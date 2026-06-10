@@ -56,6 +56,15 @@
     try { return localStorage.getItem(key); } catch (_) { return null; }
   }
 
+  function closeNavDropdowns() {
+    $$('.has-dropdown').forEach((item) => {
+      const btn = $('.nav-dropdown-toggle', item);
+      const menu = $('.nav-dropdown', item);
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+      if (menu) menu.classList.remove('is-open');
+    });
+  }
+
   /* ---------- mobile nav toggle ---------- */
   function initNavToggle() {
     const btn = $('.nav-toggle');
@@ -66,6 +75,7 @@
       btn.setAttribute('aria-expanded', String(open));
       nav.classList.toggle('is-open', open);
       document.body.classList.toggle('nav-open', open);
+      if (!open) closeNavDropdowns();
     }
 
     btn.addEventListener('click', () => {
@@ -96,6 +106,35 @@
         lastWide = wide;
         if (wide) setOpen(false);
       }
+    });
+  }
+
+  /* ---------- nav dropdown ---------- */
+  function initNavDropdowns() {
+    $$('.has-dropdown').forEach((item) => {
+      const btn = $('.nav-dropdown-toggle', item);
+      const menu = $('.nav-dropdown', item);
+      if (!btn || !menu) return;
+
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const open = btn.getAttribute('aria-expanded') !== 'true';
+        closeNavDropdowns();
+        btn.setAttribute('aria-expanded', String(open));
+        menu.classList.toggle('is-open', open);
+      });
+
+      $$('a', menu).forEach((link) => {
+        link.addEventListener('click', closeNavDropdowns);
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.has-dropdown')) closeNavDropdowns();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeNavDropdowns();
     });
   }
 
@@ -140,6 +179,7 @@
   /* ---------- boot ---------- */
   ready(() => {
     initNavToggle();
+    initNavDropdowns();
     initFaqAccordion();
     initCopyLinks();
     // Cookie banner is wired by cookie-consent.js if loaded.
