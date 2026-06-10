@@ -202,10 +202,10 @@
       <ul>
         <li><a href="/">Forside</a></li>
         <li><a href="/situation/studerende.html">Studerende</a></li>
-        <li><a href="/situation/ledig-familie.html">Ledig &amp; familie</a></li>
+        <li><a href="/situation/ledig.html">Ledig</a></li>
         <li><a href="/situation/bolig-flytning.html">Bolig</a></li>
         <li><a href="/situation/bil-transport.html">Bil</a></li>
-        <li><a href="/situation/selvstaendig.html">Selvstaendig</a></li>
+        <li><a href="/situation/selvstaendig.html">Selvstændig</a></li>
         <li class="has-dropdown">
           <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-more-menu">Mere <span aria-hidden="true">&#9662;</span></button>
           <ul id="nav-more-menu" class="nav-dropdown">
@@ -215,7 +215,7 @@
             <li><a href="/om.html">Om</a></li>
           </ul>
         </li>
-        <li class="nav-cta"><a href="/sporg-ai.html" class="nav-cta-link">Spoerg AI</a></li>
+        <li class="nav-cta"><a href="/sporg-ai.html" class="nav-cta-link">Spørg AI</a></li>
       </ul>
     </nav>
   </div>
@@ -232,12 +232,12 @@
         </ol>
       </nav>
       <p class="hero__eyebrow">Bil og transport</p>
-      <h1 class="hero__title">Bil totalomkostning 2026 — TCO over 1, 3 og 5 aar</h1>
-      <p class="hero__lead">Hvad koster bilen reelt — ikke kun pumpeprisen, men ogsaa vaerdtab, finansiering, groen ejerafgift, forsikring, service og parkering? Indtast tallene og se din total pr maaned, pr aar og pr kilometer.</p>
+      <h1 class="hero__title">Bil totalomkostning 2026 — TCO over 1, 3 og 5 år</h1>
+      <p class="hero__lead">Hvad koster bilen reelt — ikke kun pumpeprisen, men ogsaa vaerdtab, finansiering, grøn ejerafgift, forsikring, service og parkering? Indtast tallene og se din total pr måned, pr år og pr kilometer.</p>
       <p><span class="opdateret-badge">Opdateret 2026-06-10</span> <span class="badge badge--gold">2026-satser</span></p>
       <div class="cluster">
         <a class="btn btn--primary btn--lg" href="#calculator">Beregn min bils TCO</a>
-        <a class="btn btn--ghost" href="#faq">Se ofte stillede spoergsmaal</a>
+        <a class="btn btn--ghost" href="#faq">Se ofte stillede spørgsmål</a>
       </div>
     </div>
   </section>
@@ -247,7 +247,7 @@
       <div class="site-grid">
         <div>
           <h2>Indtast tal om din bil</h2>
-          <p class="muted">Defaults afspejler en typisk kompakt benzinbil paa 285.000 kr koert 15.000 km/aar. Aendr felterne og resultatet opdaterer automatisk.</p>
+          <p class="muted">Defaults afspejler en typisk kompakt benzinbil på 285.000 kr koert 15.000 km/år. Aendr felterne og resultatet opdaterer automatisk.</p>
           <form class="calculator-form" id="tco-form" novalidate>
             <div class="field field--full">
               <label for="bilkategori">Bilkategori</label>
@@ -260,7 +260,7 @@
                 <option>SUV stor (X5, XC90)</option>
                 <option>Elbil</option>
               </select>
-              <p class="field__hint">Bestemmer typiske default-vaerdier for forsikring og service.</p>
+              <p class="field__hint">Bestemmer typiske default-værdier for forsikring og service.</p>
             </div>
 
             <div class="field">
@@ -269,24 +269,24 @@
             </div>
 
             <div class="field">
-              <label for="alder_ved_koeb">Alder ved koeb</label>
+              <label for="alder_ved_koeb">Alder ved køb</label>
               <select id="alder_ved_koeb" name="alder_ved_koeb">
                 <option selected>Ny</option>
-                <option>1-2 aar brugt</option>
-                <option>3-5 aar brugt</option>
-                <option>6-10 aar brugt</option>
-                <option>10+ aar brugt</option>
+                <option>1-2 år brugt</option>
+                <option>3-5 år brugt</option>
+                <option>6-10 år brugt</option>
+                <option>10+ år brugt</option>
               </select>
             </div>
 
             <div class="field">
               <label for="ejertid_aar">Hvor laenge beholder du bilen?</label>
               <select id="ejertid_aar" name="ejertid_aar">
-                <option value="1">1 aar</option>
-                <option value="3">3 aar</option>
-                <option value="5" selected>5 aar</option>
-                <option value="7">7 aar</option>
-                <option value="10">10 aar</option>
+                <option value="1">1 år</option>
+                <option value="3">3 år</option>
+                <option value="5" selected>5 år</option>
+                <option value="7">7 år</option>
+                <option value="10">10 år</option>
               </select>
             </div>
 
@@ -307,18 +307,18 @@
             </div>
 
             <div class="field">
-              <label for="rente_pct">Rente paa billan (% p.a.)</label>
+              <label for="rente_pct">Rente på billan (% p.a.)</label>
               <input id="rente_pct" name="rente_pct" type="number" inputmode="decimal" min="0" step="0.05" value="5.95">
               <p class="field__hint">Typisk niveau 2026: 5,5-6,5 % p.a. for billan.</p>
             </div>
 
             <div class="field">
-              <label for="lan_loebetid_aar">Loebetid billan (aar)</label>
+              <label for="lan_loebetid_aar">Loebetid billan (år)</label>
               <input id="lan_loebetid_aar" name="lan_loebetid_aar" type="number" inputmode="numeric" min="1" max="15" step="1" value="5">
             </div>
 
             <div class="field">
-              <label for="braendstoftype">Braendstof</label>
+              <label for="braendstoftype">Brændstof</label>
               <select id="braendstoftype" name="braendstoftype">
                 <option selected>Benzin</option>
                 <option>Diesel</option>
@@ -335,20 +335,20 @@
             </div>
 
             <div class="field">
-              <label for="km_pr_aar">Km koert pr aar</label>
+              <label for="km_pr_aar">Km koert pr år</label>
               <input id="km_pr_aar" name="km_pr_aar" type="number" inputmode="numeric" min="0" step="500" value="15000">
             </div>
 
             <div class="field">
               <label for="egenvaegt_kg">Bilens egenvaegt (kg)</label>
               <input id="egenvaegt_kg" name="egenvaegt_kg" type="number" inputmode="numeric" min="0" step="10" value="1380">
-              <p class="field__hint">Bruges til beregning af groen ejerafgift hvis registreret efter 1. juli 2021.</p>
+              <p class="field__hint">Bruges til beregning af grøn ejerafgift hvis registreret efter 1. juli 2021.</p>
             </div>
 
             <div class="field">
               <label for="co2_udledning_g_km">CO2-udledning (WLTP, g/km)</label>
               <input id="co2_udledning_g_km" name="co2_udledning_g_km" type="number" inputmode="numeric" min="0" step="1" value="128">
-              <p class="field__hint">Findes paa registreringsattest, bruges til CO2-ejerafgift.</p>
+              <p class="field__hint">Findes på registreringsattest, bruges til CO2-ejerafgift.</p>
             </div>
 
             <div class="field">
@@ -362,9 +362,9 @@
             </div>
 
             <div class="field">
-              <label for="service_aar">Service og vedligehold (kr/aar)</label>
+              <label for="service_aar">Service og vedligehold (kr/år)</label>
               <input id="service_aar" name="service_aar" type="number" inputmode="numeric" min="0" step="100" value="5500">
-              <p class="field__hint">Inkl service, daek, bremser, vinterdaekskift.</p>
+              <p class="field__hint">Inkl service, dæk, bremser, vinterdaekskift.</p>
             </div>
 
             <div class="field">
@@ -374,13 +374,13 @@
             </div>
 
             <div class="field">
-              <label for="vaerdtab_pct_aar1">Vaerdtab foerste aar (%)</label>
+              <label for="vaerdtab_pct_aar1">Vaerdtab første år (%)</label>
               <input id="vaerdtab_pct_aar1" name="vaerdtab_pct_aar1" type="number" inputmode="decimal" min="0" max="100" step="0.5" value="20">
-              <p class="field__hint">Ny bil 15-25%, brugt bil 8-12% foerste aar.</p>
+              <p class="field__hint">Ny bil 15-25%, brugt bil 8-12% første år.</p>
             </div>
 
             <div class="field">
-              <label for="vaerdtab_pct_efter">Vaerdtab efter aar 1 (% pr aar)</label>
+              <label for="vaerdtab_pct_efter">Vaerdtab efter år 1 (% pr år)</label>
               <input id="vaerdtab_pct_efter" name="vaerdtab_pct_efter" type="number" inputmode="decimal" min="0" max="100" step="0.5" value="12">
             </div>
           </form>
@@ -390,16 +390,16 @@
           <h2>Dit resultat</h2>
           <p class="muted" id="tco-summary">Beregner…</p>
           <dl class="calculator-result__breakdown" id="tco-breakdown">
-            <dt>Vaerdtab pr aar (gns)</dt><dd id="r-vaerdtab">—</dd>
-            <dt>Groen / CO2-ejerafgift</dt><dd id="r-ejerafgift">—</dd>
+            <dt>Vaerdtab pr år (gns)</dt><dd id="r-vaerdtab">—</dd>
+            <dt>Grøn / CO2-ejerafgift</dt><dd id="r-ejerafgift">—</dd>
             <dt>Forsikring (kasko + ansvar)</dt><dd id="r-forsikring">—</dd>
-            <dt>Braendstof / strom</dt><dd id="r-braendstof">—</dd>
+            <dt>Brændstof / strom</dt><dd id="r-braendstof">—</dd>
             <dt>Service og vedligehold</dt><dd id="r-service">—</dd>
             <dt>Parkering / licens</dt><dd id="r-parkering">—</dd>
             <dt>Renteomkostning (gns)</dt><dd id="r-rente">—</dd>
           </dl>
-          <p class="calculator-result__total"><span>Total pr maaned</span><strong id="r-md">—</strong></p>
-          <p class="calculator-result__total"><span>Total pr aar</span><strong id="r-aar">—</strong></p>
+          <p class="calculator-result__total"><span>Total pr måned</span><strong id="r-md">—</strong></p>
+          <p class="calculator-result__total"><span>Total pr år</span><strong id="r-aar">—</strong></p>
           <p class="calculator-result__total"><span>Total over ejertiden</span><strong id="r-ejertid">—</strong></p>
           <p class="calculator-result__total"><span>Pris pr kilometer</span><strong id="r-km">—</strong></p>
           <p class="muted">Tallene er vejledende — faktiske priser afhaenger af model, koerselsadfaerd og forsikringsselskab.</p>
@@ -416,24 +416,24 @@
     <div class="container">
       <h2>Saadan virker det</h2>
       <div class="stack">
-        <p>Total Cost of Ownership (TCO) for en bil bestaar af syv hovedposter. Beregneren laegger dem sammen pr aar og deler ud paa maaned, ejertid og kilometer.</p>
+        <p>Total Cost of Ownership (TCO) for en bil bestaar af syv hovedposter. Beregneren laegger dem sammen pr år og deler ud på måned, ejertid og kilometer.</p>
         <h3>1. Vaerdtab</h3>
-        <p>Den stoerste — og mest oversete — post. En ny bil taber typisk 20% i vaerdi det foerste aar og 12% af restvaerdien hvert aar derefter. Formel:<br>
+        <p>Den stoerste — og mest oversete — post. En ny bil taber typisk 20% i værdi det første år og 12% af restvaerdien hvert år derefter. Formel:<br>
           <code>vaerdi_efter = indkoebspris × (1 - vaerdtab_aar1/100) × (1 - vaerdtab_efter/100)^(ejertid-1)</code><br>
           Vaerdtabet fordeles ligeligt over ejertiden.</p>
-        <h3>2. Groen ejerafgift / CO2-ejerafgift</h3>
-        <p>For biler registreret efter 1. juli 2021 bruges CO2-skalaen: <strong>257 kr pr g CO2/km over 58 g/km</strong>. Dieselbiler faar 50% udligningsafgift ovenpaa. Elbiler er fritaget i hele 2026 og betaler kun symbolsk vaegtafgift (~380 kr/aar).</p>
+        <h3>2. Grøn ejerafgift / CO2-ejerafgift</h3>
+        <p>For biler registreret efter 1. juli 2021 bruges CO2-skalaen: <strong>257 kr pr g CO2/km over 58 g/km</strong>. Dieselbiler faar 50% udligningsafgift ovenpaa. Elbiler er fritaget i hele 2026 og betaler kun symbolsk vaegtafgift (~380 kr/år).</p>
         <h3>3. Forsikring</h3>
-        <p><code>forsikring = (kasko + ansvar) × 12</code>. Ansvar er lovpligtig (~165 kr/md), kasko anbefales paa biler under 8 aar (~385 kr/md for kompakt).</p>
-        <h3>4. Braendstof eller strom</h3>
-        <p>Benzin/diesel: <code>km/aar × L/100 ÷ 100 × pumpepris</code>. Elbil hjemmeopladning: <code>km/aar × kWh/100 ÷ 100 × 1,45 kr/kWh</code>.</p>
+        <p><code>forsikring = (kasko + ansvar) × 12</code>. Ansvar er lovpligtig (~165 kr/md), kasko anbefales på biler under 8 år (~385 kr/md for kompakt).</p>
+        <h3>4. Brændstof eller strom</h3>
+        <p>Benzin/diesel: <code>km/år × L/100 ÷ 100 × pumpepris</code>. Elbil hjemmeopladning: <code>km/år × kWh/100 ÷ 100 × 1,45 kr/kWh</code>.</p>
         <h3>5. Service og vedligehold</h3>
         <p>Indtast aarlig udgift. Typisk: kompakt 5.500 kr, premium 9.500 kr, elbil 2.800 kr.</p>
         <h3>6. Finansieringsomkostning</h3>
-        <p>Simpel approksimation af gennemsnitlig aarlig rente paa et annuitetslan:<br>
+        <p>Simpel approksimation af gennemsnitlig aarlig rente på et annuitetslan:<br>
           <code>rente_aar_gns = (indkoebspris × (1 - udbetaling/100)) × rente/100 ÷ 2</code></p>
         <h3>7. Parkering</h3>
-        <p>Glemmes ofte — Koebenhavnsk beboerlicens 1.170 kr/aar, P-hus 1.200-3.600 kr/aar.</p>
+        <p>Glemmes ofte — Koebenhavnsk beboerlicens 1.170 kr/år, P-hus 1.200-3.600 kr/år.</p>
       </div>
     </div>
   </section>
@@ -441,24 +441,24 @@
   <section class="section">
     <div class="container">
       <aside class="source-card" style="border-left:4px solid #f59e0b;background:#fffbeb;">
-        <h2 style="margin-top:0;">Det egentlige spoergsmaal</h2>
+        <h2 style="margin-top:0;">Det egentlige spørgsmål</h2>
         <p><strong>Koster en elbil reelt mindre at eje end en benzinbil? Og er en billig brugt bil dyrere i drift end en ny?</strong></p>
-        <p>Svaret afhaenger af tre tal: vaerdtab, braendstof og finansiering. En elbil til 350.000 kr taber mere i kroner end en benzinbil til 285.000 kr — men den sparer 6.000-9.000 kr/aar paa braendstof og 2.700 kr/aar paa service, og er fritaget for ejerafgift. Over 5 aar og 75.000 km vinder elbilen typisk med 25.000-50.000 kr.</p>
-        <p>En billig brugt bil paa 60.000 kr har minimalt vaerdtab — men hoejere risiko for uforudsete reparationer paa 8.000-15.000 kr/aar. Sammenlign <em>total pr maaned</em>, ikke kun listeprisen.</p>
+        <p>Svaret afhaenger af tre tal: vaerdtab, brændstof og finansiering. En elbil til 350.000 kr taber mere i kroner end en benzinbil til 285.000 kr — men den sparer 6.000-9.000 kr/år på brændstof og 2.700 kr/år på service, og er fritaget for ejerafgift. Over 5 år og 75.000 km vinder elbilen typisk med 25.000-50.000 kr.</p>
+        <p>En billig brugt bil på 60.000 kr har minimalt vaerdtab — men hoejere risiko for uforudsete reparationer på 8.000-15.000 kr/år. Sammenlign <em>total pr måned</em>, ikke kun listeprisen.</p>
       </aside>
     </div>
   </section>
 
   <section class="section section--alt">
     <div class="container">
-      <h2>Vigtige situationer at vaere opmaerksom paa</h2>
+      <h2>Vigtige situationer at være opmaerksom på</h2>
       <div class="stack">
         <ul>
-          <li><strong>Biler registreret foer 1. juli 2021</strong> koerer paa gammel groen ejerafgift baseret paa km/L — kan vaere markant lavere for sparsommelige biler, men hoejere for benzinslugere.</li>
-          <li><strong>Diesel</strong> tillaegges 50% udligningsafgift (ca 2.400 kr/aar ekstra) oven i CO2-ejerafgift — ofte goer det diesel dyrere end benzin trods lavere pumpepris.</li>
-          <li><strong>Elbiler</strong> er fritaget for groen ejerafgift i hele 2026 og betaler kun symbolske ~380 kr/aar i vaegtafgift.</li>
-          <li><strong>Privatleasing:</strong> ingen vaerdtab paa egen regning, men kr/md inkluderer typisk forsikring, service og daek — sammenlign reelt kr/md, ikke listepris.</li>
-          <li><strong>Plug-in hybrid (PHEV):</strong> WLTP-CO2 forudsaetter optimal opladning — hvis du ikke lader, koerer den paa benzinmotor og forbruger 8-10 L/100km.</li>
+          <li><strong>Biler registreret før 1. juli 2021</strong> koerer på gammel grøn ejerafgift baseret på km/L — kan være markant lavere for sparsommelige biler, men hoejere for benzinslugere.</li>
+          <li><strong>Diesel</strong> tillaegges 50% udligningsafgift (ca 2.400 kr/år ekstra) oven i CO2-ejerafgift — ofte gør det diesel dyrere end benzin trods lavere pumpepris.</li>
+          <li><strong>Elbiler</strong> er fritaget for grøn ejerafgift i hele 2026 og betaler kun symbolske ~380 kr/år i vaegtafgift.</li>
+          <li><strong>Privatleasing:</strong> ingen vaerdtab på egen regning, men kr/md inkluderer typisk forsikring, service og dæk — sammenlign reelt kr/md, ikke listepris.</li>
+          <li><strong>Plug-in hybrid (PHEV):</strong> WLTP-CO2 forudsaetter optimal opladning — hvis du ikke lader, koerer den på benzinmotor og forbruger 8-10 L/100km.</li>
         </ul>
       </div>
     </div>
@@ -466,34 +466,34 @@
 
   <section class="section faq" id="faq">
     <div class="container">
-      <h2>Ofte stillede spoergsmaal</h2>
+      <h2>Ofte stillede spørgsmål</h2>
       <details>
-        <summary>Hvor meget er groen ejerafgift i 2026?</summary>
-        <p>For biler registreret efter 1. juli 2021 betaler du 257 kr pr gram CO2/km over 58 g/km. En bil med 120 g/km koster ca 4.600 kr/aar, mens en SUV med 160 g/km koster ca 13.500 kr/aar. Dieselbiler betaler 50% udligningsafgift ovenpaa. Elbiler er fritaget.</p>
+        <summary>Hvor meget er grøn ejerafgift i 2026?</summary>
+        <p>For biler registreret efter 1. juli 2021 betaler du 257 kr pr gram CO2/km over 58 g/km. En bil med 120 g/km koster ca 4.600 kr/år, mens en SUV med 160 g/km koster ca 13.500 kr/år. Dieselbiler betaler 50% udligningsafgift ovenpaa. Elbiler er fritaget.</p>
       </details>
       <details>
         <summary>Koster en elbil mindre i drift end en benzinbil?</summary>
-        <p>Ja, paa de fleste poster: elbiler har lavere braendstof (40-60 oere/km mod 90 oere/km benzin), lavere service (2.800 mod 5.500 kr/aar), og ingen groen ejerafgift. Til gengaeld er indkoebsprisen hoejere og vaerdtabet i procent let hoejere. Over 5 aar og 75.000 km sparer du typisk 25-50.000 kr.</p>
+        <p>Ja, på de fleste poster: elbiler har lavere brændstof (40-60 oere/km mod 90 oere/km benzin), lavere service (2.800 mod 5.500 kr/år), og ingen grøn ejerafgift. Til gengaeld er indkoebsprisen hoejere og vaerdtabet i procent let hoejere. Over 5 år og 75.000 km sparer du typisk 25-50.000 kr.</p>
       </details>
       <details>
         <summary>Hvad er den stoerste skjulte omkostning ved at eje bil?</summary>
-        <p>Vaerdtab. En ny bil til 300.000 kr taber typisk 60.000 kr foerste aar og endnu 80-100.000 kr over de naeste 4 aar — sammen ofte mere end braendstof, forsikring og service tilsammen. Brugte biler taber langt mindre i kroner.</p>
+        <p>Vaerdtab. En ny bil til 300.000 kr taber typisk 60.000 kr første år og endnu 80-100.000 kr over de næste 4 år — sammen ofte mere end brændstof, forsikring og service tilsammen. Brugte biler taber langt mindre i kroner.</p>
       </details>
       <details>
         <summary>Er leasing billigere end at eje?</summary>
-        <p>Privatleasing er nemt og forudsigeligt, men typisk 5-15% dyrere end koeb over 4-5 aar, fordi leasingselskabet ogsaa skal tjene penge. Erhvervsleasing kan vaere fordelagtigt pga moms- og skattefradrag. For private der koerer normalt og holder bilen 5+ aar er koeb typisk billigst.</p>
+        <p>Privatleasing er nemt og forudsigeligt, men typisk 5-15% dyrere end køb over 4-5 år, fordi leasingselskabet ogsaa skal tjene penge. Erhvervsleasing kan være fordelagtigt pga moms- og skattefradrag. For private der koerer normalt og holder bilen 5+ år er køb typisk billigst.</p>
       </details>
       <details>
         <summary>Hvor meget koster forsikring til en bil i 2026?</summary>
-        <p>Ansvarsforsikring er lovpligtig og koster typisk 1.800-2.500 kr/aar. Kaskoforsikring (anbefalet for biler under 8 aar) koster 4.500-7.000 kr/aar for en kompakt og 5.500-9.000 kr/aar for SUV. Elbiler er ofte lidt billigere pga lavere skadefrekvens.</p>
+        <p>Ansvarsforsikring er lovpligtig og koster typisk 1.800-2.500 kr/år. Kaskoforsikring (anbefalet for biler under 8 år) koster 4.500-7.000 kr/år for en kompakt og 5.500-9.000 kr/år for SUV. Elbiler er ofte lidt billigere pga lavere skadefrekvens.</p>
       </details>
       <details>
         <summary>Hvad koster det at koere 15000 km om aaret i en kompakt benzinbil?</summary>
-        <p>Med en bil til 285.000 kr nyvaerdi over 5 aar regner FDM med ca 4.500-5.500 kr/md i total — fordelt paa vaerdtab (1.800 kr), braendstof (1.100 kr), forsikring (550 kr), service og daek (460 kr), ejerafgift (385 kr), og finansiering (600-800 kr).</p>
+        <p>Med en bil til 285.000 kr nyvaerdi over 5 år regner FDM med ca 4.500-5.500 kr/md i total — fordelt på vaerdtab (1.800 kr), brændstof (1.100 kr), forsikring (550 kr), service og dæk (460 kr), ejerafgift (385 kr), og finansiering (600-800 kr).</p>
       </details>
       <details>
-        <summary>Hvordan beregnes vaerdtab paa min bil?</summary>
-        <p>Tommelfingerregel: ny bil taber 20-25% foerste aar og derefter 10-15% pr aar af resterende vaerdi. Premium-maerker (BMW, Mercedes) og elbiler taber typisk mere de foerste 2-3 aar, japansk-koreansk holder vaerdien bedst. Tjek bilpriser.dk for konkrete tal paa din model.</p>
+        <summary>Hvordan beregnes vaerdtab på min bil?</summary>
+        <p>Tommelfingerregel: ny bil taber 20-25% første år og derefter 10-15% pr år af resterende værdi. Premium-mærker (BMW, Mercedes) og elbiler taber typisk mere de første 2-3 år, japansk-koreansk holder vaerdien bedst. Tjek bilpriser.dk for konkrete tal på din model.</p>
       </details>
     </div>
   </section>
@@ -504,10 +504,10 @@
         <h2>Officielle kilder</h2>
         <p class="muted">Senest tjekket 2026-06-10</p>
         <ul>
-          <li><a href="https://skat.dk/borger/koeretoejer/ejerafgift-og-vaegtafgift/groen-ejerafgift" rel="nofollow noopener" target="_blank">Skat.dk — groen ejerafgift og CO2-ejerafgift <span class="ext-icon" aria-hidden="true">↗</span></a></li>
-          <li><a href="https://skat.dk/borger/koeretoejer/ejerafgift-og-vaegtafgift/groen-ejerafgift/co2-ejerafgift" rel="nofollow noopener" target="_blank">Skat.dk — CO2-baseret ejerafgift 2021+ <span class="ext-icon" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://skat.dk/" rel="nofollow noopener" target="_blank">Skat.dk — grøn ejerafgift og CO2-ejerafgift <span class="ext-icon" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://skat.dk//co2-ejerafgift" rel="nofollow noopener" target="_blank">Skat.dk — CO2-baseret ejerafgift 2021+ <span class="ext-icon" aria-hidden="true">↗</span></a></li>
           <li><a href="https://www.fstyr.dk/da/Selvbetjening/DMR" rel="nofollow noopener" target="_blank">Faerdselsstyrelsen — koeretoejsregister (DMR) <span class="ext-icon" aria-hidden="true">↗</span></a></li>
-          <li><a href="https://fdm.dk/alt-om-biler/brug-bil/hvad-koster-koere-bil" rel="nofollow noopener" target="_blank">FDM — totalomkostningskalkyle og koerselstatistik <span class="ext-icon" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://fdm.dk/" rel="nofollow noopener" target="_blank">FDM — totalomkostningskalkyle og koerselstatistik <span class="ext-icon" aria-hidden="true">↗</span></a></li>
           <li><a href="https://www.forsikringogpension.dk/statistik/" rel="nofollow noopener" target="_blank">Forsikring og Pension — gennemsnitspriser <span class="ext-icon" aria-hidden="true">↗</span></a></li>
           <li><a href="https://www.bilpriser.dk/" rel="nofollow noopener" target="_blank">Bilpriser.dk — vaerdtabsstatistik <span class="ext-icon" aria-hidden="true">↗</span></a></li>
           <li><a href="https://storebaelt.dk/priser" rel="nofollow noopener" target="_blank">Sund og Baelt — Storebaeltsforbindelsen priser <span class="ext-icon" aria-hidden="true">↗</span></a></li>
@@ -531,13 +531,13 @@
         </ul>
       </div>
       <div class="site-footer__col">
-        <h2>Ledig &amp; familie</h2>
+        <h2>Ledig</h2>
         <ul>
           <li><a href="/beregner/dagpenge.html">Dagpenge</a></li>
           <li><a href="/beregner/dimittend.html">Dimittend</a></li>
           <li><a href="/beregner/sygedagpenge.html">Sygedagpenge</a></li>
           <li><a href="/beregner/barselsdagpenge.html">Barselsdagpenge</a></li>
-          <li><a href="/beregner/bornepenge.html">Boernepenge</a></li>
+          <li><a href="/beregner/bornepenge.html">Børnepenge</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
@@ -549,24 +549,24 @@
           <li><a href="/beregner/depositum.html">Depositum</a></li>
           <li><a href="/beregner/flyttebudget.html">Flyttebudget</a></li>
           <li><a href="/beregner/el-vand-varme-budget.html">El, vand og varme</a></li>
-          <li><a href="/beregner/ejendomsvaerdiskat.html">Ejendomsvaerdiskat</a></li>
+          <li><a href="/beregner/ejendomsvaerdiskat.html">Ejendomsværdiskat</a></li>
           <li><a href="/beregner/andelsbolig.html">Andelsbolig</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
         <h2>Bil &amp; transport</h2>
         <ul>
-          <li><a href="/beregner/leasing-vs-koeb.html">Leasing vs. koeb</a></li>
+          <li><a href="/beregner/leasing-vs-koeb.html">Leasing vs. køb</a></li>
           <li><a href="/beregner/bil-totalomkostning.html">Bil totalomkostning</a></li>
-          <li><a href="/beregner/bil-vaerdtab.html">Bil-vaerditab</a></li>
-          <li><a href="/beregner/groen-ejerafgift.html">Groen ejerafgift</a></li>
-          <li><a href="/beregner/braendstof.html">Braendstof</a></li>
+          <li><a href="/beregner/bil-vaerdtab.html">Bil-værditab</a></li>
+          <li><a href="/beregner/groen-ejerafgift.html">Grøn ejerafgift</a></li>
+          <li><a href="/beregner/braendstof.html">Brændstof</a></li>
           <li><a href="/beregner/elbil-opladning.html">Elbil opladning</a></li>
           <li><a href="/beregner/pendlerbudget.html">Pendlerbudget</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
-        <h2>Selvstaendig</h2>
+        <h2>Selvstændig</h2>
         <ul>
           <li><a href="/beregner/moms-beregner.html">Momsberegner</a></li>
           <li><a href="/beregner/timepris-freelancer.html">Timepris</a></li>
@@ -588,7 +588,7 @@
       <div class="site-footer__col">
         <h2>Vaerktoejer</h2>
         <ul>
-          <li><a href="/sporg-ai.html">Spoerg AI</a></li>
+          <li><a href="/sporg-ai.html">Spørg AI</a></li>
           <li><a href="/#alle-beregnere">Alle beregnere</a></li>
           <li><a href="https://lonberegning.dk/" rel="noopener">Loenberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
         </ul>
@@ -604,9 +604,9 @@
         </ul>
       </div>
     </div>
-    <p class="site-footer__cross">Skal du regne nettoloen ud? Brug vores soestersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a> — specialiseret i loen og skat.</p>
+    <p class="site-footer__cross">Skal du regne nettoloen ud? Brug vores soestersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a> — specialiseret i løn og skat.</p>
     <div class="site-footer__bottom">
-      <span>&copy; 2026 hverdagstal.dk &middot; Beregn penge, stoette og udgifter i hverdagen &middot; Satser opdateret 2026-06-10</span>
+      <span>&copy; 2026 hverdagstal.dk &middot; Beregn penge, støtte og udgifter i hverdagen &middot; Satser opdateret 2026-06-10</span>
       <span>Made in Danmark</span>
     </div>
   </div>

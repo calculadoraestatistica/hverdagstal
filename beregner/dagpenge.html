@@ -189,10 +189,10 @@
       <ul>
         <li><a href="/">Forside</a></li>
         <li><a href="/situation/studerende.html">Studerende</a></li>
-        <li><a href="/situation/ledig-familie.html">Ledig &amp; familie</a></li>
+        <li><a href="/situation/ledig.html">Ledig</a></li>
         <li><a href="/situation/bolig-flytning.html">Bolig</a></li>
         <li><a href="/situation/bil-transport.html">Bil</a></li>
-        <li><a href="/situation/selvstaendig.html">Selvstaendig</a></li>
+        <li><a href="/situation/selvstaendig.html">Selvstændig</a></li>
         <li class="has-dropdown">
           <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-more-menu">Mere <span aria-hidden="true">&#9662;</span></button>
           <ul id="nav-more-menu" class="nav-dropdown">
@@ -202,7 +202,7 @@
             <li><a href="/om.html">Om</a></li>
           </ul>
         </li>
-        <li class="nav-cta"><a href="/sporg-ai.html" class="nav-cta-link">Spoerg AI</a></li>
+        <li class="nav-cta"><a href="/sporg-ai.html" class="nav-cta-link">Spørg AI</a></li>
       </ul>
     </nav>
   </div>
@@ -221,7 +221,7 @@
       </nav>
       <span class="hero__eyebrow">Ledig &middot; A-kasse</span>
       <h1 class="hero__title">Dagpengeberegner 2026</h1>
-      <p class="hero__lead">Beregn hvor meget du kan faa i dagpenge som ledig medlem af en a-kasse i 2026. Maks-satsen er 22.041 kr./md brutto for fuldtidsforsikrede, og du kan faa op til 26.198 kr./md de foerste tre maaneder med beskaeftigelsestillaegget.</p>
+      <p class="hero__lead">Beregn hvor meget du kan faa i dagpenge som ledig medlem af en a-kasse i 2026. Maks-satsen er 22.041 kr./md brutto for fuldtidsforsikrede, og du kan faa op til 26.198 kr./md de første tre måneder med beskaeftigelsestillaegget.</p>
       <span class="opdateret-badge">Opdateret 2026-06-10</span>
       <div class="cluster" style="margin-top:1.25rem;">
         <a class="btn btn--primary btn--lg" href="#beregner">Beregn dine dagpenge</a>
@@ -235,12 +235,12 @@
       <div class="site-grid">
         <div>
           <h2>Beregn dine dagpenge 2026</h2>
-          <p>Indtast din gennemsnitlige maanedsloen og din forsikringsstatus. Beregneren bruger den officielle 90 %-regel og 2026-maks paa 22.041 kr./md (fuldtid) eller 14.694 kr./md (deltid).</p>
+          <p>Indtast din gennemsnitlige maanedsloen og din forsikringsstatus. Beregneren bruger den officielle 90 %-regel og 2026-maks på 22.041 kr./md (fuldtid) eller 14.694 kr./md (deltid).</p>
           <form class="calculator-form" id="dagpengeForm" autocomplete="off" novalidate>
             <div class="field field--full">
-              <label for="indkomstSidste12">Gennemsnitlig maanedsloen (12 bedste maaneder af de seneste 24)</label>
+              <label for="indkomstSidste12">Gennemsnitlig maanedsloen (12 bedste måneder af de seneste 24)</label>
               <input type="number" inputmode="numeric" id="indkomstSidste12" name="indkomstSidste12" min="0" step="100" value="35000" required>
-              <span class="field__hint">Brut​toloen inkl. ATP og pension, men foer AM-bidrag. A-kassen vaelger automatisk de 12 bedste maaneder ud af de seneste 24.</span>
+              <span class="field__hint">Brut​toloen inkl. ATP og pension, men før AM-bidrag. A-kassen vaelger automatisk de 12 bedste måneder ud af de seneste 24.</span>
             </div>
             <div class="field">
               <label for="forsikringsstatus">Forsikringsstatus</label>
@@ -256,25 +256,25 @@
               <span class="field__hint">Paavirker ikke selve satsen, men medlemsperiode-krav og pensionsalder.</span>
             </div>
             <div class="field">
-              <label for="bornHjemmeboende">Hjemmeboende boern under 18 aar?</label>
+              <label for="bornHjemmeboende">Hjemmeboende børn under 18 år?</label>
               <select id="bornHjemmeboende" name="bornHjemmeboende">
                 <option value="nej" selected>Nej</option>
                 <option value="ja">Ja</option>
               </select>
-              <span class="field__hint">Paavirker primaert dimittendsatsen og enkelte sociale tillaeg - ikke den almindelige dagpengesats.</span>
+              <span class="field__hint">Paavirker primaert dimittendsatsen og enkelte sociale tillæg - ikke den almindelige dagpengesats.</span>
             </div>
             <div class="field">
               <label for="akasseAnciennitet">Antal maaneders medlemskab af a-kasse</label>
               <input type="number" inputmode="numeric" id="akasseAnciennitet" name="akasseAnciennitet" min="0" step="1" value="24">
-              <span class="field__hint">Skal vaere mindst 12 maaneder, og du skal opfylde indkomstkravet paa 270.876 kr. i 2026.</span>
+              <span class="field__hint">Skal være mindst 12 måneder, og du skal opfylde indkomstkravet på 270.876 kr. i 2026.</span>
             </div>
             <div class="field">
-              <label for="beskaeftigelsestillaeg">Berettiget til beskaeftigelsestillaeg de foerste 3 mdr.?</label>
+              <label for="beskaeftigelsestillaeg">Berettiget til beskaeftigelsestillaeg de første 3 mdr.?</label>
               <select id="beskaeftigelsestillaeg" name="beskaeftigelsestillaeg">
                 <option value="nej" selected>Nej</option>
                 <option value="ja">Ja</option>
               </select>
-              <span class="field__hint">Kraever mindst 2 aars sammenhaengende fuldtidsbeskaeftigelse umiddelbart foer ledighed.</span>
+              <span class="field__hint">Kraever mindst 2 aars sammenhaengende fuldtidsbeskaeftigelse umiddelbart før ledighed.</span>
             </div>
             <div class="field field--full" id="formMsg" hidden>
               <span class="field__error" id="formError"></span>
@@ -286,7 +286,7 @@
           <h2>Resultater</h2>
           <dl class="calculator-result__breakdown">
             <div>
-              <dt>Dagpenge pr. maaned (brutto)</dt>
+              <dt>Dagpenge pr. måned (brutto)</dt>
               <dd id="outMaaned">0 kr</dd>
             </div>
             <div>
@@ -294,11 +294,11 @@
               <dd id="outDag">0 kr</dd>
             </div>
             <div>
-              <dt>Sats inkl. beskaeftigelsestillaeg (foerste 3 mdr.)</dt>
+              <dt>Sats inkl. beskaeftigelsestillaeg (første 3 mdr.)</dt>
               <dd id="outTillaeg">0 kr</dd>
             </div>
             <div>
-              <dt>Skoennet nettoudbetaling pr. maaned</dt>
+              <dt>Skoennet nettoudbetaling pr. måned</dt>
               <dd id="outNetto">0 kr</dd>
             </div>
             <div>
@@ -316,8 +316,8 @@
   <section class="section section--alt">
     <div class="container">
       <h2>Saadan beregnes satsen</h2>
-      <p>Dagpengesatsen i 2026 er <strong>90 % af din tidligere bruttoloen</strong>, dog hoejst maksimumsatsen. A-kassen tager de <strong>12 bedste maaneder ud af de seneste 24</strong> og bruger gennemsnittet som beregningsgrundlag. Hvis 90 % af dette beloeb overstiger 22.041 kr./md (fuldtid) eller 14.694 kr./md (deltid), faar du maksimumsatsen.</p>
-      <p>For at faa <strong>maksimumsatsen som fuldtidsforsikret</strong> skal du have tjent mindst 26.620 kr./md i gennemsnit i de 12 bedste maaneder. Tjente du mindre, faar du 90 % af din loen i stedet for det fulde maksimum.</p>
+      <p>Dagpengesatsen i 2026 er <strong>90 % af din tidligere bruttoloen</strong>, dog hoejst maksimumsatsen. A-kassen tager de <strong>12 bedste måneder ud af de seneste 24</strong> og bruger gennemsnittet som beregningsgrundlag. Hvis 90 % af dette beløb overstiger 22.041 kr./md (fuldtid) eller 14.694 kr./md (deltid), faar du maksimumsatsen.</p>
+      <p>For at faa <strong>maksimumsatsen som fuldtidsforsikret</strong> skal du have tjent mindst 26.620 kr./md i gennemsnit i de 12 bedste måneder. Tjente du mindre, faar du 90 % af din løn i stedet for det fulde maksimum.</p>
       <p>Dagpenge udbetales i timer, ikke i dage. Maksimumsatsen pr. time er 137,43 kr. og pr. dag 1.016 kr. (fuldtid). Maaneden indeholder ca. 160,33 udbetalingstimer for fuldtidsforsikrede.</p>
     </div>
   </section>
@@ -325,12 +325,12 @@
   <section class="section" id="satser">
     <div class="container">
       <h2>Beskaeftigelsestillaegget</h2>
-      <p>Beskaeftigelsestillaegget er et midlertidigt tillaeg paa op til <strong>4.157 kr./md</strong>, som gives de <strong>foerste 3 maaneders ledighed</strong>. Du faar det automatisk, hvis du har haft mindst 2 aars sammenhaengende fuldtidsbeskaeftigelse umiddelbart foer din ledighed. Den samlede sats med tillaeg er hoejst 26.198 kr./md brutto.</p>
-      <p>Tillaegget bortfalder fra den 4. maaned, hvor du gaar tilbage til den almindelige dagpengesats. Det er derfor en god idé at faa overblik over dine udgifter, inden tillaegget falder bort.</p>
+      <p>Beskaeftigelsestillaegget er et midlertidigt tillæg på op til <strong>4.157 kr./md</strong>, som gives de <strong>første 3 maaneders ledighed</strong>. Du faar det automatisk, hvis du har haft mindst 2 aars sammenhaengende fuldtidsbeskaeftigelse umiddelbart før din ledighed. Den samlede sats med tillæg er hoejst 26.198 kr./md brutto.</p>
+      <p>Tillaegget bortfalder fra den 4. måned, hvor du gaar tilbage til den almindelige dagpengesats. Det er derfor en god idé at faa overblik over dine udgifter, inden tillaegget falder bort.</p>
 
       <h2 style="margin-top:2rem;">Fuldtid vs deltidsforsikret</h2>
       <p>Som <strong>fuldtidsforsikret</strong> kan du faa op til 22.041 kr./md brutto, mens <strong>deltidsforsikret</strong> giver maksimalt 14.694 kr./md (ca. 2/3 af fuldtidssatsen). Deltidsforsikrede kan kun faa udbetalt op til 130 timer/md. Til gengaeld er a-kassekontingentet lavere for deltidsforsikrede.</p>
-      <p>Forskellen kan vaere afgoerende: paa fuldtid er forskellen op til 7.347 kr./md i din favoer, hvis du oprindeligt valgte deltid for at spare kontingent.</p>
+      <p>Forskellen kan være afgoerende: på fuldtid er forskellen op til 7.347 kr./md i din favoer, hvis du oprindeligt valgte deltid for at spare kontingent.</p>
     </div>
   </section>
 
@@ -339,10 +339,10 @@
       <h2>Vigtige situationer</h2>
       <ul>
         <li><strong>Deltidsforsikret:</strong> maksimum er 14.694 kr./md (ca. 2/3 af fuldtidssatsen) og maksimalt 130 timer/md i udbetaling.</li>
-        <li><strong>Egen opsigelse uden gyldig grund:</strong> 3 ugers karantaene (ikke 4 uger) foer dagpenge kan udbetales.</li>
-        <li><strong>Karens-reglen:</strong> du mister 1 dags dagpenge hver 4. maaned, hvis du har arbejdet under 148 timer i perioden.</li>
-        <li><strong>Mindstekrav til udbetaling:</strong> mindst 14,8 timers udbetalingsret pr. maaned kraeves for at faa udbetalt dagpenge (fuldtidsforsikret).</li>
-        <li><strong>Selvstaendige:</strong> skal lukke CVR eller dokumentere fuldt ophoer af aktiviteten foer dagpenge kan udbetales.</li>
+        <li><strong>Egen opsigelse uden gyldig grund:</strong> 3 ugers karantaene (ikke 4 uger) før dagpenge kan udbetales.</li>
+        <li><strong>Karens-reglen:</strong> du mister 1 dags dagpenge hver 4. måned, hvis du har arbejdet under 148 timer i perioden.</li>
+        <li><strong>Mindstekrav til udbetaling:</strong> mindst 14,8 timers udbetalingsret pr. måned kraeves for at faa udbetalt dagpenge (fuldtidsforsikret).</li>
+        <li><strong>Selvstændige:</strong> skal lukke CVR eller dokumentere fuldt ophoer af aktiviteten før dagpenge kan udbetales.</li>
         <li><strong>Folkepensionsalderen:</strong> hvis du fylder folkepensionsalderen i ledighedsperioden, ophoerer dagpengeretten ved overgang til folkepension.</li>
       </ul>
     </div>
@@ -353,8 +353,8 @@
       <div class="calculator-result" style="border-left:6px solid #f59e0b;">
         <h2>Karens og karantaene - hvad koster det?</h2>
         <p><strong>Spoergsmaalet:</strong> Faar jeg maks-sats, eller hvad mister jeg ved at have tjent mindre? Skal jeg vente med at melde mig ledig for at faa beskaeftigelsestillaegget?</p>
-        <p>Hvis du selv siger op uden gyldig grund, mister du <strong>3 ugers dagpenge</strong> - det svarer til ca. <strong>15.000 kr.</strong> i tabt indtaegt ved maks-sats. Hvis du derimod kan dokumentere mobning, manglende loen eller flytning til samlever, falder karantaenen bort.</p>
-        <p>Beskaeftigelsestillaegget kan vaere op til <strong>12.471 kr.</strong> samlet over 3 maaneder. Det betyder, at det kan svare sig at strukturere din opsigelsesperiode, saa du gaar direkte fra fuldtidsarbejde til ledighed - uden afbrydelser.</p>
+        <p>Hvis du selv siger op uden gyldig grund, mister du <strong>3 ugers dagpenge</strong> - det svarer til ca. <strong>15.000 kr.</strong> i tabt indtaegt ved maks-sats. Hvis du derimod kan dokumentere mobning, manglende løn eller flytning til samlever, falder karantaenen bort.</p>
+        <p>Beskaeftigelsestillaegget kan være op til <strong>12.471 kr.</strong> samlet over 3 måneder. Det betyder, at det kan svare sig at strukturere din opsigelsesperiode, så du gaar direkte fra fuldtidsarbejde til ledighed - uden afbrydelser.</p>
       </div>
     </div>
   </section>
@@ -366,14 +366,14 @@
 
   <section class="section faq">
     <div class="container">
-      <h2>Ofte stillede spoergsmaal</h2>
+      <h2>Ofte stillede spørgsmål</h2>
       <details>
         <summary>Hvor meget kan jeg maksimalt faa i dagpenge i 2026?</summary>
-        <p>Som fuldtidsforsikret kan du maksimalt faa 22.041 kr. om maaneden brutto i 2026. Med beskaeftigelsestillaegget kan satsen vaere op til 26.198 kr./md de foerste 3 maaneder. Deltidsforsikrede kan faa op til 14.694 kr./md.</p>
+        <p>Som fuldtidsforsikret kan du maksimalt faa 22.041 kr. om maaneden brutto i 2026. Med beskaeftigelsestillaegget kan satsen være op til 26.198 kr./md de første 3 måneder. Deltidsforsikrede kan faa op til 14.694 kr./md.</p>
       </details>
       <details>
         <summary>Hvor laenge kan jeg faa dagpenge?</summary>
-        <p>Du kan modtage dagpenge i op til 2 aar (3.848 timer som fuldtidsforsikret) inden for en 3-aarig referenceperiode. Perioden kan forlaenges med op til et aar, hvis du arbejder undervejs.</p>
+        <p>Du kan modtage dagpenge i op til 2 år (3.848 timer som fuldtidsforsikret) inden for en 3-aarig referenceperiode. Perioden kan forlaenges med op til et år, hvis du arbejder undervejs.</p>
       </details>
       <details>
         <summary>Hvad sker der, hvis jeg arbejder lidt ved siden af?</summary>
@@ -381,7 +381,7 @@
       </details>
       <details>
         <summary>Hvad er karens, og kan jeg undgaa det?</summary>
-        <p>Karens betyder, at du mister 1 dags dagpenge hver 4. maaned, hvis du har arbejdet mindre end 148 timer. Du undgaar karens ved at have mindst 148 arbejdstimer i hver 4-maaneders periode.</p>
+        <p>Karens betyder, at du mister 1 dags dagpenge hver 4. måned, hvis du har arbejdet mindre end 148 timer. Du undgaar karens ved at have mindst 148 arbejdstimer i hver 4-maaneders periode.</p>
       </details>
       <details>
         <summary>Hvor stor er forskellen mellem fuldtids- og deltidsforsikret?</summary>
@@ -389,15 +389,15 @@
       </details>
       <details>
         <summary>Skal jeg betale skat af dagpenge?</summary>
-        <p>Ja, dagpenge er skattepligtige som almindelig loenindkomst. Der traekkes 8 % AM-bidrag og A-skat efter dit personlige skattekort. Netto modtager du typisk omkring 55-60 % af bruttobeloebet. Brug for at sammenligne med din tidligere nettoloen? <a class="cross-link" href="https://lonberegning.dk/" rel="noopener">Sammenlign med din tidligere nettoloen paa Loenberegning.dk <span class="ext-icon" aria-hidden="true">↗</span></a>.</p>
+        <p>Ja, dagpenge er skattepligtige som almindelig loenindkomst. Der traekkes 8 % AM-bidrag og A-skat efter dit personlige skattekort. Netto modtager du typisk omkring 55-60 % af bruttobeloebet. Brug for at sammenligne med din tidligere nettoloen? <a class="cross-link" href="https://lonberegning.dk/" rel="noopener">Sammenlign med din tidligere nettoloen på Loenberegning.dk <span class="ext-icon" aria-hidden="true">↗</span></a>.</p>
       </details>
       <details>
         <summary>Kan jeg faa dagpenge, hvis jeg selv siger op?</summary>
-        <p>Ja, men du faar 3 ugers karantaene (selvforskyldt ledighed), foer du kan modtage dagpenge. Karantaenen falder bort, hvis du har en gyldig grund som f.eks. mobning, manglende loen eller flytning.</p>
+        <p>Ja, men du faar 3 ugers karantaene (selvforskyldt ledighed), før du kan modtage dagpenge. Karantaenen falder bort, hvis du har en gyldig grund som f.eks. mobning, manglende løn eller flytning.</p>
       </details>
       <details>
         <summary>Hvad er beskaeftigelsestillaegget, og kan jeg faa det?</summary>
-        <p>Beskaeftigelsestillaegget er et tillaeg paa op til 4.157 kr./md i de foerste 3 maaneders ledighed. Det kraever, at du har haft mindst 2 aars sammenhaengende fuldtidsbeskaeftigelse umiddelbart foer ledigheden.</p>
+        <p>Beskaeftigelsestillaegget er et tillæg på op til 4.157 kr./md i de første 3 maaneders ledighed. Det kraever, at du har haft mindst 2 aars sammenhaengende fuldtidsbeskaeftigelse umiddelbart før ledigheden.</p>
       </details>
     </div>
   </section>
@@ -412,7 +412,7 @@
         <a class="btn btn--ghost" href="/beregner/efterloen.html">Efterloen</a>
         <a class="btn btn--ghost" href="/situation/ledig.html">Se alle for ledige</a>
       </div>
-      <p style="margin-top:1rem;">Skal du sammenligne med din gamle loen efter skat? Brug <a class="cross-link" href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">↗</span></a> til at regne nettoloen ud.</p>
+      <p style="margin-top:1rem;">Skal du sammenligne med din gamle løn efter skat? Brug <a class="cross-link" href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">↗</span></a> til at regne nettoloen ud.</p>
     </div>
   </section>
 
@@ -422,8 +422,8 @@
         <h3>Officielle kilder</h3>
         <p class="muted" style="font-size:0.9rem;">Senest tjekket 2026-06-10.</p>
         <ul>
-          <li><a href="https://bm.dk/satser/satser-for-2026/dagpenge" rel="nofollow noopener" target="_blank">Beskaeftigelsesministeriet - Satser 2026 (Dagpenge) <span class="ext-icon" aria-hidden="true">↗</span></a></li>
-          <li><a href="https://star.dk/ydelser/ydelsesoversigt/dagpenge/" rel="nofollow noopener" target="_blank">Styrelsen for Arbejdsmarked og Rekruttering (STAR) <span class="ext-icon" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://bm.dk//satser/satser-for-2026/dagpenge" rel="nofollow noopener" target="_blank">Beskaeftigelsesministeriet - Satser 2026 (Dagpenge) <span class="ext-icon" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://star.dk//ydelser/ydelsesoversigt/dagpenge/" rel="nofollow noopener" target="_blank">Styrelsen for Arbejdsmarked og Rekruttering (STAR) <span class="ext-icon" aria-hidden="true">↗</span></a></li>
           <li><a href="https://www.borger.dk/arbejde-dagpenge-ferie/Dagpenge-kontanthjaelp-og-sygedagpenge/Arbejdsloeshedsdagpenge" rel="nofollow noopener" target="_blank">borger.dk - Arbejdsloeshedsdagpenge <span class="ext-icon" aria-hidden="true">↗</span></a></li>
           <li><a href="https://www.retsinformation.dk/eli/retsinfo/2025/10092" rel="nofollow noopener" target="_blank">Retsinformation - Vejledning om satser m.v. 2026 <span class="ext-icon" aria-hidden="true">↗</span></a></li>
         </ul>
@@ -445,13 +445,13 @@
         </ul>
       </div>
       <div class="site-footer__col">
-        <h2>Ledig &amp; familie</h2>
+        <h2>Ledig</h2>
         <ul>
           <li><a href="/beregner/dagpenge.html">Dagpenge</a></li>
           <li><a href="/beregner/dimittend.html">Dimittend</a></li>
           <li><a href="/beregner/sygedagpenge.html">Sygedagpenge</a></li>
           <li><a href="/beregner/barselsdagpenge.html">Barselsdagpenge</a></li>
-          <li><a href="/beregner/bornepenge.html">Boernepenge</a></li>
+          <li><a href="/beregner/bornepenge.html">Børnepenge</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
@@ -463,24 +463,24 @@
           <li><a href="/beregner/depositum.html">Depositum</a></li>
           <li><a href="/beregner/flyttebudget.html">Flyttebudget</a></li>
           <li><a href="/beregner/el-vand-varme-budget.html">El, vand og varme</a></li>
-          <li><a href="/beregner/ejendomsvaerdiskat.html">Ejendomsvaerdiskat</a></li>
+          <li><a href="/beregner/ejendomsvaerdiskat.html">Ejendomsværdiskat</a></li>
           <li><a href="/beregner/andelsbolig.html">Andelsbolig</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
         <h2>Bil &amp; transport</h2>
         <ul>
-          <li><a href="/beregner/leasing-vs-koeb.html">Leasing vs. koeb</a></li>
+          <li><a href="/beregner/leasing-vs-koeb.html">Leasing vs. køb</a></li>
           <li><a href="/beregner/bil-totalomkostning.html">Bil totalomkostning</a></li>
-          <li><a href="/beregner/bil-vaerdtab.html">Bil-vaerditab</a></li>
-          <li><a href="/beregner/groen-ejerafgift.html">Groen ejerafgift</a></li>
-          <li><a href="/beregner/braendstof.html">Braendstof</a></li>
+          <li><a href="/beregner/bil-vaerdtab.html">Bil-værditab</a></li>
+          <li><a href="/beregner/groen-ejerafgift.html">Grøn ejerafgift</a></li>
+          <li><a href="/beregner/braendstof.html">Brændstof</a></li>
           <li><a href="/beregner/elbil-opladning.html">Elbil opladning</a></li>
           <li><a href="/beregner/pendlerbudget.html">Pendlerbudget</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
-        <h2>Selvstaendig</h2>
+        <h2>Selvstændig</h2>
         <ul>
           <li><a href="/beregner/moms-beregner.html">Momsberegner</a></li>
           <li><a href="/beregner/timepris-freelancer.html">Timepris</a></li>
@@ -502,7 +502,7 @@
       <div class="site-footer__col">
         <h2>Vaerktoejer</h2>
         <ul>
-          <li><a href="/sporg-ai.html">Spoerg AI</a></li>
+          <li><a href="/sporg-ai.html">Spørg AI</a></li>
           <li><a href="/#alle-beregnere">Alle beregnere</a></li>
           <li><a href="https://lonberegning.dk/" rel="noopener">Loenberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
         </ul>
@@ -518,9 +518,9 @@
         </ul>
       </div>
     </div>
-    <p class="site-footer__cross">Skal du regne nettoloen ud? Brug vores soestersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a> — specialiseret i loen og skat.</p>
+    <p class="site-footer__cross">Skal du regne nettoloen ud? Brug vores soestersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a> — specialiseret i løn og skat.</p>
     <div class="site-footer__bottom">
-      <span>&copy; 2026 hverdagstal.dk &middot; Beregn penge, stoette og udgifter i hverdagen &middot; Satser opdateret 2026-06-10</span>
+      <span>&copy; 2026 hverdagstal.dk &middot; Beregn penge, støtte og udgifter i hverdagen &middot; Satser opdateret 2026-06-10</span>
       <span>Made in Danmark</span>
     </div>
   </div>

@@ -163,10 +163,10 @@
       <ul>
         <li><a href="/">Forside</a></li>
         <li><a href="/situation/studerende.html">Studerende</a></li>
-        <li><a href="/situation/ledig-familie.html">Ledig &amp; familie</a></li>
+        <li><a href="/situation/ledig.html">Ledig</a></li>
         <li><a href="/situation/bolig-flytning.html">Bolig</a></li>
         <li><a href="/situation/bil-transport.html">Bil</a></li>
-        <li><a href="/situation/selvstaendig.html">Selvstaendig</a></li>
+        <li><a href="/situation/selvstaendig.html">Selvstændig</a></li>
         <li class="has-dropdown">
           <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-more-menu">Mere <span aria-hidden="true">&#9662;</span></button>
           <ul id="nav-more-menu" class="nav-dropdown">
@@ -176,7 +176,7 @@
             <li><a href="/om.html">Om</a></li>
           </ul>
         </li>
-        <li class="nav-cta"><a href="/sporg-ai.html" class="nav-cta-link">Spoerg AI</a></li>
+        <li class="nav-cta"><a href="/sporg-ai.html" class="nav-cta-link">Spørg AI</a></li>
       </ul>
     </nav>
   </div>
@@ -193,8 +193,8 @@
         </ol>
       </nav>
       <span class="hero__eyebrow">Skat &amp; opsparing</span>
-      <h1 class="hero__title">Aktieskat 2026 — beregn skat paa gevinst og udbytte</h1>
-      <p class="hero__lead">Indtast din realiserede kursgevinst, modtagne udbytter og evt. tab — beregneren bruger 2026-satserne (27 % under 79.400 kr, 42 % derover) og viser om det kan betale sig at vente med naeste salg til januar 2027.</p>
+      <h1 class="hero__title">Aktieskat 2026 — beregn skat på gevinst og udbytte</h1>
+      <p class="hero__lead">Indtast din realiserede kursgevinst, modtagne udbytter og evt. tab — beregneren bruger 2026-satserne (27 % under 79.400 kr, 42 % derover) og viser om det kan betale sig at vente med næste salg til januar 2027.</p>
       <span class="opdateret-badge">Opdateret 2026-06-10</span>
       <div class="cluster" style="margin-top:1rem">
         <a class="btn btn--primary btn--lg" href="#beregner">Beregn min aktieskat</a>
@@ -216,17 +216,17 @@
           <div class="field field--full">
             <label for="dividends">Modtagne udbytter i 2026 (kr)</label>
             <input id="dividends" name="dividends" type="number" inputmode="numeric" min="0" step="100" value="10000">
-            <span class="field__hint">Udbytte beskattes som aktieindkomst. Beloeb foer evt. udbytteskat indeholdt.</span>
+            <span class="field__hint">Udbytte beskattes som aktieindkomst. Beløb før evt. udbytteskat indeholdt.</span>
           </div>
 
           <div class="field">
-            <label for="realizedLoss">Realiseret tab paa noterede aktier (kr)</label>
+            <label for="realizedLoss">Realiseret tab på noterede aktier (kr)</label>
             <input id="realizedLoss" name="realizedLoss" type="number" inputmode="numeric" min="0" step="100" value="0">
             <span class="field__hint">Tab kan kun modregnes i gevinst/udbytte fra andre noterede aktier. Indtast positivt tal.</span>
           </div>
 
           <div class="field">
-            <label for="carriedLossFromPrior">Fremfoert tab fra tidligere aar (kr)</label>
+            <label for="carriedLossFromPrior">Fremfoert tab fra tidligere år (kr)</label>
             <input id="carriedLossFromPrior" name="carriedLossFromPrior" type="number" inputmode="numeric" min="0" step="100" value="0">
             <span class="field__hint">Tab indberettet til Skattestyrelsen kan fremfoeres uden tidsbegraensning.</span>
           </div>
@@ -237,7 +237,7 @@
               <option value="enlig" selected>Enlig</option>
               <option value="gift">Gift (samlevende ultimo)</option>
             </select>
-            <span class="field__hint">Gifte par der bor sammen ved aarets udgang har op til 158.800 kr i samlet graense.</span>
+            <span class="field__hint">Gifte par der bor sammen ved aarets udgang har op til 158.800 kr i samlet grænse.</span>
           </div>
 
           <div class="field">
@@ -251,7 +251,7 @@
               <input id="scenarioCompare" name="scenarioCompare" type="checkbox" checked>
               <span>Vis sammenligning med aktiesparekonto (17 % lagerbeskatning)</span>
             </label>
-            <span class="field__hint">Aktiesparekonto har loft paa 174.200 kr indskud i 2026.</span>
+            <span class="field__hint">Aktiesparekonto har loft på 174.200 kr indskud i 2026.</span>
           </div>
         </form>
 
@@ -260,9 +260,9 @@
           <dl class="calculator-result__breakdown">
             <dt>Netto aktieindkomst 2026</dt><dd id="r-netto">— kr</dd>
             <dt>Anvendelig progressionsgraense</dt><dd id="r-threshold">— kr</dd>
-            <dt>Skat under graensen (27 %)</dt><dd id="r-skatLav">— kr</dd>
-            <dt>Skat over graensen (42 %)</dt><dd id="r-skatHoj">— kr</dd>
-            <dt>Tab til fremfoersel naeste aar</dt><dd id="r-carry">— kr</dd>
+            <dt>Skat under grænsen (27 %)</dt><dd id="r-skatLav">— kr</dd>
+            <dt>Skat over grænsen (42 %)</dt><dd id="r-skatHoj">— kr</dd>
+            <dt>Tab til fremfoersel næste år</dt><dd id="r-carry">— kr</dd>
             <dt>Effektiv skatteprocent</dt><dd id="r-effective">— %</dd>
           </dl>
           <p class="calculator-result__total"><span>Samlet aktieskat 2026</span><strong id="r-total">— kr</strong></p>
@@ -270,8 +270,8 @@
           <div id="r-ask-block" hidden style="margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(13,148,136,.25)">
             <p style="margin:.25rem 0"><strong>Aktiesparekonto-sammenligning</strong></p>
             <dl class="calculator-result__breakdown">
-              <dt>Tilsvarende paa ASK (17 %)</dt><dd id="r-ask">— kr</dd>
-              <dt>Besparelse paa ASK</dt><dd id="r-ask-saving">— kr</dd>
+              <dt>Tilsvarende på ASK (17 %)</dt><dd id="r-ask">— kr</dd>
+              <dt>Besparelse på ASK</dt><dd id="r-ask-saving">— kr</dd>
             </dl>
           </div>
 
@@ -285,15 +285,15 @@
     <div class="container">
       <h2>Saadan virker det</h2>
       <div class="stack">
-        <p>Aktieindkomst er en samlepost: kursgevinst ved salg <em>plus</em> udbytter <em>minus</em> tab paa noterede aktier (baade aarets tab og fremfoert tab fra tidligere aar). Resultatet kaldes <strong>netto aktieindkomst</strong>.</p>
-        <p>Paa netto aktieindkomsten anvendes en <strong>progressionsmodel</strong> med to satser i 2026:</p>
+        <p>Aktieindkomst er en samlepost: kursgevinst ved salg <em>plus</em> udbytter <em>minus</em> tab på noterede aktier (baade aarets tab og fremfoert tab fra tidligere år). Resultatet kaldes <strong>netto aktieindkomst</strong>.</p>
+        <p>På netto aktieindkomsten anvendes en <strong>progressionsmodel</strong> med to satser i 2026:</p>
         <ul>
           <li><strong>27 %</strong> op til 79.400 kr (enlig) eller 158.800 kr (gift samlevende, fuld overfoersel)</li>
-          <li><strong>42 %</strong> af alt over graensen</li>
+          <li><strong>42 %</strong> af alt over grænsen</li>
         </ul>
-        <p>Bliver netto aktieindkomsten <strong>negativ</strong> (tab &gt; gevinst + udbytte) er skatten 0 kr, og restbeloebet gemmes som fremfoert tab uden tidsbegraensning. Det skal indberettes til Skattestyrelsen for at kunne bruges naeste aar.</p>
-        <p>For gifte par overfoeres uudnyttet progressionsgraense automatisk: hvis din aegtefaelle kun har 20.000 kr i aktieindkomst, faar du 79.400 + (79.400 − 20.000) = 138.800 kr i din egen graense.</p>
-        <p class="muted">Personfradraget kan ikke bruges paa aktieindkomst — der er ingen bundfradrag.</p>
+        <p>Bliver netto aktieindkomsten <strong>negativ</strong> (tab &gt; gevinst + udbytte) er skatten 0 kr, og restbeloebet gemmes som fremfoert tab uden tidsbegraensning. Det skal indberettes til Skattestyrelsen for at kunne bruges næste år.</p>
+        <p>For gifte par overfoeres uudnyttet progressionsgraense automatisk: hvis din aegtefaelle kun har 20.000 kr i aktieindkomst, faar du 79.400 + (79.400 − 20.000) = 138.800 kr i din egen grænse.</p>
+        <p class="muted">Personfradraget kan ikke bruges på aktieindkomst — der er ingen bundfradrag.</p>
       </div>
     </div>
   </section>
@@ -302,8 +302,8 @@
     <div class="container">
       <div class="source-card" style="border-left:4px solid #f59e0b;background:#fff8e6">
         <h3>Beslutning: saelge nu eller vente til 2027?</h3>
-        <p>Det rigtige spoergsmaal er ikke <em>"hvor meget skat skal jeg betale?"</em> men <em>"kan jeg flytte salg over aarsskiftet og spare 15 procentpoint?"</em>. Hvis du allerede er over 79.400 kr og overvejer at realisere mere, koster hver krone <strong>42 %</strong> i aar — men kun <strong>27 %</strong> hvis du venter til januar 2027 (forudsat ny graense ikke er overskredet). Beregneren viser dig den konkrete kr-besparelse, saa du kan tage stilling foer du klikker "saelg".</p>
-        <p class="muted">Overvej ogsaa modsatte traek: realiser et urealiseret tab i december for at modregne gevinsten og slippe under graensen.</p>
+        <p>Det rigtige spørgsmål er ikke <em>"hvor meget skat skal jeg betale?"</em> men <em>"kan jeg flytte salg over aarsskiftet og spare 15 procentpoint?"</em>. Hvis du allerede er over 79.400 kr og overvejer at realisere mere, koster hver krone <strong>42 %</strong> i år — men kun <strong>27 %</strong> hvis du venter til januar 2027 (forudsat ny grænse ikke er overskredet). Beregneren viser dig den konkrete kr-besparelse, så du kan tage stilling før du klikker "saelg".</p>
+        <p class="muted">Overvej ogsaa modsatte traek: realiser et urealiseret tab i december for at modregne gevinsten og slippe under grænsen.</p>
       </div>
     </div>
   </section>
@@ -314,7 +314,7 @@
       <ul class="stack">
         <li><strong>Negativ samlet aktieindkomst:</strong> skat = 0 kr, restbeloebet gemmes som fremfoert tab uden tidsbegraensning — skal indberettes i selvangivelsen for at kunne bruges senere.</li>
         <li><strong>Gifte par med skaev fordeling:</strong> uudnyttet progressionsgraense overfoeres automatisk — reelt op til 158.800 kr ved fuld overfoersel.</li>
-        <li><strong>Tab paa unoterede aktier</strong> kan <em>ikke</em> modregnes i noterede aktier — de er en separat (kildeartsbegraenset) kategori.</li>
+        <li><strong>Tab på unoterede aktier</strong> kan <em>ikke</em> modregnes i noterede aktier — de er en separat (kildeartsbegraenset) kategori.</li>
         <li><strong>Lagerbeskattede ETF'er</strong> beskattes som kapitalindkomst (ikke aktieindkomst). Saetter du dem ind her bliver tallet forkert.</li>
         <li><strong>Udenlandske udbytter</strong> med mere end 15 % udbytteskat indeholdt: brug refusionsanmodning — ikke modregning.</li>
       </ul>
@@ -331,22 +331,22 @@
 
   <section class="section faq">
     <div class="container">
-      <h2>Ofte stillede spoergsmaal</h2>
+      <h2>Ofte stillede spørgsmål</h2>
       <details>
         <summary>Hvad er aktieindkomstens progressionsgraense i 2026?</summary>
-        <p>I 2026 er progressionsgraensen 79.400 kr for enlige og 158.800 kr for gifte samlevende. Op til graensen betaler du 27 % i aktieskat, over graensen 42 %. Graensen blev haevet betydeligt fra 67.500 kr i 2025 som led i skattereformen.</p>
+        <p>I 2026 er progressionsgraensen 79.400 kr for enlige og 158.800 kr for gifte samlevende. Op til grænsen betaler du 27 % i aktieskat, over grænsen 42 %. Grænsen blev hævet betydeligt fra 67.500 kr i 2025 som led i skattereformen.</p>
       </details>
       <details>
-        <summary>Kan jeg modregne tab paa aktier i gevinst?</summary>
-        <p>Ja — men kun tab paa noterede aktier kan modregnes i gevinst og udbytte fra andre noterede aktier. Hvis tabet er stoerre end gevinsten i et aar, kan resten fremfoeres uden tidsbegraensning til senere aar. Tabet <strong>skal</strong> indberettes til Skattestyrelsen for at kunne bruges senere.</p>
+        <summary>Kan jeg modregne tab på aktier i gevinst?</summary>
+        <p>Ja — men kun tab på noterede aktier kan modregnes i gevinst og udbytte fra andre noterede aktier. Hvis tabet er stoerre end gevinsten i et år, kan resten fremfoeres uden tidsbegraensning til senere år. Tabet <strong>skal</strong> indberettes til Skattestyrelsen for at kunne bruges senere.</p>
       </details>
       <details>
-        <summary>Skal jeg vente med at saelge til naeste aar?</summary>
-        <p>Hvis du allerede har realiseret over 79.400 kr (enlig) i aktieindkomst og overvejer at saelge mere, kan det vaere klogt at vente til januar 2027 — saa undgaar du 42 % skat og betaler kun 27 % af det nye salg. Beregneren viser besparelsen i konkrete kr.</p>
+        <summary>Skal jeg vente med at saelge til næste år?</summary>
+        <p>Hvis du allerede har realiseret over 79.400 kr (enlig) i aktieindkomst og overvejer at saelge mere, kan det være klogt at vente til januar 2027 — så undgaar du 42 % skat og betaler kun 27 % af det nye salg. Beregneren viser besparelsen i konkrete kr.</p>
       </details>
       <details>
         <summary>Hvad er forskellen mellem aktiesparekonto og almindeligt depot?</summary>
-        <p>Aktiesparekonto har en flad sats paa 17 % og bruger lagerbeskatning (skat aarligt af urealiseret afkast). Loftet er 174.200 kr indskud i 2026. Almindeligt depot bruger realisationsprincippet (skat foerst ved salg) men hoejere satser (27/42 %). For laengere investeringshorisont med mellem afkast er ASK ofte billigst.</p>
+        <p>Aktiesparekonto har en flad sats på 17 % og bruger lagerbeskatning (skat aarligt af urealiseret afkast). Loftet er 174.200 kr indskud i 2026. Almindeligt depot bruger realisationsprincippet (skat først ved salg) men hoejere satser (27/42 %). For laengere investeringshorisont med mellem afkast er ASK ofte billigst.</p>
       </details>
       <details>
         <summary>Hvordan beskattes udbytter?</summary>
@@ -354,15 +354,15 @@
       </details>
       <details>
         <summary>Hvad sker der hvis jeg er gift og min aegtefaelle ikke har aktieindkomst?</summary>
-        <p>Den uudnyttede del af din aegtefaelles progressionsgraense overfoeres automatisk til dig. Hvis din aegtefaelle har 0 i aktieindkomst kan du have 158.800 kr i aktieindkomst foer 42 %-satsen rammer. Det sker automatisk paa aarsopgoerelsen.</p>
+        <p>Den uudnyttede del af din aegtefaelles progressionsgraense overfoeres automatisk til dig. Hvis din aegtefaelle har 0 i aktieindkomst kan du have 158.800 kr i aktieindkomst før 42 %-satsen rammer. Det sker automatisk på aarsopgoerelsen.</p>
       </details>
       <details>
         <summary>Skal jeg indberette mine aktiehandler selv?</summary>
-        <p>Hvis du handler via et dansk pengeinstitut indberettes data automatisk til Skattestyrelsen. Ved udenlandske maeglere (Interactive Brokers, eToro, Trade Republic) skal du selv indberette koeb, salg og udbytter i din selvangivelse senest 1. juli aaret efter.</p>
+        <p>Hvis du handler via et dansk pengeinstitut indberettes data automatisk til Skattestyrelsen. Ved udenlandske maeglere (Interactive Brokers, eToro, Trade Republic) skal du selv indberette køb, salg og udbytter i din selvangivelse senest 1. juli aaret efter.</p>
       </details>
       <details>
         <summary>Hvad sker der hvis jeg flytter aktier til aktiesparekonto?</summary>
-        <p>Du kan ikke overfoere eksisterende aktier til en aktiesparekonto — du skal saelge dem (med skat efter realisationsprincippet) og koebe ind i ASK. Vurder altid om gevinsten af lavere fremtidig skat opvejer den umiddelbare realisationsskat.</p>
+        <p>Du kan ikke overfoere eksisterende aktier til en aktiesparekonto — du skal saelge dem (med skat efter realisationsprincippet) og købe ind i ASK. Vurder altid om gevinsten af lavere fremtidig skat opvejer den umiddelbare realisationsskat.</p>
       </details>
     </div>
   </section>
@@ -380,7 +380,7 @@
         </ul>
         <p class="muted" style="margin-top:.75rem">Senest tjekket 2026-06-10.</p>
       </div>
-      <p class="cross-link" style="margin-top:1.5rem">Skal du regne nettoloen ud foer du vurderer hvor meget du kan investere? Brug vores soestersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">↗</span></a> — specialiseret i loen og skat.</p>
+      <p class="cross-link" style="margin-top:1.5rem">Skal du regne nettoloen ud før du vurderer hvor meget du kan investere? Brug vores soestersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">↗</span></a> — specialiseret i løn og skat.</p>
     </div>
   </section>
 </main>
@@ -397,13 +397,13 @@
         </ul>
       </div>
       <div class="site-footer__col">
-        <h2>Ledig &amp; familie</h2>
+        <h2>Ledig</h2>
         <ul>
           <li><a href="/beregner/dagpenge.html">Dagpenge</a></li>
           <li><a href="/beregner/dimittend.html">Dimittend</a></li>
           <li><a href="/beregner/sygedagpenge.html">Sygedagpenge</a></li>
           <li><a href="/beregner/barselsdagpenge.html">Barselsdagpenge</a></li>
-          <li><a href="/beregner/bornepenge.html">Boernepenge</a></li>
+          <li><a href="/beregner/bornepenge.html">Børnepenge</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
@@ -415,24 +415,24 @@
           <li><a href="/beregner/depositum.html">Depositum</a></li>
           <li><a href="/beregner/flyttebudget.html">Flyttebudget</a></li>
           <li><a href="/beregner/el-vand-varme-budget.html">El, vand og varme</a></li>
-          <li><a href="/beregner/ejendomsvaerdiskat.html">Ejendomsvaerdiskat</a></li>
+          <li><a href="/beregner/ejendomsvaerdiskat.html">Ejendomsværdiskat</a></li>
           <li><a href="/beregner/andelsbolig.html">Andelsbolig</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
         <h2>Bil &amp; transport</h2>
         <ul>
-          <li><a href="/beregner/leasing-vs-koeb.html">Leasing vs. koeb</a></li>
+          <li><a href="/beregner/leasing-vs-koeb.html">Leasing vs. køb</a></li>
           <li><a href="/beregner/bil-totalomkostning.html">Bil totalomkostning</a></li>
-          <li><a href="/beregner/bil-vaerdtab.html">Bil-vaerditab</a></li>
-          <li><a href="/beregner/groen-ejerafgift.html">Groen ejerafgift</a></li>
-          <li><a href="/beregner/braendstof.html">Braendstof</a></li>
+          <li><a href="/beregner/bil-vaerdtab.html">Bil-værditab</a></li>
+          <li><a href="/beregner/groen-ejerafgift.html">Grøn ejerafgift</a></li>
+          <li><a href="/beregner/braendstof.html">Brændstof</a></li>
           <li><a href="/beregner/elbil-opladning.html">Elbil opladning</a></li>
           <li><a href="/beregner/pendlerbudget.html">Pendlerbudget</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
-        <h2>Selvstaendig</h2>
+        <h2>Selvstændig</h2>
         <ul>
           <li><a href="/beregner/moms-beregner.html">Momsberegner</a></li>
           <li><a href="/beregner/timepris-freelancer.html">Timepris</a></li>
@@ -454,7 +454,7 @@
       <div class="site-footer__col">
         <h2>Vaerktoejer</h2>
         <ul>
-          <li><a href="/sporg-ai.html">Spoerg AI</a></li>
+          <li><a href="/sporg-ai.html">Spørg AI</a></li>
           <li><a href="/#alle-beregnere">Alle beregnere</a></li>
           <li><a href="https://lonberegning.dk/" rel="noopener">Loenberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
         </ul>
@@ -470,9 +470,9 @@
         </ul>
       </div>
     </div>
-    <p class="site-footer__cross">Skal du regne nettoloen ud? Brug vores soestersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a> — specialiseret i loen og skat.</p>
+    <p class="site-footer__cross">Skal du regne nettoloen ud? Brug vores soestersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a> — specialiseret i løn og skat.</p>
     <div class="site-footer__bottom">
-      <span>&copy; 2026 hverdagstal.dk &middot; Beregn penge, stoette og udgifter i hverdagen &middot; Satser opdateret 2026-06-10</span>
+      <span>&copy; 2026 hverdagstal.dk &middot; Beregn penge, støtte og udgifter i hverdagen &middot; Satser opdateret 2026-06-10</span>
       <span>Made in Danmark</span>
     </div>
   </div>

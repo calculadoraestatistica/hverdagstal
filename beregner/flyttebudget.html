@@ -29,7 +29,7 @@
 <link rel="apple-touch-icon" href="/icons/icon-192.png">
 <link rel="manifest" href="/site.webmanifest">
 
-<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/style.css">
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7516029395999799" crossorigin="anonymous"></script>
 
@@ -126,10 +126,10 @@
       <ul>
         <li><a href="/">Forside</a></li>
         <li><a href="/situation/studerende.html">Studerende</a></li>
-        <li><a href="/situation/ledig-familie.html">Ledig &amp; familie</a></li>
+        <li><a href="/situation/ledig.html">Ledig</a></li>
         <li><a href="/situation/bolig-flytning.html">Bolig</a></li>
         <li><a href="/situation/bil-transport.html">Bil</a></li>
-        <li><a href="/situation/selvstaendig.html">Selvstaendig</a></li>
+        <li><a href="/situation/selvstaendig.html">Selvstændig</a></li>
         <li class="has-dropdown">
           <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-more-menu">Mere <span aria-hidden="true">&#9662;</span></button>
           <ul id="nav-more-menu" class="nav-dropdown">
@@ -139,7 +139,7 @@
             <li><a href="/om.html">Om</a></li>
           </ul>
         </li>
-        <li class="nav-cta"><a href="/sporg-ai.html" class="nav-cta-link">Spoerg AI</a></li>
+        <li class="nav-cta"><a href="/sporg-ai.html" class="nav-cta-link">Spørg AI</a></li>
       </ul>
     </nav>
   </div>
@@ -157,11 +157,11 @@
       </nav>
       <p class="hero__eyebrow">Bolig &amp; flytning</p>
       <h1 class="hero__title">Flyttebudget 2026 — hvad koster det at flytte?</h1>
-      <p class="hero__lead">Faa et realistisk overblik over hele din flytning: flyttefirma eller goer-det-selv, transport, pakkemateriale, opbevaring og adresseskift. Beregneren bruger 2026-priser og tager hoejde for boligstoerrelse, afstand og sæson.</p>
+      <p class="hero__lead">Faa et realistisk overblik over hele din flytning: flyttefirma eller gør-det-selv, transport, pakkemateriale, opbevaring og adresseskift. Beregneren bruger 2026-priser og tager hoejde for boligstoerrelse, afstand og sæson.</p>
       <p><span class="opdateret-badge">Opdateret 2026-06-10</span> <span class="badge badge--gold">2026-satser</span></p>
       <p class="cluster">
         <a class="btn btn--primary btn--lg" href="#beregner">Start beregningen</a>
-        <a class="btn btn--ghost" href="#faq">Se ofte stillede spoergsmaal</a>
+        <a class="btn btn--ghost" href="#faq">Se ofte stillede spørgsmål</a>
       </p>
     </div>
   </section>
@@ -170,7 +170,7 @@
     <div class="container site-grid">
       <div class="stack">
         <h2>Indtast oplysninger om din flytning</h2>
-        <p class="muted">Alle felter er valgfri — standardvaerdier dækker en typisk 3-vaerelses lejlighed paa 75 m2 med 25 km flytteafstand.</p>
+        <p class="muted">Alle felter er valgfri — standardvaerdier dækker en typisk 3-vaerelses lejlighed på 75 m2 med 25 km flytteafstand.</p>
 
         <form class="calculator-form" id="flytteForm" novalidate>
           <div class="field">
@@ -192,9 +192,9 @@
           </div>
 
           <div class="field">
-            <label for="flyttetype">Goer-det-selv eller flyttefirma</label>
+            <label for="flyttetype">Gør-det-selv eller flyttefirma</label>
             <select id="flyttetype" name="flyttetype">
-              <option value="diy" selected>Goer-det-selv (lejet kassevogn)</option>
+              <option value="diy" selected>Gør-det-selv (lejet kassevogn)</option>
               <option value="delvist">Delvist flyttefirma (kun tungt)</option>
               <option value="fuldt">Fuldt flyttefirma (pakker + flytter)</option>
             </select>
@@ -224,13 +224,13 @@
 
           <div class="field field--full">
             <label><input type="checkbox" id="opbevaring" name="opbevaring"> Behov for opbevaring (depot)</label>
-            <span class="field__hint">Mellemopbevaring koster typisk 500-1.500 kr/maaned for 5-10 m2.</span>
+            <span class="field__hint">Mellemopbevaring koster typisk 500-1.500 kr/måned for 5-10 m2.</span>
           </div>
 
           <div class="field field--full">
             <label for="nyeMoebler">Budget til nye moebler (kr)</label>
             <input id="nyeMoebler" name="nyeMoebler" type="number" inputmode="numeric" min="0" max="500000" step="100" value="0">
-            <span class="field__hint">Skoen til hvad du forventer at koebe nyt (gardiner, lamper, hvidevarer).</span>
+            <span class="field__hint">Skoen til hvad du forventer at købe nyt (gardiner, lamper, hvidevarer).</span>
           </div>
 
           <div class="field field--full cluster">
@@ -242,7 +242,7 @@
 
       <aside class="calculator-result" id="resultat" aria-live="polite">
         <h2>Dit flyttebudget</h2>
-        <p class="muted" id="resultat-intro">Udfyld formularen og tryk <strong>Beregn flyttebudget</strong> — saa ser du det samlede 2026-budget her.</p>
+        <p class="muted" id="resultat-intro">Udfyld formularen og tryk <strong>Beregn flyttebudget</strong> — så ser du det samlede 2026-budget her.</p>
         <dl class="calculator-result__breakdown" id="resultat-breakdown" hidden>
           <dt>Flyttefirma</dt><dd id="r-flyttefirma">0 kr</dd>
           <dt>Transport / lejebil</dt><dd id="r-transport">0 kr</dd>
@@ -271,22 +271,22 @@
       <p>Vi summerer syv delposter til et samlet 2026-budget og laegger en 10% buffer ovenpaa til uforudsete udgifter som fraflytnings-rengoering eller smaareparationer. Beregneren bruger gennemsnitspriser fra danske flyttefirmaer og PostNord pr. juni 2026.</p>
 
         <h3>1. Flyttefirma</h3>
-        <p>Goer-det-selv koster 0 kr i denne post. Delvist flyttefirma (kun de tunge ting) regnes til 3.500 kr fast pris. Fuldt flyttefirma 2026 beregnes som ca. <strong>550 kr/m2</strong> (basis) gange dit boligareal, ganget med en sæsonfaktor (1,20 i sommer, 1,00 ellers). Hvis afstanden er over 30 km tillaegges 12 kr/km for kilometerne ud over de 30.</p>
+        <p>Gør-det-selv koster 0 kr i denne post. Delvist flyttefirma (kun de tunge ting) regnes til 3.500 kr fast pris. Fuldt flyttefirma 2026 beregnes som ca. <strong>550 kr/m2</strong> (basis) gange dit boligareal, ganget med en sæsonfaktor (1,20 i sommer, 1,00 ellers). Hvis afstanden er over 30 km tillaegges 12 kr/km for kilometerne ud over de 30.</p>
 
         <h3>2. Transport / lejebil</h3>
-        <p>Ved goer-det-selv lejes en 3,5 t kassevogn til ca. <strong>1.100 kr/dag</strong>, og braendstoffet beregnes som <strong>2,20 kr/km × afstand × 2</strong> (frem og tilbage). Ved flyttefirma er kilometer indregnet i timeprisen og posten saettes til 0.</p>
+        <p>Ved gør-det-selv lejes en 3,5 t kassevogn til ca. <strong>1.100 kr/dag</strong>, og braendstoffet beregnes som <strong>2,20 kr/km × afstand × 2</strong> (frem og tilbage). Ved flyttefirma er kilometer indregnet i timeprisen og posten saettes til 0.</p>
 
         <h3>3. Pakkemateriale</h3>
-        <p>Vi regner ca. <strong>18 kr/m2</strong>, hvilket daekker flyttekasser (25 kr/stk i ca. en kasse pr. 3 m2), bobleplast, fyldpapir, tape og maerkning. Ved fuldt flyttefirma indgaar materiale i pakke-prisen og posten halveres.</p>
+        <p>Vi regner ca. <strong>18 kr/m2</strong>, hvilket dækker flyttekasser (25 kr/stk i ca. en kasse pr. 3 m2), bobleplast, fyldpapir, tape og mærkning. Ved fuldt flyttefirma indgaar materiale i pakke-prisen og posten halveres.</p>
 
         <h3>4. Tunge / specielle ting</h3>
         <p>Tunge moebler: +2.000 kr. Klaver eller stort akvarium: +3.500 kr. Disse tillaegges flyttefirma-prisen og er kun relevante ved delvist eller fuldt flyttefirma.</p>
 
         <h3>5. Opbevaring</h3>
-        <p>Selvopbevaring koster ca. <strong>110 kr/m2/md</strong> i 2026. Vi viser prisen for én maaneds depot paa 8 m2, dvs. ca. 880 kr, hvis du har sat hak ved "behov for opbevaring".</p>
+        <p>Selvopbevaring koster ca. <strong>110 kr/m2/md</strong> i 2026. Vi viser prisen for én maaneds depot på 8 m2, dvs. ca. 880 kr, hvis du har sat hak ved "behov for opbevaring".</p>
 
         <h3>6. Adresseskift</h3>
-        <p>Folkeregister-anmeldelse paa borger.dk er gratis. Navneskilt paa postkasse: 150-300 kr. PostNord eftersendelse 6 maaneder: 220 kr. Vi regner med samlet ca. <strong>450 kr</strong>.</p>
+        <p>Folkeregister-anmeldelse på borger.dk er gratis. Navneskilt på postkasse: 150-300 kr. PostNord eftersendelse 6 måneder: 220 kr. Vi regner med samlet ca. <strong>450 kr</strong>.</p>
 
         <h3>7. Nye moebler og buffer</h3>
         <p>Dit eget skoen til nye moebler/udstyr laegges direkte oveni. Til sidst lægges en <strong>10% buffer</strong> ovenpaa hele summen for at fange uforudsete udgifter.</p>
@@ -298,32 +298,32 @@
       <div class="calculator-result" role="note" style="border-left:6px solid #f5b301">
         <h2>Beslutning: Selv eller flyttefirma?</h2>
         <p><strong>Skal jeg flytte selv eller bruge professionelt flyttefirma — og hvor meget skal jeg saette af i 2026-priser?</strong></p>
-        <p>Tommelfingerregel for 2026: under 50 m2 og kort afstand giver goer-det-selv klart bedst oekonomi (typisk 4.000-8.000 kr). Over 80 m2, mange tunge ting eller mere end 100 km — saa er fuldt flyttefirma ofte pengene vaerd, selv om regningen lander paa 25.000-45.000 kr. Den mellemste loesning (delvist flyttefirma kun til klaver, safe og hvidevarer) sparer ofte 30-40% i forhold til fuld pakke-loesning.</p>
-        <p class="muted">Husk: vinterhalvaaret giver 5-10% rabat, og det er smartest at undgaa de sidste dage i juli og foerste uge i august (studiestart) hvor priserne topper.</p>
+        <p>Tommelfingerregel for 2026: under 50 m2 og kort afstand giver gør-det-selv klart bedst økonomi (typisk 4.000-8.000 kr). Over 80 m2, mange tunge ting eller mere end 100 km — så er fuldt flyttefirma ofte pengene værd, selv om regningen lander på 25.000-45.000 kr. Den mellemste loesning (delvist flyttefirma kun til klaver, safe og hvidevarer) sparer ofte 30-40% i forhold til fuld pakke-loesning.</p>
+        <p class="muted">Husk: vinterhalvaaret giver 5-10% rabat, og det er smartest at undgaa de sidste dage i juli og første uge i august (studiestart) hvor priserne topper.</p>
       </div>
     </div>
   </section>
 
   <section class="section section--alt">
     <div class="container stack">
-      <h2>Vigtige situationer at vaere opmaerksom paa</h2>
+      <h2>Vigtige situationer at være opmaerksom på</h2>
       <ul>
         <li><strong>Flytning til/fra oe:</strong> faergebillet for flyttebil tillaegges typisk 800-2.500 kr afhaengig af rute og koeretoejets stoerrelse.</li>
         <li><strong>Flytning til udlandet:</strong> kraever internationalt flyttefirma og told-/forsendelsespapirer — beregneren er kun gyldig for indenrigsflytninger.</li>
         <li><strong>Studerende fra kollegium:</strong> ofte meget faerre m2 end formularens minimum — én kassevogn og 2-3 venner med pizza er nok.</li>
         <li><strong>Delt boepael / skilsmisse:</strong> hvis I begge skal videre i hver sin retning, skal budgettet evt. dobbelttegnes.</li>
-        <li><strong>Elevator-fri 4. sal:</strong> flyttefirmaer laegger typisk 10-20% etagepaalseg paa — angiv ekstra tunge moebler for at faa et mere realistisk estimat.</li>
-        <li><strong>Forsikring under flytning:</strong> indboforsikringen daekker normalt ved goer-det-selv, men ved professionel flytter er det flytterens ansvarsforsikring der gaelder. Kontroller policen for transportskader.</li>
+        <li><strong>Elevator-fri 4. sal:</strong> flyttefirmaer laegger typisk 10-20% etagepaalseg på — angiv ekstra tunge moebler for at faa et mere realistisk estimat.</li>
+        <li><strong>Forsikring under flytning:</strong> indboforsikringen dækker normalt ved gør-det-selv, men ved professionel flytter er det flytterens ansvarsforsikring der gaelder. Kontroller policen for transportskader.</li>
       </ul>
     </div>
   </section>
 
   <section class="section faq" id="faq">
     <div class="container stack">
-      <h2>Ofte stillede spoergsmaal</h2>
+      <h2>Ofte stillede spørgsmål</h2>
       <details>
         <summary>Hvor meget koster det at flytte i Danmark i 2026?</summary>
-        <p>En typisk 75 m2 lejlighed med flyttefirma koster 25.000-40.000 kr i sommeren 2026. Goer-det-selv loesningen ligger paa 4.000-8.000 kr inkl. kassevogn, pakkemateriale og braendstof.</p>
+        <p>En typisk 75 m2 lejlighed med flyttefirma koster 25.000-40.000 kr i sommeren 2026. Gør-det-selv loesningen ligger på 4.000-8.000 kr inkl. kassevogn, pakkemateriale og brændstof.</p>
       </details>
       <details>
         <summary>Er det billigere at flytte om vinteren?</summary>
@@ -335,19 +335,19 @@
       </details>
       <details>
         <summary>Er adresseaendring gratis i 2026?</summary>
-        <p>Ja. Folkeregister-anmeldelse via borger.dk med MitID er gratis og skal ske senest 5 dage efter flytning. PostNord eftersendelse koster 220 kr for 6 maaneder.</p>
+        <p>Ja. Folkeregister-anmeldelse via borger.dk med MitID er gratis og skal ske senest 5 dage efter flytning. PostNord eftersendelse koster 220 kr for 6 måneder.</p>
       </details>
       <details>
         <summary>Hvor mange flyttekasser skal jeg bruge til 75 m2?</summary>
-        <p>Tommelfingerregel: 1 kasse pr 3 m2 = ca. 25 kasser til 75 m2. Familier med boern eller mange boeger laegger 30-40% oveni.</p>
+        <p>Tommelfingerregel: 1 kasse pr 3 m2 = ca. 25 kasser til 75 m2. Familier med børn eller mange boeger laegger 30-40% oveni.</p>
       </details>
       <details>
-        <summary>Daekker min indboforsikring skader under flytning?</summary>
-        <p>Ja, ved goer-det-selv flytning daekker din normale indboforsikring. Ved professionelt flyttefirma er det flytterens ansvarsforsikring der gaelder (typisk op til 500.000 kr). Kontroller altid policen for transportskader.</p>
+        <summary>Dækker min indboforsikring skader under flytning?</summary>
+        <p>Ja, ved gør-det-selv flytning dækker din normale indboforsikring. Ved professionelt flyttefirma er det flytterens ansvarsforsikring der gaelder (typisk op til 500.000 kr). Kontroller altid policen for transportskader.</p>
       </details>
       <details>
         <summary>Kan jeg traekke flytteudgifter fra i skat?</summary>
-        <p>Kun hvis flytningen er joobetinget og afstanden til nyt arbejde overstiger den gamle med mere end 4 timer transport dagligt — saa kan du faa fradrag som befordring. Privatflytning er ikke fradragsberettiget.</p>
+        <p>Kun hvis flytningen er joobetinget og afstanden til nyt arbejde overstiger den gamle med mere end 4 timer transport dagligt — så kan du faa fradrag som befordring. Privatflytning er ikke fradragsberettiget.</p>
       </details>
     </div>
   </section>
@@ -357,7 +357,7 @@
       <div class="source-card">
         <h3>Officielle kilder</h3>
         <ul>
-          <li><a href="https://www.borger.dk/bolig-og-flytning/Flytning-oversigt" rel="nofollow noopener" target="_blank">borger.dk — Flytning og adresseaendring <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
+          <li><a href="https://www.borger.dk/" rel="nofollow noopener" target="_blank">borger.dk — Flytning og adresseaendring <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
           <li><a href="https://www.postnord.dk/modtag/eftersendelse" rel="nofollow noopener" target="_blank">PostNord — Eftersendelse priser 2026 <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
           <li><a href="https://taenk.dk/aktiviteter-og-kampagner/test/test-af-flyttefirmaer" rel="nofollow noopener" target="_blank">Forbrugerraadet Taenk — Flytteguide <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
           <li><a href="https://www.dst.dk/da/Statistik/emner/oekonomi/prisindeks/forbrugerprisindeks" rel="nofollow noopener" target="_blank">Danmarks Statistik — Forbrugerprisindeks transport <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
@@ -381,13 +381,13 @@
         </ul>
       </div>
       <div class="site-footer__col">
-        <h2>Ledig &amp; familie</h2>
+        <h2>Ledig</h2>
         <ul>
           <li><a href="/beregner/dagpenge.html">Dagpenge</a></li>
           <li><a href="/beregner/dimittend.html">Dimittend</a></li>
           <li><a href="/beregner/sygedagpenge.html">Sygedagpenge</a></li>
           <li><a href="/beregner/barselsdagpenge.html">Barselsdagpenge</a></li>
-          <li><a href="/beregner/bornepenge.html">Boernepenge</a></li>
+          <li><a href="/beregner/bornepenge.html">Børnepenge</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
@@ -399,24 +399,24 @@
           <li><a href="/beregner/depositum.html">Depositum</a></li>
           <li><a href="/beregner/flyttebudget.html">Flyttebudget</a></li>
           <li><a href="/beregner/el-vand-varme-budget.html">El, vand og varme</a></li>
-          <li><a href="/beregner/ejendomsvaerdiskat.html">Ejendomsvaerdiskat</a></li>
+          <li><a href="/beregner/ejendomsvaerdiskat.html">Ejendomsværdiskat</a></li>
           <li><a href="/beregner/andelsbolig.html">Andelsbolig</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
         <h2>Bil &amp; transport</h2>
         <ul>
-          <li><a href="/beregner/leasing-vs-koeb.html">Leasing vs. koeb</a></li>
+          <li><a href="/beregner/leasing-vs-koeb.html">Leasing vs. køb</a></li>
           <li><a href="/beregner/bil-totalomkostning.html">Bil totalomkostning</a></li>
-          <li><a href="/beregner/bil-vaerdtab.html">Bil-vaerditab</a></li>
-          <li><a href="/beregner/groen-ejerafgift.html">Groen ejerafgift</a></li>
-          <li><a href="/beregner/braendstof.html">Braendstof</a></li>
+          <li><a href="/beregner/bil-vaerdtab.html">Bil-værditab</a></li>
+          <li><a href="/beregner/groen-ejerafgift.html">Grøn ejerafgift</a></li>
+          <li><a href="/beregner/braendstof.html">Brændstof</a></li>
           <li><a href="/beregner/elbil-opladning.html">Elbil opladning</a></li>
           <li><a href="/beregner/pendlerbudget.html">Pendlerbudget</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
-        <h2>Selvstaendig</h2>
+        <h2>Selvstændig</h2>
         <ul>
           <li><a href="/beregner/moms-beregner.html">Momsberegner</a></li>
           <li><a href="/beregner/timepris-freelancer.html">Timepris</a></li>
@@ -438,7 +438,7 @@
       <div class="site-footer__col">
         <h2>Vaerktoejer</h2>
         <ul>
-          <li><a href="/sporg-ai.html">Spoerg AI</a></li>
+          <li><a href="/sporg-ai.html">Spørg AI</a></li>
           <li><a href="/#alle-beregnere">Alle beregnere</a></li>
           <li><a href="https://lonberegning.dk/" rel="noopener">Loenberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
         </ul>
@@ -454,9 +454,9 @@
         </ul>
       </div>
     </div>
-    <p class="site-footer__cross">Skal du regne nettoloen ud? Brug vores soestersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a> — specialiseret i loen og skat.</p>
+    <p class="site-footer__cross">Skal du regne nettoloen ud? Brug vores soestersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a> — specialiseret i løn og skat.</p>
     <div class="site-footer__bottom">
-      <span>&copy; 2026 hverdagstal.dk &middot; Beregn penge, stoette og udgifter i hverdagen &middot; Satser opdateret 2026-06-10</span>
+      <span>&copy; 2026 hverdagstal.dk &middot; Beregn penge, støtte og udgifter i hverdagen &middot; Satser opdateret 2026-06-10</span>
       <span>Made in Danmark</span>
     </div>
   </div>

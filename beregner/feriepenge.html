@@ -187,10 +187,10 @@
       <ul>
         <li><a href="/">Forside</a></li>
         <li><a href="/situation/studerende.html">Studerende</a></li>
-        <li><a href="/situation/ledig-familie.html">Ledig &amp; familie</a></li>
+        <li><a href="/situation/ledig.html">Ledig</a></li>
         <li><a href="/situation/bolig-flytning.html">Bolig</a></li>
         <li><a href="/situation/bil-transport.html">Bil</a></li>
-        <li><a href="/situation/selvstaendig.html">Selvstaendig</a></li>
+        <li><a href="/situation/selvstaendig.html">Selvstændig</a></li>
         <li class="has-dropdown">
           <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-more-menu">Mere <span aria-hidden="true">&#9662;</span></button>
           <ul id="nav-more-menu" class="nav-dropdown">
@@ -200,7 +200,7 @@
             <li><a href="/om.html">Om</a></li>
           </ul>
         </li>
-        <li class="nav-cta"><a href="/sporg-ai.html" class="nav-cta-link">Spoerg AI</a></li>
+        <li class="nav-cta"><a href="/sporg-ai.html" class="nav-cta-link">Spørg AI</a></li>
       </ul>
     </nav>
   </div>
@@ -229,22 +229,22 @@
       <div class="site-grid">
         <div>
           <h2>Indtast dine tal</h2>
-          <p class="muted">Brug din ferieberettigede aarsloen — det vil sige bruttoloenen uden arbejdsgiverens pensionsbidrag og skattefri tillaeg.</p>
+          <p class="muted">Brug din ferieberettigede aarsloen — det vil sige bruttoloenen uden arbejdsgiverens pensionsbidrag og skattefri tillæg.</p>
           <form class="calculator-form" id="feriepenge-form" novalidate>
             <div class="field field--full">
-              <label for="annualSalary">Aarsloen brutto (ferieberettiget loen)</label>
+              <label for="annualSalary">Aarsloen brutto (ferieberettiget løn)</label>
               <input id="annualSalary" name="annualSalary" type="number" min="0" step="1000" value="450000" inputmode="numeric">
-              <small class="field__hint">Almindelig bruttoloen plus pensionspligtig loen — men IKKE arbejdsgiverbetalt pension eller skattefri tillaeg. Angives i kr/aar.</small>
+              <small class="field__hint">Almindelig bruttoloen plus pensionspligtig løn — men IKKE arbejdsgiverbetalt pension eller skattefri tillæg. Angives i kr/år.</small>
             </div>
 
             <div class="field field--full">
               <label for="feriepengetype">Hvad faar du udbetalt?</label>
               <select id="feriepengetype" name="feriepengetype">
                 <option value="feriegodtgorelse" selected>Feriegodtgoerelse (12,5 %)</option>
-                <option value="ferie_med_loen">Ferie med loen + ferietillaeg (1 %)</option>
+                <option value="ferie_med_loen">Ferie med løn + ferietillaeg (1 %)</option>
                 <option value="resterende">Udbetaling af resterende feriedage</option>
               </select>
-              <small class="field__hint">Timelonnede og fratraadte: feriegodtgoerelse 12,5 %. Fastansatte med ferie med loen: kun 1 % ferietillaeg. Resterende ikke-afholdt ferie: konvertering til kontanter.</small>
+              <small class="field__hint">Timelonnede og fratraadte: feriegodtgoerelse 12,5 %. Fastansatte med ferie med løn: kun 1 % ferietillaeg. Resterende ikke-afholdt ferie: konvertering til kontanter.</small>
             </div>
 
             <div class="field">
@@ -254,16 +254,16 @@
             </div>
 
             <div class="field">
-              <label for="includeFerietillaeg">Inkluder ferietillaeg paa 1 %</label>
+              <label for="includeFerietillaeg">Inkluder ferietillaeg på 1 %</label>
               <select id="includeFerietillaeg" name="includeFerietillaeg">
                 <option value="true" selected>Ja</option>
                 <option value="false">Nej</option>
               </select>
-              <small class="field__hint">Hvis du har ferie med loen faar du ogsaa 1 % ferietillaeg udbetalt i maj og august.</small>
+              <small class="field__hint">Hvis du har ferie med løn faar du ogsaa 1 % ferietillaeg udbetalt i maj og august.</small>
             </div>
 
             <div class="field">
-              <label for="saerligFeriegodtgorelse">Saerlig feriegodtgoerelse (offentlig sektor)</label>
+              <label for="saerligFeriegodtgorelse">Særlig feriegodtgoerelse (offentlig sektor)</label>
               <select id="saerligFeriegodtgorelse" name="saerligFeriegodtgorelse">
                 <option value="0" selected>0 % (privat sektor)</option>
                 <option value="1.15">1,15 % (kommune/region min.)</option>
@@ -293,7 +293,7 @@
                 <option value="0.7" selected>0,7 % (gennemsnit)</option>
                 <option value="1.0">1,0 %</option>
               </select>
-              <small class="field__hint">Saet 0 hvis du ikke er medlem af folkekirken.</small>
+              <small class="field__hint">Sæt 0 hvis du ikke er medlem af folkekirken.</small>
             </div>
 
             <div class="field">
@@ -302,7 +302,7 @@
                 <option value="false" selected>Nej</option>
                 <option value="true">Ja</option>
               </select>
-              <small class="field__hint">Topskat rammer ved indkomst over 777.900 kr/aar i 2026. Topskat = 15 % ekstra. Ny mellemskat (7,5 %) for indkomst 611.800-777.900 kr.</small>
+              <small class="field__hint">Topskat rammer ved indkomst over 777.900 kr/år i 2026. Topskat = 15 % ekstra. Ny mellemskat (7,5 %) for indkomst 611.800-777.900 kr.</small>
             </div>
           </form>
         </div>
@@ -311,13 +311,13 @@
           <h2>Resultat</h2>
           <dl class="calculator-result__breakdown">
             <dt>Brutto feriepenge (12,5 %)</dt><dd id="r-brutto">—</dd>
-            <dt>Saerlig feriegodtgoerelse</dt><dd id="r-saerlig">—</dd>
+            <dt>Særlig feriegodtgoerelse</dt><dd id="r-saerlig">—</dd>
             <dt>Ferietillaeg (1 %)</dt><dd id="r-ferietillaeg">—</dd>
             <dt>Total brutto udbetaling</dt><dd id="r-total-brutto">—</dd>
             <dt>− AM-bidrag (8 %)</dt><dd id="r-am">—</dd>
-            <dt>Beloeb efter AM-bidrag</dt><dd id="r-after-am">—</dd>
+            <dt>Beløb efter AM-bidrag</dt><dd id="r-after-am">—</dd>
             <dt>Marginalskat anvendt</dt><dd id="r-marginal">—</dd>
-            <dt>− A-skat paa feriepenge</dt><dd id="r-askat">—</dd>
+            <dt>− A-skat på feriepenge</dt><dd id="r-askat">—</dd>
             <dt>Effektiv skat</dt><dd id="r-effective">—</dd>
           </dl>
           <p class="calculator-result__total"><span>Netto udbetalt</span><strong id="r-netto">—</strong></p>
@@ -334,13 +334,13 @@
   <section class="section section--alt">
     <div class="container stack">
       <h2>Saadan virker det</h2>
-      <p>Feriepenge beskattes som A-indkomst — men fordi det er en engangsudbetaling oven paa din almindelige loen, traekkes der ikke personfradrag i selve feriepengebeloebet (personfradraget bruges allerede af din maanedsloen). Derfor foeles skatten hoejere end paa lonnen, selv om regelsaettet er det samme.</p>
+      <p>Feriepenge beskattes som A-indkomst — men fordi det er en engangsudbetaling oven på din almindelige løn, traekkes der ikke personfradrag i selve feriepengebeloebet (personfradraget bruges allerede af din maanedsloen). Derfor foeles skatten hoejere end på lonnen, selv om regelsaettet er det samme.</p>
       <ol class="stack">
-        <li><strong>Beregn brutto feriepenge.</strong> 12,5 % af din ferieberettigede aarsloen for feriegodtgoerelse, eller 1 % som ferietillaeg hvis du har ferie med loen. Saerlig feriegodtgoerelse (1,15-1,95 %) laegges paa for offentligt ansatte.</li>
-        <li><strong>Traek 8 % AM-bidrag.</strong> Arbejdsmarkedsbidrag traekkes foerst af bruttobeloebet.</li>
-        <li><strong>Beregn marginalskat.</strong> Bundskat 12,06 % + kommuneskat + kirkeskat. Er du i topskat, laegges 15 % ekstra paa — dog hoejst skatteloftet paa 52,07 %.</li>
-        <li><strong>Traek A-skat.</strong> Marginalskatten ganges paa beloebet efter AM-bidrag.</li>
-        <li><strong>Resultat: netto udbetalt.</strong> Det du faar paa kontoen — typisk 50-62 % af brutto, afhaengigt af kommune og topskat.</li>
+        <li><strong>Beregn brutto feriepenge.</strong> 12,5 % af din ferieberettigede aarsloen for feriegodtgoerelse, eller 1 % som ferietillaeg hvis du har ferie med løn. Særlig feriegodtgoerelse (1,15-1,95 %) laegges på for offentligt ansatte.</li>
+        <li><strong>Traek 8 % AM-bidrag.</strong> Arbejdsmarkedsbidrag traekkes først af bruttobeloebet.</li>
+        <li><strong>Beregn marginalskat.</strong> Bundskat 12,06 % + kommuneskat + kirkeskat. Er du i topskat, laegges 15 % ekstra på — dog hoejst skatteloftet på 52,07 %.</li>
+        <li><strong>Traek A-skat.</strong> Marginalskatten ganges på beloebet efter AM-bidrag.</li>
+        <li><strong>Resultat: netto udbetalt.</strong> Det du faar på kontoen — typisk 50-62 % af brutto, afhaengigt af kommune og topskat.</li>
       </ol>
       <p class="muted">Beregneren bruger 2026-satser: AM-bidrag 8 %, bundskat 12,06 %, topskat 15 % over 777.900 kr (efter AM), skatteloft 52,07 %.</p>
     </div>
@@ -350,7 +350,7 @@
     <div class="container">
       <aside class="source-card" style="border-left:4px solid #f59e0b;background:#fffbeb;">
         <h2>Beslutningsvinkel: udbetal nu eller vent?</h2>
-        <p>Skal du tage feriepenge ud nu — med fuld beskatning samme aar — eller vente til naeste aar, hvor din indkomst er lavere og marginalskatten mindre? Hvor meget faar du reelt udbetalt? Mange undervurderer skatten paa store engangsudbetalinger. Hvis du allerede ligger taet paa topskattegraensen (777.900 kr i 2026), kan du spare 15 % af det beloeb, som ellers ville have skubbet dig over graensen, ved at udskyde feriepenge til et aar med lavere indkomst — fx ved jobskifte, orlov, barsel eller delvis pension.</p>
+        <p>Skal du tage feriepenge ud nu — med fuld beskatning samme år — eller vente til næste år, hvor din indkomst er lavere og marginalskatten mindre? Hvor meget faar du reelt udbetalt? Mange undervurderer skatten på store engangsudbetalinger. Hvis du allerede ligger taet på topskattegraensen (777.900 kr i 2026), kan du spare 15 % af det beløb, som ellers ville have skubbet dig over grænsen, ved at udskyde feriepenge til et år med lavere indkomst — fx ved jobskifte, orlov, barsel eller delvis pension.</p>
       </aside>
     </div>
   </section>
@@ -360,8 +360,8 @@
       <h2>Vigtige situationer</h2>
       <ul class="stack">
         <li><strong>Fratraadt med uudbetalte feriepenge:</strong> arbejdsgiver indberetter til FerieKonto, og skat indeholdes ved udbetaling — hovedkortet kan IKKE bruges.</li>
-        <li><strong>Feriepenge fra flere arbejdsgivere samme aar:</strong> hver udbetaling beskattes separat, men samles i aarsopgoerelsen — kan udloese restskat hvis kombineret rammer topskat.</li>
-        <li><strong>Indefrosne feriemidler (foer ny ferielov 2020):</strong> udbetales kun ved folkepensionsalder, foertidspension eller doed — separate regler.</li>
+        <li><strong>Feriepenge fra flere arbejdsgivere samme år:</strong> hver udbetaling beskattes separat, men samles i aarsopgoerelsen — kan udloese restskat hvis kombineret rammer topskat.</li>
+        <li><strong>Indefrosne feriemidler (før ny ferielov 2020):</strong> udbetales kun ved folkepensionsalder, foertidspension eller doed — separate regler.</li>
         <li><strong>Feriepenge under foraeldreorlov:</strong> stadig beskatning som A-indkomst, men ingen modregning i foraeldreorlovsdagpenge.</li>
         <li><strong>Udbetaling af 5. ferieuge:</strong> kraever ikke ferieafholdelse, men kraever 1 aars optjening — kan udbetales efter ferieaarets udloeb 31. december.</li>
       </ul>
@@ -370,38 +370,38 @@
 
   <section class="section faq">
     <div class="container stack">
-      <h2>Ofte stillede spoergsmaal</h2>
+      <h2>Ofte stillede spørgsmål</h2>
       <details>
         <summary>Hvor meget faar jeg i feriepenge i 2026?</summary>
-        <p>Du optjener 12,5 % af din ferieberettigede loen som feriegodtgoerelse — svarende til 2,08 dage pr. maaneds arbejde, i alt 25 dage (5 uger) pr. aar. Hvis du har "ferie med loen" faar du i stedet din almindelige loen under ferien plus 1 % ferietillaeg.</p>
+        <p>Du optjener 12,5 % af din ferieberettigede løn som feriegodtgoerelse — svarende til 2,08 dage pr. maaneds arbejde, i alt 25 dage (5 uger) pr. år. Hvis du har "ferie med løn" faar du i stedet din almindelige løn under ferien plus 1 % ferietillaeg.</p>
       </details>
       <details>
         <summary>Hvor meget skat skal jeg betale af mine feriepenge?</summary>
-        <p>Foerst traekkes 8 % AM-bidrag. Af resten betales A-skat efter din marginale sats — typisk 37-45 % afhaengig af kommuneskat og om du er i topskat. Effektivt faar du ca. 50-60 % udbetalt af brutto-beloebet. For engangsudbetalinger bruges hovedkortet ikke — dvs. ikke personfradrag.</p>
+        <p>Først traekkes 8 % AM-bidrag. Af resten betales A-skat efter din marginale sats — typisk 37-45 % afhaengig af kommuneskat og om du er i topskat. Effektivt faar du ca. 50-60 % udbetalt af brutto-beloebet. For engangsudbetalinger bruges hovedkortet ikke — dvs. ikke personfradrag.</p>
       </details>
       <details>
         <summary>Skal jeg vente med at faa feriepenge udbetalt?</summary>
-        <p>Hvis du er paa graensen til topskat (777.900 kr i 2026) kan det vaere oekonomisk klogt at udskyde feriepenge til et aar med lavere indkomst — fx ved jobskifte, orlov eller pension. Du sparer 15 % topskat af det beloeb der ellers ville have ramt topskattegraensen.</p>
+        <p>Hvis du er på grænsen til topskat (777.900 kr i 2026) kan det være økonomisk klogt at udskyde feriepenge til et år med lavere indkomst — fx ved jobskifte, orlov eller pension. Du sparer 15 % topskat af det beløb der ellers ville have ramt topskattegraensen.</p>
       </details>
       <details>
-        <summary>Hvad er forskellen paa feriegodtgoerelse og ferietillaeg?</summary>
-        <p>Feriegodtgoerelse er 12,5 % udbetalt naar du holder ferie (eller fratraeder) og bruges af timelonnede og fratraadte. Ferietillaeg er 1 % til fastansatte med ferie med loen — det udbetales i maj og august som ekstra ovenpaa din loen, fordi loenmodtageren allerede faar loen under ferien.</p>
+        <summary>Hvad er forskellen på feriegodtgoerelse og ferietillaeg?</summary>
+        <p>Feriegodtgoerelse er 12,5 % udbetalt når du holder ferie (eller fratraeder) og bruges af timelonnede og fratraadte. Ferietillaeg er 1 % til fastansatte med ferie med løn — det udbetales i maj og august som ekstra ovenpaa din løn, fordi loenmodtageren allerede faar løn under ferien.</p>
       </details>
       <details>
-        <summary>Hvad er saerlig feriegodtgoerelse?</summary>
-        <p>Saerlig feriegodtgoerelse er et tillaeg paa 1,15-1,95 % til offentligt ansatte (statsligt: 1,5 %). Det er en arvet kompensation fra dengang offentligt ansatte ikke fik fuldt ferietillaeg. Det udbetales sammen med maj- og augustloen. Det beskattes som A-indkomst paa hovedkortet (ikke marginalskat).</p>
+        <summary>Hvad er særlig feriegodtgoerelse?</summary>
+        <p>Særlig feriegodtgoerelse er et tillæg på 1,15-1,95 % til offentligt ansatte (statsligt: 1,5 %). Det er en arvet kompensation fra dengang offentligt ansatte ikke fik fuldt ferietillaeg. Det udbetales sammen med maj- og augustloen. Det beskattes som A-indkomst på hovedkortet (ikke marginalskat).</p>
       </details>
       <details>
         <summary>Kan jeg faa feriepenge udbetalt i stedet for at holde ferie?</summary>
-        <p>Kun for ferie ud over de lovpligtige 4 uger (dvs. den 5. ferieuge) maa du faa kontant udbetaling uden at afholde ferien. De 4 ugers minimumsferie SKAL afholdes. Ved fratraedelse udbetales alt optjent feriegodtgoerelse til FerieKonto eller direkte til dig efter fratraedelsesdato.</p>
+        <p>Kun for ferie ud over de lovpligtige 4 uger (dvs. den 5. ferieuge) må du faa kontant udbetaling uden at afholde ferien. De 4 ugers minimumsferie SKAL afholdes. Ved fratraedelse udbetales alt optjent feriegodtgoerelse til FerieKonto eller direkte til dig efter fratraedelsesdato.</p>
       </details>
       <details>
-        <summary>Hvad sker der med feriepenge naar jeg skifter job?</summary>
-        <p>Din gamle arbejdsgiver indbetaler dine optjente feriepenge (12,5 % af bruttoloen) til FerieKonto eller en feriekortordning. Du faar dem udbetalt naar du holder ferien hos den nye arbejdsgiver — og A-skat indeholdes paa det tidspunkt. Brug feriepengeinfo.dk for at se hvor pengene staar.</p>
+        <summary>Hvad sker der med feriepenge når jeg skifter job?</summary>
+        <p>Din gamle arbejdsgiver indbetaler dine optjente feriepenge (12,5 % af bruttoloen) til FerieKonto eller en feriekortordning. Du faar dem udbetalt når du holder ferien hos den nye arbejdsgiver — og A-skat indeholdes på det tidspunkt. Brug feriepengeinfo.dk for at se hvor pengene staar.</p>
       </details>
       <details>
-        <summary>Hvorfor er skatten paa feriepenge saa hoej?</summary>
-        <p>Feriepenge er en stor engangsudbetaling oven i din almindelige loen. Da personfradraget allerede er brugt op af loebende loen beskattes hele feriepengebeloebet med din marginalskat — dvs. den hoejeste sats du betaler. Det foeles som hoejere skat end paa loen, men det er korrekt skat — du har bare allerede "brugt" dine fradrag.</p>
+        <summary>Hvorfor er skatten på feriepenge så hoej?</summary>
+        <p>Feriepenge er en stor engangsudbetaling oven i din almindelige løn. Da personfradraget allerede er brugt op af loebende løn beskattes hele feriepengebeloebet med din marginalskat — dvs. den hoejeste sats du betaler. Det foeles som hoejere skat end på løn, men det er korrekt skat — du har bare allerede "brugt" dine fradrag.</p>
       </details>
     </div>
   </section>
@@ -412,15 +412,15 @@
         <h2>Officielle kilder</h2>
         <p class="muted">Senest tjekket 2026-06-10.</p>
         <ul>
-          <li><a href="https://bm.dk/arbejdsomraader/arbejdsmiljoe-og-arbejdsforhold/ferie-og-fritid/" rel="nofollow noopener" target="_blank">Beskaeftigelsesministeriet — ferieloven <span class="ext-icon" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://bm.dk//arbejdsomraader/arbejdsmiljoe-og-arbejdsforhold/ferie-og-fritid/" rel="nofollow noopener" target="_blank">Beskaeftigelsesministeriet — ferieloven <span class="ext-icon" aria-hidden="true">↗</span></a></li>
           <li><a href="https://info.skat.dk/data.aspx?oid=1976774" rel="nofollow noopener" target="_blank">Skat.dk — C.A.3.2 Feriegodtgoerelse <span class="ext-icon" aria-hidden="true">↗</span></a></li>
-          <li><a href="https://www.borger.dk/arbejde-dagpenge-ferie/Ferie" rel="nofollow noopener" target="_blank">Borger.dk — feriepenge og ferieloven <span class="ext-icon" aria-hidden="true">↗</span></a></li>
-          <li><a href="https://statens-adm.dk/support/loensupport/brugervejledninger/saerlig-feriegodtgoerelse/" rel="nofollow noopener" target="_blank">Statens administrationscenter — saerlig feriegodtgoerelse <span class="ext-icon" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://www.borger.dk/" rel="nofollow noopener" target="_blank">Borger.dk — feriepenge og ferieloven <span class="ext-icon" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://statens-adm.dk/support/loensupport/brugervejledninger/saerlig-feriegodtgoerelse/" rel="nofollow noopener" target="_blank">Statens administrationscenter — særlig feriegodtgoerelse <span class="ext-icon" aria-hidden="true">↗</span></a></li>
           <li><a href="https://www.retsinformation.dk/eli/lta/2020/230" rel="nofollow noopener" target="_blank">Retsinformation — ferieloven (LBK) <span class="ext-icon" aria-hidden="true">↗</span></a></li>
           <li><a href="https://skat.dk/en-us/help/tax-rates" rel="nofollow noopener" target="_blank">Skat.dk — skattesatser 2026 <span class="ext-icon" aria-hidden="true">↗</span></a></li>
         </ul>
       </div>
-      <p style="margin-top:1rem;">Skal du ogsaa regne din maanedlige nettoloen ud? Brug vores soestersite <a class="cross-link" href="https://lonberegning.dk/loenberegner" rel="noopener">lonberegning.dk — loenberegner <span class="ext-icon" aria-hidden="true">↗</span></a>.</p>
+      <p style="margin-top:1rem;">Skal du ogsaa regne din maanedlige nettoloen ud? Brug vores soestersite <a class="cross-link" href="https://lonberegning.dk/" rel="noopener">lonberegning.dk — loenberegner <span class="ext-icon" aria-hidden="true">↗</span></a>.</p>
     </div>
   </section>
 </main>
@@ -437,13 +437,13 @@
         </ul>
       </div>
       <div class="site-footer__col">
-        <h2>Ledig &amp; familie</h2>
+        <h2>Ledig</h2>
         <ul>
           <li><a href="/beregner/dagpenge.html">Dagpenge</a></li>
           <li><a href="/beregner/dimittend.html">Dimittend</a></li>
           <li><a href="/beregner/sygedagpenge.html">Sygedagpenge</a></li>
           <li><a href="/beregner/barselsdagpenge.html">Barselsdagpenge</a></li>
-          <li><a href="/beregner/bornepenge.html">Boernepenge</a></li>
+          <li><a href="/beregner/bornepenge.html">Børnepenge</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
@@ -455,24 +455,24 @@
           <li><a href="/beregner/depositum.html">Depositum</a></li>
           <li><a href="/beregner/flyttebudget.html">Flyttebudget</a></li>
           <li><a href="/beregner/el-vand-varme-budget.html">El, vand og varme</a></li>
-          <li><a href="/beregner/ejendomsvaerdiskat.html">Ejendomsvaerdiskat</a></li>
+          <li><a href="/beregner/ejendomsvaerdiskat.html">Ejendomsværdiskat</a></li>
           <li><a href="/beregner/andelsbolig.html">Andelsbolig</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
         <h2>Bil &amp; transport</h2>
         <ul>
-          <li><a href="/beregner/leasing-vs-koeb.html">Leasing vs. koeb</a></li>
+          <li><a href="/beregner/leasing-vs-koeb.html">Leasing vs. køb</a></li>
           <li><a href="/beregner/bil-totalomkostning.html">Bil totalomkostning</a></li>
-          <li><a href="/beregner/bil-vaerdtab.html">Bil-vaerditab</a></li>
-          <li><a href="/beregner/groen-ejerafgift.html">Groen ejerafgift</a></li>
-          <li><a href="/beregner/braendstof.html">Braendstof</a></li>
+          <li><a href="/beregner/bil-vaerdtab.html">Bil-værditab</a></li>
+          <li><a href="/beregner/groen-ejerafgift.html">Grøn ejerafgift</a></li>
+          <li><a href="/beregner/braendstof.html">Brændstof</a></li>
           <li><a href="/beregner/elbil-opladning.html">Elbil opladning</a></li>
           <li><a href="/beregner/pendlerbudget.html">Pendlerbudget</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
-        <h2>Selvstaendig</h2>
+        <h2>Selvstændig</h2>
         <ul>
           <li><a href="/beregner/moms-beregner.html">Momsberegner</a></li>
           <li><a href="/beregner/timepris-freelancer.html">Timepris</a></li>
@@ -494,7 +494,7 @@
       <div class="site-footer__col">
         <h2>Vaerktoejer</h2>
         <ul>
-          <li><a href="/sporg-ai.html">Spoerg AI</a></li>
+          <li><a href="/sporg-ai.html">Spørg AI</a></li>
           <li><a href="/#alle-beregnere">Alle beregnere</a></li>
           <li><a href="https://lonberegning.dk/" rel="noopener">Loenberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
         </ul>
@@ -510,9 +510,9 @@
         </ul>
       </div>
     </div>
-    <p class="site-footer__cross">Skal du regne nettoloen ud? Brug vores soestersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a> — specialiseret i loen og skat.</p>
+    <p class="site-footer__cross">Skal du regne nettoloen ud? Brug vores soestersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a> — specialiseret i løn og skat.</p>
     <div class="site-footer__bottom">
-      <span>&copy; 2026 hverdagstal.dk &middot; Beregn penge, stoette og udgifter i hverdagen &middot; Satser opdateret 2026-06-10</span>
+      <span>&copy; 2026 hverdagstal.dk &middot; Beregn penge, støtte og udgifter i hverdagen &middot; Satser opdateret 2026-06-10</span>
       <span>Made in Danmark</span>
     </div>
   </div>

@@ -130,10 +130,10 @@
       <ul>
         <li><a href="/">Forside</a></li>
         <li><a href="/situation/studerende.html">Studerende</a></li>
-        <li><a href="/situation/ledig-familie.html">Ledig &amp; familie</a></li>
+        <li><a href="/situation/ledig.html">Ledig</a></li>
         <li><a href="/situation/bolig-flytning.html">Bolig</a></li>
         <li><a href="/situation/bil-transport.html">Bil</a></li>
-        <li><a href="/situation/selvstaendig.html">Selvstaendig</a></li>
+        <li><a href="/situation/selvstaendig.html">Selvstændig</a></li>
         <li class="has-dropdown">
           <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-more-menu">Mere <span aria-hidden="true">&#9662;</span></button>
           <ul id="nav-more-menu" class="nav-dropdown">
@@ -143,7 +143,7 @@
             <li><a href="/om.html">Om</a></li>
           </ul>
         </li>
-        <li class="nav-cta"><a href="/sporg-ai.html" class="nav-cta-link">Spoerg AI</a></li>
+        <li class="nav-cta"><a href="/sporg-ai.html" class="nav-cta-link">Spørg AI</a></li>
       </ul>
     </nav>
   </div>
@@ -160,12 +160,12 @@
         </ol>
       </nav>
       <p class="hero__eyebrow">Pension &amp; opsparing</p>
-      <h1 class="hero__title">Efterloen 2026 — kan jeg gaa paa efterloen?</h1>
+      <h1 class="hero__title">Efterloen 2026 — kan jeg gå på efterloen?</h1>
       <p class="hero__lead">Tjek om du opfylder de 30 aars a-kassekrav og se hvor meget du faar udbetalt om maaneden — inkl. modregning af pension og arbejdsindkomst. Satser for 2026 indbygget.</p>
       <span class="opdateret-badge">Opdateret 2026-06-10</span>
       <div class="cluster" style="margin-top:1rem">
         <a class="btn btn--primary btn--lg" href="#beregner">Start beregningen</a>
-        <a class="btn btn--ghost" href="#faq">Se ofte stillede spoergsmaal</a>
+        <a class="btn btn--ghost" href="#faq">Se ofte stillede spørgsmål</a>
       </div>
     </div>
   </section>
@@ -179,19 +179,19 @@
             <div class="field">
               <label for="currentAge">Din nuvaerende alder</label>
               <input id="currentAge" name="currentAge" type="number" min="50" max="75" step="1" value="63" inputmode="numeric">
-              <p class="field__hint">Efterloensalderen er 64 aar i 2026 og stiger gradvist.</p>
+              <p class="field__hint">Efterloensalderen er 64 år i 2026 og stiger gradvist.</p>
             </div>
 
             <div class="field">
               <label for="birthDate">Foedselsdato (til efterloensalder)</label>
               <input id="birthDate" name="birthDate" type="date" value="1962-01-01">
-              <p class="field__hint">Foedt 1959–1962: efterloensalder 64. Foedt 1963 eller senere: 65 aar.</p>
+              <p class="field__hint">Foedt 1959–1962: efterloensalder 64. Foedt 1963 eller senere: 65 år.</p>
             </div>
 
             <div class="field">
-              <label for="akasseYears">Aar med uafbrudt a-kasse + efterloensbidrag</label>
+              <label for="akasseYears">År med uafbrudt a-kasse + efterloensbidrag</label>
               <input id="akasseYears" name="akasseYears" type="number" min="0" max="50" step="1" value="30" inputmode="numeric">
-              <p class="field__hint">Krav: mindst 30 aar (eller fra du fyldte 24 hvis senere).</p>
+              <p class="field__hint">Krav: mindst 30 år (eller fra du fyldte 24 hvis senere).</p>
             </div>
 
             <div class="field">
@@ -209,13 +209,13 @@
                 <option value="100" selected>100% (kraever 2 aars udskydelse)</option>
                 <option value="91">91% (standard ved efterloensalder)</option>
               </select>
-              <p class="field__hint">100% kraever 2 aars udskydelse + 1.560 timers arbejde paa efterloensbevis.</p>
+              <p class="field__hint">100% kraever 2 aars udskydelse + 1.560 timers arbejde på efterloensbevis.</p>
             </div>
 
             <div class="field">
-              <label for="currentMonthlyIncome">Hidtidig gennemsnitsindkomst (sidste 3 aar)</label>
+              <label for="currentMonthlyIncome">Hidtidig gennemsnitsindkomst (sidste 3 år)</label>
               <input id="currentMonthlyIncome" name="currentMonthlyIncome" type="number" min="0" step="500" value="32000" inputmode="numeric">
-              <p class="field__hint">Til kontrol af indtaegtskrav (286.632 kr over 3 aar = 7.962 kr/md).</p>
+              <p class="field__hint">Til kontrol af indtaegtskrav (286.632 kr over 3 år = 7.962 kr/md).</p>
             </div>
 
             <div class="field">
@@ -242,7 +242,7 @@
           <h2>Resultat</h2>
           <p id="qualifiesLine"><strong>Opfylder du kravene?</strong> <span id="qualifies">—</span></p>
           <dl class="calculator-result__breakdown">
-            <dt>Brutto efterloen (foer modregning)</dt>
+            <dt>Brutto efterloen (før modregning)</dt>
             <dd id="brutto">— kr/md</dd>
 
             <dt>Modregning af pension</dt>
@@ -251,7 +251,7 @@
             <dt>Modregning af arbejde</dt>
             <dd id="modregningArbejde">— kr/md</dd>
 
-            <dt>Efter modregning (foer skat)</dt>
+            <dt>Efter modregning (før skat)</dt>
             <dd id="netBeforeTax">— kr/md</dd>
 
             <dt>Estimeret skat</dt>
@@ -261,7 +261,7 @@
             <dd id="praemie">— kr</dd>
           </dl>
           <p class="calculator-result__total"><span>Udbetalt om maaneden</span><strong id="netto">— kr</strong></p>
-          <p class="muted" id="alternativ">Sammenligning med fortsat arbejde beregnes naar du har udfyldt felterne.</p>
+          <p class="muted" id="alternativ">Sammenligning med fortsat arbejde beregnes når du har udfyldt felterne.</p>
         </aside>
       </div>
 
@@ -277,14 +277,14 @@
       <div class="stack">
         <p>Efterloenen er en social ydelse fra a-kassen til personer der opfylder anciennitets- og alderskravet. Beregningen foelger disse trin:</p>
         <ol>
-          <li><strong>Kvalifikation.</strong> Vi tjekker at du har mindst 30 aars uafbrudt medlemskab med efterloensbidrag, har naaet din efterloensalder (64 aar for foedte 1959–1962, ellers 65), og at din indtjening de sidste 3 aar overstiger 286.632 kr.</li>
+          <li><strong>Kvalifikation.</strong> Vi tjekker at du har mindst 30 aars uafbrudt medlemskab med efterloensbidrag, har naaet din efterloensalder (64 år for foedte 1959–1962, ellers 65), og at din indtjening de sidste 3 år overstiger 286.632 kr.</li>
           <li><strong>Bruttosats.</strong> Fuldtidsforsikret 100%: <strong>22.041 kr/md</strong>. Fuldtidsforsikret 91%: <strong>20.057 kr/md</strong>. Deltid 100%: <strong>14.694 kr/md</strong>. Deltid 91%: <strong>13.372 kr/md</strong>.</li>
-          <li><strong>Modregning af pension.</strong> Loebende arbejdsmarkedspension: 64% modregnes efter bundfradrag (16.700 kr/aar). Kapital- og ratepension under opsparing: 4% af depotvaerdien aarligt — uanset udbetaling. Resultatet ganges med 60% modregningssats.</li>
+          <li><strong>Modregning af pension.</strong> Loebende arbejdsmarkedspension: 64% modregnes efter bundfradrag (16.700 kr/år). Kapital- og ratepension under opsparing: 4% af depotvaerdien aarligt — uanset udbetaling. Resultatet ganges med 60% modregningssats.</li>
           <li><strong>Modregning af arbejde.</strong> Time-for-time: en arbejdstime traekker en time efterloen fra (bruttoefterloen / 160,33 timer × arbejdstimer).</li>
-          <li><strong>Skat.</strong> Efterloen er A-indkomst men <em>ikke</em> arbejdsmarkedsbidragspligtig. Vi bruger 37% gennemsnitssats efter personfradrag (54.100 kr/aar).</li>
-          <li><strong>Skattefri praemie.</strong> Hvis du udskyder 2 aar og fortsaetter arbejdet kan du optjene op til 12 portioner × 15.870 kr = <strong>190.440 kr skattefrit</strong> (fuldtid).</li>
+          <li><strong>Skat.</strong> Efterloen er A-indkomst men <em>ikke</em> arbejdsmarkedsbidragspligtig. Vi bruger 37% gennemsnitssats efter personfradrag (54.100 kr/år).</li>
+          <li><strong>Skattefri praemie.</strong> Hvis du udskyder 2 år og fortsaetter arbejdet kan du optjene op til 12 portioner × 15.870 kr = <strong>190.440 kr skattefrit</strong> (fuldtid).</li>
         </ol>
-        <p class="muted">Beregningen er et estimat. Endeligt beloeb fastsaettes af din a-kasse paa baggrund af dit efterloensbevis og faktiske pensionsoplysninger.</p>
+        <p class="muted">Beregningen er et estimat. Endeligt beløb fastsaettes af din a-kasse på baggrund af dit efterloensbevis og faktiske pensionsoplysninger.</p>
       </div>
     </div>
   </section>
@@ -292,60 +292,60 @@
   <section class="section">
     <div class="container">
       <div class="calculator-result" style="border-left:4px solid #f59e0b;background:#fef3c7;color:#78350f">
-        <h2 style="margin-top:0">Beslutningsvinkel: gaa nu eller arbejde videre?</h2>
-        <p>Er det vaerd at gaa paa efterloen nu — eller skal du arbejde 2 aar mere og faa skattefri praemie + hoejere folkepension? Beregneren viser den samlede oekonomiske forskel paa de to scenarier over hele perioden indtil 68/69 aar.</p>
-        <p><strong>Tommelfingerregel:</strong> Med stor pensionsformue (kapital- og ratepension over ca. 2 mio. kr) bliver efterloenen ofte modregnet ned til naer 0. Saa er det typisk en bedre handel at fravaelge efterloen og faa bidragene udbetalt skattefrit.</p>
+        <h2 style="margin-top:0">Beslutningsvinkel: gå nu eller arbejde videre?</h2>
+        <p>Er det værd at gå på efterloen nu — eller skal du arbejde 2 år mere og faa skattefri praemie + hoejere folkepension? Beregneren viser den samlede oekonomiske forskel på de to scenarier over hele perioden indtil 68/69 år.</p>
+        <p><strong>Tommelfingerregel:</strong> Med stor pensionsformue (kapital- og ratepension over ca. 2 mio. kr) bliver efterloenen ofte modregnet ned til naer 0. Så er det typisk en bedre handel at fravaelge efterloen og faa bidragene udbetalt skattefrit.</p>
       </div>
     </div>
   </section>
 
   <section class="section section--alt">
     <div class="container">
-      <h2>Vigtige situationer at vaere opmaerksom paa</h2>
+      <h2>Vigtige situationer at være opmaerksom på</h2>
       <ul class="stack">
-        <li><strong>Under 30 aars a-kasse:</strong> Du har ikke ret til efterloen. Som hovedregel skal du have vaeret indmeldt senest da du fyldte 30 aar.</li>
+        <li><strong>Under 30 aars a-kasse:</strong> Du har ikke ret til efterloen. Som hovedregel skal du have vaeret indmeldt senest da du fyldte 30 år.</li>
         <li><strong>Deltidsforsikret med fuldtidsarbejde:</strong> Har du arbejdet fuldtid de sidste 12 mdr. kan du ofte konvertere til fuldtidsforsikring og faa hoejere sats.</li>
-        <li><strong>Stor arbejdsmarkedspension (&gt;500.000 kr/aar):</strong> Efterloen reduceres til 0, men du har stadig betalt bidrag — ofte daarlig handel, overvej fravalg.</li>
-        <li><strong>Udskyder 2 aar + opfylder arbejdskrav:</strong> Du faar 100% sats <em>og</em> ret til skattefri praemie paa op til 190.440 kr.</li>
-        <li><strong>Foedt 1959–1962:</strong> Efterloensalder 64. Foedt 1963 eller senere: 65 aar — automatisk progression.</li>
+        <li><strong>Stor arbejdsmarkedspension (&gt;500.000 kr/år):</strong> Efterloen reduceres til 0, men du har stadig betalt bidrag — ofte daarlig handel, overvej fravalg.</li>
+        <li><strong>Udskyder 2 år + opfylder arbejdskrav:</strong> Du faar 100% sats <em>og</em> ret til skattefri praemie på op til 190.440 kr.</li>
+        <li><strong>Foedt 1959–1962:</strong> Efterloensalder 64. Foedt 1963 eller senere: 65 år — automatisk progression.</li>
       </ul>
     </div>
   </section>
 
   <section class="section faq" id="faq">
     <div class="container">
-      <h2>Ofte stillede spoergsmaal</h2>
+      <h2>Ofte stillede spørgsmål</h2>
       <details>
-        <summary>Hvor mange aar i a-kasse skal jeg have for at gaa paa efterloen?</summary>
-        <p>Du skal have vaeret medlem af en a-kasse og betalt efterloensbidrag i mindst 30 aar — eller fra du fyldte 24 hvis det er senere end 30 aar tilbage. Hvis du har holdt pause i medlemskabet kan det aendre din ret — kontakt a-kassen for at faa et efterloensbevis.</p>
+        <summary>Hvor mange år i a-kasse skal jeg have for at gå på efterloen?</summary>
+        <p>Du skal have vaeret medlem af en a-kasse og betalt efterloensbidrag i mindst 30 år — eller fra du fyldte 24 hvis det er senere end 30 år tilbage. Hvis du har holdt pause i medlemskabet kan det aendre din ret — kontakt a-kassen for at faa et efterloensbevis.</p>
       </details>
       <details>
         <summary>Hvor stor er efterloenen i 2026?</summary>
-        <p>For fuldtidsforsikrede er den hoejeste sats 22.041 kr/md (100%) eller 20.057 kr/md (91%). For deltidsforsikrede er den 14.694 kr/md (100%) eller 13.372 kr/md (91%). 100%-satsen kraever 2-aars udskydelse OG arbejde i mindst 1.560 timer paa baggrund af efterloensbevis.</p>
+        <p>For fuldtidsforsikrede er den hoejeste sats 22.041 kr/md (100%) eller 20.057 kr/md (91%). For deltidsforsikrede er den 14.694 kr/md (100%) eller 13.372 kr/md (91%). 100%-satsen kraever 2-aars udskydelse OG arbejde i mindst 1.560 timer på baggrund af efterloensbevis.</p>
       </details>
       <details>
         <summary>Bliver min pension modregnet i efterloenen?</summary>
-        <p>Ja. Loebende udbetalinger fra arbejdsmarkedspension modregnes med 64% efter et bundfradrag paa 16.700 kr/aar (2026). Kapital- og ratepension under opsparing modregnes med 4% af depotvaerdien aarligt — uanset om du udbetaler eller ej. Mange udskyder derfor private pensioner til efter efterloensperioden.</p>
+        <p>Ja. Loebende udbetalinger fra arbejdsmarkedspension modregnes med 64% efter et bundfradrag på 16.700 kr/år (2026). Kapital- og ratepension under opsparing modregnes med 4% af depotvaerdien aarligt — uanset om du udbetaler eller ej. Mange udskyder derfor private pensioner til efter efterloensperioden.</p>
       </details>
       <details>
         <summary>Hvad er den skattefri praemie?</summary>
-        <p>Hvis du fortsaetter med at arbejde efter efterloensbeviset (2 aars udskydelse) kan du optjene op til 12 portioner skattefri praemie. Hver portion kraever 481 arbejdstimer og udgoer 15.870 kr for fuldtidsforsikrede — dvs. maks 190.440 kr skattefrit (2026). Det udbetales naar du gaar paa folkepension.</p>
+        <p>Hvis du fortsaetter med at arbejde efter efterloensbeviset (2 aars udskydelse) kan du optjene op til 12 portioner skattefri praemie. Hver portion kraever 481 arbejdstimer og udgoer 15.870 kr for fuldtidsforsikrede — dvs. maks 190.440 kr skattefrit (2026). Det udbetales når du gaar på folkepension.</p>
       </details>
       <details>
-        <summary>Kan jeg arbejde mens jeg er paa efterloen?</summary>
-        <p>Ja, du kan arbejde saa meget du vil. Men dine arbejdstimer modregnes time-for-time i din efterloen — hver time du arbejder mister du en time efterloen. Hvis du gaar paa nedsat tid og din loen er lavere bliver modregningen reduceret tilsvarende. Bruttoindkomst over visse graenser udloeser ekstra modregning.</p>
+        <summary>Kan jeg arbejde mens jeg er på efterloen?</summary>
+        <p>Ja, du kan arbejde så meget du vil. Men dine arbejdstimer modregnes time-for-time i din efterloen — hver time du arbejder mister du en time efterloen. Hvis du gaar på nedsat tid og din løn er lavere bliver modregningen reduceret tilsvarende. Bruttoindkomst over visse grænser udloeser ekstra modregning.</p>
       </details>
       <details>
-        <summary>Hvad er forskellen paa 91% og 100% sats?</summary>
-        <p>91% er standardsatsen hvis du gaar paa efterloen ved efterloensalderen (typisk 64). 100%-satsen kraever at du venter mindst 2 aar OG arbejder mindst 1.560 timer som fuldtidsforsikret efter at have faaet efterloensbeviset OG opfylder et indkomstkrav. Forskellen er ca. 2.000 kr/md hele perioden — vaerd at vente for de fleste.</p>
+        <summary>Hvad er forskellen på 91% og 100% sats?</summary>
+        <p>91% er standardsatsen hvis du gaar på efterloen ved efterloensalderen (typisk 64). 100%-satsen kraever at du venter mindst 2 år OG arbejder mindst 1.560 timer som fuldtidsforsikret efter at have faaet efterloensbeviset OG opfylder et indkomstkrav. Forskellen er ca. 2.000 kr/md hele perioden — værd at vente for de fleste.</p>
       </details>
       <details>
         <summary>Hvornaar er folkepensionsalderen for mig?</summary>
-        <p>Hvis du er foedt 1955–1958: 67 aar. Foedt 1959–1962: 68 aar. Foedt 1963–1966: 68 aar. Foedt 1967–1970: 69 aar. Foedt 1971 eller senere: 70 aar. Det betyder efterloensperioden er enten 3 eller 4 aar afhaengig af din foedselsdato.</p>
+        <p>Hvis du er foedt 1955–1958: 67 år. Foedt 1959–1962: 68 år. Foedt 1963–1966: 68 år. Foedt 1967–1970: 69 år. Foedt 1971 eller senere: 70 år. Det betyder efterloensperioden er enten 3 eller 4 år afhaengig af din foedselsdato.</p>
       </details>
       <details>
         <summary>Kan jeg faa penge tilbage hvis jeg ikke bruger min efterloen?</summary>
-        <p>Ja — du kan faa udbetalt dine efterloensbidrag (eller en del af dem) hvis du fravaelger efterloen helt. Beloebet udbetales skattefrit som engangsbeloeb. For mange med stor pensionsformue er det den oekonomisk bedste loesning fordi modregningen alligevel ville reducere efterloenen til naer 0.</p>
+        <p>Ja — du kan faa udbetalt dine efterloensbidrag (eller en del af dem) hvis du fravaelger efterloen helt. Beloebet udbetales skattefrit som engangsbeloeb. For mange med stor pensionsformue er det den økonomisk bedste loesning fordi modregningen alligevel ville reducere efterloenen til naer 0.</p>
       </details>
     </div>
   </section>
@@ -356,14 +356,14 @@
         <h3>Officielle kilder</h3>
         <p class="muted">Senest tjekket 2026-06-10</p>
         <ul>
-          <li><a href="https://www.borger.dk/pension-og-efterloen/Efterloen-fleksydelse-delpension/efterloen" rel="nofollow noopener" target="_blank">Borger.dk — efterloen oversigt <span class="ext-icon" aria-hidden="true">↗</span></a></li>
-          <li><a href="https://star.dk/ydelser/pension-og-efterloen/efterloen/" rel="nofollow noopener" target="_blank">STAR — efterloen regler og satser <span class="ext-icon" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://www.borger.dk/" rel="nofollow noopener" target="_blank">Borger.dk — efterloen oversigt <span class="ext-icon" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://star.dk//ydelser/pension-og-efterloen/efterloen/" rel="nofollow noopener" target="_blank">STAR — efterloen regler og satser <span class="ext-icon" aria-hidden="true">↗</span></a></li>
           <li><a href="https://www.aeldresagen.dk/viden-og-raadgivning/penge-og-pension/efterloen" rel="nofollow noopener" target="_blank">AEldre Sagen — efterloenssatser 2026 <span class="ext-icon" aria-hidden="true">↗</span></a></li>
-          <li><a href="https://www.borger.dk/pension-og-efterloen/Efterloen-fleksydelse-delpension/efterloen/skattefri-praemie" rel="nofollow noopener" target="_blank">Borger.dk — skattefri praemie <span class="ext-icon" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://www.borger.dk//skattefri-praemie" rel="nofollow noopener" target="_blank">Borger.dk — skattefri praemie <span class="ext-icon" aria-hidden="true">↗</span></a></li>
           <li><a href="https://www.retsinformation.dk/eli/lta/2022/1213" rel="nofollow noopener" target="_blank">Retsinformation — lov om arbejdsloeshedsforsikring <span class="ext-icon" aria-hidden="true">↗</span></a></li>
         </ul>
       </div>
-      <p style="margin-top:1.5rem">Skal du ogsaa beregne din loen efter skat eller feriepenge inden du gaar paa efterloen? Brug vores soestersite <a class="cross-link" href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">↗</span></a> — specialiseret i loen og skat.</p>
+      <p style="margin-top:1.5rem">Skal du ogsaa beregne din løn efter skat eller feriepenge inden du gaar på efterloen? Brug vores soestersite <a class="cross-link" href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">↗</span></a> — specialiseret i løn og skat.</p>
     </div>
   </section>
 </main>
@@ -380,13 +380,13 @@
         </ul>
       </div>
       <div class="site-footer__col">
-        <h2>Ledig &amp; familie</h2>
+        <h2>Ledig</h2>
         <ul>
           <li><a href="/beregner/dagpenge.html">Dagpenge</a></li>
           <li><a href="/beregner/dimittend.html">Dimittend</a></li>
           <li><a href="/beregner/sygedagpenge.html">Sygedagpenge</a></li>
           <li><a href="/beregner/barselsdagpenge.html">Barselsdagpenge</a></li>
-          <li><a href="/beregner/bornepenge.html">Boernepenge</a></li>
+          <li><a href="/beregner/bornepenge.html">Børnepenge</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
@@ -398,24 +398,24 @@
           <li><a href="/beregner/depositum.html">Depositum</a></li>
           <li><a href="/beregner/flyttebudget.html">Flyttebudget</a></li>
           <li><a href="/beregner/el-vand-varme-budget.html">El, vand og varme</a></li>
-          <li><a href="/beregner/ejendomsvaerdiskat.html">Ejendomsvaerdiskat</a></li>
+          <li><a href="/beregner/ejendomsvaerdiskat.html">Ejendomsværdiskat</a></li>
           <li><a href="/beregner/andelsbolig.html">Andelsbolig</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
         <h2>Bil &amp; transport</h2>
         <ul>
-          <li><a href="/beregner/leasing-vs-koeb.html">Leasing vs. koeb</a></li>
+          <li><a href="/beregner/leasing-vs-koeb.html">Leasing vs. køb</a></li>
           <li><a href="/beregner/bil-totalomkostning.html">Bil totalomkostning</a></li>
-          <li><a href="/beregner/bil-vaerdtab.html">Bil-vaerditab</a></li>
-          <li><a href="/beregner/groen-ejerafgift.html">Groen ejerafgift</a></li>
-          <li><a href="/beregner/braendstof.html">Braendstof</a></li>
+          <li><a href="/beregner/bil-vaerdtab.html">Bil-værditab</a></li>
+          <li><a href="/beregner/groen-ejerafgift.html">Grøn ejerafgift</a></li>
+          <li><a href="/beregner/braendstof.html">Brændstof</a></li>
           <li><a href="/beregner/elbil-opladning.html">Elbil opladning</a></li>
           <li><a href="/beregner/pendlerbudget.html">Pendlerbudget</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
-        <h2>Selvstaendig</h2>
+        <h2>Selvstændig</h2>
         <ul>
           <li><a href="/beregner/moms-beregner.html">Momsberegner</a></li>
           <li><a href="/beregner/timepris-freelancer.html">Timepris</a></li>
@@ -437,7 +437,7 @@
       <div class="site-footer__col">
         <h2>Vaerktoejer</h2>
         <ul>
-          <li><a href="/sporg-ai.html">Spoerg AI</a></li>
+          <li><a href="/sporg-ai.html">Spørg AI</a></li>
           <li><a href="/#alle-beregnere">Alle beregnere</a></li>
           <li><a href="https://lonberegning.dk/" rel="noopener">Loenberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
         </ul>
@@ -453,9 +453,9 @@
         </ul>
       </div>
     </div>
-    <p class="site-footer__cross">Skal du regne nettoloen ud? Brug vores soestersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a> — specialiseret i loen og skat.</p>
+    <p class="site-footer__cross">Skal du regne nettoloen ud? Brug vores soestersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a> — specialiseret i løn og skat.</p>
     <div class="site-footer__bottom">
-      <span>&copy; 2026 hverdagstal.dk &middot; Beregn penge, stoette og udgifter i hverdagen &middot; Satser opdateret 2026-06-10</span>
+      <span>&copy; 2026 hverdagstal.dk &middot; Beregn penge, støtte og udgifter i hverdagen &middot; Satser opdateret 2026-06-10</span>
       <span>Made in Danmark</span>
     </div>
   </div>

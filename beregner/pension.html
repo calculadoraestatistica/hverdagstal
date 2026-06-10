@@ -187,10 +187,10 @@
       <ul>
         <li><a href="/">Forside</a></li>
         <li><a href="/situation/studerende.html">Studerende</a></li>
-        <li><a href="/situation/ledig-familie.html">Ledig &amp; familie</a></li>
+        <li><a href="/situation/ledig.html">Ledig</a></li>
         <li><a href="/situation/bolig-flytning.html">Bolig</a></li>
         <li><a href="/situation/bil-transport.html">Bil</a></li>
-        <li><a href="/situation/selvstaendig.html">Selvstaendig</a></li>
+        <li><a href="/situation/selvstaendig.html">Selvstændig</a></li>
         <li class="has-dropdown">
           <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-more-menu">Mere <span aria-hidden="true">&#9662;</span></button>
           <ul id="nav-more-menu" class="nav-dropdown">
@@ -200,7 +200,7 @@
             <li><a href="/om.html">Om</a></li>
           </ul>
         </li>
-        <li class="nav-cta"><a href="/sporg-ai.html" class="nav-cta-link">Spoerg AI</a></li>
+        <li class="nav-cta"><a href="/sporg-ai.html" class="nav-cta-link">Spørg AI</a></li>
       </ul>
     </nav>
   </div>
@@ -219,7 +219,7 @@
       </nav>
       <p class="hero__eyebrow">Pension og opsparing</p>
       <h1 class="hero__title">Pensionsberegner 2026 — hvor meget faar du udbetalt?</h1>
-      <p class="hero__lead">Indtast din alder, formue og maanedlige indbetaling. Vi beregner din samlede pension som pensionist — privat pension, arbejdsmarkedspension, folkepension og ATP — i nutidskroner, saa du kan se om du sparer nok op.</p>
+      <p class="hero__lead">Indtast din alder, formue og maanedlige indbetaling. Vi beregner din samlede pension som pensionist — privat pension, arbejdsmarkedspension, folkepension og ATP — i nutidskroner, så du kan se om du sparer nok op.</p>
       <div class="cluster">
         <span class="opdateret-badge">Opdateret 2026-06-10</span>
         <span class="badge badge--gold">2026-satser</span>
@@ -233,13 +233,13 @@
       <div class="site-grid">
         <div>
           <h2>Dine oplysninger</h2>
-          <p class="muted">Aendringer opdaterer resultatet med det samme. Slaa din nuvaerende pensionsformue op paa <a href="https://www.pensionsinfo.dk/" rel="nofollow noopener" target="_blank">pensionsinfo.dk <span class="ext-icon" aria-hidden="true">↗</span></a>.</p>
+          <p class="muted">Aendringer opdaterer resultatet med det samme. Slaa din nuvaerende pensionsformue op på <a href="https://www.pensionsinfo.dk/" rel="nofollow noopener" target="_blank">pensionsinfo.dk <span class="ext-icon" aria-hidden="true">↗</span></a>.</p>
 
           <form class="calculator-form" id="pension-form" novalidate>
             <div class="field">
               <label for="currentAge">Din nuvaerende alder</label>
               <input id="currentAge" name="currentAge" type="number" min="18" max="75" step="1" value="40" inputmode="numeric">
-              <span class="field__hint">Heltal fra 18 til 75 aar.</span>
+              <span class="field__hint">Heltal fra 18 til 75 år.</span>
             </div>
 
             <div class="field">
@@ -267,7 +267,7 @@
             </div>
 
             <div class="field">
-              <label for="expectedReturn">Forventet aarligt afkast foer skat (%)</label>
+              <label for="expectedReturn">Forventet aarligt afkast før skat (%)</label>
               <select id="expectedReturn" name="expectedReturn">
                 <option value="3">3 %</option>
                 <option value="4">4 %</option>
@@ -286,15 +286,15 @@
                 <option value="2.5">2,5 %</option>
                 <option value="3">3 %</option>
               </select>
-              <span class="field__hint">Nationalbankens maal er 2 %. Resultatet vises i nutidskroner.</span>
+              <span class="field__hint">Nationalbankens mål er 2 %. Resultatet vises i nutidskroner.</span>
             </div>
 
             <div class="field">
-              <label for="pafSkat">PAL-skat paa afkast (%)</label>
+              <label for="pafSkat">PAL-skat på afkast (%)</label>
               <select id="pafSkat" name="pafSkat">
                 <option value="15.3" selected>15,3 %</option>
               </select>
-              <span class="field__hint">Pensionsafkastskatten er 15,3 % paa loebende afkast i opsparingsperioden.</span>
+              <span class="field__hint">Pensionsafkastskatten er 15,3 % på loebende afkast i opsparingsperioden.</span>
             </div>
 
             <div class="field">
@@ -307,9 +307,9 @@
             </div>
 
             <div class="field field--full">
-              <label for="otherIncomeAtRetirement">Forventet anden indkomst ved pension (kr/aar)</label>
+              <label for="otherIncomeAtRetirement">Forventet anden indkomst ved pension (kr/år)</label>
               <input id="otherIncomeAtRetirement" name="otherIncomeAtRetirement" type="number" min="0" step="1000" value="0" inputmode="numeric">
-              <span class="field__hint">Loen, udlejning mm. Modregnes i pensionstillaegget — og i grundbeloebet hvis over ~382.700 kr/aar.</span>
+              <span class="field__hint">Løn, udlejning mm. Modregnes i pensionstillaegget — og i grundbeloebet hvis over ~382.700 kr/år.</span>
             </div>
           </form>
         </div>
@@ -328,7 +328,7 @@
               <dd id="out-privatePension">— kr/md</dd>
             </div>
             <div>
-              <dt>Folkepension — grundbeloeb</dt>
+              <dt>Folkepension — grundbeløb</dt>
               <dd id="out-grundbelob">— kr/md</dd>
             </div>
             <div>
@@ -344,12 +344,12 @@
               <dd id="out-net">— kr/md</dd>
             </div>
             <div>
-              <dt>Daekningsgrad af nuvaerende loen</dt>
+              <dt>Daekningsgrad af nuvaerende løn</dt>
               <dd id="out-replacement">— %</dd>
             </div>
           </dl>
 
-          <p class="calculator-result__total"><span>Samlet brutto pr. maaned</span><strong id="out-totalGross">— kr</strong></p>
+          <p class="calculator-result__total"><span>Samlet brutto pr. måned</span><strong id="out-totalGross">— kr</strong></p>
 
           <p class="muted" id="out-warning" hidden></p>
         </aside>
@@ -367,14 +367,14 @@
     <div class="container">
       <h2>Saadan virker det</h2>
       <div class="stack">
-        <p>Beregneren laegger fire dele sammen og viser dem i <strong>nutidskroner</strong> — saa beloebene er sammenlignelige med dit nuvaerende forbrug, ikke kunstigt opskrevet med inflation.</p>
+        <p>Beregneren laegger fire dele sammen og viser dem i <strong>nutidskroner</strong> — så beloebene er sammenlignelige med dit nuvaerende forbrug, ikke kunstigt opskrevet med inflation.</p>
         <ol>
-          <li><strong>Privat og arbejdsmarkedspension:</strong> Din nuvaerende formue og dine manedlige indbetalinger fremskrives med dit forventede realafkast (afkast minus PAL-skat minus inflation) frem til din pensionsalder. Den samlede formue omregnes til en livrente over forventet udbetalingsperiode (typisk 15-25 aar).</li>
-          <li><strong>Folkepension — grundbeloeb:</strong> 7.544 kr/md i 2026 til alle. Modregnes kun ved arbejdsindkomst over 382.700 kr/aar.</li>
+          <li><strong>Privat og arbejdsmarkedspension:</strong> Din nuvaerende formue og dine manedlige indbetalinger fremskrives med dit forventede realafkast (afkast minus PAL-skat minus inflation) frem til din pensionsalder. Den samlede formue omregnes til en livrente over forventet udbetalingsperiode (typisk 15-25 år).</li>
+          <li><strong>Folkepension — grundbeløb:</strong> 7.544 kr/md i 2026 til alle. Modregnes kun ved arbejdsindkomst over 382.700 kr/år.</li>
           <li><strong>Folkepension — pensionstillaeg:</strong> Op til 8.729 kr/md for enlige eller 4.467 kr/md for gifte/samlevende. Reduceres med 30,5 % (enlig) eller 32 % (gift) af indkomst over fribeloebet.</li>
           <li><strong>ATP livslang pension:</strong> Estimeres ud fra antal arbejdsaar — typisk 1.500-2.500 kr/md for fuld karriere.</li>
         </ol>
-        <p>Til sidst trakkes A-skat (men ikke AM-bidrag) for at vise et estimeret netto-beloeb. Daekningsgraden viser hvor stor en andel af din nuvaerende loen pensionen daekker — 60-80 % regnes som tilstraekkeligt.</p>
+        <p>Til sidst trakkes A-skat (men ikke AM-bidrag) for at vise et estimeret netto-beløb. Daekningsgraden viser hvor stor en andel af din nuvaerende løn pensionen dækker — 60-80 % regnes som tilstraekkeligt.</p>
       </div>
     </div>
   </section>
@@ -383,7 +383,7 @@
     <div class="container">
       <div class="source-card" style="border-left:4px solid #f59e0b;background:#fffbeb">
         <h3>Sparer jeg nok op?</h3>
-        <p>Beregneren svarer paa det centrale spoergsmaal: <strong>er du paa et spor der giver 60-80 % af din slutloen som pension?</strong> Hvis daekningsgraden er under 60 %, har du tre muligheder: indbetal mere hver maaned, udskyd pensionsalderen et par aar, eller saenk dit forventede forbrug som pensionist. Beregneren viser typisk anbefalede 60-80 % af slutloen og fortaeller dig dermed om dit nuvaerende sporingsspor er tilstraekkeligt — saa du kan justere mens du stadig har tid.</p>
+        <p>Beregneren svarer på det centrale spørgsmål: <strong>er du på et spor der giver 60-80 % af din slutloen som pension?</strong> Hvis daekningsgraden er under 60 %, har du tre muligheder: indbetal mere hver måned, udskyd pensionsalderen et par år, eller saenk dit forventede forbrug som pensionist. Beregneren viser typisk anbefalede 60-80 % af slutloen og fortaeller dig dermed om dit nuvaerende sporingsspor er tilstraekkeligt — så du kan justere mens du stadig har tid.</p>
       </div>
     </div>
   </section>
@@ -392,25 +392,25 @@
     <div class="container">
       <h2>Vigtige situationer</h2>
       <ul class="stack">
-        <li><strong>Foedt efter 1971:</strong> Folkepensionsalder = 70 aar. Afkastperioden er 30+ aar, og sammensaetningseffekten dominerer total formue.</li>
-        <li><strong>Ratepension + livrente:</strong> Du faar to forskellige maanedlige beloeb. Ratepension stopper efter 10-25 aar; livrente loeber resten af livet.</li>
+        <li><strong>Foedt efter 1971:</strong> Folkepensionsalder = 70 år. Afkastperioden er 30+ år, og sammensaetningseffekten dominerer total formue.</li>
+        <li><strong>Ratepension + livrente:</strong> Du faar to forskellige maanedlige beløb. Ratepension stopper efter 10-25 år; livrente loeber resten af livet.</li>
         <li><strong>Aldersopsparing:</strong> Ikke fradragsberettiget, men skattefri ved udbetaling. Skal IKKE indgaa i samme prognose som rate/livrente.</li>
-        <li><strong>Hoejt anden indkomst (over 382.700 kr/aar):</strong> Reducerer baade grundbeloeb og pensionstillaeg. Beregneren markerer det med en advarsel.</li>
-        <li><strong>Tidligere privat pension end folkepension:</strong> Hvis du gaar paa privat pension ved 65 men folkepension foerst ved 68, har du et 3 aars gap hvor kun din egen opsparing daekker.</li>
+        <li><strong>Hoejt anden indkomst (over 382.700 kr/år):</strong> Reducerer baade grundbeløb og pensionstillaeg. Beregneren markerer det med en advarsel.</li>
+        <li><strong>Tidligere privat pension end folkepension:</strong> Hvis du gaar på privat pension ved 65 men folkepension først ved 68, har du et 3 aars gap hvor kun din egen opsparing dækker.</li>
       </ul>
     </div>
   </section>
 
   <section class="section faq">
     <div class="container">
-      <h2>Ofte stillede spoergsmaal</h2>
+      <h2>Ofte stillede spørgsmål</h2>
       <details>
         <summary>Hvor stor er folkepensionen i 2026?</summary>
-        <p>Folkepensionen bestaar af et grundbeloeb paa 7.544 kr/md som alle faar (uafhaengigt af formue) plus et pensionstillaeg paa op til 8.729 kr/md for enlige eller 4.467 kr/md pr. person for gifte. I alt maks 16.273 kr/md for enlige og 12.011 kr/md pr. person for gifte — alt foer skat.</p>
+        <p>Folkepensionen bestaar af et grundbeløb på 7.544 kr/md som alle faar (uafhaengigt af formue) plus et pensionstillaeg på op til 8.729 kr/md for enlige eller 4.467 kr/md pr. person for gifte. I alt maks 16.273 kr/md for enlige og 12.011 kr/md pr. person for gifte — alt før skat.</p>
       </details>
       <details>
-        <summary>Hvornaar kan jeg gaa paa folkepension?</summary>
-        <p>I 2026 er folkepensionsalderen 67 aar. Den stiger til 68 i 2030, 69 i 2035 og 70 i 2040 afhaengigt af dit foedeaar. Foedt 1971 eller senere: 70 aar. Du kan udskyde folkepension med op til 10 aar og faa hoejere udbetaling (opsat pension).</p>
+        <summary>Hvornaar kan jeg gå på folkepension?</summary>
+        <p>I 2026 er folkepensionsalderen 67 år. Den stiger til 68 i 2030, 69 i 2035 og 70 i 2040 afhaengigt af dit foedeaar. Foedt 1971 eller senere: 70 år. Du kan udskyde folkepension med op til 10 år og faa hoejere udbetaling (opsat pension).</p>
       </details>
       <details>
         <summary>Hvad er en god daekningsgrad for pensionen?</summary>
@@ -418,23 +418,23 @@
       </details>
       <details>
         <summary>Hvad er PAL-skat?</summary>
-        <p>Pensionsafkastskatten er 15,3 % af det loebende afkast paa din pensionsopsparing. Den traekkes hvert aar — du betaler ikke skat af afkastet igen ved udbetaling. PAL-skatten er lavere end den almindelige aktieskat (27/42 %) og en del af grunden til at pensionsopsparing er attraktivt.</p>
+        <p>Pensionsafkastskatten er 15,3 % af det loebende afkast på din pensionsopsparing. Den traekkes hvert år — du betaler ikke skat af afkastet igen ved udbetaling. PAL-skatten er lavere end den almindelige aktieskat (27/42 %) og en del af grunden til at pensionsopsparing er attraktivt.</p>
       </details>
       <details>
         <summary>Skal jeg indbetale til ratepension eller livrente?</summary>
-        <p>Ratepension giver udbetalinger i 10-25 aar — fradragsloft er 65.500 kr (2026). Livrente er livsvarig (intet fradragsloft) og giver oekonomisk sikkerhed hvis du lever laenge. De fleste eksperter anbefaler en blanding: livrente til basis + ratepension til ekstra de foerste pensionsaar.</p>
+        <p>Ratepension giver udbetalinger i 10-25 år — fradragsloft er 65.500 kr (2026). Livrente er livsvarig (intet fradragsloft) og giver økonomisk sikkerhed hvis du lever laenge. De fleste eksperter anbefaler en blanding: livrente til basis + ratepension til ekstra de første pensionsaar.</p>
       </details>
       <details>
         <summary>Hvor meget faar jeg fra ATP?</summary>
         <p>ATP Livslang Pension er en obligatorisk basis-pension for alle lonmodtagere. En fuldtidsansat der har bidraget hele karrieren faar typisk 1.500-2.500 kr/md som 68-aarig i 2026. Beloebet er livsvarigt og indekseres.</p>
       </details>
       <details>
-        <summary>Hvad sker der med min pension hvis jeg gaar paa efterloen?</summary>
+        <summary>Hvad sker der med min pension hvis jeg gaar på efterloen?</summary>
         <p>Privat pension og arbejdsmarkedspension modregnes i din efterloen (64 % af loebende udbetalinger eller 4 % af depotvaerdien for kapitalpension). Det er ofte derfor folk vaelger at udskyde private pensionsudbetalinger til efter efterloensperioden.</p>
       </details>
       <details>
         <summary>Kan jeg spare for lidt op til pension?</summary>
-        <p>Ja. Hvis du kun har folkepension + lille arbejdsmarkedspension vil du tabe markant koebekraft som pensionist. Pensionskommissionen anbefaler at indbetale mindst 12 % af loen til arbejdsmarkedspension fra du er 25. Vores beregner viser om dit nuvaerende spor giver tilstraekkelig daekningsgrad.</p>
+        <p>Ja. Hvis du kun har folkepension + lille arbejdsmarkedspension vil du tabe markant koebekraft som pensionist. Pensionskommissionen anbefaler at indbetale mindst 12 % af løn til arbejdsmarkedspension fra du er 25. Vores beregner viser om dit nuvaerende spor giver tilstraekkelig daekningsgrad.</p>
       </details>
     </div>
   </section>
@@ -446,7 +446,7 @@
         <p class="muted">Senest tjekket 2026-06-10.</p>
         <ul>
           <li><a href="https://www.borger.dk/pension-og-efterloen/Folkepension-oversigt/foer-du-gaar-paa-folkepension/Folkepension-grundbeloeb-pensionstillaeg" rel="nofollow noopener" target="_blank">Borger.dk — folkepensionssatser 2026 <span class="ext-icon" aria-hidden="true">↗</span></a></li>
-          <li><a href="https://star.dk/ydelser/pension-og-efterloen/folkepension-tidlig-pension-foertidspension-og-seniorpension/folkepension/folkepensionsalderen-nu-og-fremover/" rel="nofollow noopener" target="_blank">STAR — folkepensionsalderen nu og fremover <span class="ext-icon" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://star.dk//ydelser/pension-og-efterloen/folkepension-tidlig-pension-foertidspension-og-seniorpension/folkepension/folkepensionsalderen-nu-og-fremover/" rel="nofollow noopener" target="_blank">STAR — folkepensionsalderen nu og fremover <span class="ext-icon" aria-hidden="true">↗</span></a></li>
           <li><a href="https://www.pensionsinfo.dk/" rel="nofollow noopener" target="_blank">Pensionsinfo.dk (officiel samlet pensionsoversigt) <span class="ext-icon" aria-hidden="true">↗</span></a></li>
           <li><a href="https://www.atp.dk/livslang-pension" rel="nofollow noopener" target="_blank">ATP livslang pension <span class="ext-icon" aria-hidden="true">↗</span></a></li>
           <li><a href="https://afkastforventninger.dk/" rel="nofollow noopener" target="_blank">Raadet for Afkastforventninger <span class="ext-icon" aria-hidden="true">↗</span></a></li>
@@ -454,7 +454,7 @@
         </ul>
       </div>
 
-      <p style="margin-top:1.5rem">Skal du regne ud hvor meget du faar i loen efter skat — eller hvor stor del din arbejdsgivers pensionsindbetaling udgoer? Brug vores soestersite <a class="cross-link" href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">↗</span></a> — specialiseret i loen, skat og pensionsindbetalinger.</p>
+      <p style="margin-top:1.5rem">Skal du regne ud hvor meget du faar i løn efter skat — eller hvor stor del din arbejdsgivers pensionsindbetaling udgoer? Brug vores soestersite <a class="cross-link" href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">↗</span></a> — specialiseret i løn, skat og pensionsindbetalinger.</p>
     </div>
   </section>
 
@@ -472,13 +472,13 @@
         </ul>
       </div>
       <div class="site-footer__col">
-        <h2>Ledig &amp; familie</h2>
+        <h2>Ledig</h2>
         <ul>
           <li><a href="/beregner/dagpenge.html">Dagpenge</a></li>
           <li><a href="/beregner/dimittend.html">Dimittend</a></li>
           <li><a href="/beregner/sygedagpenge.html">Sygedagpenge</a></li>
           <li><a href="/beregner/barselsdagpenge.html">Barselsdagpenge</a></li>
-          <li><a href="/beregner/bornepenge.html">Boernepenge</a></li>
+          <li><a href="/beregner/bornepenge.html">Børnepenge</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
@@ -490,24 +490,24 @@
           <li><a href="/beregner/depositum.html">Depositum</a></li>
           <li><a href="/beregner/flyttebudget.html">Flyttebudget</a></li>
           <li><a href="/beregner/el-vand-varme-budget.html">El, vand og varme</a></li>
-          <li><a href="/beregner/ejendomsvaerdiskat.html">Ejendomsvaerdiskat</a></li>
+          <li><a href="/beregner/ejendomsvaerdiskat.html">Ejendomsværdiskat</a></li>
           <li><a href="/beregner/andelsbolig.html">Andelsbolig</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
         <h2>Bil &amp; transport</h2>
         <ul>
-          <li><a href="/beregner/leasing-vs-koeb.html">Leasing vs. koeb</a></li>
+          <li><a href="/beregner/leasing-vs-koeb.html">Leasing vs. køb</a></li>
           <li><a href="/beregner/bil-totalomkostning.html">Bil totalomkostning</a></li>
-          <li><a href="/beregner/bil-vaerdtab.html">Bil-vaerditab</a></li>
-          <li><a href="/beregner/groen-ejerafgift.html">Groen ejerafgift</a></li>
-          <li><a href="/beregner/braendstof.html">Braendstof</a></li>
+          <li><a href="/beregner/bil-vaerdtab.html">Bil-værditab</a></li>
+          <li><a href="/beregner/groen-ejerafgift.html">Grøn ejerafgift</a></li>
+          <li><a href="/beregner/braendstof.html">Brændstof</a></li>
           <li><a href="/beregner/elbil-opladning.html">Elbil opladning</a></li>
           <li><a href="/beregner/pendlerbudget.html">Pendlerbudget</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
-        <h2>Selvstaendig</h2>
+        <h2>Selvstændig</h2>
         <ul>
           <li><a href="/beregner/moms-beregner.html">Momsberegner</a></li>
           <li><a href="/beregner/timepris-freelancer.html">Timepris</a></li>
@@ -529,7 +529,7 @@
       <div class="site-footer__col">
         <h2>Vaerktoejer</h2>
         <ul>
-          <li><a href="/sporg-ai.html">Spoerg AI</a></li>
+          <li><a href="/sporg-ai.html">Spørg AI</a></li>
           <li><a href="/#alle-beregnere">Alle beregnere</a></li>
           <li><a href="https://lonberegning.dk/" rel="noopener">Loenberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
         </ul>
@@ -545,9 +545,9 @@
         </ul>
       </div>
     </div>
-    <p class="site-footer__cross">Skal du regne nettoloen ud? Brug vores soestersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a> — specialiseret i loen og skat.</p>
+    <p class="site-footer__cross">Skal du regne nettoloen ud? Brug vores soestersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a> — specialiseret i løn og skat.</p>
     <div class="site-footer__bottom">
-      <span>&copy; 2026 hverdagstal.dk &middot; Beregn penge, stoette og udgifter i hverdagen &middot; Satser opdateret 2026-06-10</span>
+      <span>&copy; 2026 hverdagstal.dk &middot; Beregn penge, støtte og udgifter i hverdagen &middot; Satser opdateret 2026-06-10</span>
       <span>Made in Danmark</span>
     </div>
   </div>

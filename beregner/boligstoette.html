@@ -137,10 +137,10 @@
       <ul>
         <li><a href="/">Forside</a></li>
         <li><a href="/situation/studerende.html">Studerende</a></li>
-        <li><a href="/situation/ledig-familie.html">Ledig &amp; familie</a></li>
+        <li><a href="/situation/ledig.html">Ledig</a></li>
         <li><a href="/situation/bolig-flytning.html">Bolig</a></li>
         <li><a href="/situation/bil-transport.html">Bil</a></li>
-        <li><a href="/situation/selvstaendig.html">Selvstaendig</a></li>
+        <li><a href="/situation/selvstaendig.html">Selvstændig</a></li>
         <li class="has-dropdown">
           <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-more-menu">Mere <span aria-hidden="true">&#9662;</span></button>
           <ul id="nav-more-menu" class="nav-dropdown">
@@ -150,7 +150,7 @@
             <li><a href="/om.html">Om</a></li>
           </ul>
         </li>
-        <li class="nav-cta"><a href="/sporg-ai.html" class="nav-cta-link">Spoerg AI</a></li>
+        <li class="nav-cta"><a href="/sporg-ai.html" class="nav-cta-link">Spørg AI</a></li>
       </ul>
     </nav>
   </div>
@@ -163,13 +163,13 @@
       <nav class="breadcrumbs" aria-label="Brodkrumme">
         <ol>
           <li><a href="/">Forside</a></li>
-          <li><a href="/situation/boern.html">Familie og boern</a></li>
+          <li><a href="/situation/boern.html">Familie og børn</a></li>
           <li aria-current="page">Boligstoette beregner 2026</li>
         </ol>
       </nav>
       <p class="hero__eyebrow">Bolig og husstand</p>
       <h1 class="hero__title">Boligstoette beregner 2026</h1>
-      <p class="hero__lead">Find ud af hvor meget boligstoette du kan faa udbetalt hver maaned i 2026. Beregneren daekker baade <strong>boligsikring</strong> (alle uden pension) og <strong>boligydelse</strong> (folke- og foertidspensionister) med opdaterede satser fra Udbetaling Danmark.</p>
+      <p class="hero__lead">Find ud af hvor meget boligstoette du kan faa udbetalt hver måned i 2026. Beregneren dækker baade <strong>boligsikring</strong> (alle uden pension) og <strong>boligydelse</strong> (folke- og foertidspensionister) med opdaterede satser fra Udbetaling Danmark.</p>
       <p><span class="opdateret-badge">Opdateret 2026-06-10</span></p>
       <div class="cluster">
         <a class="btn btn--primary btn--lg" href="#beregner">Start beregningen</a>
@@ -200,25 +200,25 @@
           <div class="field">
             <label for="antalPersoner">Antal personer i husstanden</label>
             <input id="antalPersoner" name="antalPersoner" type="number" inputmode="numeric" min="1" step="1" value="2">
-            <span class="field__hint">Voksne og boern tilsammen.</span>
+            <span class="field__hint">Voksne og børn tilsammen.</span>
           </div>
 
           <div class="field">
-            <label for="antalBoern">Heraf antal boern under 18</label>
+            <label for="antalBoern">Heraf antal børn under 18</label>
             <input id="antalBoern" name="antalBoern" type="number" inputmode="numeric" min="0" max="10" step="1" value="1">
-            <span class="field__hint">Boern under 18 i husstanden.</span>
+            <span class="field__hint">Børn under 18 i husstanden.</span>
           </div>
 
           <div class="field">
             <label for="samletIndkomst">Husstandens samlede aarsindkomst</label>
             <input id="samletIndkomst" name="samletIndkomst" type="number" inputmode="numeric" min="0" step="1000" value="350000">
-            <span class="field__hint">Brutto skattepligtig indkomst for alle voksne i husstanden. Enhed: kr/aar.</span>
+            <span class="field__hint">Brutto skattepligtig indkomst for alle voksne i husstanden. Enhed: kr/år.</span>
           </div>
 
           <div class="field">
             <label for="formue">Husstandens samlede formue</label>
             <input id="formue" name="formue" type="number" inputmode="numeric" min="0" step="1000" value="50000">
-            <span class="field__hint">Formue over 904.100 kr (2026) reducerer stoetten. Over 999.200 kr bortfalder den helt.</span>
+            <span class="field__hint">Formue over 904.100 kr (2026) reducerer støtten. Over 999.200 kr bortfalder den helt.</span>
           </div>
 
           <div class="field">
@@ -237,7 +237,7 @@
             <select id="modtagerType" name="modtagerType">
               <option value="boligsikring">Boligsikring (ikke-pensionist)</option>
               <option value="boligydelse_folke">Boligydelse (folkepensionist)</option>
-              <option value="boligydelse_foertid">Boligydelse (foertidspensionist foer 2003)</option>
+              <option value="boligydelse_foertid">Boligydelse (foertidspensionist før 2003)</option>
             </select>
             <span class="field__hint">Pensionister faar boligydelse (75%), andre faar boligsikring (60%).</span>
           </div>
@@ -266,20 +266,20 @@
         <aside class="calculator-result" id="resultBox" aria-live="polite">
           <h2>Resultater</h2>
           <dl class="calculator-result__breakdown">
-            <dt>Type af stoette</dt><dd id="r-type">-</dd>
+            <dt>Type af støtte</dt><dd id="r-type">-</dd>
             <dt>Boligudgift (efter varmefradrag)</dt><dd id="r-boligudgift">-</dd>
             <dt>Beregningsgrundlag (loft 9.142 kr/md)</dt><dd id="r-grundlag">-</dd>
             <dt>Egenbetaling</dt><dd id="r-egenbetaling">-</dd>
-            <dt>Brutto stoette (foer loft)</dt><dd id="r-brutto">-</dd>
+            <dt>Brutto støtte (før loft)</dt><dd id="r-brutto">-</dd>
             <dt>Formue-fradrag</dt><dd id="r-formue">-</dd>
-            <dt>Maks-loft (boern: <span id="r-boern">0</span>)</dt><dd id="r-loft">-</dd>
+            <dt>Maks-loft (børn: <span id="r-boern">0</span>)</dt><dd id="r-loft">-</dd>
             <dt>Boligudgift som andel af indkomst</dt><dd id="r-andel">-</dd>
-            <dt>Egenbetaling efter stoette</dt><dd id="r-egen-efter">-</dd>
+            <dt>Egenbetaling efter støtte</dt><dd id="r-egen-efter">-</dd>
             <dt>Aarlig boligstoette</dt><dd id="r-aar">-</dd>
             <dt>Berettiget?</dt><dd id="r-berettiget">-</dd>
           </dl>
           <p class="calculator-result__total"><span>Maanedlig boligstoette</span><strong id="r-total">0 kr</strong></p>
-          <p class="muted" id="r-note">Resultatet er en estimeret beregning. Den endelige stoette afgoeres af Udbetaling Danmark.</p>
+          <p class="muted" id="r-note">Resultatet er en estimeret beregning. Den endelige støtte afgoeres af Udbetaling Danmark.</p>
         </aside>
       </div>
     </div>
@@ -288,26 +288,26 @@
   <section class="section section--alt">
     <div class="container">
       <h2>Saadan virker det</h2>
-      <p>Boligstoette beregnes ud fra fire ting: <strong>boligudgiften</strong>, <strong>husstandens indkomst</strong>, <strong>antal boern</strong> og <strong>formuen</strong>. Modellen er den samme for boligsikring og boligydelse - kun kompensationsgraden og loftet er forskellige.</p>
+      <p>Boligstoette beregnes ud fra fire ting: <strong>boligudgiften</strong>, <strong>husstandens indkomst</strong>, <strong>antal børn</strong> og <strong>formuen</strong>. Modellen er den samme for boligsikring og boligydelse - kun kompensationsgraden og loftet er forskellige.</p>
 
       <h3>1. Boligudgiften</h3>
-      <p>Vi starter med din maanedlige husleje uden forbrug. Hvis varme er en del af huslejen, traekkes varmebidraget fra (maks varmeloft 1.187 kr/md i 2026). Der laegges et forbrugstillaeg paa 100 kr per voksen oveni. Hele boligudgiften maa ikke overstige boligudgiftsloftet paa <strong>9.142 kr/md</strong> (109.700 kr/aar) i 2026.</p>
+      <p>Vi starter med din maanedlige husleje uden forbrug. Hvis varme er en del af huslejen, traekkes varmebidraget fra (maks varmeloft 1.187 kr/md i 2026). Der laegges et forbrugstillaeg på 100 kr per voksen oveni. Hele boligudgiften må ikke overstige boligudgiftsloftet på <strong>9.142 kr/md</strong> (109.700 kr/år) i 2026.</p>
 
-      <h3>2. Bundfradrag og boern</h3>
-      <p>Husstandsindkomsten fratraekkes et bundfradrag: <strong>162.300 kr</strong> for enlige og <strong>226.400 kr</strong> for par. Per barn under 18 (op til 4 boern) faar du <strong>51.700 kr ekstra bundfradrag</strong>. Det femte barn giver intet ekstra.</p>
+      <h3>2. Bundfradrag og børn</h3>
+      <p>Husstandsindkomsten fratraekkes et bundfradrag: <strong>162.300 kr</strong> for enlige og <strong>226.400 kr</strong> for par. Per barn under 18 (op til 4 børn) faar du <strong>51.700 kr ekstra bundfradrag</strong>. Det femte barn giver intet ekstra.</p>
 
       <h3>3. Egenbetaling</h3>
-      <p>Egenbetaling er det beloeb, du selv skal daekke, foer stoetten begynder. Den bestaar af et grundbeloeb paa 23.500 kr/aar plus 18% af den del af indkomsten, der ligger over bundfradraget.</p>
+      <p>Egenbetaling er det beløb, du selv skal dække, før støtten begynder. Den bestaar af et grundbeløb på 23.500 kr/år plus 18% af den del af indkomsten, der ligger over bundfradraget.</p>
 
-      <h3>4. Brutto stoette</h3>
+      <h3>4. Brutto støtte</h3>
       <p>Forskellen mellem boligudgift og egenbetaling daekkes med:</p>
       <ul>
-        <li><strong>60%</strong> hvis du er paa <strong>boligsikring</strong> (alle uden pension).</li>
-        <li><strong>75%</strong> hvis du er paa <strong>boligydelse</strong> (folkepensionist eller foertidspensionist foer 2003).</li>
+        <li><strong>60%</strong> hvis du er på <strong>boligsikring</strong> (alle uden pension).</li>
+        <li><strong>75%</strong> hvis du er på <strong>boligydelse</strong> (folkepensionist eller foertidspensionist før 2003).</li>
       </ul>
 
       <h3>5. Formue og loft</h3>
-      <p>Hvis husstandens formue overstiger <strong>904.100 kr</strong>, traekkes 10% af det overskydende fra den aarlige stoette. Boligsikring har desuden et loft paa 4.519 kr/md uden boern, der oeges med 25% per barn op til 4 boern. Boligydelse har intet maks-loft. Minimum udbetaling er 354 kr/md - er stoetten lavere, udbetales intet.</p>
+      <p>Hvis husstandens formue overstiger <strong>904.100 kr</strong>, traekkes 10% af det overskydende fra den aarlige støtte. Boligsikring har desuden et loft på 4.519 kr/md uden børn, der oeges med 25% per barn op til 4 børn. Boligydelse har intet maks-loft. Minimum udbetaling er 354 kr/md - er støtten lavere, udbetales intet.</p>
     </div>
   </section>
 
@@ -320,20 +320,20 @@
           <h3>Boligsikring</h3>
           <ul>
             <li>For alle der <strong>ikke</strong> er pensionister (loenmodtagere, ledige, studerende, kontanthjaelpsmodtagere).</li>
-            <li>Daekker <strong>60%</strong> af forskellen mellem boligudgift og egenbetaling.</li>
-            <li>Maks-loft: <strong>4.519 kr/md</strong> uden boern (2026).</li>
-            <li>Loftet stiger 25% per barn op til 4 boern (op til 9.038 kr/md).</li>
+            <li>Dækker <strong>60%</strong> af forskellen mellem boligudgift og egenbetaling.</li>
+            <li>Maks-loft: <strong>4.519 kr/md</strong> uden børn (2026).</li>
+            <li>Loftet stiger 25% per barn op til 4 børn (op til 9.038 kr/md).</li>
             <li>Kun til lejeboliger og andelsboliger - ikke ejerboliger.</li>
           </ul>
         </div>
         <div>
           <h3>Boligydelse</h3>
           <ul>
-            <li>For folkepensionister og foertidspensionister (tilkendt foer 2003).</li>
-            <li>Daekker <strong>75%</strong> af forskellen mellem boligudgift og egenbetaling.</li>
+            <li>For folkepensionister og foertidspensionister (tilkendt før 2003).</li>
+            <li>Dækker <strong>75%</strong> af forskellen mellem boligudgift og egenbetaling.</li>
             <li><strong>Intet maks-loft</strong>.</li>
             <li>Kan udbetales til ejerbolig som <strong>laan mod pant</strong> (tilbagebetales ved salg).</li>
-            <li>Paa plejehjem/friplejehjem bortfalder loft og graenser.</li>
+            <li>På plejehjem/friplejehjem bortfalder loft og grænser.</li>
           </ul>
         </div>
       </div>
@@ -342,11 +342,11 @@
       <p>Officielle satser fra Udbetaling Danmark, gaeldende fra 1. januar 2026.</p>
       <div class="source-card">
         <ul>
-          <li><strong>Boligudgiftsloft:</strong> 109.700 kr/aar (9.142 kr/md)</li>
-          <li><strong>Bundfradrag enlig:</strong> 162.300 kr/aar</li>
-          <li><strong>Bundfradrag par:</strong> 226.400 kr/aar</li>
-          <li><strong>Boernetillaeg per barn:</strong> 51.700 kr/aar (op til 4 boern)</li>
-          <li><strong>Grundbeloeb egenbetaling:</strong> 23.500 kr/aar</li>
+          <li><strong>Boligudgiftsloft:</strong> 109.700 kr/år (9.142 kr/md)</li>
+          <li><strong>Bundfradrag enlig:</strong> 162.300 kr/år</li>
+          <li><strong>Bundfradrag par:</strong> 226.400 kr/år</li>
+          <li><strong>Boernetillaeg per barn:</strong> 51.700 kr/år (op til 4 børn)</li>
+          <li><strong>Grundbeløb egenbetaling:</strong> 23.500 kr/år</li>
           <li><strong>Egenbetalingsprocent over bundfradrag:</strong> 18%</li>
           <li><strong>Forbrugstillaeg per voksen:</strong> 100 kr/md</li>
           <li><strong>Varmetillaeg maks:</strong> 1.187 kr/md</li>
@@ -354,24 +354,24 @@
           <li><strong>Formuegraense ved bortfald:</strong> 999.200 kr</li>
           <li><strong>Formue-afslag:</strong> 10% af overskydende</li>
           <li><strong>Minimum udbetaling:</strong> 354 kr/md</li>
-          <li><strong>Minimum husleje for stoette:</strong> 3.200 kr/md</li>
+          <li><strong>Minimum husleje for støtte:</strong> 3.200 kr/md</li>
         </ul>
       </div>
 
-      <h2>Tillaeg for boern</h2>
-      <p>Boern under 18 oeger baade bundfradraget (51.700 kr per barn) og hoejner maks-loftet for boligsikring med 25% per barn:</p>
+      <h2>Tillæg for børn</h2>
+      <p>Børn under 18 oeger baade bundfradraget (51.700 kr per barn) og hoejner maks-loftet for boligsikring med 25% per barn:</p>
       <div class="source-card">
         <ul>
-          <li>0 boern: maks <strong>4.519 kr/md</strong></li>
+          <li>0 børn: maks <strong>4.519 kr/md</strong></li>
           <li>1 barn: maks <strong>5.649 kr/md</strong></li>
-          <li>2 boern: maks <strong>6.779 kr/md</strong></li>
-          <li>3 boern: maks <strong>7.908 kr/md</strong></li>
-          <li>4 boern eller flere: maks <strong>9.038 kr/md</strong></li>
+          <li>2 børn: maks <strong>6.779 kr/md</strong></li>
+          <li>3 børn: maks <strong>7.908 kr/md</strong></li>
+          <li>4 børn eller flere: maks <strong>9.038 kr/md</strong></li>
         </ul>
       </div>
 
       <h2>Pensionister og ejerbolig</h2>
-      <p>Folke- og foertidspensionister (foer 2003) kan modtage <strong>boligydelse</strong>. For ejerbolig udbetales den som et <strong>laan mod pant</strong> i boligen, der foerst skal tilbagebetales naar boligen saelges. Det fungerer som en likviditetsstoette uden at tvinge pensionisten ud af huset. Paa plejehjem og friplejehjem bortfalder baade maks-loft og bundfradrag, saa boligydelsen kan blive vaesentlig hoejere.</p>
+      <p>Folke- og foertidspensionister (før 2003) kan modtage <strong>boligydelse</strong>. For ejerbolig udbetales den som et <strong>laan mod pant</strong> i boligen, der først skal tilbagebetales når boligen saelges. Det fungerer som en likviditetsstoette uden at tvinge pensionisten ud af huset. På plejehjem og friplejehjem bortfalder baade maks-loft og bundfradrag, så boligydelsen kan blive vaesentlig hoejere.</p>
     </div>
   </section>
 
@@ -386,12 +386,12 @@
     <div class="container">
       <h2>Vigtige situationer</h2>
       <ul>
-        <li><strong>Enlig forsoerger med boern:</strong> bundfradrag for enlig + boernetillaeg per barn op til 4 boern. 5. barn giver intet ekstra fradrag.</li>
-        <li><strong>Pensionist paa plejehjem/friplejehjem:</strong> faar boligydelse direkte, ikke boligsikring, og maks-graensen bortfalder.</li>
-        <li><strong>Staerkt bevaegelseshaemmet i husstanden:</strong> boligudgiftsloftet haeves med 25% (op til ca. 137.000 kr/aar).</li>
-        <li><strong>Andelsbolig:</strong> kun boligafgift og faellesudgifter taeller som boligudgift, ikke afdrag paa andelsboliglaan.</li>
-        <li><strong>Mellemkommunal refusion:</strong> hvis du flytter kommune, fortsaetter den gamle kommune med at betale i 6 maaneder.</li>
-        <li><strong>Samlevende uden aegteskab:</strong> taeller som husstand hvis I har faelles oekonomi eller boern, ellers individuel beregning.</li>
+        <li><strong>Enlig forsoerger med børn:</strong> bundfradrag for enlig + boernetillaeg per barn op til 4 børn. 5. barn giver intet ekstra fradrag.</li>
+        <li><strong>Pensionist på plejehjem/friplejehjem:</strong> faar boligydelse direkte, ikke boligsikring, og maks-grænsen bortfalder.</li>
+        <li><strong>Staerkt bevaegelseshaemmet i husstanden:</strong> boligudgiftsloftet haeves med 25% (op til ca. 137.000 kr/år).</li>
+        <li><strong>Andelsbolig:</strong> kun boligafgift og faellesudgifter taeller som boligudgift, ikke afdrag på andelsboliglaan.</li>
+        <li><strong>Mellemkommunal refusion:</strong> hvis du flytter kommune, fortsaetter den gamle kommune med at betale i 6 måneder.</li>
+        <li><strong>Samlevende uden aegteskab:</strong> taeller som husstand hvis I har faelles økonomi eller børn, ellers individuel beregning.</li>
         <li><strong>Formue over 999.200 kr (2026):</strong> ingen boligstoette overhovedet, uanset indkomst.</li>
       </ul>
     </div>
@@ -400,53 +400,53 @@
   <section class="section section--alt">
     <div class="container">
       <div class="calculator-result" style="border-left: 6px solid #f59e0b;">
-        <h2 style="margin-top:0;">Beslutningsspoergsmaalet: er det vaerd at soege?</h2>
-        <p>Den korte regel: hvis husleje plus forbrug fylder over <strong>20-25% af husstandens indkomst</strong>, og formuen er under <strong>904.100 kr</strong>, er der stor sandsynlighed for, at du har ret til boligstoette. Selv smaa beloeb taeller - 500 kr/md er 6.000 kr/aar, og ansoegningen tager 15 minutter paa borger.dk. Husk at boligstoette efterreguleres mod aarsopgoerelsen, saa overvurder ikke indkomsten.</p>
-        <p class="muted">Tip: Brug beregneren her foerst, og soeg derefter formelt via Udbetaling Danmark, hvis resultatet er over minimumsgraensen paa 354 kr/md.</p>
+        <h2 style="margin-top:0;">Beslutningsspoergsmaalet: er det værd at søge?</h2>
+        <p>Den korte regel: hvis husleje plus forbrug fylder over <strong>20-25% af husstandens indkomst</strong>, og formuen er under <strong>904.100 kr</strong>, er der stor sandsynlighed for, at du har ret til boligstoette. Selv smaa beløb taeller - 500 kr/md er 6.000 kr/år, og ansoegningen tager 15 minutter på borger.dk. Husk at boligstoette efterreguleres mod aarsopgoerelsen, så overvurder ikke indkomsten.</p>
+        <p class="muted">Tip: Brug beregneren her først, og søg derefter formelt via Udbetaling Danmark, hvis resultatet er over minimumsgraensen på 354 kr/md.</p>
       </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <p>Skal du oversaette boligstoetten til en realistisk maanedlig oekonomi? <a class="cross-link" href="https://lonberegning.dk/" rel="noopener" target="_blank">Beregn husstandens samlede nettoindkomst paa Loenberegning.dk <span class="ext-icon" aria-hidden="true">↗</span></a> og laeg boligstoette ovenpaa - saa ved du, hvor meget der reelt er til raadighed efter husleje.</p>
+      <p>Skal du oversaette boligstoetten til en realistisk maanedlig økonomi? <a class="cross-link" href="https://lonberegning.dk/" rel="noopener" target="_blank">Beregn husstandens samlede nettoindkomst på Loenberegning.dk <span class="ext-icon" aria-hidden="true">↗</span></a> og laeg boligstoette ovenpaa - så ved du, hvor meget der reelt er til raadighed efter husleje.</p>
     </div>
   </section>
 
   <section class="section faq">
     <div class="container">
-      <h2>Ofte stillede spoergsmaal</h2>
+      <h2>Ofte stillede spørgsmål</h2>
       <details>
         <summary>Hvem kan faa boligstoette i 2026?</summary>
         <p>Du kan faa boligstoette hvis du bor til leje, har en husleje der staar i misforhold til din indkomst, og din husstands formue er under 904.100 kr (2026). Pensionister faar boligydelse, alle andre faar boligsikring.</p>
       </details>
       <details>
-        <summary>Hvor meget maa jeg tjene for at faa boligstoette?</summary>
-        <p>Der er ingen fast indkomstgraense, men jo hoejere indkomst, jo mindre stoette. For en enlig uden boern falder stoetten typisk til 0 ved en aarsindkomst omkring 320.000-380.000 kr afhaengig af husleje. Bundfradraget er 162.300 kr for enlige og 226.400 kr for par i 2026.</p>
+        <summary>Hvor meget må jeg tjene for at faa boligstoette?</summary>
+        <p>Der er ingen fast indkomstgraense, men jo hoejere indkomst, jo mindre støtte. For en enlig uden børn falder støtten typisk til 0 ved en aarsindkomst omkring 320.000-380.000 kr afhaengig af husleje. Bundfradraget er 162.300 kr for enlige og 226.400 kr for par i 2026.</p>
       </details>
       <details>
         <summary>Taeller min formue med i boligstoette 2026?</summary>
-        <p>Ja. Hvis husstandens samlede formue overstiger 904.100 kr, reduceres den aarlige boligstoette med 10% af det overskydende beloeb. Over 999.200 kr formue bortfalder boligstoetten helt.</p>
+        <p>Ja. Hvis husstandens samlede formue overstiger 904.100 kr, reduceres den aarlige boligstoette med 10% af det overskydende beløb. Over 999.200 kr formue bortfalder boligstoetten helt.</p>
       </details>
       <details>
         <summary>Kan jeg faa boligstoette til min ejerbolig?</summary>
-        <p>Kun folke- og foertidspensionister kan faa boligydelse til ejerbolig, og det ydes som et laan med pant i boligen. Det betales tilbage naar boligen saelges. Almindelige boligejere kan ikke faa boligsikring.</p>
+        <p>Kun folke- og foertidspensionister kan faa boligydelse til ejerbolig, og det ydes som et laan med pant i boligen. Det betales tilbage når boligen saelges. Almindelige boligejere kan ikke faa boligsikring.</p>
       </details>
       <details>
-        <summary>Hvad er forskellen paa boligsikring og boligydelse?</summary>
-        <p>Boligydelse er for folkepensionister og foertidspensionister (tilkendt foer 2003) - den daekker 75% af forskellen mellem boligudgift og egenbetaling og har ingen maxgraense. Boligsikring er for alle andre - den daekker 60% og har et loft paa 4.519 kr/md (2026) uden boern.</p>
+        <summary>Hvad er forskellen på boligsikring og boligydelse?</summary>
+        <p>Boligydelse er for folkepensionister og foertidspensionister (tilkendt før 2003) - den dækker 75% af forskellen mellem boligudgift og egenbetaling og har ingen maxgraense. Boligsikring er for alle andre - den dækker 60% og har et loft på 4.519 kr/md (2026) uden børn.</p>
       </details>
       <details>
-        <summary>Skal jeg soege boligstoette hvert aar?</summary>
-        <p>Nej, du soeger en gang via borger.dk. Men du SKAL straks oplyse om aendringer i indkomst, husstand, husleje eller flytning - ellers risikerer du tilbagebetalingskrav. Udbetaling Danmark efterregulerer hvert aar baseret paa din endelige aarsopgoerelse.</p>
+        <summary>Skal jeg søge boligstoette hvert år?</summary>
+        <p>Nej, du søger en gang via borger.dk. Men du SKAL straks oplyse om aendringer i indkomst, husstand, husleje eller flytning - ellers risikerer du tilbagebetalingskrav. Udbetaling Danmark efterregulerer hvert år baseret på din endelige aarsopgoerelse.</p>
       </details>
       <details>
         <summary>Hvor lang tid tager det at faa boligstoette udbetalt?</summary>
-        <p>Sagsbehandling tager typisk 4-8 uger. Boligstoetten udbetales fra den 1. i maaneden efter ansoegning og betales bagud til din NemKonto omkring den 1. hver maaned.</p>
+        <p>Sagsbehandling tager typisk 4-8 uger. Boligstoetten udbetales fra den 1. i maaneden efter ansoegning og betales bagud til din NemKonto omkring den 1. hver måned.</p>
       </details>
       <details>
         <summary>Taeller SU eller arbejdsloeshedsdagpenge som indkomst?</summary>
-        <p>Ja, baade SU, dagpenge, kontanthjaelp, sygedagpenge, pension og loenindkomst taeller som husstandsindkomst i boligstoetteberegningen. Boernepenge og boerneydelse taeller IKKE med.</p>
+        <p>Ja, baade SU, dagpenge, kontanthjaelp, sygedagpenge, pension og loenindkomst taeller som husstandsindkomst i boligstoetteberegningen. Børnepenge og boerneydelse taeller IKKE med.</p>
       </details>
     </div>
   </section>
@@ -457,11 +457,11 @@
         <h2>Officielle kilder</h2>
         <p class="muted">Senest tjekket 2026-06-10.</p>
         <ul>
-          <li><a href="https://www.borger.dk/bolig-og-flytning/Boligstoette-oversigt" rel="nofollow noopener" target="_blank">Udbetaling Danmark - Boligstoette <span class="ext-icon" aria-hidden="true">↗</span></a></li>
-          <li><a href="https://www.borger.dk/bolig-og-flytning/Boligstoette-oversigt/boligstoette-beregner" rel="nofollow noopener" target="_blank">Borger.dk - Boligstoette beregner <span class="ext-icon" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://www.borger.dk/-oversigt" rel="nofollow noopener" target="_blank">Udbetaling Danmark - Boligstoette <span class="ext-icon" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://www.borger.dk/-oversigt/boligstoette-beregner" rel="nofollow noopener" target="_blank">Borger.dk - Boligstoette beregner <span class="ext-icon" aria-hidden="true">↗</span></a></li>
           <li><a href="https://www.retsinformation.dk/eli/lta/2024/229" rel="nofollow noopener" target="_blank">Retsinformation - Boligstoetteloven <span class="ext-icon" aria-hidden="true">↗</span></a></li>
-          <li><a href="https://www.atp.dk/satser-boligstoette-2026" rel="nofollow noopener" target="_blank">ATP/Udbetaling Danmark satser 2026 <span class="ext-icon" aria-hidden="true">↗</span></a></li>
-          <li><a href="https://bl.dk/politik-og-analyser/boligstoette/" rel="nofollow noopener" target="_blank">Boligselskabernes Landsforening (BL) <span class="ext-icon" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://www.atp.dk/" rel="nofollow noopener" target="_blank">ATP/Udbetaling Danmark satser 2026 <span class="ext-icon" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://bl.dk/" rel="nofollow noopener" target="_blank">Boligselskabernes Landsforening (BL) <span class="ext-icon" aria-hidden="true">↗</span></a></li>
         </ul>
       </div>
 
@@ -469,17 +469,17 @@
       <div class="hub-grid">
         <a class="hub-card" href="/beregner/huslejebudget.html">
           <h3>Huslejebudget</h3>
-          <p>Hvor stor en husleje kan din oekonomi baere?</p>
+          <p>Hvor stor en husleje kan din økonomi baere?</p>
           <span class="hub-card__cta">Beregn nu →</span>
         </a>
         <a class="hub-card" href="/beregner/bornepenge.html">
-          <h3>Boernepenge</h3>
+          <h3>Børnepenge</h3>
           <p>Boerne- og ungeydelse 2026 per barn.</p>
           <span class="hub-card__cta">Beregn nu →</span>
         </a>
         <a class="hub-card" href="/beregner/ejendomsvaerdiskat.html">
-          <h3>Ejendomsvaerdiskat</h3>
-          <p>Ny skat paa ejerbolig fra 2024 og frem.</p>
+          <h3>Ejendomsværdiskat</h3>
+          <p>Ny skat på ejerbolig fra 2024 og frem.</p>
           <span class="hub-card__cta">Beregn nu →</span>
         </a>
         <a class="hub-card" href="/beregner/andelsbolig.html">
@@ -505,13 +505,13 @@
         </ul>
       </div>
       <div class="site-footer__col">
-        <h2>Ledig &amp; familie</h2>
+        <h2>Ledig</h2>
         <ul>
           <li><a href="/beregner/dagpenge.html">Dagpenge</a></li>
           <li><a href="/beregner/dimittend.html">Dimittend</a></li>
           <li><a href="/beregner/sygedagpenge.html">Sygedagpenge</a></li>
           <li><a href="/beregner/barselsdagpenge.html">Barselsdagpenge</a></li>
-          <li><a href="/beregner/bornepenge.html">Boernepenge</a></li>
+          <li><a href="/beregner/bornepenge.html">Børnepenge</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
@@ -523,24 +523,24 @@
           <li><a href="/beregner/depositum.html">Depositum</a></li>
           <li><a href="/beregner/flyttebudget.html">Flyttebudget</a></li>
           <li><a href="/beregner/el-vand-varme-budget.html">El, vand og varme</a></li>
-          <li><a href="/beregner/ejendomsvaerdiskat.html">Ejendomsvaerdiskat</a></li>
+          <li><a href="/beregner/ejendomsvaerdiskat.html">Ejendomsværdiskat</a></li>
           <li><a href="/beregner/andelsbolig.html">Andelsbolig</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
         <h2>Bil &amp; transport</h2>
         <ul>
-          <li><a href="/beregner/leasing-vs-koeb.html">Leasing vs. koeb</a></li>
+          <li><a href="/beregner/leasing-vs-koeb.html">Leasing vs. køb</a></li>
           <li><a href="/beregner/bil-totalomkostning.html">Bil totalomkostning</a></li>
-          <li><a href="/beregner/bil-vaerdtab.html">Bil-vaerditab</a></li>
-          <li><a href="/beregner/groen-ejerafgift.html">Groen ejerafgift</a></li>
-          <li><a href="/beregner/braendstof.html">Braendstof</a></li>
+          <li><a href="/beregner/bil-vaerdtab.html">Bil-værditab</a></li>
+          <li><a href="/beregner/groen-ejerafgift.html">Grøn ejerafgift</a></li>
+          <li><a href="/beregner/braendstof.html">Brændstof</a></li>
           <li><a href="/beregner/elbil-opladning.html">Elbil opladning</a></li>
           <li><a href="/beregner/pendlerbudget.html">Pendlerbudget</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
-        <h2>Selvstaendig</h2>
+        <h2>Selvstændig</h2>
         <ul>
           <li><a href="/beregner/moms-beregner.html">Momsberegner</a></li>
           <li><a href="/beregner/timepris-freelancer.html">Timepris</a></li>
@@ -562,7 +562,7 @@
       <div class="site-footer__col">
         <h2>Vaerktoejer</h2>
         <ul>
-          <li><a href="/sporg-ai.html">Spoerg AI</a></li>
+          <li><a href="/sporg-ai.html">Spørg AI</a></li>
           <li><a href="/#alle-beregnere">Alle beregnere</a></li>
           <li><a href="https://lonberegning.dk/" rel="noopener">Loenberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
         </ul>
@@ -578,9 +578,9 @@
         </ul>
       </div>
     </div>
-    <p class="site-footer__cross">Skal du regne nettoloen ud? Brug vores soestersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a> — specialiseret i loen og skat.</p>
+    <p class="site-footer__cross">Skal du regne nettoloen ud? Brug vores soestersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a> — specialiseret i løn og skat.</p>
     <div class="site-footer__bottom">
-      <span>&copy; 2026 hverdagstal.dk &middot; Beregn penge, stoette og udgifter i hverdagen &middot; Satser opdateret 2026-06-10</span>
+      <span>&copy; 2026 hverdagstal.dk &middot; Beregn penge, støtte og udgifter i hverdagen &middot; Satser opdateret 2026-06-10</span>
       <span>Made in Danmark</span>
     </div>
   </div>

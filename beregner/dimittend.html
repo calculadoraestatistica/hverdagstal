@@ -136,10 +136,10 @@
       <ul>
         <li><a href="/">Forside</a></li>
         <li><a href="/situation/studerende.html">Studerende</a></li>
-        <li><a href="/situation/ledig-familie.html">Ledig &amp; familie</a></li>
+        <li><a href="/situation/ledig.html">Ledig</a></li>
         <li><a href="/situation/bolig-flytning.html">Bolig</a></li>
         <li><a href="/situation/bil-transport.html">Bil</a></li>
-        <li><a href="/situation/selvstaendig.html">Selvstaendig</a></li>
+        <li><a href="/situation/selvstaendig.html">Selvstændig</a></li>
         <li class="has-dropdown">
           <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-more-menu">Mere <span aria-hidden="true">&#9662;</span></button>
           <ul id="nav-more-menu" class="nav-dropdown">
@@ -149,7 +149,7 @@
             <li><a href="/om.html">Om</a></li>
           </ul>
         </li>
-        <li class="nav-cta"><a href="/sporg-ai.html" class="nav-cta-link">Spoerg AI</a></li>
+        <li class="nav-cta"><a href="/sporg-ai.html" class="nav-cta-link">Spørg AI</a></li>
       </ul>
     </nav>
   </div>
@@ -167,7 +167,7 @@
       </nav>
       <p class="hero__eyebrow">For nyuddannede</p>
       <h1 class="hero__title">Dimittenddagpenge-beregner 2026</h1>
-      <p class="hero__lead">Beregn din maanedlige dimittendsats som nyuddannet. Faa svar paa hvor meget du faar de foerste 3 maaneder, hvad du faar fra 4. maaned, og om du kan komme paa almindelig dagpenge i stedet.</p>
+      <p class="hero__lead">Beregn din maanedlige dimittendsats som nyuddannet. Faa svar på hvor meget du faar de første 3 måneder, hvad du faar fra 4. måned, og om du kan komme på almindelig dagpenge i stedet.</p>
       <span class="opdateret-badge">Opdateret 2026-06-10</span>
       <div class="cluster" style="margin-top:1rem;">
         <a class="btn btn--primary btn--lg" href="#calculator">Beregn din sats</a>
@@ -191,13 +191,13 @@
               <option value="erhvervsakademi">Erhvervsakademi</option>
               <option value="erhvervsuddannelse">Erhvervsuddannelse</option>
             </select>
-            <p class="field__hint">Uddannelsen skal vaere SU-berettiget og vare mindst 18 maaneder (3 semestre).</p>
+            <p class="field__hint">Uddannelsen skal være SU-berettiget og vare mindst 18 måneder (3 semestre).</p>
           </div>
 
           <div class="field">
             <label for="alder">Alder ved ledighedstidspunkt</label>
             <input id="alder" name="alder" type="number" min="18" max="70" step="1" value="26" inputmode="numeric">
-            <p class="field__hint">Under 30 aar uden forsoergerpligt rammes af den nedsatte sats efter 3 maaneder.</p>
+            <p class="field__hint">Under 30 år uden forsoergerpligt rammes af den nedsatte sats efter 3 måneder.</p>
           </div>
 
           <div class="field">
@@ -210,12 +210,12 @@
           </div>
 
           <div class="field">
-            <label for="harForsorgerpligt">Har du forsoergerpligt over for hjemmeboende boern under 18?</label>
+            <label for="harForsorgerpligt">Har du forsoergerpligt over for hjemmeboende børn under 18?</label>
             <select id="harForsorgerpligt" name="harForsorgerpligt">
               <option value="nej" selected>Nej</option>
               <option value="ja">Ja</option>
             </select>
-            <p class="field__hint">Forsoergere faar 82% af maks-satsen og bliver IKKE nedsat efter 3 maaneder.</p>
+            <p class="field__hint">Forsoergere faar 82% af maks-satsen og bliver IKKE nedsat efter 3 måneder.</p>
           </div>
 
           <div class="field">
@@ -228,12 +228,12 @@
           </div>
 
           <div class="field">
-            <label for="akasseTilmeldtFoerDimission">Var du a-kasse-medlem mindst 12 mdr. foer dimission?</label>
+            <label for="akasseTilmeldtFoerDimission">Var du a-kasse-medlem mindst 12 mdr. før dimission?</label>
             <select id="akasseTilmeldtFoerDimission" name="akasseTilmeldtFoerDimission">
               <option value="nej" selected>Nej</option>
               <option value="ja">Ja</option>
             </select>
-            <p class="field__hint">Hvis ja og du har haft loennet arbejde under studiet, kan du vaere berettiget til almindelig dagpenge i stedet.</p>
+            <p class="field__hint">Hvis ja og du har haft loennet arbejde under studiet, kan du være berettiget til almindelig dagpenge i stedet.</p>
           </div>
         </form>
 
@@ -241,11 +241,11 @@
           <h2>Resultater</h2>
           <dl class="calculator-result__breakdown">
             <div>
-              <dt>Sats foerste 3 maaneder</dt>
+              <dt>Sats første 3 måneder</dt>
               <dd id="r-sats1">15.759 kr/md</dd>
             </div>
             <div>
-              <dt>Sats fra 4. maaned</dt>
+              <dt>Sats fra 4. måned</dt>
               <dd id="r-sats2">10.838 kr/md</dd>
             </div>
             <div>
@@ -257,7 +257,7 @@
               <dd id="r-alm">Ikke tilgaengelig</dd>
             </div>
           </dl>
-          <p class="calculator-result__total"><span>Samlet brutto foerste 12 mdr.</span><strong id="r-total">144.819 kr</strong></p>
+          <p class="calculator-result__total"><span>Samlet brutto første 12 mdr.</span><strong id="r-total">144.819 kr</strong></p>
           <p class="muted" id="r-note">Vejledende beregning. Endelig sats fastsaettes af din a-kasse.</p>
         </aside>
       </div>
@@ -267,10 +267,10 @@
   <section class="section section--alt">
     <div class="container">
       <h2>Saadan virker det</h2>
-      <p>Dimittenddagpenge er en saerlig dagpengeordning for nyuddannede, der ikke har optjent ret til almindelig dagpenge via loennet arbejde. Du faar en fast sats, som ligger under maks-dagpengesatsen paa 22.041 kr./md i 2026.</p>
+      <p>Dimittenddagpenge er en særlig dagpengeordning for nyuddannede, der ikke har optjent ret til almindelig dagpenge via loennet arbejde. Du faar en fast sats, som ligger under maks-dagpengesatsen på 22.041 kr./md i 2026.</p>
       <p>Som <strong>ikke-forsoerger</strong> faar du 71,5 % af maks-satsen, svarende til <strong>15.759 kr./md brutto</strong> hvis du er fuldtidsforsikret. Som <strong>forsoerger</strong> (mindst eet hjemmeboende barn under 18) faar du 82 %, altsaa <strong>18.074 kr./md</strong>.</p>
-      <p>Efter 3 maaneder nedsaettes satsen for ikke-forsoergere under 30 aar til <strong>10.838 kr./md</strong> - et fald paa knap 5.000 kr. Forsoergere og dimittender paa 30+ bevarer den hoejere sats hele perioden.</p>
-      <p>Du kan modtage dimittenddagpenge i op til 24 maaneder inden for en 3-aarig periode.</p>
+      <p>Efter 3 måneder nedsaettes satsen for ikke-forsoergere under 30 år til <strong>10.838 kr./md</strong> - et fald på knap 5.000 kr. Forsoergere og dimittender på 30+ bevarer den hoejere sats hele perioden.</p>
+      <p>Du kan modtage dimittenddagpenge i op til 24 måneder inden for en 3-aarig periode.</p>
 
       <h3 id="satser">Dimittendsatser 2026</h3>
       <div style="overflow-x:auto;">
@@ -278,8 +278,8 @@
           <thead>
             <tr style="background:#f0fdfa; text-align:left;">
               <th style="padding:0.6rem; border-bottom:1px solid #ccc;">Situation</th>
-              <th style="padding:0.6rem; border-bottom:1px solid #ccc;">Foerste 3 mdr.</th>
-              <th style="padding:0.6rem; border-bottom:1px solid #ccc;">Fra 4. maaned</th>
+              <th style="padding:0.6rem; border-bottom:1px solid #ccc;">Første 3 mdr.</th>
+              <th style="padding:0.6rem; border-bottom:1px solid #ccc;">Fra 4. måned</th>
               <th style="padding:0.6rem; border-bottom:1px solid #ccc;">% af maks</th>
             </tr>
           </thead>
@@ -292,7 +292,7 @@
           </tbody>
         </table>
       </div>
-      <p class="muted">*Kun under 30 aar uden forsoergerpligt. Er du 30+ bevarer du den hoejere sats hele perioden.</p>
+      <p class="muted">*Kun under 30 år uden forsoergerpligt. Er du 30+ bevarer du den hoejere sats hele perioden.</p>
     </div>
   </section>
 
@@ -300,29 +300,29 @@
     <div class="container">
       <h2>Tilmeld a-kasse senest 14 dage efter</h2>
       <p>Den 14-dages frist er den enkeltvigtigste regel i ordningen. Hvis du tilmelder dig a-kassen <strong>senest 14 dage efter din sidste eksamen</strong>, har du automatisk dimittendret og kan begynde at modtage dagpenge straks efter en kort karensperiode.</p>
-      <p>Misser du fristen, mister du retten til dimittendsats. Du skal i stedet opfylde det almindelige indkomstkrav paa 270.876 kr. (2026), som typisk tager lang tid at optjene efter studiet.</p>
-      <p>Praktisk tip: De fleste a-kasser tager imod ansoegning <em>foer</em> dimission - tilmeld dig allerede maaneden inden eksamen, saa du er sikker paa fristen.</p>
+      <p>Misser du fristen, mister du retten til dimittendsats. Du skal i stedet opfylde det almindelige indkomstkrav på 270.876 kr. (2026), som typisk tager lang tid at optjene efter studiet.</p>
+      <p>Praktisk tip: De fleste a-kasser tager imod ansoegning <em>før</em> dimission - tilmeld dig allerede maaneden inden eksamen, så du er sikker på fristen.</p>
     </div>
   </section>
 
   <section class="section section--alt">
     <div class="container">
-      <h2>Nedsaettelse efter 3 maaneder</h2>
-      <p>Efter 3 maaneder paa dimittenddagpenge falder satsen for ikke-forsoergere under 30 aar fra 15.759 kr. til 10.838 kr./md. Det er et fald paa 4.921 kr./md - eller knap 30 % af din maanedlige indtaegt.</p>
-      <p>Loven er bevidst designet til at skubbe unge nyuddannede hurtigt i job. Tre maaneder er kort tid til at lande det foerste fuldtidsjob, saa for mange er nedsaettelsen en realitet.</p>
+      <h2>Nedsaettelse efter 3 måneder</h2>
+      <p>Efter 3 måneder på dimittenddagpenge falder satsen for ikke-forsoergere under 30 år fra 15.759 kr. til 10.838 kr./md. Det er et fald på 4.921 kr./md - eller knap 30 % af din maanedlige indtaegt.</p>
+      <p>Loven er bevidst designet til at skubbe unge nyuddannede hurtigt i job. Tre måneder er kort tid til at lande det første fuldtidsjob, så for mange er nedsaettelsen en realitet.</p>
       <p>Hvis du har <strong>forsoergerpligt</strong> over for et hjemmeboende barn under 18, sker nedsaettelsen <strong>ikke</strong>. Du bevarer 18.074 kr./md hele perioden. Det er typisk det stoerste oekonomiske spring i ordningen.</p>
 
       <h2 style="margin-top:2rem;">Dimittend vs almindelig dagpenge</h2>
-      <p>Almindelig dagpenge er op til 22.041 kr./md - eller op til 6.282 kr. mere end dimittendsatsen. Du faar almindelig dagpenge hvis du i 12 maaneder foer ledighed:</p>
+      <p>Almindelig dagpenge er op til 22.041 kr./md - eller op til 6.282 kr. mere end dimittendsatsen. Du faar almindelig dagpenge hvis du i 12 måneder før ledighed:</p>
       <ul>
         <li>har vaeret medlem af en a-kasse, og</li>
-        <li>har tjent mindst 270.876 kr. (2026-niveau), enten i loen eller B-indkomst.</li>
+        <li>har tjent mindst 270.876 kr. (2026-niveau), enten i løn eller B-indkomst.</li>
       </ul>
-      <p>Mange studerende med studiejob naar faktisk indkomstkravet uden at vide det. Var du a-kasse-medlem under hele studiet og havde 8-10 timers loennet arbejde om ugen, er det vaerd at faa din a-kasse til at tjekke om du kan kvalificere dig.</p>
+      <p>Mange studerende med studiejob når faktisk indkomstkravet uden at vide det. Var du a-kasse-medlem under hele studiet og havde 8-10 timers loennet arbejde om ugen, er det værd at faa din a-kasse til at tjekke om du kan kvalificere dig.</p>
 
       <h2 style="margin-top:2rem;">Forsoergertillaegget</h2>
-      <p>Som forsoerger faar du ikke et separat tillaeg, men en hoejere grundsats: 82 % af maks i stedet for 71,5 %. Det giver <strong>2.315 kr. mere om maaneden</strong> end ikke-forsoergere - og endnu mere fra 4. maaned, hvor du er fritaget for nedsaettelsen.</p>
-      <p>Forsoergerstatus kraever, at barnet er under 18 og bor paa din adresse. Det er typisk a-kassen, der vurderer status ud fra CPR-oplysningerne.</p>
+      <p>Som forsoerger faar du ikke et separat tillæg, men en hoejere grundsats: 82 % af maks i stedet for 71,5 %. Det giver <strong>2.315 kr. mere om maaneden</strong> end ikke-forsoergere - og endnu mere fra 4. måned, hvor du er fritaget for nedsaettelsen.</p>
+      <p>Forsoergerstatus kraever, at barnet er under 18 og bor på din adresse. Det er typisk a-kassen, der vurderer status ud fra CPR-oplysningerne.</p>
     </div>
   </section>
 
@@ -330,17 +330,17 @@
     <div class="container">
       <h2>Vigtige situationer</h2>
       <ul class="stack">
-        <li><strong>Ikke-forsoerger under 30 aar:</strong> satsen falder fra 15.759 kr. til 10.838 kr./md efter 3 maaneder - et fald paa naesten 5.000 kr.</li>
+        <li><strong>Ikke-forsoerger under 30 år:</strong> satsen falder fra 15.759 kr. til 10.838 kr./md efter 3 måneder - et fald på naesten 5.000 kr.</li>
         <li><strong>Forsoergere bevarer den hoejere sats</strong> (18.074 kr.) hele perioden. Det er typisk det stoerste oekonomiske spring i ordningen.</li>
-        <li><strong>Tilmeldingsfristen paa 14 dage</strong> efter sidste eksamen er afgoerende - misser man den, maa man kvalificere sig via indkomstkravet (270.876 kr. i 2026).</li>
-        <li><strong>A-kasse-medlem i mindst 12 mdr.</strong> foer dimission + loennet arbejde kan give almindelig dagpenge (op til 22.041 kr./md) i stedet for dimittendsats.</li>
-        <li><strong>Uddannelsen skal vaere SU-berettiget</strong> og vare mindst 18 maaneder - kortere uddannelser giver ikke ret til dimittendsats.</li>
-        <li><strong>Dimittendrabat:</strong> dimittender betaler nedsat a-kassekontingent det foerste aar efter dimission.</li>
+        <li><strong>Tilmeldingsfristen på 14 dage</strong> efter sidste eksamen er afgoerende - misser man den, må man kvalificere sig via indkomstkravet (270.876 kr. i 2026).</li>
+        <li><strong>A-kasse-medlem i mindst 12 mdr.</strong> før dimission + loennet arbejde kan give almindelig dagpenge (op til 22.041 kr./md) i stedet for dimittendsats.</li>
+        <li><strong>Uddannelsen skal være SU-berettiget</strong> og vare mindst 18 måneder - kortere uddannelser giver ikke ret til dimittendsats.</li>
+        <li><strong>Dimittendrabat:</strong> dimittender betaler nedsat a-kassekontingent det første år efter dimission.</li>
       </ul>
 
       <div style="margin-top:2rem; background:#fff7ed; border-left:4px solid #f59e0b; padding:1.25rem 1.5rem; border-radius:6px;">
-        <h3 style="margin-top:0;">Beslutningen: a-kasse foer eller efter dimission?</h3>
-        <p style="margin-bottom:0;">Hvis du har haft et fast studiejob, kan det vaere langt mere fordelagtigt at melde dig ind i a-kassen <strong>12+ maaneder foer dimission</strong>. Saa kan du kvalificere dig til almindelig dagpenge paa 22.041 kr./md i stedet for dimittendsats paa 15.759 kr./md. Forskellen er op til <strong>6.282 kr./md</strong> - eller 75.000 kr. over et aar. Faa din a-kasse til at lave et indkomstkrav-tjek inden du dimitterer.</p>
+        <h3 style="margin-top:0;">Beslutningen: a-kasse før eller efter dimission?</h3>
+        <p style="margin-bottom:0;">Hvis du har haft et fast studiejob, kan det være langt mere fordelagtigt at melde dig ind i a-kassen <strong>12+ måneder før dimission</strong>. Så kan du kvalificere dig til almindelig dagpenge på 22.041 kr./md i stedet for dimittendsats på 15.759 kr./md. Forskellen er op til <strong>6.282 kr./md</strong> - eller 75.000 kr. over et år. Faa din a-kasse til at lave et indkomstkrav-tjek inden du dimitterer.</p>
       </div>
     </div>
   </section>
@@ -352,10 +352,10 @@
 
   <section class="section section--alt faq">
     <div class="container">
-      <h2>Ofte stillede spoergsmaal</h2>
+      <h2>Ofte stillede spørgsmål</h2>
       <details>
         <summary>Hvor meget kan jeg faa i dimittenddagpenge i 2026?</summary>
-        <p>Som fuldtidsforsikret nyuddannet faar du 15.759 kr./md brutto uden forsoergerpligt, eller 18.074 kr./md med forsoergerpligt. Efter 3 maaneder falder satsen for ikke-forsoergere under 30 aar til 10.838 kr./md.</p>
+        <p>Som fuldtidsforsikret nyuddannet faar du 15.759 kr./md brutto uden forsoergerpligt, eller 18.074 kr./md med forsoergerpligt. Efter 3 måneder falder satsen for ikke-forsoergere under 30 år til 10.838 kr./md.</p>
       </details>
       <details>
         <summary>Hvor stor er forskellen mellem dimittend- og almindelig dagpenge?</summary>
@@ -363,11 +363,11 @@
       </details>
       <details>
         <summary>Hvornaar skal jeg tilmelde mig a-kassen som dimittend?</summary>
-        <p>Senest 14 dage efter, du har afsluttet din uddannelse. Tilmelder du dig senere, mister du retten til dimittendsats og skal i stedet opfylde det almindelige indkomstkrav paa 270.876 kr.</p>
+        <p>Senest 14 dage efter, du har afsluttet din uddannelse. Tilmelder du dig senere, mister du retten til dimittendsats og skal i stedet opfylde det almindelige indkomstkrav på 270.876 kr.</p>
       </details>
       <details>
-        <summary>Hvorfor falder min sats efter 3 maaneder?</summary>
-        <p>For at motivere unge ikke-forsoergere under 30 aar til hurtigt at finde arbejde, nedsaettes satsen til 10.838 kr./md fra 4. maaned. Har du forsoergerpligt, sker denne nedsaettelse IKKE.</p>
+        <summary>Hvorfor falder min sats efter 3 måneder?</summary>
+        <p>For at motivere unge ikke-forsoergere under 30 år til hurtigt at finde arbejde, nedsaettes satsen til 10.838 kr./md fra 4. måned. Har du forsoergerpligt, sker denne nedsaettelse IKKE.</p>
       </details>
       <details>
         <summary>Taeller min studiejob til indkomstkravet?</summary>
@@ -375,18 +375,18 @@
       </details>
       <details>
         <summary>Hvor laenge kan jeg faa dimittenddagpenge?</summary>
-        <p>Op til 2 aar (24 maaneder) inden for en 3-aarig referenceperiode - samme varighed som almindelig dagpenge.</p>
+        <p>Op til 2 år (24 måneder) inden for en 3-aarig referenceperiode - samme varighed som almindelig dagpenge.</p>
       </details>
       <details>
-        <summary>Skal jeg melde mig ind i a-kassen foer eller efter dimission?</summary>
-        <p>For at faa den bedste sats: meld dig ind saa tidligt som muligt. Er du medlem 12+ maaneder foer dimission og har haft job ved siden af studiet, kan du kvalificere dig til almindelig dagpenge (22.041 kr./md) i stedet for dimittendsats (15.759 kr./md).</p>
+        <summary>Skal jeg melde mig ind i a-kassen før eller efter dimission?</summary>
+        <p>For at faa den bedste sats: meld dig ind så tidligt som muligt. Er du medlem 12+ måneder før dimission og har haft job ved siden af studiet, kan du kvalificere dig til almindelig dagpenge (22.041 kr./md) i stedet for dimittendsats (15.759 kr./md).</p>
       </details>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <p>Naar du faar dit foerste fuldtidsjob efter dimittendperioden, er det vaerd at se hvad bruttoloennen bliver til netto. <a class="cross-link" href="https://lonberegning.dk/" rel="noopener">Se hvad din foerste loen som nyuddannet ville give netto paa Loenberegning.dk <span class="ext-icon" aria-hidden="true">↗</span></a>.</p>
+      <p>Når du faar dit første fuldtidsjob efter dimittendperioden, er det værd at se hvad bruttoloennen bliver til netto. <a class="cross-link" href="https://lonberegning.dk/" rel="noopener">Se hvad din første løn som nyuddannet ville give netto på Loenberegning.dk <span class="ext-icon" aria-hidden="true">↗</span></a>.</p>
 
       <h2>Relaterede beregnere</h2>
       <div class="cluster">
@@ -399,8 +399,8 @@
       <div class="source-card" style="margin-top:2rem;">
         <h2>Officielle kilder</h2>
         <ul>
-          <li><a href="https://bm.dk/satser/satser-for-2026/dagpenge" rel="nofollow noopener" target="_blank">Beskaeftigelsesministeriet - Satser 2026 <span class="ext-icon" aria-hidden="true">↗</span></a></li>
-          <li><a href="https://star.dk/ydelser/ydelsesoversigt/dagpenge/" rel="nofollow noopener" target="_blank">STAR - Ydelse til dimittender <span class="ext-icon" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://bm.dk//satser/satser-for-2026/dagpenge" rel="nofollow noopener" target="_blank">Beskaeftigelsesministeriet - Satser 2026 <span class="ext-icon" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://star.dk//ydelser/ydelsesoversigt/dagpenge/" rel="nofollow noopener" target="_blank">STAR - Ydelse til dimittender <span class="ext-icon" aria-hidden="true">↗</span></a></li>
           <li><a href="https://www.borger.dk/arbejde-dagpenge-ferie/Dagpenge-kontanthjaelp-og-sygedagpenge/Arbejdsloeshedsdagpenge" rel="nofollow noopener" target="_blank">borger.dk - Dagpenge for nyuddannede <span class="ext-icon" aria-hidden="true">↗</span></a></li>
           <li><a href="https://danskeakasser.dk/viden-analyser/dimittendpakken" rel="nofollow noopener" target="_blank">Danske A-kasser - Dimittendpakken <span class="ext-icon" aria-hidden="true">↗</span></a></li>
         </ul>
@@ -422,13 +422,13 @@
         </ul>
       </div>
       <div class="site-footer__col">
-        <h2>Ledig &amp; familie</h2>
+        <h2>Ledig</h2>
         <ul>
           <li><a href="/beregner/dagpenge.html">Dagpenge</a></li>
           <li><a href="/beregner/dimittend.html">Dimittend</a></li>
           <li><a href="/beregner/sygedagpenge.html">Sygedagpenge</a></li>
           <li><a href="/beregner/barselsdagpenge.html">Barselsdagpenge</a></li>
-          <li><a href="/beregner/bornepenge.html">Boernepenge</a></li>
+          <li><a href="/beregner/bornepenge.html">Børnepenge</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
@@ -440,24 +440,24 @@
           <li><a href="/beregner/depositum.html">Depositum</a></li>
           <li><a href="/beregner/flyttebudget.html">Flyttebudget</a></li>
           <li><a href="/beregner/el-vand-varme-budget.html">El, vand og varme</a></li>
-          <li><a href="/beregner/ejendomsvaerdiskat.html">Ejendomsvaerdiskat</a></li>
+          <li><a href="/beregner/ejendomsvaerdiskat.html">Ejendomsværdiskat</a></li>
           <li><a href="/beregner/andelsbolig.html">Andelsbolig</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
         <h2>Bil &amp; transport</h2>
         <ul>
-          <li><a href="/beregner/leasing-vs-koeb.html">Leasing vs. koeb</a></li>
+          <li><a href="/beregner/leasing-vs-koeb.html">Leasing vs. køb</a></li>
           <li><a href="/beregner/bil-totalomkostning.html">Bil totalomkostning</a></li>
-          <li><a href="/beregner/bil-vaerdtab.html">Bil-vaerditab</a></li>
-          <li><a href="/beregner/groen-ejerafgift.html">Groen ejerafgift</a></li>
-          <li><a href="/beregner/braendstof.html">Braendstof</a></li>
+          <li><a href="/beregner/bil-vaerdtab.html">Bil-værditab</a></li>
+          <li><a href="/beregner/groen-ejerafgift.html">Grøn ejerafgift</a></li>
+          <li><a href="/beregner/braendstof.html">Brændstof</a></li>
           <li><a href="/beregner/elbil-opladning.html">Elbil opladning</a></li>
           <li><a href="/beregner/pendlerbudget.html">Pendlerbudget</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
-        <h2>Selvstaendig</h2>
+        <h2>Selvstændig</h2>
         <ul>
           <li><a href="/beregner/moms-beregner.html">Momsberegner</a></li>
           <li><a href="/beregner/timepris-freelancer.html">Timepris</a></li>
@@ -479,7 +479,7 @@
       <div class="site-footer__col">
         <h2>Vaerktoejer</h2>
         <ul>
-          <li><a href="/sporg-ai.html">Spoerg AI</a></li>
+          <li><a href="/sporg-ai.html">Spørg AI</a></li>
           <li><a href="/#alle-beregnere">Alle beregnere</a></li>
           <li><a href="https://lonberegning.dk/" rel="noopener">Loenberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
         </ul>
@@ -495,9 +495,9 @@
         </ul>
       </div>
     </div>
-    <p class="site-footer__cross">Skal du regne nettoloen ud? Brug vores soestersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a> — specialiseret i loen og skat.</p>
+    <p class="site-footer__cross">Skal du regne nettoloen ud? Brug vores soestersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a> — specialiseret i løn og skat.</p>
     <div class="site-footer__bottom">
-      <span>&copy; 2026 hverdagstal.dk &middot; Beregn penge, stoette og udgifter i hverdagen &middot; Satser opdateret 2026-06-10</span>
+      <span>&copy; 2026 hverdagstal.dk &middot; Beregn penge, støtte og udgifter i hverdagen &middot; Satser opdateret 2026-06-10</span>
       <span>Made in Danmark</span>
     </div>
   </div>

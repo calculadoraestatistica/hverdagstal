@@ -137,10 +137,10 @@
       <ul>
         <li><a href="/">Forside</a></li>
         <li><a href="/situation/studerende.html">Studerende</a></li>
-        <li><a href="/situation/ledig-familie.html">Ledig &amp; familie</a></li>
+        <li><a href="/situation/ledig.html">Ledig</a></li>
         <li><a href="/situation/bolig-flytning.html">Bolig</a></li>
         <li><a href="/situation/bil-transport.html">Bil</a></li>
-        <li><a href="/situation/selvstaendig.html">Selvstaendig</a></li>
+        <li><a href="/situation/selvstaendig.html">Selvstændig</a></li>
         <li class="has-dropdown">
           <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-more-menu">Mere <span aria-hidden="true">&#9662;</span></button>
           <ul id="nav-more-menu" class="nav-dropdown">
@@ -150,7 +150,7 @@
             <li><a href="/om.html">Om</a></li>
           </ul>
         </li>
-        <li class="nav-cta"><a href="/sporg-ai.html" class="nav-cta-link">Spoerg AI</a></li>
+        <li class="nav-cta"><a href="/sporg-ai.html" class="nav-cta-link">Spørg AI</a></li>
       </ul>
     </nav>
   </div>
@@ -166,13 +166,13 @@
           <li aria-current="page">Andelsbolig</li>
         </ol>
       </nav>
-      <span class="hero__eyebrow">Bolig og oekonomi</span>
+      <span class="hero__eyebrow">Bolig og økonomi</span>
       <h1 class="hero__title">Andelsbolig beregner 2026</h1>
-      <p class="hero__lead">Beregn lovens maksimale andelspris efter andelsboligloven og se din samlede maanedlige udgift inkl. boligafgift, forbrug og andelsboliglaan. Saa ved du, om prisen er lovlig - og om oekonomien hænger sammen.</p>
+      <p class="hero__lead">Beregn lovens maksimale andelspris efter andelsboligloven og se din samlede maanedlige udgift inkl. boligafgift, forbrug og andelsboliglaan. Så ved du, om prisen er lovlig - og om oekonomien hænger sammen.</p>
       <p><span class="opdateret-badge">Opdateret 2026-06-10</span></p>
       <div class="cluster">
         <a class="btn btn--primary btn--lg" href="#beregner">Beregn nu</a>
-        <a class="btn btn--ghost" href="#faq">Ofte stillede spoergsmaal</a>
+        <a class="btn btn--ghost" href="#faq">Ofte stillede spørgsmål</a>
       </div>
     </div>
   </section>
@@ -180,7 +180,7 @@
   <section class="section" id="beregner">
     <div class="container">
       <h2>Beregn maksimal andelspris 2026</h2>
-      <p>Udfyld tallene fra foreningens seneste aarsregnskab og dit eget budget. Beregneren bruger formlen fra <strong>Andelsboligloven § 5</strong>: andelens vaerdi = foreningens formue gange din andels fordelingstal.</p>
+      <p>Udfyld tallene fra foreningens seneste aarsregnskab og dit eget budget. Beregneren bruger formlen fra <strong>Andelsboligloven § 5</strong>: andelens værdi = foreningens formue gange din andels fordelingstal.</p>
 
       <div class="site-grid">
         <form class="calculator-form" id="andelsbolig-form" autocomplete="off" novalidate>
@@ -233,7 +233,7 @@
           <div class="field">
             <label for="forbedringer">Godkendte forbedringer (kr)</label>
             <input id="forbedringer" name="forbedringer" type="number" inputmode="numeric" min="0" step="1000" value="50000">
-            <span class="field__hint">Skal vaere godkendt af bestyrelsen - afskrives 2 % pr. aar</span>
+            <span class="field__hint">Skal være godkendt af bestyrelsen - afskrives 2 % pr. år</span>
           </div>
 
           <div class="field">
@@ -259,9 +259,9 @@
           </div>
 
           <div class="field">
-            <label for="ydelse_andelsboliglaan">Ydelse paa andelsboliglaan (kr/md)</label>
+            <label for="ydelse_andelsboliglaan">Ydelse på andelsboliglaan (kr/md)</label>
             <input id="ydelse_andelsboliglaan" name="ydelse_andelsboliglaan" type="number" inputmode="numeric" min="0" step="100" value="2500">
-            <span class="field__hint">Saet 0, hvis du ikke optager laan til andelen</span>
+            <span class="field__hint">Sæt 0, hvis du ikke optager laan til andelen</span>
           </div>
 
           <div class="field field--full">
@@ -278,13 +278,13 @@
             <dt>Maksimal lovlig andelspris</dt><dd id="r_max_andel">-</dd>
             <dt>Inkl. forbedringer og loesoere</dt><dd id="r_max_inkl">-</dd>
             <dt>Pris pr. m²</dt><dd id="r_pris_m2">-</dd>
-            <dt>Boligafgift pr. m²/aar</dt><dd id="r_boligafgift_m2">-</dd>
+            <dt>Boligafgift pr. m²/år</dt><dd id="r_boligafgift_m2">-</dd>
             <dt>Belaaningsgrad i foreningen</dt><dd id="r_belaaning">-</dd>
             <dt>Risikoscore (1-10)</dt><dd id="r_risiko">-</dd>
-            <dt>Rentefradrag pr. aar (ca.)</dt><dd id="r_fradrag">-</dd>
+            <dt>Rentefradrag pr. år (ca.)</dt><dd id="r_fradrag">-</dd>
           </dl>
           <p class="calculator-result__total"><span>Samlet maanedlig udgift</span><strong id="r_maaned">-</strong></p>
-          <p class="muted"><small id="r_kommentar">Indtast vaerdier og se den lovlige pris og din maanedsoekonomi.</small></p>
+          <p class="muted"><small id="r_kommentar">Indtast værdier og se den lovlige pris og din maanedsoekonomi.</small></p>
         </aside>
       </div>
     </div>
@@ -293,28 +293,28 @@
   <section class="section section--alt">
     <div class="container">
       <h2>Andelsboligloven § 5</h2>
-      <p>Andelsboligloven saetter et loft over, hvad en andel maa saelges for. Lovens § 5 fastslaar, at salgsprisen ikke maa overstige andelens forholdsmaessige andel af foreningens formue. Bryder en saelger loftet, kan handlen omstoedes - og koeberen kan kraeve det overskydende beloeb tilbage.</p>
+      <p>Andelsboligloven saetter et loft over, hvad en andel må saelges for. Lovens § 5 fastslaar, at salgsprisen ikke må overstige andelens forholdsmaessige andel af foreningens formue. Bryder en saelger loftet, kan handlen omstoedes - og koeberen kan kraeve det overskydende beløb tilbage.</p>
       <ol>
         <li><strong>Foreningens formue</strong> = ejendomsvaerdi + oevrige aktiver - samlet gaeld.</li>
-        <li><strong>Andelens vaerdi</strong> = foreningens formue × (din fordelingstal / samlet fordelingstal).</li>
-        <li><strong>Maksimal salgspris</strong> = andelens vaerdi + godkendte forbedringer + lovligt vurderet loesoere.</li>
+        <li><strong>Andelens værdi</strong> = foreningens formue × (din fordelingstal / samlet fordelingstal).</li>
+        <li><strong>Maksimal salgspris</strong> = andelens værdi + godkendte forbedringer + lovligt vurderet loesoere.</li>
       </ol>
-      <p>Forbedringer afskrives 2 % om aaret efter ABF's vejledning, og loesoere maa kun saettes til brugt handelsvaerdi - aldrig nyvaerdi. Foreningens valuarvurdering er gyldig i 18 maaneder.</p>
+      <p>Forbedringer afskrives 2 % om aaret efter ABF's vejledning, og loesoere må kun saettes til brugt handelsvaerdi - aldrig nyvaerdi. Foreningens valuarvurdering er gyldig i 18 måneder.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
       <h2>Valuarvurdering vs offentlig vurdering</h2>
-      <p>Tre principper kan ligge til grund for andelens vaerdi. Princippet besluttes paa generalforsamlingen og fremgaar af aarsregnskabet.</p>
+      <p>Tre principper kan ligge til grund for andelens værdi. Princippet besluttes på generalforsamlingen og fremgaar af aarsregnskabet.</p>
       <div class="stack">
         <div class="source-card">
           <h3>Valuarvurdering</h3>
-          <p>Ekstern, autoriseret vurderingsmand vurderer foreningens ejendom hver 18. maaned. Giver typisk den hoejeste pris og det mest aktuelle billede. Anbefales af ABF til foreninger i koebenhavnsomraadet.</p>
+          <p>Ekstern, autoriseret vurderingsmand vurderer foreningens ejendom hver 18. måned. Giver typisk den hoejeste pris og det mest aktuelle billede. Anbefales af ABF til foreninger i koebenhavnsomraadet.</p>
         </div>
         <div class="source-card">
           <h3>Offentlig vurdering</h3>
-          <p>Bruger Vurderingsstyrelsens ejendomsvurdering. Lavere og mere stabil end valuar. Maa anvendes indtil 2027, hvor de nye offentlige vurderinger faar fuldt gennemslag.</p>
+          <p>Bruger Vurderingsstyrelsens ejendomsvurdering. Lavere og mere stabil end valuar. Må anvendes indtil 2027, hvor de nye offentlige vurderinger faar fuldt gennemslag.</p>
         </div>
         <div class="source-card">
           <h3>Anskaffelsessum</h3>
@@ -327,8 +327,8 @@
   <section class="section section--alt">
     <div class="container">
       <h2>Foreningens gaeld og risiko</h2>
-      <p>En lav andelspris og lav boligafgift kan vaere et tegn paa, at foreningen har laant for meget og udskudt afdrag. Det giver lav loebende udgift nu - men store stigninger, naar afdragsfriheden udloeber, eller renten stiger.</p>
-      <p>ABF anbefaler en <strong>belaaningsgrad under 60 %</strong> som sundt niveau. Mellem 60 og 80 % er risikoen forhoejet, og over 80 % er der tale om en haardt belaant forening, hvor boligafgiften ofte maa op.</p>
+      <p>En lav andelspris og lav boligafgift kan være et tegn på, at foreningen har laant for meget og udskudt afdrag. Det giver lav loebende udgift nu - men store stigninger, når afdragsfriheden udloeber, eller renten stiger.</p>
+      <p>ABF anbefaler en <strong>belaaningsgrad under 60 %</strong> som sundt niveau. Mellem 60 og 80 % er risikoen forhoejet, og over 80 % er der tale om en haardt belaant forening, hvor boligafgiften ofte må op.</p>
       <p>Tjek altid foreningens vedligeholdelsesplan, laaneprofil og refinansieringsdato i regnskabet - ikke bare boligafgiften.</p>
     </div>
   </section>
@@ -336,8 +336,8 @@
   <section class="section">
     <div class="container">
       <h2>Sund boligafgift pr m2</h2>
-      <p>Boligafgiften daekker foreningens drift, vedligehold og afdrag paa laan. Sundt niveau i 2026 ligger paa <strong>600-1.100 kr/m²/aar</strong>. Under 600 indikerer ofte underfinansiering - laeg en buffer ind for kommende stigninger. Over 1.100 kan vaere tegn paa hoej gaeld eller stort vedligeholdelsesefterslaeb.</p>
-      <p>Bemaerk: der er ingen lovbestemt graense for boligafgift - den fastsaettes paa generalforsamlingen ud fra budgettet.</p>
+      <p>Boligafgiften dækker foreningens drift, vedligehold og afdrag på laan. Sundt niveau i 2026 ligger på <strong>600-1.100 kr/m²/år</strong>. Under 600 indikerer ofte underfinansiering - laeg en buffer ind for kommende stigninger. Over 1.100 kan være tegn på hoej gaeld eller stort vedligeholdelsesefterslaeb.</p>
+      <p>Bemaerk: der er ingen lovbestemt grænse for boligafgift - den fastsaettes på generalforsamlingen ud fra budgettet.</p>
 
       <div class="ad-slot ad-slot--inline" aria-label="Annonce">
         <small class="muted">Annonce</small>
@@ -350,10 +350,10 @@
     <div class="container">
       <h2>Vigtige situationer</h2>
       <ul>
-        <li><strong>Valuarvurdering over 18 maaneder gammel:</strong> kan ikke bruges som grundlag - kraev ny vurdering foer du underskriver.</li>
-        <li><strong>Afdragsfrihed udloeber inden for 5 aar:</strong> belaaningsgrad over 70 % er kritisk - regn med stigende boligafgift.</li>
+        <li><strong>Valuarvurdering over 18 måneder gammel:</strong> kan ikke bruges som grundlag - kraev ny vurdering før du underskriver.</li>
+        <li><strong>Afdragsfrihed udloeber inden for 5 år:</strong> belaaningsgrad over 70 % er kritisk - regn med stigende boligafgift.</li>
         <li><strong>Anskaffelsessumprincip:</strong> lavere pris, men banken vil normalt laane mindre mod andelen.</li>
-        <li><strong>Forbedringer uden bestyrelsesgodkendelse:</strong> maa ikke indgaa i prisen - saelger kan blive kraevet at betale tilbage.</li>
+        <li><strong>Forbedringer uden bestyrelsesgodkendelse:</strong> må ikke indgaa i prisen - saelger kan blive kraevet at betale tilbage.</li>
         <li><strong>Loesoere vurderet til nyvaerdi:</strong> ulovligt - kun reel brugt-handelsvaerdi accepteres.</li>
       </ul>
     </div>
@@ -363,12 +363,12 @@
     <div class="container">
       <div class="source-card" style="background:#fff8e6;border-color:#f59e0b">
         <h2>Beslutningsspoergsmaal</h2>
-        <p><strong>Er denne andelspris lovlig - og bliver den maanedlige udgift baeredygtig, naar jeg laegger boligafgift og laan sammen?</strong></p>
+        <p><strong>Er denne andelspris lovlig - og bliver den maanedlige udgift baeredygtig, når jeg laegger boligafgift og laan sammen?</strong></p>
         <p>Saadan bruger du beregneren til at svare:</p>
         <ul>
           <li>Sammenlign saelgers pris med <em>Maksimal lovlig andelspris inkl. forbedringer</em>. Er saelgers pris over - er handlen ulovlig.</li>
-          <li>Tjek <em>Boligafgift pr. m²/aar</em>: ligger den inden for 600-1.100 kr, er driften typisk sund.</li>
-          <li>Se paa <em>Belaaningsgrad</em>: over 60 % er der oekonomisk risiko, over 80 % er det en raed advarsel.</li>
+          <li>Tjek <em>Boligafgift pr. m²/år</em>: ligger den inden for 600-1.100 kr, er driften typisk sund.</li>
+          <li>Se på <em>Belaaningsgrad</em>: over 60 % er der økonomisk risiko, over 80 % er det en raed advarsel.</li>
           <li>Tjek den <em>Samlede maanedlige udgift</em> mod dit budget - regn med plads til renten kan stige.</li>
         </ul>
       </div>
@@ -377,38 +377,38 @@
 
   <section class="section section--alt faq" id="faq">
     <div class="container">
-      <h2>Ofte stillede spoergsmaal</h2>
+      <h2>Ofte stillede spørgsmål</h2>
       <details>
-        <summary>Hvad er den maksimale lovlige pris paa en andelsbolig i 2026?</summary>
+        <summary>Hvad er den maksimale lovlige pris på en andelsbolig i 2026?</summary>
         <p>Lovens maksimumpris er andelens forholdsmaessige andel af foreningens formue (egenkapital), plus vaerdien af godkendte forbedringer og lovligt vurderet loesoere. Foreningens formue = ejendomsvaerdi + andre aktiver minus samlet gaeld. Saelges der over denne pris, er handlen ulovlig og kan omstoedes.</p>
       </details>
       <details>
-        <summary>Hvad er forskellen paa valuarvurdering, offentlig vurdering og anskaffelsessum?</summary>
-        <p>Valuarvurdering: ekstern vurderingsmand vurderer foreningens ejendom hvert 18. md, mest realistisk men giver hoejest pris. Offentlig vurdering: bruges hvis valuar ikke er valgt, baseres paa Vurderingsstyrelsen. Anskaffelsessum: foreningens oprindelige koebspris - giver lave priser men bruges sjaeldent i dag.</p>
+        <summary>Hvad er forskellen på valuarvurdering, offentlig vurdering og anskaffelsessum?</summary>
+        <p>Valuarvurdering: ekstern vurderingsmand vurderer foreningens ejendom hvert 18. md, mest realistisk men giver hoejest pris. Offentlig vurdering: bruges hvis valuar ikke er valgt, baseres på Vurderingsstyrelsen. Anskaffelsessum: foreningens oprindelige koebspris - giver lave priser men bruges sjaeldent i dag.</p>
       </details>
       <details>
-        <summary>Hvor hoej maa boligafgiften vaere paa en andelsbolig?</summary>
-        <p>Der er ingen lovbestemt graense - generalforsamlingen fastsaetter den. Sund boligafgift i 2026 ligger paa 600-1.100 kr/m²/aar. Under 600 indikerer ofte underfinansiering (stoerre stigninger forude). Over 1.100 kan vaere tegn paa hoej gaeld eller stort vedligeholdelsesefterslaeb.</p>
+        <summary>Hvor hoej må boligafgiften være på en andelsbolig?</summary>
+        <p>Der er ingen lovbestemt grænse - generalforsamlingen fastsaetter den. Sund boligafgift i 2026 ligger på 600-1.100 kr/m²/år. Under 600 indikerer ofte underfinansiering (stoerre stigninger forude). Over 1.100 kan være tegn på hoej gaeld eller stort vedligeholdelsesefterslaeb.</p>
       </details>
       <details>
-        <summary>Kan jeg laane penge til at koebe en andelsbolig?</summary>
-        <p>Ja, via et andelsboliglaan i bank - typisk op til 80 % af andelens vaerdi. Renter er fradragsberettigede som negativ kapitalindkomst (ca 25,6 % i 2026 over bundgraensen). Banken kraever foreningens seneste tre aars regnskaber og vedligeholdelsesplan foer godkendelse.</p>
+        <summary>Kan jeg laane penge til at købe en andelsbolig?</summary>
+        <p>Ja, via et andelsboliglaan i bank - typisk op til 80 % af andelens værdi. Renter er fradragsberettigede som negativ kapitalindkomst (ca 25,6 % i 2026 over bundgraensen). Banken kraever foreningens seneste tre aars regnskaber og vedligeholdelsesplan før godkendelse.</p>
       </details>
       <details>
         <summary>Hvad sker der hvis foreningen har hoej gaeld?</summary>
-        <p>Hoej belaaningsgrad (over 60-80 % af ejendomsvaerdien) betyder hoej risiko: rentestigninger eller udloeb af afdragsfrihed kan tvinge boligafgiften markant op. Tjek foreningens regnskab for laantype, afdragsfrihed og refinansieringsdato foer koeb. ABF anbefaler max 60 % belaaning.</p>
+        <p>Hoej belaaningsgrad (over 60-80 % af ejendomsvaerdien) betyder hoej risiko: rentestigninger eller udloeb af afdragsfrihed kan tvinge boligafgiften markant op. Tjek foreningens regnskab for laantype, afdragsfrihed og refinansieringsdato før køb. ABF anbefaler max 60 % belaaning.</p>
       </details>
       <details>
         <summary>Hvad er en frivillig (fritids) bestyrelse?</summary>
         <p>En bestyrelse der bestaar af beboere uden professionel administration. Det er normen i mindre foreninger (under 30 lejligheder) og giver lavere driftsomkostninger. Risiko: forsoemt vedligeholdelse og daarlig oekonomistyring. Tjek altid vedligeholdelsesplan og om der er aftale med ekstern administrator.</p>
       </details>
       <details>
-        <summary>Skal jeg betale ejendomsvaerdiskat paa min andelsbolig?</summary>
-        <p>Nej, andelsboliger er ikke underlagt ejendomsvaerdiskat, fordi du formelt ikke ejer boligen - du ejer en andel i foreningen. Foreningen betaler grundskyld, som indgaar i boligafgiften. Dette er en stor oekonomisk fordel ved andelsbolig vs ejerbolig.</p>
+        <summary>Skal jeg betale ejendomsværdiskat på min andelsbolig?</summary>
+        <p>Nej, andelsboliger er ikke underlagt ejendomsværdiskat, fordi du formelt ikke ejer boligen - du ejer en andel i foreningen. Foreningen betaler grundskyld, som indgaar i boligafgiften. Dette er en stor økonomisk fordel ved andelsbolig vs ejerbolig.</p>
       </details>
       <details>
         <summary>Hvad sker der med min andel hvis foreningen gaar konkurs?</summary>
-        <p>Hvis foreningen ikke kan betale sine laan og gaar konkurs, kan du miste hele eller dele af din andelsindbetaling, og du kan blive noedt til at flytte. Dit andelsboliglaan i banken skal stadig betales. Tjek altid foreningens likviditet og soliditet foer koeb - saerligt belaaningsgrad og likviditetsbuffer.</p>
+        <p>Hvis foreningen ikke kan betale sine laan og gaar konkurs, kan du miste hele eller dele af din andelsindbetaling, og du kan blive noedt til at flytte. Dit andelsboliglaan i banken skal stadig betales. Tjek altid foreningens likviditet og soliditet før køb - særligt belaaningsgrad og likviditetsbuffer.</p>
       </details>
     </div>
   </section>
@@ -416,7 +416,7 @@
   <section class="section">
     <div class="container">
       <h2>Relateret</h2>
-      <p>Skal du sammenligne med en ejerbolig? Brug <a href="/beregner/ejendomsvaerdiskat.html">Ejendomsvaerdiskat-beregneren</a> eller <a href="/beregner/huslejebudget.html">Huslejebudgettet</a>. Vil du vide din nettoloen, bruger du vores soestersite <a class="cross-link" href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">↗</span></a>.</p>
+      <p>Skal du sammenligne med en ejerbolig? Brug <a href="/beregner/ejendomsvaerdiskat.html">Ejendomsværdiskat-beregneren</a> eller <a href="/beregner/huslejebudget.html">Huslejebudgettet</a>. Vil du vide din nettoloen, bruger du vores soestersite <a class="cross-link" href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">↗</span></a>.</p>
     </div>
   </section>
 
@@ -428,10 +428,10 @@
         <ul>
           <li><a href="https://www.abf-rep.dk" rel="nofollow noopener" target="_blank">Andelsboligforeningernes Faellesrepraesentation (ABF) <span class="ext-icon" aria-hidden="true">↗</span></a></li>
           <li><a href="https://www.retsinformation.dk/eli/lta/2024/1144" rel="nofollow noopener" target="_blank">Retsinformation - Andelsboligloven 2024 <span class="ext-icon" aria-hidden="true">↗</span></a></li>
-          <li><a href="https://www.boligstyrelsen.dk/andelsbolig" rel="nofollow noopener" target="_blank">Bolig- og Planstyrelsen - Andelsboliger <span class="ext-icon" aria-hidden="true">↗</span></a></li>
-          <li><a href="https://www.abf-rep.dk/raadgivning/oekonomi/andelskronen" rel="nofollow noopener" target="_blank">ABF - Andelskronen og maksimalpris <span class="ext-icon" aria-hidden="true">↗</span></a></li>
-          <li><a href="https://taenk.dk/test-og-forbrugerliv/bolig/koeb-af-andelsbolig" rel="nofollow noopener" target="_blank">Forbrugerraadet Taenk - Koeb af andelsbolig <span class="ext-icon" aria-hidden="true">↗</span></a></li>
-          <li><a href="https://skat.dk/borger/aktier-og-vaerdipapirer/laanetyper" rel="nofollow noopener" target="_blank">Skat.dk - Rentefradrag andelsboliglaan <span class="ext-icon" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://www.boligstyrelsen.dk/" rel="nofollow noopener" target="_blank">Bolig- og Planstyrelsen - Andelsboliger <span class="ext-icon" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://www.abf-rep.dk/" rel="nofollow noopener" target="_blank">ABF - Andelskronen og maksimalpris <span class="ext-icon" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://taenk.dk/test-og-forbrugerliv/bolig/koeb-af-andelsbolig" rel="nofollow noopener" target="_blank">Forbrugerraadet Taenk - Køb af andelsbolig <span class="ext-icon" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://skat.dk/" rel="nofollow noopener" target="_blank">Skat.dk - Rentefradrag andelsboliglaan <span class="ext-icon" aria-hidden="true">↗</span></a></li>
         </ul>
       </div>
     </div>
@@ -450,13 +450,13 @@
         </ul>
       </div>
       <div class="site-footer__col">
-        <h2>Ledig &amp; familie</h2>
+        <h2>Ledig</h2>
         <ul>
           <li><a href="/beregner/dagpenge.html">Dagpenge</a></li>
           <li><a href="/beregner/dimittend.html">Dimittend</a></li>
           <li><a href="/beregner/sygedagpenge.html">Sygedagpenge</a></li>
           <li><a href="/beregner/barselsdagpenge.html">Barselsdagpenge</a></li>
-          <li><a href="/beregner/bornepenge.html">Boernepenge</a></li>
+          <li><a href="/beregner/bornepenge.html">Børnepenge</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
@@ -468,24 +468,24 @@
           <li><a href="/beregner/depositum.html">Depositum</a></li>
           <li><a href="/beregner/flyttebudget.html">Flyttebudget</a></li>
           <li><a href="/beregner/el-vand-varme-budget.html">El, vand og varme</a></li>
-          <li><a href="/beregner/ejendomsvaerdiskat.html">Ejendomsvaerdiskat</a></li>
+          <li><a href="/beregner/ejendomsvaerdiskat.html">Ejendomsværdiskat</a></li>
           <li><a href="/beregner/andelsbolig.html">Andelsbolig</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
         <h2>Bil &amp; transport</h2>
         <ul>
-          <li><a href="/beregner/leasing-vs-koeb.html">Leasing vs. koeb</a></li>
+          <li><a href="/beregner/leasing-vs-koeb.html">Leasing vs. køb</a></li>
           <li><a href="/beregner/bil-totalomkostning.html">Bil totalomkostning</a></li>
-          <li><a href="/beregner/bil-vaerdtab.html">Bil-vaerditab</a></li>
-          <li><a href="/beregner/groen-ejerafgift.html">Groen ejerafgift</a></li>
-          <li><a href="/beregner/braendstof.html">Braendstof</a></li>
+          <li><a href="/beregner/bil-vaerdtab.html">Bil-værditab</a></li>
+          <li><a href="/beregner/groen-ejerafgift.html">Grøn ejerafgift</a></li>
+          <li><a href="/beregner/braendstof.html">Brændstof</a></li>
           <li><a href="/beregner/elbil-opladning.html">Elbil opladning</a></li>
           <li><a href="/beregner/pendlerbudget.html">Pendlerbudget</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
-        <h2>Selvstaendig</h2>
+        <h2>Selvstændig</h2>
         <ul>
           <li><a href="/beregner/moms-beregner.html">Momsberegner</a></li>
           <li><a href="/beregner/timepris-freelancer.html">Timepris</a></li>
@@ -507,7 +507,7 @@
       <div class="site-footer__col">
         <h2>Vaerktoejer</h2>
         <ul>
-          <li><a href="/sporg-ai.html">Spoerg AI</a></li>
+          <li><a href="/sporg-ai.html">Spørg AI</a></li>
           <li><a href="/#alle-beregnere">Alle beregnere</a></li>
           <li><a href="https://lonberegning.dk/" rel="noopener">Loenberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
         </ul>
@@ -523,9 +523,9 @@
         </ul>
       </div>
     </div>
-    <p class="site-footer__cross">Skal du regne nettoloen ud? Brug vores soestersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a> — specialiseret i loen og skat.</p>
+    <p class="site-footer__cross">Skal du regne nettoloen ud? Brug vores soestersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a> — specialiseret i løn og skat.</p>
     <div class="site-footer__bottom">
-      <span>&copy; 2026 hverdagstal.dk &middot; Beregn penge, stoette og udgifter i hverdagen &middot; Satser opdateret 2026-06-10</span>
+      <span>&copy; 2026 hverdagstal.dk &middot; Beregn penge, støtte og udgifter i hverdagen &middot; Satser opdateret 2026-06-10</span>
       <span>Made in Danmark</span>
     </div>
   </div>

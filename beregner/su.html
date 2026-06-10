@@ -142,10 +142,10 @@
       <ul>
         <li><a href="/">Forside</a></li>
         <li><a href="/situation/studerende.html">Studerende</a></li>
-        <li><a href="/situation/ledig-familie.html">Ledig &amp; familie</a></li>
+        <li><a href="/situation/ledig.html">Ledig</a></li>
         <li><a href="/situation/bolig-flytning.html">Bolig</a></li>
         <li><a href="/situation/bil-transport.html">Bil</a></li>
-        <li><a href="/situation/selvstaendig.html">Selvstaendig</a></li>
+        <li><a href="/situation/selvstaendig.html">Selvstændig</a></li>
         <li class="has-dropdown">
           <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-more-menu">Mere <span aria-hidden="true">&#9662;</span></button>
           <ul id="nav-more-menu" class="nav-dropdown">
@@ -155,7 +155,7 @@
             <li><a href="/om.html">Om</a></li>
           </ul>
         </li>
-        <li class="nav-cta"><a href="/sporg-ai.html" class="nav-cta-link">Spoerg AI</a></li>
+        <li class="nav-cta"><a href="/sporg-ai.html" class="nav-cta-link">Spørg AI</a></li>
       </ul>
     </nav>
   </div>
@@ -185,14 +185,14 @@
   <section class="section" id="beregn">
     <div class="container">
       <h2>Beregn din SU 2026</h2>
-      <p>Udfyld felterne nedenfor. Resultatet opdateres automatisk, naar du aendrer et input.</p>
+      <p>Udfyld felterne nedenfor. Resultatet opdateres automatisk, når du aendrer et input.</p>
 
       <div class="site-grid">
         <form class="calculator-form" id="su-form" aria-label="SU-beregner formular">
           <div class="field">
             <label for="alder">Hvor gammel er du?</label>
             <input id="alder" name="alder" type="number" min="15" max="60" value="20" inputmode="numeric">
-            <p class="field__hint">SU-satsen afhaenger af om du er under eller over 20 aar, samt din bopaelsstatus.</p>
+            <p class="field__hint">SU-satsen afhaenger af om du er under eller over 20 år, samt din bopaelsstatus.</p>
           </div>
 
           <div class="field">
@@ -210,21 +210,21 @@
               <option value="udeboende" selected>Udeboende</option>
               <option value="hjemmeboende">Hjemmeboende</option>
             </select>
-            <p class="field__hint">Udeboende: du er folkeregistreret paa en anden adresse end dine foraeldres. 18-19 aarige skal godkendes (20 km eller 75 min transport).</p>
+            <p class="field__hint">Udeboende: du er folkeregistreret på en anden adresse end dine foraeldres. 18-19 aarige skal godkendes (20 km eller 75 min transport).</p>
           </div>
 
           <div class="field">
             <label for="godkendt_udeboende_18_19">
               <input id="godkendt_udeboende_18_19" name="godkendt_udeboende_18_19" type="checkbox">
-              Er du 18-19 aar og godkendt til udeboendesats?
+              Er du 18-19 år og godkendt til udeboendesats?
             </label>
-            <p class="field__hint">Kun relevant hvis du gaar paa ungdomsuddannelse og er under 20. Kraever godkendelse fra uddannelsesstedet.</p>
+            <p class="field__hint">Kun relevant hvis du gaar på ungdomsuddannelse og er under 20. Kraever godkendelse fra uddannelsesstedet.</p>
           </div>
 
           <div class="field">
-            <label for="foraeldre_indkomst">Foraeldrenes samlede aarsindkomst (kr/aar)</label>
+            <label for="foraeldre_indkomst">Foraeldrenes samlede aarsindkomst (kr/år)</label>
             <input id="foraeldre_indkomst" name="foraeldre_indkomst" type="number" min="0" step="1000" value="500000" inputmode="numeric">
-            <p class="field__hint">Bruges til at beregne tillaeg. Fuldt tillaeg under 405.906 kr. Intet tillaeg over 866.224 kr.</p>
+            <p class="field__hint">Bruges til at beregne tillæg. Fuldt tillæg under 405.906 kr. Intet tillæg over 866.224 kr.</p>
           </div>
 
           <div class="field">
@@ -246,7 +246,7 @@
               <input id="enlig_forsoerger" name="enlig_forsoerger" type="checkbox">
               Er du enlig forsoerger?
             </label>
-            <p class="field__hint">Enlige forsoergere modtager ekstra boernetilskud fra Udbetaling Danmark og dobbelt forsoergertillaeg.</p>
+            <p class="field__hint">Enlige forsoergere modtager ekstra børnetilskud fra Udbetaling Danmark og dobbelt forsoergertillaeg.</p>
           </div>
 
           <div class="field">
@@ -260,21 +260,21 @@
           <div class="field">
             <label for="trk_procent">Traekprocent (fra dit skattekort)</label>
             <input id="trk_procent" name="trk_procent" type="number" min="0" max="60" step="0.1" value="38" inputmode="decimal">
-            <p class="field__hint">Standardtraekprocent for studerende ligger typisk 36-40 %. Findes paa tastselv.skat.dk.</p>
+            <p class="field__hint">Standardtraekprocent for studerende ligger typisk 36-40 %. Findes på tastselv.skat.dk.</p>
           </div>
         </form>
 
         <aside class="calculator-result" aria-live="polite" id="su-result">
           <h2>Resultater</h2>
           <dl class="calculator-result__breakdown">
-            <dt>SU foer skat pr. maaned</dt><dd id="r-brutto">-</dd>
+            <dt>SU før skat pr. måned</dt><dd id="r-brutto">-</dd>
             <dt>Skat (traekprocent)</dt><dd id="r-skat">-</dd>
-            <dt>SU efter skat pr. maaned</dt><dd id="r-netto">-</dd>
-            <dt>SU-laan pr. maaned</dt><dd id="r-laan">-</dd>
-            <dt>SU pr. aar (12 maaneder, brutto)</dt><dd id="r-aarlig">-</dd>
+            <dt>SU efter skat pr. måned</dt><dd id="r-netto">-</dd>
+            <dt>SU-laan pr. måned</dt><dd id="r-laan">-</dd>
+            <dt>SU pr. år (12 måneder, brutto)</dt><dd id="r-aarlig">-</dd>
           </dl>
-          <p class="calculator-result__total"><span>Samlet udbetalt pr. maaned</span><strong id="r-samlet">-</strong></p>
-          <p class="muted" id="r-note" style="margin-top:.75rem;">Tallene er vejledende og baseret paa de officielle 2026-satser.</p>
+          <p class="calculator-result__total"><span>Samlet udbetalt pr. måned</span><strong id="r-samlet">-</strong></p>
+          <p class="muted" id="r-note" style="margin-top:.75rem;">Tallene er vejledende og baseret på de officielle 2026-satser.</p>
         </aside>
       </div>
     </div>
@@ -283,10 +283,10 @@
   <section class="section section--alt">
     <div class="container">
       <h2>Saadan virker SU-satsen</h2>
-      <p>SU staar for Statens Uddannelsesstoette og udbetales af Uddannelses- og Forskningsstyrelsen via su.dk. Beloebet du faar afhaenger af tre ting: din alder, om du bor hjemme eller ude, og din uddannelsestype. Oveni grundsatsen kan der laegges et foraeldretillaeg, et forsoergertillaeg og et frivilligt SU-laan.</p>
-      <p>Beregningen i 2026 starter med en <strong>grundsats</strong>. Som udeboende paa en videregaaende uddannelse - eller udeboende 20+ paa ungdomsuddannelse - er grundsatsen <strong>7.426 kr/md</strong>. Som hjemmeboende er den <strong>1.154 kr/md</strong>. Er du 18-19 aar paa ungdomsuddannelse og godkendt til udeboende, faar du en mellemsats paa <strong>4.764 kr/md</strong>.</p>
-      <p>Oveni grundsatsen kan du som hjemmeboende eller ung paa ungdomsuddannelse faa et <strong>foraeldretillaeg</strong>. Tillaegget er fuldt, hvis foraeldrenes samlede indkomst er under 405.906 kr/aar, og glider lineaert ned til nul ved 866.224 kr/aar. Hver soeskende under 18 traekkes fra indkomstgrundlaget med 43.086 kr.</p>
-      <p>SU er <strong>A-indkomst</strong> og beskattes som almindelig loen, men der traekkes <em>ikke</em> AM-bidrag. Det er derfor din traekprocent fra skattekortet, der bestemmer det udbetalte beloeb.</p>
+      <p>SU staar for Statens Uddannelsesstoette og udbetales af Uddannelses- og Forskningsstyrelsen via su.dk. Beloebet du faar afhaenger af tre ting: din alder, om du bor hjemme eller ude, og din uddannelsestype. Oveni grundsatsen kan der laegges et forældretillæg, et forsoergertillaeg og et frivilligt SU-laan.</p>
+      <p>Beregningen i 2026 starter med en <strong>grundsats</strong>. Som udeboende på en videregaaende uddannelse - eller udeboende 20+ på ungdomsuddannelse - er grundsatsen <strong>7.426 kr/md</strong>. Som hjemmeboende er den <strong>1.154 kr/md</strong>. Er du 18-19 år på ungdomsuddannelse og godkendt til udeboende, faar du en mellemsats på <strong>4.764 kr/md</strong>.</p>
+      <p>Oveni grundsatsen kan du som hjemmeboende eller ung på ungdomsuddannelse faa et <strong>forældretillæg</strong>. Tillaegget er fuldt, hvis foraeldrenes samlede indkomst er under 405.906 kr/år, og glider lineaert ned til nul ved 866.224 kr/år. Hver soeskende under 18 traekkes fra indkomstgrundlaget med 43.086 kr.</p>
+      <p>SU er <strong>A-indkomst</strong> og beskattes som almindelig løn, men der traekkes <em>ikke</em> AM-bidrag. Det er derfor din traekprocent fra skattekortet, der bestemmer det udbetalte beløb.</p>
     </div>
   </section>
 
@@ -295,23 +295,23 @@
       <h2>SU-satser 2026</h2>
       <p>Her er de centrale satser fra su.dk, som denne beregner bruger:</p>
       <div class="source-card">
-        <h3>Grundsatser pr. maaned 2026</h3>
+        <h3>Grundsatser pr. måned 2026</h3>
         <ul>
-          <li>Udeboende videregaaende eller udeboende 20+ paa ungdomsuddannelse: <strong>7.426 kr</strong></li>
-          <li>Udeboende 18-19 aar paa ungdomsuddannelse (godkendt): <strong>4.764 kr</strong></li>
+          <li>Udeboende videregaaende eller udeboende 20+ på ungdomsuddannelse: <strong>7.426 kr</strong></li>
+          <li>Udeboende 18-19 år på ungdomsuddannelse (godkendt): <strong>4.764 kr</strong></li>
           <li>Hjemmeboende grundsats: <strong>1.154 kr</strong></li>
           <li>Forsoergertillaeg pr. md (barn under 18): <strong>7.426 kr</strong></li>
           <li>SU-laan standard pr. md: <strong>3.799 kr</strong></li>
           <li>SU-laan ekstra for forsoergere pr. md: <strong>1.900 kr</strong></li>
           <li>Slutlaan pr. md: <strong>9.801 kr</strong></li>
         </ul>
-        <h3>Foraeldretillaeg - graenser</h3>
+        <h3>Forældretillæg - grænser</h3>
         <ul>
-          <li>Fuldt tillaeg under: <strong>405.906 kr/aar</strong></li>
-          <li>Intet tillaeg over: <strong>866.224 kr/aar</strong></li>
+          <li>Fuldt tillæg under: <strong>405.906 kr/år</strong></li>
+          <li>Intet tillæg over: <strong>866.224 kr/år</strong></li>
           <li>Soeskendefradrag pr. barn under 18: <strong>43.086 kr</strong></li>
         </ul>
-        <h3>SU-klip paa videregaaende</h3>
+        <h3>SU-klip på videregaaende</h3>
         <ul>
           <li>Standard ramme: <strong>70 klip</strong></li>
           <li>Uddannelser paabegyndt fra 1. juli 2025: <strong>58 klip</strong></li>
@@ -325,24 +325,24 @@
       <h2>Hjemmeboende vs udeboende</h2>
       <div style="background:#fff7ed;border-left:4px solid #f59e0b;padding:1rem 1.25rem;border-radius:8px;">
         <h3 style="margin-top:0;">Loenner det sig at flytte hjemmefra?</h3>
-        <p>Forskellen mellem hjemmeboende grundsats (1.154 kr/md) og udeboende sats (7.426 kr/md) er <strong>6.272 kr/md</strong> brutto - svarende til ca. <strong>3.889 kr/md</strong> ekstra efter 38% skat. Det betyder at hvis dit vaerelse eller din lejlighed koster mere end ca. 3.900 kr/md inkl. forbrug, vil du stadig vaere oekonomisk daarligere stillet end ved at blive boende hjemme.</p>
-        <p>Husk dog at udeboende kan tage SU-laan oveni (3.799 kr/md), og at foraeldretillaeg falder vaek for hjemmeboende ved hoej foraeldreindkomst. Brug beregneren ovenfor med din egen husleje for at se det praecise tal.</p>
+        <p>Forskellen mellem hjemmeboende grundsats (1.154 kr/md) og udeboende sats (7.426 kr/md) er <strong>6.272 kr/md</strong> brutto - svarende til ca. <strong>3.889 kr/md</strong> ekstra efter 38% skat. Det betyder at hvis dit vaerelse eller din lejlighed koster mere end ca. 3.900 kr/md inkl. forbrug, vil du stadig være økonomisk daarligere stillet end ved at blive boende hjemme.</p>
+        <p>Husk dog at udeboende kan tage SU-laan oveni (3.799 kr/md), og at forældretillæg falder vaek for hjemmeboende ved hoej foraeldreindkomst. Brug beregneren ovenfor med din egen husleje for at se det praecise tal.</p>
       </div>
 
-      <h2 style="margin-top:2rem;">Foraeldretillaeg og indkomst</h2>
-      <p>Foraeldretillaegget er den vigtigste grund til at hjemmeboende kan ende med mere end blot 1.154 kr/md. Modellen er en lineaer interpolation mellem to graenser:</p>
+      <h2 style="margin-top:2rem;">Forældretillæg og indkomst</h2>
+      <p>Foraeldretillaegget er den vigtigste grund til at hjemmeboende kan ende med mere end blot 1.154 kr/md. Modellen er en lineaer interpolation mellem to grænser:</p>
       <ul>
-        <li>Under <strong>405.906 kr</strong>/aar samlet foraeldreindkomst: <strong>fuldt tillaeg</strong>.</li>
-        <li>Over <strong>866.224 kr</strong>/aar: <strong>intet tillaeg</strong>.</li>
+        <li>Under <strong>405.906 kr</strong>/år samlet foraeldreindkomst: <strong>fuldt tillæg</strong>.</li>
+        <li>Over <strong>866.224 kr</strong>/år: <strong>intet tillæg</strong>.</li>
         <li>Mellem de to: tillaegget glider lineaert ned.</li>
       </ul>
-      <p>Hver soeskende under 18 reducerer indkomstgrundlaget med 43.086 kr - har dine foraeldre f.eks. 600.000 kr og 2 mindre soeskende, regnes der med 600.000 - 86.172 = 513.828 kr.</p>
+      <p>Hver soeskende under 18 reducerer indkomstgrundlaget med 43.086 kr - har dine forældre f.eks. 600.000 kr og 2 mindre soeskende, regnes der med 600.000 - 86.172 = 513.828 kr.</p>
 
       <h2 style="margin-top:2rem;">Forsoergertillaeg</h2>
-      <p>Er du forsoerger for et barn under 18, faar du et <strong>forsoergertillaeg paa 7.426 kr/md</strong> oveni din normale SU - uanset om du er hjemme- eller udeboende. Er du <strong>enlig forsoerger</strong> og modtager ekstra boernetilskud fra Udbetaling Danmark, faar du tillaegget i <strong>dobbelt</strong> sats. Forsoergere kan ogsaa optage ekstra <strong>1.900 kr/md</strong> i supplerende SU-laan.</p>
+      <p>Er du forsoerger for et barn under 18, faar du et <strong>forsoergertillaeg på 7.426 kr/md</strong> oveni din normale SU - uanset om du er hjemme- eller udeboende. Er du <strong>enlig forsoerger</strong> og modtager ekstra børnetilskud fra Udbetaling Danmark, faar du tillaegget i <strong>dobbelt</strong> sats. Forsoergere kan ogsaa optage ekstra <strong>1.900 kr/md</strong> i supplerende SU-laan.</p>
 
       <h2 style="margin-top:2rem;">SU-laan oveni?</h2>
-      <p>SU-laan udbetales fuldt - der traekkes ikke skat ved udbetalingen, men renten er fradragsberettiget paa selvangivelsen. I 2026 er renten 4% under studiet og diskonto + 1 procentpoint efter studiet (ca. 2,60% i 2026). Et SU-laan er reelt billige penge sammenlignet med forbrugslaan, men husk at det skal tilbagebetales efter dimission.</p>
+      <p>SU-laan udbetales fuldt - der traekkes ikke skat ved udbetalingen, men renten er fradragsberettiget på selvangivelsen. I 2026 er renten 4% under studiet og diskonto + 1 procentpoint efter studiet (ca. 2,60% i 2026). Et SU-laan er reelt billige penge sammenlignet med forbrugslaan, men husk at det skal tilbagebetales efter dimission.</p>
     </div>
   </section>
 
@@ -355,50 +355,50 @@
     <div class="container">
       <h2>Vigtige situationer</h2>
       <ul>
-        <li><strong>18-19 aar paa ungdomsuddannelse</strong>: udeboendesats kraever godkendelse. Du skal have 20 km eller 75 min offentlig transport til foraeldrenes adresse, 12 maaneders sammenhaengende udeboende-historik eller saerlige forhold i hjemmet.</li>
-        <li><strong>Forhoejet hjemmeboendesats</strong>: foraeldreindkomst under 405.906 kr giver fuldt tillaeg - det kan loefte din hjemmeboende SU markant.</li>
-        <li><strong>Folkeregisteradresse afgoer alt</strong>: det er ikke nok at bo et andet sted i praksis - du skal vaere folkeregistreret paa en adresse, der ikke er foraeldrenes.</li>
+        <li><strong>18-19 år på ungdomsuddannelse</strong>: udeboendesats kraever godkendelse. Du skal have 20 km eller 75 min offentlig transport til foraeldrenes adresse, 12 maaneders sammenhaengende udeboende-historik eller saerlige forhold i hjemmet.</li>
+        <li><strong>Forhoejet hjemmeboendesats</strong>: foraeldreindkomst under 405.906 kr giver fuldt tillæg - det kan loefte din hjemmeboende SU markant.</li>
+        <li><strong>Folkeregisteradresse afgoer alt</strong>: det er ikke nok at bo et andet sted i praksis - du skal være folkeregistreret på en adresse, der ikke er foraeldrenes.</li>
         <li><strong>Gymnasieelever under 18</strong> faar IKKE SU - foraeldrene modtager ungeydelse i stedet.</li>
-        <li><strong>SU-klip</strong>: 70 klip i alt paa videregaaende (58 klip for uddannelser paabegyndt fra 1. juli 2025). Et klip = en maaneds SU.</li>
+        <li><strong>SU-klip</strong>: 70 klip i alt på videregaaende (58 klip for uddannelser paabegyndt fra 1. juli 2025). Et klip = en maaneds SU.</li>
       </ul>
 
-      <p style="margin-top:1.5rem;">Skal du ogsaa have et studiejob ved siden af din SU? <a class="cross-link" href="https://lonberegning.dk/" rel="noopener">Studiejob ved siden af? Beregn nettoloen paa Loenberegning.dk <span class="ext-icon" aria-hidden="true">↗</span></a> - og husk at tjekke SU-fribeloebet, saa du ikke skal betale tilbage.</p>
+      <p style="margin-top:1.5rem;">Skal du ogsaa have et studiejob ved siden af din SU? <a class="cross-link" href="https://lonberegning.dk/" rel="noopener">Studiejob ved siden af? Beregn nettoloen på Loenberegning.dk <span class="ext-icon" aria-hidden="true">↗</span></a> - og husk at tjekke SU-fribeloebet, så du ikke skal betale tilbage.</p>
     </div>
   </section>
 
   <section class="section section--alt">
     <div class="container">
       <section class="faq">
-        <h2>Ofte stillede spoergsmaal</h2>
+        <h2>Ofte stillede spørgsmål</h2>
 
         <details>
           <summary>Hvor meget SU faar jeg som udeboende i 2026?</summary>
-          <p>Som udeboende studerende paa videregaaende uddannelse eller udeboende 20+ paa ungdomsuddannelse faar du 7.426 kr/md foer skat i 2026. Efter typisk traekprocent paa 38% er det ca. 4.604 kr udbetalt.</p>
+          <p>Som udeboende studerende på videregaaende uddannelse eller udeboende 20+ på ungdomsuddannelse faar du 7.426 kr/md før skat i 2026. Efter typisk traekprocent på 38% er det ca. 4.604 kr udbetalt.</p>
         </details>
 
         <details>
-          <summary>Kan jeg faa udeboendesats hvis jeg er 18 aar?</summary>
-          <p>Ja, men kun hvis du gaar paa en ungdomsuddannelse og bliver godkendt: enten transportvej paa 20 km, transporttid paa over 75 min med offentlig transport, eller saerlige forhold i hjemmet. Du soeger via minSU. Satsen er 4.764 kr/md.</p>
+          <summary>Kan jeg faa udeboendesats hvis jeg er 18 år?</summary>
+          <p>Ja, men kun hvis du gaar på en ungdomsuddannelse og bliver godkendt: enten transportvej på 20 km, transporttid på over 75 min med offentlig transport, eller saerlige forhold i hjemmet. Du søger via minSU. Satsen er 4.764 kr/md.</p>
         </details>
 
         <details>
           <summary>Hvor meget faar jeg som hjemmeboende?</summary>
-          <p>Grundsatsen er 1.154 kr/md i 2026. Ovenpaa kan du faa et tillaeg afhaengigt af foraeldrenes indkomst - fuldt tillaeg under 405.906 kr/aar, intet tillaeg over 866.224 kr/aar.</p>
+          <p>Grundsatsen er 1.154 kr/md i 2026. Ovenpaa kan du faa et tillæg afhaengigt af foraeldrenes indkomst - fuldt tillæg under 405.906 kr/år, intet tillæg over 866.224 kr/år.</p>
         </details>
 
         <details>
           <summary>Skal jeg betale skat af SU?</summary>
-          <p>Ja, SU er A-indkomst og beskattes som almindelig loen, men der traekkes ikke AM-bidrag. Din traekprocent findes paa dit skattekort paa tastselv.skat.dk.</p>
+          <p>Ja, SU er A-indkomst og beskattes som almindelig løn, men der traekkes ikke AM-bidrag. Din traekprocent findes på dit skattekort på tastselv.skat.dk.</p>
         </details>
 
         <details>
-          <summary>Hvor mange SU-klip har jeg paa en videregaaende uddannelse?</summary>
-          <p>Du har 70 klip (maaneder) i alt til videregaaende uddannelse. For uddannelser paabegyndt fra 1. juli 2025 er rammen reduceret til 58 klip pga. SU-reformen.</p>
+          <summary>Hvor mange SU-klip har jeg på en videregaaende uddannelse?</summary>
+          <p>Du har 70 klip (måneder) i alt til videregaaende uddannelse. For uddannelser paabegyndt fra 1. juli 2025 er rammen reduceret til 58 klip pga. SU-reformen.</p>
         </details>
 
         <details>
-          <summary>Kan jeg faa ekstra SU naar jeg har boern?</summary>
-          <p>Ja, som forsoerger faar du forsoergertillaeg paa 7.426 kr/md oveni din normale SU, og du kan tage ekstra 1.900 kr/md i supplerende SU-laan. Enlige forsoergere faar dobbelt tillaeg, hvis de modtager ekstra boernetilskud.</p>
+          <summary>Kan jeg faa ekstra SU når jeg har børn?</summary>
+          <p>Ja, som forsoerger faar du forsoergertillaeg på 7.426 kr/md oveni din normale SU, og du kan tage ekstra 1.900 kr/md i supplerende SU-laan. Enlige forsoergere faar dobbelt tillæg, hvis de modtager ekstra børnetilskud.</p>
         </details>
 
         <details>
@@ -407,8 +407,8 @@
         </details>
 
         <details>
-          <summary>Hvad er forskellen paa SU paa gymnasium og universitet?</summary>
-          <p>Selve satserne er ens (7.426 kr udeboende, 1.154 kr hjemmeboende), men gymnasieelever skal vaere fyldt 18 aar for at faa SU, og udeboendesatsen for 18-19 aarige kraever godkendelse. Paa videregaaende er du altid berettiget til udeboendesats hvis du er udeboende.</p>
+          <summary>Hvad er forskellen på SU på gymnasium og universitet?</summary>
+          <p>Selve satserne er ens (7.426 kr udeboende, 1.154 kr hjemmeboende), men gymnasieelever skal være fyldt 18 år for at faa SU, og udeboendesatsen for 18-19 aarige kraever godkendelse. På videregaaende er du altid berettiget til udeboendesats hvis du er udeboende.</p>
         </details>
       </section>
     </div>
@@ -425,15 +425,15 @@
             <li><a href="https://www.su.dk/satser/videregaaende-uddannelser-satser-for-su-til-udeboende" rel="nofollow noopener" target="_blank">su.dk - Satser videregaaende udeboende <span class="ext-icon" aria-hidden="true">↗</span></a></li>
             <li><a href="https://www.su.dk/satser/ungdomsuddannelse-satser-for-su-til-hjemmeboende" rel="nofollow noopener" target="_blank">su.dk - Satser ungdomsuddannelse hjemmeboende <span class="ext-icon" aria-hidden="true">↗</span></a></li>
             <li><a href="https://www.su.dk/su/om-su-til-ungdomsuddannelser/dine-foraeldres-indkomst-ungdomsuddannelser" rel="nofollow noopener" target="_blank">su.dk - Foraeldres indkomst <span class="ext-icon" aria-hidden="true">↗</span></a></li>
-            <li><a href="https://www.su.dk/su/om-su-til-ungdomsuddannelser/bopael-og-su-satser" rel="nofollow noopener" target="_blank">su.dk - Bopael og SU-satser (18-19 aar) <span class="ext-icon" aria-hidden="true">↗</span></a></li>
-            <li><a href="https://www.borger.dk/oekonomi-skat-su/SU-og-oekonomi-under-uddannelse" rel="nofollow noopener" target="_blank">borger.dk - SU oversigt <span class="ext-icon" aria-hidden="true">↗</span></a></li>
+            <li><a href="https://www.su.dk/su/om-su-til-ungdomsuddannelser/bopael-og-su-satser" rel="nofollow noopener" target="_blank">su.dk - Bopael og SU-satser (18-19 år) <span class="ext-icon" aria-hidden="true">↗</span></a></li>
+            <li><a href="https://www.borger.dk/" rel="nofollow noopener" target="_blank">borger.dk - SU oversigt <span class="ext-icon" aria-hidden="true">↗</span></a></li>
           </ul>
         </div>
 
         <div class="source-card">
           <h3>Relaterede beregnere</h3>
           <ul>
-            <li><a href="/beregner/su-fribelob.html">SU fribeloeb 2026 - hvor meget maa du tjene?</a></li>
+            <li><a href="/beregner/su-fribelob.html">SU fribeloeb 2026 - hvor meget må du tjene?</a></li>
             <li><a href="/beregner/su-laan-tilbagebetaling.html">SU-laan tilbagebetaling</a></li>
             <li><a href="/beregner/boligstoette.html">Boligstoette beregner</a></li>
             <li><a href="/beregner/huslejebudget.html">Huslejebudget for studerende</a></li>
@@ -457,13 +457,13 @@
         </ul>
       </div>
       <div class="site-footer__col">
-        <h2>Ledig &amp; familie</h2>
+        <h2>Ledig</h2>
         <ul>
           <li><a href="/beregner/dagpenge.html">Dagpenge</a></li>
           <li><a href="/beregner/dimittend.html">Dimittend</a></li>
           <li><a href="/beregner/sygedagpenge.html">Sygedagpenge</a></li>
           <li><a href="/beregner/barselsdagpenge.html">Barselsdagpenge</a></li>
-          <li><a href="/beregner/bornepenge.html">Boernepenge</a></li>
+          <li><a href="/beregner/bornepenge.html">Børnepenge</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
@@ -475,24 +475,24 @@
           <li><a href="/beregner/depositum.html">Depositum</a></li>
           <li><a href="/beregner/flyttebudget.html">Flyttebudget</a></li>
           <li><a href="/beregner/el-vand-varme-budget.html">El, vand og varme</a></li>
-          <li><a href="/beregner/ejendomsvaerdiskat.html">Ejendomsvaerdiskat</a></li>
+          <li><a href="/beregner/ejendomsvaerdiskat.html">Ejendomsværdiskat</a></li>
           <li><a href="/beregner/andelsbolig.html">Andelsbolig</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
         <h2>Bil &amp; transport</h2>
         <ul>
-          <li><a href="/beregner/leasing-vs-koeb.html">Leasing vs. koeb</a></li>
+          <li><a href="/beregner/leasing-vs-koeb.html">Leasing vs. køb</a></li>
           <li><a href="/beregner/bil-totalomkostning.html">Bil totalomkostning</a></li>
-          <li><a href="/beregner/bil-vaerdtab.html">Bil-vaerditab</a></li>
-          <li><a href="/beregner/groen-ejerafgift.html">Groen ejerafgift</a></li>
-          <li><a href="/beregner/braendstof.html">Braendstof</a></li>
+          <li><a href="/beregner/bil-vaerdtab.html">Bil-værditab</a></li>
+          <li><a href="/beregner/groen-ejerafgift.html">Grøn ejerafgift</a></li>
+          <li><a href="/beregner/braendstof.html">Brændstof</a></li>
           <li><a href="/beregner/elbil-opladning.html">Elbil opladning</a></li>
           <li><a href="/beregner/pendlerbudget.html">Pendlerbudget</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
-        <h2>Selvstaendig</h2>
+        <h2>Selvstændig</h2>
         <ul>
           <li><a href="/beregner/moms-beregner.html">Momsberegner</a></li>
           <li><a href="/beregner/timepris-freelancer.html">Timepris</a></li>
@@ -514,7 +514,7 @@
       <div class="site-footer__col">
         <h2>Vaerktoejer</h2>
         <ul>
-          <li><a href="/sporg-ai.html">Spoerg AI</a></li>
+          <li><a href="/sporg-ai.html">Spørg AI</a></li>
           <li><a href="/#alle-beregnere">Alle beregnere</a></li>
           <li><a href="https://lonberegning.dk/" rel="noopener">Loenberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
         </ul>
@@ -530,9 +530,9 @@
         </ul>
       </div>
     </div>
-    <p class="site-footer__cross">Skal du regne nettoloen ud? Brug vores soestersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a> — specialiseret i loen og skat.</p>
+    <p class="site-footer__cross">Skal du regne nettoloen ud? Brug vores soestersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a> — specialiseret i løn og skat.</p>
     <div class="site-footer__bottom">
-      <span>&copy; 2026 hverdagstal.dk &middot; Beregn penge, stoette og udgifter i hverdagen &middot; Satser opdateret 2026-06-10</span>
+      <span>&copy; 2026 hverdagstal.dk &middot; Beregn penge, støtte og udgifter i hverdagen &middot; Satser opdateret 2026-06-10</span>
       <span>Made in Danmark</span>
     </div>
   </div>
