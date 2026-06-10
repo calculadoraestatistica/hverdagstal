@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d9488">
+  <meta name="color-scheme" content="light">
+
+  <title>Braendstof 2026 - pris pr km og pr aar | hverdagstal.dk</title>
+  <meta name="description" content="Beregn braendstofomkostning 2026 - benzin, diesel, HVO100. Aktuelle pumpepriser og realistisk forbrug. Kilde: Energistyrelsen og FDM.">
+  <link rel="canonical" href="https://hverdagstal.dk/beregner/braendstof.html">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="Hverdagstal">
+  <meta property="og:locale" content="da_DK">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Braendstof 2026 - pris pr km og pr aar | hverdagstal.dk">
+  <meta property="og:description" content="Beregn braendstofomkostning 2026 - benzin, diesel, HVO100. Aktuelle pumpepriser og realistisk forbrug. Kilde: Energistyrelsen og FDM.">
+  <meta property="og:url" content="https://hverdagstal.dk/beregner/braendstof.html">
+  <meta property="og:image" content="https://hverdagstal.dk/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Braendstof 2026 - pris pr km og pr aar | hverdagstal.dk">
+  <meta name="twitter:description" content="Beregn braendstofomkostning 2026 - benzin, diesel, HVO100. Aktuelle pumpepriser og realistisk forbrug. Kilde: Energistyrelsen og FDM.">
+  <meta name="twitter:image" content="https://hverdagstal.dk/og-image.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+
+  <!-- AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7516029395999799" crossorigin="anonymous"></script>
+
+  <!-- Structured data: WebSite + Organization (always) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Hverdagstal",
+    "url": "https://hverdagstal.dk/",
+    "inLanguage": "da-DK",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Hverdagstal",
+      "url": "https://hverdagstal.dk/",
+      "logo": "https://hverdagstal.dk/favicon-192.png"
+    }
+  }
+  </script>
+
+  <!-- BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Forside", "item": "https://hverdagstal.dk/" },
+      { "@type": "ListItem", "position": 2, "name": "Hverdagsudgifter", "item": "https://hverdagstal.dk/situation/hverdagsudgifter.html" },
+      { "@type": "ListItem", "position": 3, "name": "Braendstof-beregner", "item": "https://hverdagstal.dk/beregner/braendstof.html" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Hvad koster benzin og diesel i Danmark i 2026?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Typiske pumpepriser i 2026: benzin 95 ca 14,70 kr/L, benzin 98 ca 15,45 kr/L, diesel ca 13,90 kr/L. Automat-stationer som F24 og Ingo er typisk 30-60 oere billigere pr liter." }
+      },
+      {
+        "@type": "Question",
+        "name": "Hvor meget koster det at koere 100 km i benzin?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Med en moderne bil der koerer 16,5 km/L bruger du ca 6 L pr 100 km (efter realisme-korrektion). Til 14,69 kr/L bliver det ca 90 kr — eller 90 oere pr km." }
+      },
+      {
+        "@type": "Question",
+        "name": "Er diesel stadig billigere end benzin pr km?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Ja paa litergrundlag, da diesel typisk er 80 oere billigere pr liter end benzin 95, og dieselmotorer bruger 15-25% mindre braendstof. Til gengaeld er groen ejerafgift hoejere paa dieselbiler, og koerselsomkostningen pr km laver kun forskel ved over 15-20000 km/aar." }
+      },
+      {
+        "@type": "Question",
+        "name": "Skal jeg vaelge 95 eller 98 oktan?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Foelg bilens manual. Hvis bilen er bygget til 95 oktan giver 98 oktan ingen merydelse og er bare 60-80 oere dyrere pr liter — penge ud af vinduet. Sportsvogne og turbomotorer kraever ofte 98." }
+      },
+      {
+        "@type": "Question",
+        "name": "Hvad er forskellen paa katalog-forbrug og reelt forbrug?",
+        "acceptedAnswer": { "@type": "Answer", "text": "WLTP-testen koeres under kontrollerede forhold uden aircondition, vinterdaek eller kold start. Reelt forbrug er typisk 15-25% hoejere — derfor justerer beregneren automatisk." }
+      },
+      {
+        "@type": "Question",
+        "name": "Sparer jeg penge paa HVO100?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Nej i kroner — HVO100 koster 1-2 kr mere pr liter end almindelig diesel. Men du reducerer CO2-udledning med over 90% og kan bruge det i alle moderne dieselbiler uden modifikation. Relevant for klima-bevidste bilister eller firmabiler med CO2-rapportering." }
+      },
+      {
+        "@type": "Question",
+        "name": "Hvorfor er prisen forskellig paa tankstationer?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Bemandede stationer som OK, Q8 og Shell tilbyder service og bonuskort. Automat-stationer som F24 og Ingo har lavere drift og er derfor 30-60 oere billigere pr liter. Forskellen paa 1000 L er 300-600 kr om aaret." }
+      }
+    ]
+  }
+  </script>
+
+  <!-- WebApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Braendstof-beregner 2026",
+    "url": "https://hverdagstal.dk/beregner/braendstof.html",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Any",
+    "inLanguage": "da-DK",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "DKK"
+    }
+  }
+  </script>
+</head>
+<body>
+<a class="skip-link" href="#main">Spring til indhold</a>
+<a class="skip-link" href="#main">Spring til indhold</a>
+<header class="site-header" role="banner">
+  <div class="site-header__inner">
+    <a class="brand" href="/" aria-label="Hverdagstal forside">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 28 28" width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="12" height="12" rx="2" fill="#0d9488"/>
+          <rect x="15" y="1" width="12" height="12" rx="2" fill="#ffffff" stroke="#0d9488" stroke-width="1.5"/>
+          <rect x="1" y="15" width="12" height="12" rx="2" fill="#ffffff" stroke="#0d9488" stroke-width="1.5"/>
+          <rect x="15" y="15" width="12" height="12" rx="2" fill="#0d9488"/>
+        </svg>
+      </span>
+      <span class="brand__name">Hverdags<span>tal</span></span>
+    </a>
+    <span class="header-badge" aria-label="Sidst opdateret 10. juni 2026">Opdateret 2026-06-10</span>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Aabn menu">
+      <svg class="icon-open" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <svg class="icon-close" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <nav class="main-nav" id="main-nav" aria-label="Hovedmenu">
+      <ul>
+        <li><a href="/">Forside</a></li>
+        <li><a href="/situation/studerende.html">Studerende</a></li>
+        <li><a href="/situation/ledig-familie.html">Ledig &amp; familie</a></li>
+        <li><a href="/situation/bolig-flytning.html">Bolig</a></li>
+        <li><a href="/situation/bil-transport.html">Bil</a></li>
+        <li><a href="/situation/selvstaendig.html">Selvstaendig</a></li>
+        <li class="has-dropdown">
+          <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-more-menu">Mere <span aria-hidden="true">&#9662;</span></button>
+          <ul id="nav-more-menu" class="nav-dropdown">
+            <li><a href="/situation/hverdagsudgifter.html">Hverdagsudgifter</a></li>
+            <li><a href="/#alle-beregnere">Alle beregnere</a></li>
+            <li><a href="/kilder.html">Kilder</a></li>
+            <li><a href="/om.html">Om</a></li>
+          </ul>
+        </li>
+        <li class="nav-cta"><a href="/sporg-ai.html" class="nav-cta-link">Spoerg AI</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Brodkrumme">
+        <ol>
+          <li><a href="/">Forside</a></li>
+          <li><a href="/situation/hverdagsudgifter.html">Hverdagsudgifter</a></li>
+          <li aria-current="page">Braendstof-beregner</li>
+        </ol>
+      </nav>
+      <span class="hero__eyebrow">Hverdagsudgifter · Bil</span>
+      <h1 class="hero__title">Braendstof-beregner 2026</h1>
+      <p class="hero__lead">Beregn hvad benzin, diesel eller HVO100 koster dig pr tur, pr maaned og pr aar. Vi bruger aktuelle pumpepriser fra 2026 og justerer dit forbrug, saa du faar et realistisk tal — ikke katalogtallet fra registreringsattesten.</p>
+      <span class="opdateret-badge">Opdateret 2026-06-10</span>
+      <div class="cluster" style="margin-top:1rem;">
+        <a class="btn btn--primary btn--lg" href="#beregner">Beregn min braendstofpris</a>
+        <a class="btn btn--ghost" href="#faq">Se ofte stillede spoergsmaal</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="beregner">
+    <div class="container">
+      <h2>Beregn dit braendstofforbrug 2026</h2>
+      <p>Indtast bilens forbrug, antal kilometer og aktuel pumpepris. Beregneren oversaetter automatisk mellem km/L og L/100 km og lægger en realisme-korrektion paa, hvis du vil have et tal taettere paa virkeligheden.</p>
+
+      <div class="site-grid">
+        <form class="calculator-form" id="braendstof-form" autocomplete="off">
+          <div class="field">
+            <label for="braendstoftype">Braendstoftype</label>
+            <select id="braendstoftype" name="braendstoftype">
+              <option value="benzin95">Benzin 95 oktan E10</option>
+              <option value="benzin98">Benzin 98 oktan</option>
+              <option value="diesel">Diesel B7</option>
+              <option value="dieselpremium">Diesel premium</option>
+              <option value="hvo100">HVO100 (fornybar diesel)</option>
+              <option value="e85">Bioethanol E85</option>
+            </select>
+            <p class="field__hint">Vi praeudfylder pumpeprisen automatisk.</p>
+          </div>
+
+          <div class="field">
+            <label for="tankstation">Tankstation</label>
+            <select id="tankstation" name="tankstation">
+              <option value="OK" selected>OK</option>
+              <option value="Q8">Q8</option>
+              <option value="Shell">Shell</option>
+              <option value="CircleK">Circle K</option>
+              <option value="F24">F24/automat</option>
+              <option value="Ingo">Ingo</option>
+              <option value="Andet">Andet</option>
+            </select>
+            <p class="field__hint">Automat-stationer er typisk 30-60 oere billigere pr liter.</p>
+          </div>
+
+          <div class="field">
+            <label for="forbrug_enhed">Hvordan oplyses forbruget?</label>
+            <select id="forbrug_enhed" name="forbrug_enhed">
+              <option value="km_l" selected>km pr liter</option>
+              <option value="l_100">liter pr 100 km</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="forbrug_vaerdi">Bilens forbrug</label>
+            <input id="forbrug_vaerdi" name="forbrug_vaerdi" type="number" inputmode="decimal" min="0" step="0.1" value="16.5">
+            <p class="field__hint">Find det i registreringsattest eller paa fdm.dk.</p>
+          </div>
+
+          <div class="field">
+            <label for="km">Antal kilometer</label>
+            <input id="km" name="km" type="number" inputmode="numeric" min="0" step="1" value="100">
+          </div>
+
+          <div class="field">
+            <label for="beregningsperiode">Beregn for</label>
+            <select id="beregningsperiode" name="beregningsperiode">
+              <option value="tur" selected>En tur</option>
+              <option value="uge">En uge</option>
+              <option value="maaned">En maaned</option>
+              <option value="aar">Et aar</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="pumpepris">Aktuel pumpepris (kr/L)</label>
+            <input id="pumpepris" name="pumpepris" type="number" inputmode="decimal" min="0" step="0.01" value="14.69">
+            <p class="field__hint">Praeudfyldes med aktuelt gennemsnit fra OK, Q8, Shell.</p>
+          </div>
+
+          <div class="field">
+            <label for="korsel_type">Koersel type</label>
+            <select id="korsel_type" name="korsel_type">
+              <option value="bland" selected>Bland (NEDC/WLTP)</option>
+              <option value="motorvej">Motorvej (overvejende)</option>
+              <option value="by">Bykoersel (overvejende)</option>
+              <option value="vinter">Vinter (kold start ofte)</option>
+            </select>
+            <p class="field__hint">Bykoersel og vinter giver 15-30% hoejere reelt forbrug end katalog.</p>
+          </div>
+
+          <div class="field field--full">
+            <label for="korrektion_realisme">
+              <input type="checkbox" id="korrektion_realisme" name="korrektion_realisme" checked>
+              Brug realistisk forbrug (tilfoejer 10-30% paa katalog)
+            </label>
+            <p class="field__hint">Slaa fra, hvis du allerede har et erfaringsbaseret forbrugstal.</p>
+          </div>
+        </form>
+
+        <aside class="calculator-result" aria-live="polite" id="result">
+          <h2>Resultater</h2>
+          <dl class="calculator-result__breakdown">
+            <div><dt>Forbrug (L/100 km)</dt><dd id="out_l100">—</dd></div>
+            <div><dt>Realistisk forbrug</dt><dd id="out_real">—</dd></div>
+            <div><dt>Total liter</dt><dd id="out_liter">—</dd></div>
+            <div><dt>Pris pr km</dt><dd id="out_prkm">—</dd></div>
+            <div><dt>Pris pr maaned</dt><dd id="out_prmd">—</dd></div>
+            <div><dt>Pris pr aar</dt><dd id="out_praar">—</dd></div>
+            <div><dt>CO2-udledning</dt><dd id="out_co2">—</dd></div>
+          </dl>
+          <p class="calculator-result__total"><span id="periode_label">For perioden</span><strong id="out_total">— kr</strong></p>
+          <p class="field__hint">Tallene opdateres automatisk, naar du aendrer felterne. Beregningen er vejledende.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <h2>Saadan virker det</h2>
+      <p>Beregneren tager dit input om forbrug og kilometer, oversaetter til L/100 km og ganger med den aktuelle pumpepris. Hvis du har slaaet realisme-korrektion til, lægger den en faktor oven i — fordi katalog-tal fra WLTP-testen typisk ligger 10-30% under det, du oplever paa vejen.</p>
+      <p>De faste pumpepriser, der praeudfyldes i 2026, er gennemsnit fra Energistyrelsen, FDM og de store kaeder OK, Q8 og Shell. Du kan altid overskrive prisen manuelt, hvis du har tanket billigere eller dyrere paa din rute.</p>
+      <h3>Realisme-faktorer i 2026</h3>
+      <ul>
+        <li><strong>Motorvej:</strong> +10% paa katalog — jaevn fart slider ikke saa meget.</li>
+        <li><strong>Bland (NEDC/WLTP):</strong> +20% — det realistiske gennemsnit.</li>
+        <li><strong>Bykoersel:</strong> +30% — mange kolde starter og stop.</li>
+        <li><strong>Vinter:</strong> +25% — kold motor, vinterdaek, kabinevarme.</li>
+      </ul>
+      <p>CO2-udledningen beregnes med faktorer fra Energistyrelsen: 2,31 kg/L benzin, 2,68 kg/L diesel og kun ca 0,20 kg/L for HVO100 (fornybar diesel).</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Katalog vs reelt forbrug</h2>
+      <p>Forbrugstallet paa din registreringsattest er maalt under WLTP-testen — en standardiseret rute uden aircondition, vinterdaek eller kold start. I praksis ligger det reelle forbrug typisk 15-25% over katalogtallet, og endnu mere om vinteren eller hvis du primært koerer i byen.</p>
+      <p>Derfor er realisme-toggle slaaet til som standard. Hvis du allerede har et erfaringsbaseret forbrug fra fueleconomy-app eller tankloggen, saa slaa det fra og indtast dit eget tal direkte.</p>
+
+      <h2>Benzin vs diesel vs HVO100</h2>
+      <p>Diesel er stadig billigst pr liter i 2026 (ca 13,89 kr/L mod 14,69 kr/L for benzin 95), og dieselmotorer bruger 15-25% mindre braendstof. Til gengaeld er groen ejerafgift hoejere paa dieselbiler, saa pengene tjenes foerst hjem ved over 15-20.000 km om aaret.</p>
+      <p>HVO100 (fornybar diesel) koster 1-2 kr mere pr liter, men reducerer CO2-udledning med over 90%. Det er primaert relevant, hvis du vil minimere klima-aftrykket eller koerer en firmabil med CO2-rapportering.</p>
+
+      <h2>Automat-stationer rabat</h2>
+      <p>Automat-stationer som F24, Ingo og Shell Express er typisk 30-60 oere billigere pr liter end bemandede stationer. Over 1.000 L om aaret er det 300-600 kr — pengene gaar typisk i bonus eller service paa bemandede stationer.</p>
+
+      <h2>Pris pr km og aar</h2>
+      <p>Pris pr km er det taette tal til at sammenligne biler. En moderne benzinbil paa 16,5 km/L katalog ender efter realisme-korrektion paa ca 6,0 L/100 km og 90 oere pr km til 14,69 kr/L. Koerer du 15.000 km om aaret, taler vi om ca 13.500 kr i braendstof alene.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="ad-slot ad-slot--inline" aria-label="Annonce">
+      <span class="visually-hidden">Annonce</span>
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7516029395999799" data-ad-slot="1234567890" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    </div>
+  </div>
+
+  <section class="section section--alt">
+    <div class="container">
+      <h2>Vigtige situationer</h2>
+      <ul>
+        <li><strong>Diesel og DPF i byen:</strong> Dieselbiler med partikelfilter kraever lange ture jaevnligt — ren bykoersel kan tilstoppe filtret, og udskiftning koster 8.000-15.000 kr.</li>
+        <li><strong>E10 i aeldre biler:</strong> E10-benzin har 1-2% lavere energiindhold og er ikke godkendt til alle aeldre biler — tjek manualen, ellers stiger forbruget og motoren kan tage skade.</li>
+        <li><strong>Vinterforbrug:</strong> 20-30% hoejere end katalog pga kold motor, vinterdaek og opvarmning. Brug "Vinter"-valget naar det er relevant.</li>
+        <li><strong>WLTP undertrumfer virkelighed:</strong> Registreringsattestens tal er typisk 15-25% lavere end det, du faktisk maaler — derfor realisme-toggle.</li>
+        <li><strong>Bioethanol E85:</strong> Bruger 25-30% mere end benzin, saa den lavere literpris spises hurtigt op af det hoejere forbrug.</li>
+      </ul>
+
+      <div style="margin-top:2rem;border-left:4px solid #f59e0b;background:#fff8e6;padding:1.25rem 1.5rem;border-radius:6px;">
+        <h3 style="margin-top:0;color:#9a6700;">Beslutnings-vinkel: 95 vs 98 oktan?</h3>
+        <p style="margin-bottom:0;">Foelg din bils manual. Er bilen bygget til 95 oktan, giver 98 ingen merydelse — du betaler bare 60-80 oere ekstra pr liter ud af vinduet. Sportsvogne og mange turbomotorer kraever 98 — der er det omvendt skadeligt at koere paa 95.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section faq" id="faq">
+    <div class="container">
+      <h2>Ofte stillede spoergsmaal</h2>
+      <details>
+        <summary>Hvad koster benzin og diesel i Danmark i 2026?</summary>
+        <p>Typiske pumpepriser i 2026: benzin 95 ca 14,70 kr/L, benzin 98 ca 15,45 kr/L, diesel ca 13,90 kr/L. Automat-stationer som F24 og Ingo er typisk 30-60 oere billigere pr liter.</p>
+      </details>
+      <details>
+        <summary>Hvor meget koster det at koere 100 km i benzin?</summary>
+        <p>Med en moderne bil der koerer 16,5 km/L bruger du ca 6 L pr 100 km (efter realisme-korrektion). Til 14,69 kr/L bliver det ca 90 kr — eller 90 oere pr km.</p>
+      </details>
+      <details>
+        <summary>Er diesel stadig billigere end benzin pr km?</summary>
+        <p>Ja paa litergrundlag, da diesel typisk er 80 oere billigere pr liter end benzin 95, og dieselmotorer bruger 15-25% mindre braendstof. Til gengaeld er groen ejerafgift hoejere paa dieselbiler, og koerselsomkostningen pr km laver kun forskel ved over 15-20000 km/aar.</p>
+      </details>
+      <details>
+        <summary>Skal jeg vaelge 95 eller 98 oktan?</summary>
+        <p>Foelg bilens manual. Hvis bilen er bygget til 95 oktan giver 98 oktan ingen merydelse og er bare 60-80 oere dyrere pr liter — penge ud af vinduet. Sportsvogne og turbomotorer kraever ofte 98.</p>
+      </details>
+      <details>
+        <summary>Hvad er forskellen paa katalog-forbrug og reelt forbrug?</summary>
+        <p>WLTP-testen koeres under kontrollerede forhold uden aircondition, vinterdaek eller kold start. Reelt forbrug er typisk 15-25% hoejere — derfor justerer beregneren automatisk.</p>
+      </details>
+      <details>
+        <summary>Sparer jeg penge paa HVO100?</summary>
+        <p>Nej i kroner — HVO100 koster 1-2 kr mere pr liter end almindelig diesel. Men du reducerer CO2-udledning med over 90% og kan bruge det i alle moderne dieselbiler uden modifikation. Relevant for klima-bevidste bilister eller firmabiler med CO2-rapportering.</p>
+      </details>
+      <details>
+        <summary>Hvorfor er prisen forskellig paa tankstationer?</summary>
+        <p>Bemandede stationer som OK, Q8 og Shell tilbyder service og bonuskort. Automat-stationer som F24 og Ingo har lavere drift og er derfor 30-60 oere billigere pr liter. Forskellen paa 1000 L er 300-600 kr om aaret.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <p>Skal du regne nettoloen ud for at se, hvor stor en bid braendstoffet tager af din raadighed? Brug vores soestersite <a class="cross-link" href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">↗</span></a> — den giver dig loen efter skat i 2026.</p>
+
+      <div class="source-card">
+        <h2>Officielle kilder</h2>
+        <p class="muted">Senest tjekket 2026-06-10</p>
+        <ul>
+          <li><a href="https://ens.dk/analyser-og-statistik/braendstofpriser" rel="nofollow noopener" target="_blank">Energistyrelsen — braendstofstatistik <span class="ext-icon" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://skat.dk/erhverv/punktafgifter/punktafgifter-paa-energi/energiafgifter" rel="nofollow noopener" target="_blank">Skat.dk — energiafgift braendstof <span class="ext-icon" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://fdm.dk/alt-om-biler/brug-bil/braendstofpriser" rel="nofollow noopener" target="_blank">FDM — aktuelle braendstofpriser <span class="ext-icon" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://www.fstyr.dk/da/Emner/Koeretoejer" rel="nofollow noopener" target="_blank">Trafikstyrelsen — koeretoejsforbrug <span class="ext-icon" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://www.ok.dk/privat/produkter/braendstof/braendstofpriser" rel="nofollow noopener" target="_blank">OK — pumpepriser <span class="ext-icon" aria-hidden="true">↗</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" role="contentinfo" aria-label="Sidefod">
+  <div class="container">
+    <div class="site-footer__cols">
+      <div class="site-footer__col">
+        <h2>Studerende</h2>
+        <ul>
+          <li><a href="/beregner/su.html">SU-beregner</a></li>
+          <li><a href="/beregner/su-fribelob.html">SU fribeloeb</a></li>
+          <li><a href="/beregner/su-laan-tilbagebetaling.html">SU-laan tilbagebetaling</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h2>Ledig &amp; familie</h2>
+        <ul>
+          <li><a href="/beregner/dagpenge.html">Dagpenge</a></li>
+          <li><a href="/beregner/dimittend.html">Dimittend</a></li>
+          <li><a href="/beregner/sygedagpenge.html">Sygedagpenge</a></li>
+          <li><a href="/beregner/barselsdagpenge.html">Barselsdagpenge</a></li>
+          <li><a href="/beregner/bornepenge.html">Boernepenge</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h2>Bolig &amp; flytning</h2>
+        <ul>
+          <li><a href="/beregner/huslejebudget.html">Huslejebudget</a></li>
+          <li><a href="/beregner/kvm-beregner.html">Kvadratmeter</a></li>
+          <li><a href="/beregner/boligstoette.html">Boligstoette</a></li>
+          <li><a href="/beregner/depositum.html">Depositum</a></li>
+          <li><a href="/beregner/flyttebudget.html">Flyttebudget</a></li>
+          <li><a href="/beregner/el-vand-varme-budget.html">El, vand og varme</a></li>
+          <li><a href="/beregner/ejendomsvaerdiskat.html">Ejendomsvaerdiskat</a></li>
+          <li><a href="/beregner/andelsbolig.html">Andelsbolig</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h2>Bil &amp; transport</h2>
+        <ul>
+          <li><a href="/beregner/leasing-vs-koeb.html">Leasing vs. koeb</a></li>
+          <li><a href="/beregner/bil-totalomkostning.html">Bil totalomkostning</a></li>
+          <li><a href="/beregner/bil-vaerdtab.html">Bil-vaerditab</a></li>
+          <li><a href="/beregner/groen-ejerafgift.html">Groen ejerafgift</a></li>
+          <li><a href="/beregner/braendstof.html">Braendstof</a></li>
+          <li><a href="/beregner/elbil-opladning.html">Elbil opladning</a></li>
+          <li><a href="/beregner/pendlerbudget.html">Pendlerbudget</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h2>Selvstaendig</h2>
+        <ul>
+          <li><a href="/beregner/moms-beregner.html">Momsberegner</a></li>
+          <li><a href="/beregner/timepris-freelancer.html">Timepris</a></li>
+          <li><a href="/beregner/faktura-generator.html">Faktura-generator</a></li>
+          <li><a href="/beregner/b-skat-beregner.html">B-skat</a></li>
+          <li><a href="/beregner/overskud-efter-skat.html">Overskud efter skat</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h2>Hverdagsudgifter</h2>
+        <ul>
+          <li><a href="/beregner/elpris-apparatforbrug.html">Elpris time for time</a></li>
+          <li><a href="/beregner/pension.html">Pension</a></li>
+          <li><a href="/beregner/aktieskat.html">Aktieskat</a></li>
+          <li><a href="/beregner/efterloen.html">Efterloen</a></li>
+          <li><a href="/beregner/feriepenge.html">Feriepenge</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h2>Vaerktoejer</h2>
+        <ul>
+          <li><a href="/sporg-ai.html">Spoerg AI</a></li>
+          <li><a href="/#alle-beregnere">Alle beregnere</a></li>
+          <li><a href="https://lonberegning.dk/" rel="noopener">Loenberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h2>Om Hverdagstal</h2>
+        <ul>
+          <li><a href="/om.html">Om os</a></li>
+          <li><a href="/kilder.html">Officielle kilder</a></li>
+          <li><a href="/kontakt.html">Kontakt</a></li>
+          <li><a href="/privatlivspolitik.html">Privatlivspolitik</a></li>
+          <li><a href="/vilkar.html">Vilkaar</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="site-footer__cross">Skal du regne nettoloen ud? Brug vores soestersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a> — specialiseret i loen og skat.</p>
+    <div class="site-footer__bottom">
+      <span>&copy; 2026 hverdagstal.dk &middot; Beregn penge, stoette og udgifter i hverdagen &middot; Satser opdateret 2026-06-10</span>
+      <span>Made in Danmark</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/main.js" defer></script>
+<script>
+(function(){
+  var nf0 = new Intl.NumberFormat("da-DK", { maximumFractionDigits: 0 });
+  var nf1 = new Intl.NumberFormat("da-DK", { maximumFractionDigits: 1 });
+  var nf2 = new Intl.NumberFormat("da-DK", { maximumFractionDigits: 2 });
+
+  var prices = {
+    benzin95: 14.69,
+    benzin98: 15.45,
+    diesel: 13.89,
+    dieselpremium: 14.55,
+    hvo100: 16.20,
+    e85: 11.95
+  };
+
+  var co2Factor = {
+    benzin95: 2.31,
+    benzin98: 2.31,
+    diesel: 2.68,
+    dieselpremium: 2.68,
+    hvo100: 0.20,
+    e85: 1.50
+  };
+
+  var realismeFactor = {
+    motorvej: 1.10,
+    bland: 1.20,
+    by: 1.30,
+    vinter: 1.25
+  };
+
+  var automatRabat = 0.45;
+
+  var $ = function(id){ return document.getElementById(id); };
+
+  function applyDefaultPrice() {
+    var fuel = $("braendstoftype").value;
+    var station = $("tankstation").value;
+    var base = prices[fuel] || 14.69;
+    if (station === "F24" || station === "Ingo") {
+      base = Math.max(0, base - automatRabat);
+    }
+    $("pumpepris").value = base.toFixed(2);
+  }
+
+  function compute() {
+    var fuel = $("braendstoftype").value;
+    var enhed = $("forbrug_enhed").value;
+    var v = parseFloat($("forbrug_vaerdi").value);
+    var km = parseFloat($("km").value);
+    var periode = $("beregningsperiode").value;
+    var pris = parseFloat($("pumpepris").value);
+    var kType = $("korsel_type").value;
+    var realisme = $("korrektion_realisme").checked;
+
+    if (isNaN(v) || v <= 0 || isNaN(km) || km < 0 || isNaN(pris) || pris < 0) {
+      $("out_l100").textContent = "—";
+      $("out_real").textContent = "—";
+      $("out_liter").textContent = "—";
+      $("out_prkm").textContent = "—";
+      $("out_prmd").textContent = "—";
+      $("out_praar").textContent = "—";
+      $("out_co2").textContent = "—";
+      $("out_total").textContent = "— kr";
+      return;
+    }
+
+    var l100 = (enhed === "km_l") ? (100 / v) : v;
+    var faktor = realisme ? (realismeFactor[kType] || 1.0) : 1.0;
+    var l100real = l100 * faktor;
+
+    var literTotal = km * l100real / 100;
+    var prisTotal = literTotal * pris;
+    var prisPrKm = l100real / 100 * pris;
+
+    // Konverter til km pr maaned afhaengig af perioden
+    var kmPrMaaned;
+    if (periode === "tur") kmPrMaaned = km * 4;        // antagelse: 4 ture pr maaned (kun til pr md/aar skoen)
+    else if (periode === "uge") kmPrMaaned = km * 4.33;
+    else if (periode === "maaned") kmPrMaaned = km;
+    else kmPrMaaned = km / 12;
+
+    var prisPrMaaned = kmPrMaaned * l100real / 100 * pris;
+    var prisPrAar = prisPrMaaned * 12;
+
+    var co2 = literTotal * (co2Factor[fuel] || 2.31);
+
+    $("out_l100").textContent = nf1.format(l100) + " L/100 km";
+    $("out_real").textContent = nf1.format(l100real) + " L/100 km";
+    $("out_liter").textContent = nf2.format(literTotal) + " L";
+    $("out_prkm").textContent = nf2.format(prisPrKm) + " kr/km";
+    $("out_prmd").textContent = nf0.format(prisPrMaaned) + " kr/md";
+    $("out_praar").textContent = nf0.format(prisPrAar) + " kr/aar";
+    $("out_co2").textContent = nf1.format(co2) + " kg CO2";
+
+    var lbl = { tur: "For denne tur", uge: "For ugen", maaned: "For maaneden", aar: "For aaret" }[periode] || "For perioden";
+    $("periode_label").textContent = lbl;
+    $("out_total").textContent = nf0.format(prisTotal) + " kr";
+  }
+
+  var form = document.getElementById("braendstof-form");
+  if (form) {
+    form.addEventListener("input", function(e){
+      if (e.target.id === "braendstoftype" || e.target.id === "tankstation") {
+        applyDefaultPrice();
+      }
+      compute();
+    });
+    form.addEventListener("change", function(e){
+      if (e.target.id === "braendstoftype" || e.target.id === "tankstation") {
+        applyDefaultPrice();
+      }
+      compute();
+    });
+  }
+
+  compute();
+})();
+</script>
+</body>
+</html>

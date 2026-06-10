@@ -1,0 +1,9 @@
+.venv/
+data/raw/
+logs/
+*.local.txt
+*.env
+*.key
+.DS_Store
+Thumbs.db
+research/

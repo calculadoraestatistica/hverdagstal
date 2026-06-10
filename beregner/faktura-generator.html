@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Faktura-generator 2026 — gratis HTML/PDF faktura | Hverdagstal</title>
+<meta name="description" content="Generer en korrekt dansk faktura med CVR, momsspecifikation, linjeposter og betalingsbetingelser — klient-side HTML der printes som PDF.">
+<link rel="canonical" href="https://hverdagstal.dk/beregner/faktura-generator.html">
+<meta name="theme-color" content="#0d9488">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="da_DK">
+<meta property="og:site_name" content="Hverdagstal">
+<meta property="og:title" content="Faktura-generator 2026 — gratis HTML/PDF faktura | Hverdagstal">
+<meta property="og:description" content="Generer en korrekt dansk faktura med CVR, momsspecifikation, linjeposter og betalingsbetingelser — klient-side HTML der printes som PDF.">
+<meta property="og:url" content="https://hverdagstal.dk/beregner/faktura-generator.html">
+<meta property="og:image" content="https://hverdagstal.dk/img/og-faktura-generator.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Faktura-generator 2026 — gratis HTML/PDF faktura | Hverdagstal">
+<meta name="twitter:description" content="Generer en korrekt dansk faktura med CVR, momsspecifikation, linjeposter og betalingsbetingelser — klient-side HTML der printes som PDF.">
+<meta name="twitter:image" content="https://hverdagstal.dk/img/og-faktura-generator.png">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/css/site.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7516029395999799" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Hverdagstal",
+  "url": "https://hverdagstal.dk/",
+  "inLanguage": "da-DK"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Hverdagstal",
+  "url": "https://hverdagstal.dk/",
+  "logo": "https://hverdagstal.dk/favicon-192.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Forside", "item": "https://hverdagstal.dk/"},
+    {"@type": "ListItem", "position": 2, "name": "Selvstaendig", "item": "https://hverdagstal.dk/situation/selvstaendig.html"},
+    {"@type": "ListItem", "position": 3, "name": "Faktura-generator", "item": "https://hverdagstal.dk/beregner/faktura-generator.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Faktura-generator 2026",
+  "url": "https://hverdagstal.dk/beregner/faktura-generator.html",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Any (browser)",
+  "inLanguage": "da-DK",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "DKK"},
+  "description": "Generer en korrekt dansk faktura med CVR, momsspecifikation, linjeposter og betalingsbetingelser. Klient-side HTML der printes/gemmes som PDF via browserens print-funktion."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Hvilke oplysninger SKAL en dansk faktura indeholde i 2026?", "acceptedAnswer": {"@type": "Answer", "text": "Bogfoeringsloven og momsloven kraever: fakturadato, fortloebende fakturanummer, saelgers navn/adresse/CVR, koebers navn/adresse (og CVR ved B2B), beskrivelse af ydelse, leveringsdato, momsgrundlag pr. sats, momssats og momsbeloeb, samt totalbeloeb. Mangler et af felterne kan kunden afvise momsfradrag."}},
+    {"@type": "Question", "name": "Kan jeg lave en faktura uden et fakturaprogram?", "acceptedAnswer": {"@type": "Answer", "text": "Ja — en faktura kan vaere et Word-dokument, et PDF-dokument eller en formateret HTML-side, saa laenge alle lovpligtige felter er med og nummerering er fortloebende uden huller. For under 5-10 fakturaer om aaret er det fuldt forsvarligt; ved hoejere volumen anbefales et bogfoeringsprogram (Dinero, Billy, e-conomic) der ogsaa haandterer kreditnotaer og elektronisk arkivering."}},
+    {"@type": "Question", "name": "Hvad er en kort betalingsfrist — 8, 14 eller 30 dage?", "acceptedAnswer": {"@type": "Answer", "text": "Privatmarkedet bruger typisk 8-14 dage netto. B2B 14-30 dage. Det offentlige har lovpligtigt 30 dage. Kortere end 8 dage anses som usaedvanligt og kan udfordres. Du maa gerne kraeve forudbetaling, men det skal aftales paa forhaand."}},
+    {"@type": "Question", "name": "Skal jeg laegge moms paa min faktura?", "acceptedAnswer": {"@type": "Answer", "text": "Ja, hvis du er momsregistreret (omsaetning over 50.000 kr/aar): 25% paa de fleste ydelser, 0% paa boeger og EU-B2B-eksport, 7% paa hotel/camping fra 2026. Hvis du IKKE er momsregistreret, maa fakturaen IKKE indeholde momsbeloeb — kun det rene beloeb uden moms eller momstekst."}},
+    {"@type": "Question", "name": "Hvor laenge skal jeg gemme mine fakturaer?", "acceptedAnswer": {"@type": "Answer", "text": "5 aar fra udgangen af det regnskabsaar fakturaen vedroerer. Det gaelder baade fakturaer du har sendt og koebsbilag du har modtaget. Fra 2024 skal opbevaringen ske digitalt for de fleste virksomheder (digital bogfoeringslov)."}},
+    {"@type": "Question", "name": "Kan jeg sende fakturaen som almindelig PDF til en offentlig kunde?", "acceptedAnswer": {"@type": "Answer", "text": "Nej — det offentlige (stat, regioner, kommuner, mange selvejende institutioner) modtager kun fakturaer i OIOUBL/PEPPOL-formatet via NemHandel. Du skal enten bruge et bogfoeringsprogram med NemHandel-integration eller den gratis 'Erhvervssystem'-loesning fra Erhvervsstyrelsen."}},
+    {"@type": "Question", "name": "Hvad goer jeg hvis kunden ikke betaler til tiden?", "acceptedAnswer": {"@type": "Answer", "text": "1) Send foerste rykker (gerne efter 8 dage) — du maa kraeve 100 kr i rykkergebyr (op til 3 rykkere). 2) Forsinkelsesrente kan tillaegges fra forfaldsdatoen (ca. 12,35% p.a. i 2026). 3) Ved B2B har du desuden ret til 310 kr i kompensationsbeloeb. 4) Hvis betaling fortsat udebliver, kan du sende sagen til inkasso eller fogedretten."}}
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Spring til indhold</a>
+<a class="skip-link" href="#main">Spring til indhold</a>
+<header class="site-header" role="banner">
+  <div class="site-header__inner">
+    <a class="brand" href="/" aria-label="Hverdagstal forside">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 28 28" width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="12" height="12" rx="2" fill="#0d9488"/>
+          <rect x="15" y="1" width="12" height="12" rx="2" fill="#ffffff" stroke="#0d9488" stroke-width="1.5"/>
+          <rect x="1" y="15" width="12" height="12" rx="2" fill="#ffffff" stroke="#0d9488" stroke-width="1.5"/>
+          <rect x="15" y="15" width="12" height="12" rx="2" fill="#0d9488"/>
+        </svg>
+      </span>
+      <span class="brand__name">Hverdags<span>tal</span></span>
+    </a>
+    <span class="header-badge" aria-label="Sidst opdateret 10. juni 2026">Opdateret 2026-06-10</span>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Aabn menu">
+      <svg class="icon-open" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <svg class="icon-close" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <nav class="main-nav" id="main-nav" aria-label="Hovedmenu">
+      <ul>
+        <li><a href="/">Forside</a></li>
+        <li><a href="/situation/studerende.html">Studerende</a></li>
+        <li><a href="/situation/ledig-familie.html">Ledig &amp; familie</a></li>
+        <li><a href="/situation/bolig-flytning.html">Bolig</a></li>
+        <li><a href="/situation/bil-transport.html">Bil</a></li>
+        <li><a href="/situation/selvstaendig.html">Selvstaendig</a></li>
+        <li class="has-dropdown">
+          <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-more-menu">Mere <span aria-hidden="true">&#9662;</span></button>
+          <ul id="nav-more-menu" class="nav-dropdown">
+            <li><a href="/situation/hverdagsudgifter.html">Hverdagsudgifter</a></li>
+            <li><a href="/#alle-beregnere">Alle beregnere</a></li>
+            <li><a href="/kilder.html">Kilder</a></li>
+            <li><a href="/om.html">Om</a></li>
+          </ul>
+        </li>
+        <li class="nav-cta"><a href="/sporg-ai.html" class="nav-cta-link">Spoerg AI</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Brodkrumme">
+        <ol>
+          <li><a href="/">Forside</a></li>
+          <li><a href="/situation/selvstaendig.html">Selvstaendig</a></li>
+          <li aria-current="page">Faktura-generator</li>
+        </ol>
+      </nav>
+      <span class="hero__eyebrow">Selvstaendig &middot; Faktura</span>
+      <h1 class="hero__title">Faktura-generator 2026 — lav en lovlig dansk faktura</h1>
+      <p class="hero__lead">Udfyld felterne, klik <strong>Generer faktura</strong> og print som PDF via browseren. Alle data bliver i din browser — ingen server, ingen tracking, ingen registrering. Generatoren opfylder bogfoeringslovens og momslovens krav til en almindelig dansk faktura.</p>
+      <p><span class="opdateret-badge">Opdateret 2026-06-10</span> <span class="badge badge--gold">2026-satser</span></p>
+      <div class="cluster">
+        <a class="btn btn--primary btn--lg" href="#faktura-form">Lav din faktura nu</a>
+        <a class="btn btn--ghost" href="#krav">Se lovkrav</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="site-grid">
+        <div>
+          <h2 id="faktura-form">Udfyld faktura-oplysninger</h2>
+          <p class="muted">Felterne herunder daekker alle de oplysninger som en dansk faktura skal indeholde. Standardvaerdier er forhaandsudfyldt som eksempel — overskriv med dine egne tal.</p>
+
+          <form class="calculator-form" id="fakturaForm" novalidate>
+            <div class="field field--full">
+              <label for="afsenderNavn">Dit firmanavn</label>
+              <input id="afsenderNavn" name="afsenderNavn" type="text" value="Mit Firma ApS" autocomplete="organization">
+              <small class="field__hint">Det navn der staar paa CVR-registreringen (eller dit personlige navn ved enkeltmandsvirksomhed).</small>
+            </div>
+
+            <div class="field">
+              <label for="afsenderCVR">Dit CVR-nr</label>
+              <input id="afsenderCVR" name="afsenderCVR" type="text" value="12345678" inputmode="numeric" pattern="[0-9 ]{8,10}">
+              <small class="field__hint">8 cifre. Skal staa paa fakturaen for at den er gyldig som afgiftsbilag.</small>
+            </div>
+
+            <div class="field">
+              <label for="afsenderEmail">Din e-mail</label>
+              <input id="afsenderEmail" name="afsenderEmail" type="email" value="kontakt@mitfirma.dk" autocomplete="email">
+              <small class="field__hint">Kontaktoplysning til modtageren ved spoergsmaal til fakturaen.</small>
+            </div>
+
+            <div class="field field--full">
+              <label for="afsenderAdresse">Din adresse</label>
+              <input id="afsenderAdresse" name="afsenderAdresse" type="text" value="Hovedgade 1, 1000 Koebenhavn" autocomplete="street-address">
+              <small class="field__hint">Fuld postadresse — vej, nr, postnr og by.</small>
+            </div>
+
+            <div class="field field--full">
+              <label for="afsenderKonto">Bankkonto (regnr + kontonr) eller IBAN</label>
+              <input id="afsenderKonto" name="afsenderKonto" type="text" value="1234 5678901234">
+              <small class="field__hint">Hvor pengene skal overfoeres. Brug IBAN ved udenlandske kunder. Tilfoej evt. BIC/SWIFT.</small>
+            </div>
+
+            <div class="field field--full">
+              <label for="modtagerNavn">Modtagers firmanavn/navn</label>
+              <input id="modtagerNavn" name="modtagerNavn" type="text" value="Kunde A/S">
+              <small class="field__hint">Den juridiske enhed der koeber ydelsen.</small>
+            </div>
+
+            <div class="field">
+              <label for="modtagerCVR">Modtagers CVR (valgfri)</label>
+              <input id="modtagerCVR" name="modtagerCVR" type="text" value="87654321" inputmode="numeric">
+              <small class="field__hint">Skal angives ved B2B, helst ogsaa EAN-nr ved salg til det offentlige.</small>
+            </div>
+
+            <div class="field">
+              <label for="modtagerAdresse">Modtagers adresse</label>
+              <input id="modtagerAdresse" name="modtagerAdresse" type="text" value="Industrivej 10, 8000 Aarhus">
+              <small class="field__hint">Faktura-adresse — kan vaere forskellig fra leveringsadresse.</small>
+            </div>
+
+            <div class="field">
+              <label for="fakturaNr">Fakturanummer</label>
+              <input id="fakturaNr" name="fakturaNr" type="text" value="2026-001">
+              <small class="field__hint">Skal vaere fortloebende uden huller. Mange bruger format AAAA-NNN eller blot et 1-baseret tal.</small>
+            </div>
+
+            <div class="field">
+              <label for="fakturaDato">Fakturadato</label>
+              <input id="fakturaDato" name="fakturaDato" type="date" value="2026-06-10">
+              <small class="field__hint">Datoen fakturaen udstedes. Bestemmer momsperioden.</small>
+            </div>
+
+            <div class="field">
+              <label for="leveringsDato">Leveringsdato</label>
+              <input id="leveringsDato" name="leveringsDato" type="date" value="2026-06-10">
+              <small class="field__hint">Naar ydelsen blev leveret. Kan vaere periode (fx 1.-31. maj) ved loebende ydelser.</small>
+            </div>
+
+            <div class="field">
+              <label for="betalingsfristDage">Betalingsfrist (dage)</label>
+              <input id="betalingsfristDage" name="betalingsfristDage" type="number" value="14" min="0" max="365" step="1">
+              <small class="field__hint">Standard er 8, 14 eller 30 dage netto. Det offentlige bruger 30 dage.</small>
+            </div>
+
+            <div class="field field--full">
+              <label for="linjeposter">Linjeposter (JSON-array)</label>
+              <textarea id="linjeposter" name="linjeposter" rows="5">[{"beskrivelse":"Konsulentbistand juni 2026","antal":20,"enhedspris":1200,"momssats":0.25}]</textarea>
+              <small class="field__hint">JSON-array med en post pr. ydelse. Hver post: beskrivelse, antal (timer/stk), enhedspris (kr ekskl. moms), momssats (0, 0.07 eller 0.25).</small>
+              <small class="field__error" id="linjeposterError" hidden>Ugyldig JSON — tjek format. Eksempel: <code>[{"beskrivelse":"...","antal":1,"enhedspris":1000,"momssats":0.25}]</code></small>
+            </div>
+
+            <div class="field field--full">
+              <label for="kommentar">Kommentar / reference</label>
+              <textarea id="kommentar" name="kommentar" rows="3">Tak for samarbejdet. Ved sporgsmaal kontakt undertegnede.</textarea>
+              <small class="field__hint">PO-nummer, projektreference, kontaktperson hos kunden, eller bare en venlig hilsen.</small>
+            </div>
+
+            <div class="field field--full">
+              <div class="cluster">
+                <button class="btn btn--primary btn--lg" type="submit">Generer faktura</button>
+                <button class="btn btn--ghost" type="button" id="printBtn">Print / gem som PDF</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <aside class="calculator-result" id="resultat" aria-live="polite">
+          <h2>Faktura-oversigt</h2>
+          <p class="muted">Beloeb opdateres automatisk naar du klikker <em>Generer faktura</em>.</p>
+          <dl class="calculator-result__breakdown" id="breakdown">
+            <dt>Subtotal (ekskl. moms)</dt><dd id="outSubtotal">— kr</dd>
+            <dt>Moms i alt</dt><dd id="outMoms">— kr</dd>
+            <dt>Sidste rettidige betalingsdato</dt><dd id="outBetalingsdato">—</dd>
+          </dl>
+          <p class="calculator-result__total"><span>Total til betaling (inkl. moms)</span><strong id="outTotal">— kr</strong></p>
+          <p class="muted"><small>Print-klar faktura vises nedenfor naar du har genereret den. Ingen data forlader din browser.</small></p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <h2>Din faktura (print-klar)</h2>
+      <p class="muted">Tryk <strong>Print / gem som PDF</strong> ovenfor — vaelg "Gem som PDF" i browserens print-dialog for at faa en fil du kan sende til kunden.</p>
+      <div id="fakturaPreview" class="source-card" aria-live="polite">
+        <p class="muted">Klik <em>Generer faktura</em> for at se din faktura her.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="source-card" style="border-left:4px solid #f0b400;background:#fffbea;">
+        <h2>Hvorfor bruge denne generator?</h2>
+        <p>Du behoever ikke et dyrt fakturasystem til en enkelt faktura. Med korrekte felter (CVR, faktura-nr, fakturadato, leveringsdato, momsspecifikation) opfylder denne generator bogfoeringslovens krav til en almindelig dansk faktura.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <h2 id="krav">Saadan virker det</h2>
+      <div class="stack">
+        <p><strong>1) Udfyld felterne.</strong> Alle standardvaerdier er bare et eksempel — overskriv med dine egne oplysninger.</p>
+        <p><strong>2) Tilfoej dine linjeposter.</strong> Hver post er en linje i fakturaen: beskrivelse, antal (timer eller stk), enhedspris (uden moms) og momssats (0,25 for 25%, 0,07 for 7%, 0 for momsfri/EU-eksport).</p>
+        <p><strong>3) Klik "Generer faktura".</strong> Beregneren laver subtotal, moms pr. sats og total, og udstiller fakturaen som en print-klar HTML-side.</p>
+        <p><strong>4) Print til PDF.</strong> Browserens print-dialog (Ctrl+P / Cmd+P) har en "Gem som PDF"-mulighed. Send PDF'en pr. e-mail til kunden eller arkivér den.</p>
+        <p><strong>5) Arkivér.</strong> Bogfoeringsloven kraever at du opbevarer fakturaer i 5 aar fra udgangen af regnskabsaaret. Gem PDF'en et sikkert sted (sky eller backup).</p>
+
+        <h3>Lovpligtige felter paa en dansk faktura (2026)</h3>
+        <ul>
+          <li>Udstedelsesdato (fakturadato)</li>
+          <li>Fortloebende fakturanummer</li>
+          <li>Saelgers navn, adresse og CVR-nr</li>
+          <li>Koebers navn og adresse (CVR-nr ved B2B)</li>
+          <li>Maengde og art af leverede ydelser/varer</li>
+          <li>Leveringsdato (hvis forskellig fra fakturadato)</li>
+          <li>Momsgrundlag pr. sats</li>
+          <li>Momssats og momsbeloeb</li>
+          <li>Total til betaling</li>
+        </ul>
+
+        <h3>Momssatser 2026</h3>
+        <ul>
+          <li><strong>25 %</strong> — standardsats paa de fleste ydelser og varer.</li>
+          <li><strong>7 %</strong> — reduceret sats paa hotel- og campingovernatninger fra 2026.</li>
+          <li><strong>0 %</strong> — boeger, aviser, EU-B2B-eksport (med "Reverse charge"-tekst).</li>
+        </ul>
+
+        <h3>Beloeb hvis kunden ikke betaler</h3>
+        <ul>
+          <li>Rykkergebyr: maks. <strong>100 kr</strong> pr. rykker (op til 3 rykkere).</li>
+          <li>Forsinkelsesrente 2026: ca. <strong>12,35 % p.a.</strong> (Nationalbankens udlaansrente + 8 procentpoint).</li>
+          <li>Kompensationsbeloeb ved B2B: <strong>310 kr</strong>.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Vigtige situationer og undtagelser</h2>
+      <div class="stack">
+        <div class="source-card">
+          <h3>Salg til det offentlige</h3>
+          <p>Salg til det offentlige (stat, regioner, kommuner) SKAL sendes elektronisk via NemHandel/OIOUBL — en almindelig PDF accepteres ikke.</p>
+        </div>
+        <div class="source-card">
+          <h3>EU-B2B-salg (Reverse charge)</h3>
+          <p>Ved EU-B2B-salg skal fakturaen indeholde teksten <strong>"Reverse charge"</strong> eller <strong>"Omvendt betalingspligt"</strong> samt koebers VAT-nummer, og momsen er 0 %.</p>
+        </div>
+        <div class="source-card">
+          <h3>Kontantsalg under 1.000 kr</h3>
+          <p>Ved kontantsalg under 1.000 kr kraeves ikke fuld faktura — en forenklet kvittering er nok (men ikke ved B2B).</p>
+        </div>
+        <div class="source-card">
+          <h3>Ikke-momsregistreret (under 50.000 kr/aar)</h3>
+          <p>Hvis du er ikke-momsregistreret MAA fakturaen IKKE indeholde momsbeloeb eller teksten "inkl. moms" — kun beloebet uden moms.</p>
+        </div>
+        <div class="source-card">
+          <h3>Kreditnota</h3>
+          <p>Kreditnotaer skal have eget fortloebende nummer og referere til den oprindelige faktura-nr.</p>
+        </div>
+        <div class="source-card">
+          <h3>Opbevaring</h3>
+          <p>Fakturaer skal opbevares i <strong>5 aar</strong> fra udgangen af regnskabsaaret (bogfoeringslovens § 12).</p>
+        </div>
+        <div class="source-card">
+          <h3>Forsinket betaling</h3>
+          <p>Ved betaling efter forfald har du ret til forsinkelsesrente (Nationalbankens udlaansrente + 8 procentpoint, ca. <strong>12,35 % p.a.</strong> i 2026) og <strong>310 kr</strong> i kompensation ved B2B-handler.</p>
+        </div>
+        <div class="source-card">
+          <h3>Privatpersoner over 6.000 kr</h3>
+          <p>Hvis fakturaen er over 6.000 kr inkl. moms til en privatperson skal du opbevare modtagers navn og adresse i 5 aar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ad-slot ad-slot--inline" aria-label="Annonce">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7516029395999799" data-ad-slot="0000000000" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  </div>
+
+  <section class="section section--alt faq">
+    <div class="container">
+      <h2>Ofte stillede spoergsmaal</h2>
+      <details>
+        <summary>Hvilke oplysninger SKAL en dansk faktura indeholde i 2026?</summary>
+        <p>Bogfoeringsloven og momsloven kraever: fakturadato, fortloebende fakturanummer, saelgers navn/adresse/CVR, koebers navn/adresse (og CVR ved B2B), beskrivelse af ydelse, leveringsdato, momsgrundlag pr. sats, momssats og momsbeloeb, samt totalbeloeb. Mangler et af felterne kan kunden afvise momsfradrag.</p>
+      </details>
+      <details>
+        <summary>Kan jeg lave en faktura uden et fakturaprogram?</summary>
+        <p>Ja — en faktura kan vaere et Word-dokument, et PDF-dokument eller en formateret HTML-side, saa laenge alle lovpligtige felter er med og nummerering er fortloebende uden huller. For under 5-10 fakturaer om aaret er det fuldt forsvarligt; ved hoejere volumen anbefales et bogfoeringsprogram (Dinero, Billy, e-conomic) der ogsaa haandterer kreditnotaer og elektronisk arkivering.</p>
+      </details>
+      <details>
+        <summary>Hvad er en kort betalingsfrist — 8, 14 eller 30 dage?</summary>
+        <p>Privatmarkedet bruger typisk 8-14 dage netto. B2B 14-30 dage. Det offentlige har lovpligtigt 30 dage. Kortere end 8 dage anses som usaedvanligt og kan udfordres. Du maa gerne kraeve forudbetaling, men det skal aftales paa forhaand.</p>
+      </details>
+      <details>
+        <summary>Skal jeg laegge moms paa min faktura?</summary>
+        <p>Ja, hvis du er momsregistreret (omsaetning over 50.000 kr/aar): 25% paa de fleste ydelser, 0% paa boeger og EU-B2B-eksport, 7% paa hotel/camping fra 2026. Hvis du IKKE er momsregistreret, maa fakturaen IKKE indeholde momsbeloeb — kun det rene beloeb uden moms eller momstekst.</p>
+      </details>
+      <details>
+        <summary>Hvor laenge skal jeg gemme mine fakturaer?</summary>
+        <p>5 aar fra udgangen af det regnskabsaar fakturaen vedroerer. Det gaelder baade fakturaer du har sendt og koebsbilag du har modtaget. Fra 2024 skal opbevaringen ske digitalt for de fleste virksomheder (digital bogfoeringslov).</p>
+      </details>
+      <details>
+        <summary>Kan jeg sende fakturaen som almindelig PDF til en offentlig kunde?</summary>
+        <p>Nej — det offentlige (stat, regioner, kommuner, mange selvejende institutioner) modtager kun fakturaer i OIOUBL/PEPPOL-formatet via NemHandel. Du skal enten bruge et bogfoeringsprogram med NemHandel-integration eller den gratis "Erhvervssystem"-loesning fra Erhvervsstyrelsen.</p>
+      </details>
+      <details>
+        <summary>Hvad goer jeg hvis kunden ikke betaler til tiden?</summary>
+        <p>1) Send foerste rykker (gerne efter 8 dage) — du maa kraeve 100 kr i rykkergebyr (op til 3 rykkere). 2) Forsinkelsesrente kan tillaegges fra forfaldsdatoen (ca. 12,35% p.a. i 2026). 3) Ved B2B har du desuden ret til 310 kr i kompensationsbeloeb. 4) Hvis betaling fortsat udebliver, kan du sende sagen til inkasso eller fogedretten.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="source-card">
+        <h2>Officielle kilder</h2>
+        <ul>
+          <li><a href="https://www.retsinformation.dk/eli/lta/2022/700" rel="nofollow noopener" target="_blank">Bogfoeringsloven — krav til fakturaer <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
+          <li><a href="https://skat.dk/erhverv/moms/fakturakrav" rel="nofollow noopener" target="_blank">Skattestyrelsen — Krav til en faktura <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
+          <li><a href="https://erhvervsstyrelsen.dk/nemhandel" rel="nofollow noopener" target="_blank">Erhvervsstyrelsen — Digital faktura (OIOUBL) <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
+          <li><a href="https://www.retsinformation.dk/eli/lta/2014/459" rel="nofollow noopener" target="_blank">Renteloven — forsinkelsesrente <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
+          <li><a href="https://virk.dk" rel="nofollow noopener" target="_blank">Virk — Send faktura til det offentlige <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
+        </ul>
+        <p class="muted"><small>Senest tjekket 2026-06-10.</small></p>
+      </div>
+      <p class="muted" style="margin-top:1rem;"><small>Bruger du andre selvstaendig-vaerktoejer? Se ogsaa <a href="/beregner/moms-beregner.html">momsberegneren</a>, <a href="/beregner/timepris-freelancer.html">timeprisberegneren</a> og <a href="/beregner/b-skat-beregner.html">B-skat-beregneren</a>.</small></p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" role="contentinfo" aria-label="Sidefod">
+  <div class="container">
+    <div class="site-footer__cols">
+      <div class="site-footer__col">
+        <h2>Studerende</h2>
+        <ul>
+          <li><a href="/beregner/su.html">SU-beregner</a></li>
+          <li><a href="/beregner/su-fribelob.html">SU fribeloeb</a></li>
+          <li><a href="/beregner/su-laan-tilbagebetaling.html">SU-laan tilbagebetaling</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h2>Ledig &amp; familie</h2>
+        <ul>
+          <li><a href="/beregner/dagpenge.html">Dagpenge</a></li>
+          <li><a href="/beregner/dimittend.html">Dimittend</a></li>
+          <li><a href="/beregner/sygedagpenge.html">Sygedagpenge</a></li>
+          <li><a href="/beregner/barselsdagpenge.html">Barselsdagpenge</a></li>
+          <li><a href="/beregner/bornepenge.html">Boernepenge</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h2>Bolig &amp; flytning</h2>
+        <ul>
+          <li><a href="/beregner/huslejebudget.html">Huslejebudget</a></li>
+          <li><a href="/beregner/kvm-beregner.html">Kvadratmeter</a></li>
+          <li><a href="/beregner/boligstoette.html">Boligstoette</a></li>
+          <li><a href="/beregner/depositum.html">Depositum</a></li>
+          <li><a href="/beregner/flyttebudget.html">Flyttebudget</a></li>
+          <li><a href="/beregner/el-vand-varme-budget.html">El, vand og varme</a></li>
+          <li><a href="/beregner/ejendomsvaerdiskat.html">Ejendomsvaerdiskat</a></li>
+          <li><a href="/beregner/andelsbolig.html">Andelsbolig</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h2>Bil &amp; transport</h2>
+        <ul>
+          <li><a href="/beregner/leasing-vs-koeb.html">Leasing vs. koeb</a></li>
+          <li><a href="/beregner/bil-totalomkostning.html">Bil totalomkostning</a></li>
+          <li><a href="/beregner/bil-vaerdtab.html">Bil-vaerditab</a></li>
+          <li><a href="/beregner/groen-ejerafgift.html">Groen ejerafgift</a></li>
+          <li><a href="/beregner/braendstof.html">Braendstof</a></li>
+          <li><a href="/beregner/elbil-opladning.html">Elbil opladning</a></li>
+          <li><a href="/beregner/pendlerbudget.html">Pendlerbudget</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h2>Selvstaendig</h2>
+        <ul>
+          <li><a href="/beregner/moms-beregner.html">Momsberegner</a></li>
+          <li><a href="/beregner/timepris-freelancer.html">Timepris</a></li>
+          <li><a href="/beregner/faktura-generator.html">Faktura-generator</a></li>
+          <li><a href="/beregner/b-skat-beregner.html">B-skat</a></li>
+          <li><a href="/beregner/overskud-efter-skat.html">Overskud efter skat</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h2>Hverdagsudgifter</h2>
+        <ul>
+          <li><a href="/beregner/elpris-apparatforbrug.html">Elpris time for time</a></li>
+          <li><a href="/beregner/pension.html">Pension</a></li>
+          <li><a href="/beregner/aktieskat.html">Aktieskat</a></li>
+          <li><a href="/beregner/efterloen.html">Efterloen</a></li>
+          <li><a href="/beregner/feriepenge.html">Feriepenge</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h2>Vaerktoejer</h2>
+        <ul>
+          <li><a href="/sporg-ai.html">Spoerg AI</a></li>
+          <li><a href="/#alle-beregnere">Alle beregnere</a></li>
+          <li><a href="https://lonberegning.dk/" rel="noopener">Loenberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h2>Om Hverdagstal</h2>
+        <ul>
+          <li><a href="/om.html">Om os</a></li>
+          <li><a href="/kilder.html">Officielle kilder</a></li>
+          <li><a href="/kontakt.html">Kontakt</a></li>
+          <li><a href="/privatlivspolitik.html">Privatlivspolitik</a></li>
+          <li><a href="/vilkar.html">Vilkaar</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="site-footer__cross">Skal du regne nettoloen ud? Brug vores soestersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a> — specialiseret i loen og skat.</p>
+    <div class="site-footer__bottom">
+      <span>&copy; 2026 hverdagstal.dk &middot; Beregn penge, stoette og udgifter i hverdagen &middot; Satser opdateret 2026-06-10</span>
+      <span>Made in Danmark</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var form = document.getElementById('fakturaForm');
+  var outSubtotal = document.getElementById('outSubtotal');
+  var outMoms = document.getElementById('outMoms');
+  var outTotal = document.getElementById('outTotal');
+  var outBetalingsdato = document.getElementById('outBetalingsdato');
+  var breakdown = document.getElementById('breakdown');
+  var preview = document.getElementById('fakturaPreview');
+  var linjeErr = document.getElementById('linjeposterError');
+  var printBtn = document.getElementById('printBtn');
+
+  function fmtKr(n){
+    if (!isFinite(n)) return '— kr';
+    return n.toLocaleString('da-DK', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' kr';
+  }
+  function fmtPct(p){
+    return (p*100).toLocaleString('da-DK', {maximumFractionDigits: 2}) + ' %';
+  }
+  function fmtDato(d){
+    if (!(d instanceof Date) || isNaN(d)) return '—';
+    return d.toLocaleDateString('da-DK', {year:'numeric', month:'long', day:'numeric'});
+  }
+  function esc(s){
+    return String(s == null ? '' : s)
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+      .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  }
+
+  function compute(){
+    var v = {};
+    var els = form.querySelectorAll('input, textarea');
+    for (var i=0;i<els.length;i++){ v[els[i].name] = els[i].value; }
+
+    // Parse linjeposter
+    var linjer;
+    try {
+      linjer = JSON.parse(v.linjeposter);
+      if (!Array.isArray(linjer)) throw new Error('not array');
+      linjeErr.hidden = true;
+    } catch(e) {
+      linjeErr.hidden = false;
+      return null;
+    }
+
+    // Group by momssats
+    var bySats = {};
+    var grandSubtotal = 0;
+    var grandMoms = 0;
+    var rows = [];
+    for (var j=0;j<linjer.length;j++){
+      var l = linjer[j];
+      var antal = Number(l.antal) || 0;
+      var pris = Number(l.enhedspris) || 0;
+      var sats = Number(l.momssats) || 0;
+      var linjeSub = antal * pris;
+      var linjeMoms = linjeSub * sats;
+      grandSubtotal += linjeSub;
+      grandMoms += linjeMoms;
+      if (!bySats[sats]) bySats[sats] = {sub:0, moms:0};
+      bySats[sats].sub += linjeSub;
+      bySats[sats].moms += linjeMoms;
+      rows.push({
+        beskrivelse: String(l.beskrivelse || ''),
+        antal: antal, pris: pris, sats: sats,
+        sub: linjeSub, moms: linjeMoms, total: linjeSub + linjeMoms
+      });
+    }
+    var grandTotal = grandSubtotal + grandMoms;
+
+    // Betalingsdato
+    var fakturaDato = new Date(v.fakturaDato);
+    var dage = parseInt(v.betalingsfristDage, 10) || 0;
+    var betDato = new Date(fakturaDato.getTime());
+    betDato.setDate(betDato.getDate() + dage);
+
+    return {
+      v: v, linjer: rows, bySats: bySats,
+      subtotal: grandSubtotal, moms: grandMoms, total: grandTotal,
+      fakturaDato: fakturaDato, betalingsdato: betDato
+    };
+  }
+
+  function render(r){
+    if (!r) return;
+    // Update result aside
+    outSubtotal.textContent = fmtKr(r.subtotal);
+    outMoms.textContent = fmtKr(r.moms);
+    outTotal.textContent = fmtKr(r.total);
+    outBetalingsdato.textContent = fmtDato(r.betalingsdato);
+
+    // Insert moms-per-sats lines into breakdown (rebuild)
+    var html = '<dt>Subtotal (ekskl. moms)</dt><dd>' + fmtKr(r.subtotal) + '</dd>';
+    var satser = Object.keys(r.bySats).sort();
+    for (var i=0;i<satser.length;i++){
+      var s = satser[i];
+      html += '<dt>Moms ' + fmtPct(Number(s)) + ' af ' + fmtKr(r.bySats[s].sub) + '</dt><dd>' + fmtKr(r.bySats[s].moms) + '</dd>';
+    }
+    html += '<dt>Moms i alt</dt><dd>' + fmtKr(r.moms) + '</dd>';
+    html += '<dt>Sidste rettidige betalingsdato</dt><dd>' + fmtDato(r.betalingsdato) + '</dd>';
+    breakdown.innerHTML = html;
+
+    // Render printable faktura
+    var v = r.v;
+    var linjeRows = '';
+    for (var k=0;k<r.linjer.length;k++){
+      var l = r.linjer[k];
+      linjeRows += '<tr>' +
+        '<td>' + esc(l.beskrivelse) + '</td>' +
+        '<td style="text-align:right;">' + l.antal.toLocaleString('da-DK') + '</td>' +
+        '<td style="text-align:right;">' + fmtKr(l.pris) + '</td>' +
+        '<td style="text-align:right;">' + fmtPct(l.sats) + '</td>' +
+        '<td style="text-align:right;">' + fmtKr(l.sub) + '</td>' +
+      '</tr>';
+    }
+    var momsRows = '';
+    var ss = Object.keys(r.bySats).sort();
+    for (var m=0;m<ss.length;m++){
+      var sk = ss[m];
+      momsRows += '<tr><td colspan="3"></td><td style="text-align:right;">Moms ' + fmtPct(Number(sk)) + '</td><td style="text-align:right;">' + fmtKr(r.bySats[sk].moms) + '</td></tr>';
+    }
+
+    preview.innerHTML =
+      '<div class="faktura-print" style="background:#fff;padding:1.5rem;border:1px solid #e5e7eb;border-radius:8px;">' +
+      '<div style="display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;">' +
+        '<div>' +
+          '<h3 style="margin:0 0 .25rem;">' + esc(v.afsenderNavn) + '</h3>' +
+          '<p style="margin:0;"><small>CVR: ' + esc(v.afsenderCVR) + '<br>' +
+          esc(v.afsenderAdresse) + '<br>' +
+          esc(v.afsenderEmail) + '</small></p>' +
+        '</div>' +
+        '<div style="text-align:right;">' +
+          '<h3 style="margin:0 0 .25rem;">Faktura</h3>' +
+          '<p style="margin:0;"><small>Fakturanr: <strong>' + esc(v.fakturaNr) + '</strong><br>' +
+          'Fakturadato: ' + fmtDato(r.fakturaDato) + '<br>' +
+          'Leveringsdato: ' + fmtDato(new Date(v.leveringsDato)) + '<br>' +
+          'Betalingsfrist: ' + esc(v.betalingsfristDage) + ' dage (' + fmtDato(r.betalingsdato) + ')</small></p>' +
+        '</div>' +
+      '</div>' +
+      '<hr style="margin:1rem 0;border:0;border-top:1px solid #e5e7eb;">' +
+      '<div>' +
+        '<p style="margin:0 0 .5rem;"><strong>Faktureres til:</strong></p>' +
+        '<p style="margin:0;">' + esc(v.modtagerNavn) +
+        (v.modtagerCVR ? '<br><small>CVR: ' + esc(v.modtagerCVR) + '</small>' : '') +
+        '<br><small>' + esc(v.modtagerAdresse) + '</small></p>' +
+      '</div>' +
+      '<table style="width:100%;border-collapse:collapse;margin-top:1rem;font-size:.95em;">' +
+        '<thead><tr style="background:#f3f4f6;text-align:left;">' +
+          '<th style="padding:.5rem;">Beskrivelse</th>' +
+          '<th style="padding:.5rem;text-align:right;">Antal</th>' +
+          '<th style="padding:.5rem;text-align:right;">Enhedspris</th>' +
+          '<th style="padding:.5rem;text-align:right;">Moms</th>' +
+          '<th style="padding:.5rem;text-align:right;">Beloeb</th>' +
+        '</tr></thead>' +
+        '<tbody>' + linjeRows + '</tbody>' +
+        '<tfoot>' +
+          '<tr><td colspan="3"></td><td style="text-align:right;padding:.5rem;">Subtotal</td><td style="text-align:right;padding:.5rem;">' + fmtKr(r.subtotal) + '</td></tr>' +
+          momsRows +
+          '<tr style="background:#ecfdf5;font-weight:700;"><td colspan="3"></td><td style="text-align:right;padding:.5rem;">Total til betaling</td><td style="text-align:right;padding:.5rem;">' + fmtKr(r.total) + '</td></tr>' +
+        '</tfoot>' +
+      '</table>' +
+      '<div style="margin-top:1rem;">' +
+        '<p style="margin:0;"><strong>Betalingsoplysninger:</strong> ' + esc(v.afsenderKonto) + '</p>' +
+        '<p style="margin:.25rem 0 0;"><strong>Betalingsfrist:</strong> ' + fmtDato(r.betalingsdato) + '</p>' +
+        (v.kommentar ? '<p style="margin-top:1rem;"><em>' + esc(v.kommentar) + '</em></p>' : '') +
+      '</div>' +
+      '</div>';
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var r = compute();
+    render(r);
+    document.getElementById('resultat').scrollIntoView({behavior:'smooth', block:'start'});
+  });
+
+  printBtn.addEventListener('click', function(){
+    var r = compute();
+    if (r) render(r);
+    window.print();
+  });
+
+  // Compute on load with defaults
+  var initial = compute();
+  if (initial) render(initial);
+})();
+</script>
+<script src="/js/main.js" defer></script>
+</body>
+</html>

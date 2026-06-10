@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privatleasing vs. køb af bil 2026 — totalomkostning og breakeven | Hverdagstal</title>
+<meta name="description" content="Sammenlign privatleasing og køb af bil over 3-5 år. Beregn værditab, renter, etablering og restværdi-risiko — find dit personlige breakeven-punkt.">
+<link rel="canonical" href="https://hverdagstal.dk/beregner/leasing-vs-koeb.html">
+<meta name="theme-color" content="#0d9488">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="da_DK">
+<meta property="og:site_name" content="Hverdagstal">
+<meta property="og:title" content="Privatleasing vs. køb af bil 2026 — totalomkostning og breakeven">
+<meta property="og:description" content="Sammenlign privatleasing og køb af bil over 3-5 år. Beregn værditab, renter, etablering og restværdi-risiko — find dit personlige breakeven-punkt.">
+<meta property="og:url" content="https://hverdagstal.dk/beregner/leasing-vs-koeb.html">
+<meta property="og:image" content="https://hverdagstal.dk/img/og-leasing-vs-koeb.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Privatleasing vs. køb af bil 2026 — totalomkostning og breakeven">
+<meta name="twitter:description" content="Sammenlign privatleasing og køb af bil over 3-5 år. Find dit breakeven-punkt med danske 2026-satser.">
+<meta name="twitter:image" content="https://hverdagstal.dk/img/og-leasing-vs-koeb.png">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/css/styles.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7516029395999799" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://hverdagstal.dk/#website",
+      "url": "https://hverdagstal.dk/",
+      "name": "Hverdagstal",
+      "description": "Danske beregnere til penge, støtte og udgifter i hverdagen.",
+      "inLanguage": "da-DK",
+      "publisher": { "@id": "https://hverdagstal.dk/#organization" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://hverdagstal.dk/#organization",
+      "name": "Hverdagstal",
+      "url": "https://hverdagstal.dk/",
+      "logo": "https://hverdagstal.dk/favicon-192.png"
+    },
+    {
+      "@type": "WebApplication",
+      "name": "Privatleasing vs. køb af bil — beregner",
+      "url": "https://hverdagstal.dk/beregner/leasing-vs-koeb.html",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "inLanguage": "da-DK",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "DKK" },
+      "description": "Sammenlign privatleasing og køb af bil over 3-5 år. Find dit breakeven-punkt."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Forside", "item": "https://hverdagstal.dk/" },
+        { "@type": "ListItem", "position": 2, "name": "Bil & transport", "item": "https://hverdagstal.dk/situation/bil-transport.html" },
+        { "@type": "ListItem", "position": 3, "name": "Privatleasing vs. køb", "item": "https://hverdagstal.dk/beregner/leasing-vs-koeb.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Er privatleasing altid dyrere end at købe?", "acceptedAnswer": { "@type": "Answer", "text": "Nej. På korte horisonter (1–3 år) og for biler med højt værditab (premium, store SUV'er) er leasing ofte billigst, fordi du ikke bærer værditabsrisikoen. På 4–7 år og for biler med lavt værditab (Toyota, Skoda) vinder køb næsten altid." } },
+        { "@type": "Question", "name": "Hvad er en god tommelfingerregel for værditab?", "acceptedAnswer": { "@type": "Answer", "text": "År 1: 15–25 %. År 2–5: 10–15 % pr. år af restværdien. Premium-mærker og diesel taber typisk mere; japanske biler og populære elbiler (Tesla, Kia) holder bedre i 2026." } },
+        { "@type": "Question", "name": "Hvor meget rente betaler jeg på billån i 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Typisk 5–8 % p.a. nominelt hos danske banker for billån med pant i bilen. ÅOP ligger ofte 1–2 procentpoint højere pga. gebyrer." } },
+        { "@type": "Question", "name": "Skal etableringsgebyret med i sammenligningen?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, absolut. En leasingaftale med 'lav månedlig ydelse' men 25.000 kr i førstegangsydelse er ofte dyrere end en aftale med højere ydelse og lav etablering — beregneren fanger det." } },
+        { "@type": "Question", "name": "Hvad sker der hvis jeg afleverer leasingbilen med skader?", "acceptedAnswer": { "@type": "Answer", "text": "Du betaler for afhjælpning ud over normalt slid. Sæt et realistisk beløb i 'restværdi-garanti'-feltet (typisk 0–15.000 kr) afhængig af aftalens 'normalt slid'-definition." } },
+        { "@type": "Question", "name": "Kan jeg trække leasing fra i skat som privatperson?", "acceptedAnswer": { "@type": "Answer", "text": "Nej. Privatleasing giver ingen skattefordel. Kun erhvervsleasing (firmabil) udløser skattemæssig håndtering." } },
+        { "@type": "Question", "name": "Hvad med forsikring — er den med?", "acceptedAnswer": { "@type": "Answer", "text": "Forsikring er sjældent inkluderet i privatleasing og er den samme uanset om du leaser eller ejer. Den er derfor udeladt af sammenligningen, men budgettér 6.000–14.000 kr/år ekstra." } }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Spring til indhold</a>
+<a class="skip-link" href="#main">Spring til indhold</a>
+<header class="site-header" role="banner">
+  <div class="site-header__inner">
+    <a class="brand" href="/" aria-label="Hverdagstal forside">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 28 28" width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="12" height="12" rx="2" fill="#0d9488"/>
+          <rect x="15" y="1" width="12" height="12" rx="2" fill="#ffffff" stroke="#0d9488" stroke-width="1.5"/>
+          <rect x="1" y="15" width="12" height="12" rx="2" fill="#ffffff" stroke="#0d9488" stroke-width="1.5"/>
+          <rect x="15" y="15" width="12" height="12" rx="2" fill="#0d9488"/>
+        </svg>
+      </span>
+      <span class="brand__name">Hverdags<span>tal</span></span>
+    </a>
+    <span class="header-badge" aria-label="Sidst opdateret 10. juni 2026">Opdateret 2026-06-10</span>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Aabn menu">
+      <svg class="icon-open" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <svg class="icon-close" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <nav class="main-nav" id="main-nav" aria-label="Hovedmenu">
+      <ul>
+        <li><a href="/">Forside</a></li>
+        <li><a href="/situation/studerende.html">Studerende</a></li>
+        <li><a href="/situation/ledig-familie.html">Ledig &amp; familie</a></li>
+        <li><a href="/situation/bolig-flytning.html">Bolig</a></li>
+        <li><a href="/situation/bil-transport.html">Bil</a></li>
+        <li><a href="/situation/selvstaendig.html">Selvstaendig</a></li>
+        <li class="has-dropdown">
+          <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-more-menu">Mere <span aria-hidden="true">&#9662;</span></button>
+          <ul id="nav-more-menu" class="nav-dropdown">
+            <li><a href="/situation/hverdagsudgifter.html">Hverdagsudgifter</a></li>
+            <li><a href="/#alle-beregnere">Alle beregnere</a></li>
+            <li><a href="/kilder.html">Kilder</a></li>
+            <li><a href="/om.html">Om</a></li>
+          </ul>
+        </li>
+        <li class="nav-cta"><a href="/sporg-ai.html" class="nav-cta-link">Spoerg AI</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Brødkrumme">
+        <ol>
+          <li><a href="/">Forside</a></li>
+          <li><a href="/situation/bil-transport.html">Bil &amp; transport</a></li>
+          <li aria-current="page">Privatleasing vs. køb</li>
+        </ol>
+      </nav>
+      <p class="hero__eyebrow">Bil &amp; transport · 2026-satser</p>
+      <h1 class="hero__title">Privatleasing vs. køb — hvad er billigst for dig i 2026?</h1>
+      <p class="hero__lead">Sammenlign den reelle totalomkostning ved privatleasing og kontant-/lånefinansieret køb af samme bil. Beregneren tager højde for værditab, renter, etableringsgebyr, restværdi-risiko og vedligeholdelse — og finder dit personlige breakeven-punkt.</p>
+      <p><span class="opdateret-badge">Opdateret 2026-06-10</span></p>
+      <p class="cluster">
+        <a class="btn btn--primary btn--lg" href="#beregner">Gå til beregner</a>
+        <a class="btn btn--ghost" href="#faq">Læs ofte stillede spørgsmål</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="stack" style="background:#fff8e1;border-left:4px solid #f6c343;padding:1rem 1.25rem;border-radius:8px;">
+        <h2 style="margin:0;">Beslutningsvinkel</h2>
+        <p style="margin:0;">Hvad koster bilen mig <strong>reelt pr. måned</strong> i hvert scenarie, og hvornår tipper regnestykket — så jeg vælger ud fra tal frem for mavefornemmelse.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="beregner">
+    <div class="container">
+      <h2>Beregner: leasing vs. køb</h2>
+      <p class="muted">Udfyld felterne nedenfor. Tallene opdateres automatisk. Standardværdierne afspejler en typisk mellemklasse-bil i Danmark primo 2026.</p>
+
+      <form class="calculator-form" id="leasingForm" novalidate>
+        <div class="field field--full">
+          <label for="nyvaerdi">Bilens nyværdi (kontantpris inkl. moms og afgift)</label>
+          <input id="nyvaerdi" name="nyvaerdi" type="number" inputmode="numeric" min="0" step="1000" value="350000">
+          <span class="field__hint">Vejledende udsalgspris hos forhandler. Bruges som basis for både køb og restværdi-beregning. (kr)</span>
+        </div>
+
+        <div class="field">
+          <label for="antalAar">Periode (antal år du vil have bilen)</label>
+          <input id="antalAar" name="antalAar" type="number" inputmode="numeric" min="1" max="10" step="1" value="4">
+          <span class="field__hint">Sammenligningshorisonten. Typisk leasingaftale er 12–60 mdr.</span>
+        </div>
+
+        <div class="field">
+          <label for="leasingrateMd">Leasingydelse pr. måned</label>
+          <input id="leasingrateMd" name="leasingrateMd" type="number" inputmode="numeric" min="0" step="50" value="3995">
+          <span class="field__hint">Den faste månedlige ydelse i leasingkontrakten (ekskl. brændstof/forsikring hvis ikke nævnt i tilbud). (kr/md)</span>
+        </div>
+
+        <div class="field">
+          <label for="etablering">Etableringsomkostning (engangs)</label>
+          <input id="etablering" name="etablering" type="number" inputmode="numeric" min="0" step="500" value="9995">
+          <span class="field__hint">Førstegangsydelse + leveringsomkostning + evt. nummerplader. (kr)</span>
+        </div>
+
+        <div class="field">
+          <label for="restvaerdiGaranti">Restværdi-garanti / afleveringsrisiko</label>
+          <input id="restvaerdiGaranti" name="restvaerdiGaranti" type="number" inputmode="numeric" min="0" step="500" value="0">
+          <span class="field__hint">Forventet ekstraregning ved aflevering (ridser, slid, km-overskridelse). 0 hvis fuldt friskrevet. (kr)</span>
+        </div>
+
+        <div class="field field--full">
+          <label for="leasingInkluderer">
+            <input id="leasingInkluderer" name="leasingInkluderer" type="checkbox" checked>
+            Leasing inkluderer service/dæk?
+          </label>
+          <span class="field__hint">Hvis JA, lægges der ikke vedligeholdelse oveni leasing-scenariet.</span>
+        </div>
+
+        <div class="field">
+          <label for="udbetaling">Udbetaling ved køb</label>
+          <input id="udbetaling" name="udbetaling" type="number" inputmode="numeric" min="0" step="1000" value="70000">
+          <span class="field__hint">Typisk 20 % ved billån; 0 hvis du tager fuldt lån. (kr)</span>
+        </div>
+
+        <div class="field">
+          <label for="laaneRente">Billån — nominel rente p.a.</label>
+          <input id="laaneRente" name="laaneRente" type="number" inputmode="decimal" min="0" max="25" step="0.1" value="6.5">
+          <span class="field__hint">2026-niveau hos danske banker: typisk 5–8 % for billån m. sikkerhed. (%)</span>
+        </div>
+
+        <div class="field">
+          <label for="laaneLoebetid">Lånets løbetid</label>
+          <input id="laaneLoebetid" name="laaneLoebetid" type="number" inputmode="numeric" min="1" max="15" step="1" value="7">
+          <span class="field__hint">Hvor mange år lånet afdrages over. Renteomkostning trækkes kun for ejerperioden. (år)</span>
+        </div>
+
+        <div class="field">
+          <label for="vedligeholdAarligt">Service, dæk og reparationer pr. år (ved køb)</label>
+          <input id="vedligeholdAarligt" name="vedligeholdAarligt" type="number" inputmode="numeric" min="0" step="500" value="8000">
+          <span class="field__hint">FDM-gennemsnit 6.000–12.000 kr/år afhængig af bilstørrelse og alder. (kr/år)</span>
+        </div>
+
+        <div class="field field--full">
+          <label for="vaerditabPctAarligt">Forventet årligt værditab</label>
+          <input id="vaerditabPctAarligt" name="vaerditabPctAarligt" type="number" inputmode="decimal" min="0" max="50" step="0.5" value="15">
+          <span class="field__hint">Bruges til at beregne salgsværdi efter X år (geometrisk). Se bil-værditab-kalkulatoren for præcis kurve. (%)</span>
+        </div>
+      </form>
+
+      <aside class="calculator-result" id="resultat" aria-live="polite">
+        <h2>Resultat</h2>
+        <dl class="calculator-result__breakdown">
+          <dt>Total omkostning — leasing</dt><dd id="r-totalLeasing">–</dd>
+          <dt>Total omkostning — køb</dt><dd id="r-totalKoeb">–</dd>
+          <dt>Anslået salgsværdi efter perioden</dt><dd id="r-salgsvaerdi">–</dd>
+          <dt>Samlet renteomkostning på billån</dt><dd id="r-renter">–</dd>
+          <dt>Restgæld når du sælger</dt><dd id="r-restgaeld">–</dd>
+          <dt>Nettoprovenu ved salg (salgsværdi − restgæld)</dt><dd id="r-netto">–</dd>
+          <dt>Reel månedlig ejeromkostning ved køb</dt><dd id="r-maanedKoeb">–</dd>
+          <dt>Månedlig leasingomkostning (alt inkl.)</dt><dd id="r-maanedLeasing">–</dd>
+          <dt>Breakeven — hvornår bliver køb billigere?</dt><dd id="r-breakeven">–</dd>
+        </dl>
+        <p class="calculator-result__total"><span id="r-konklusion-label">Forskel</span><strong id="r-forskel">–</strong></p>
+        <p class="muted" id="r-konklusion">Indtast dine tal og se konklusionen her.</p>
+      </aside>
+
+      <div class="ad-slot ad-slot--inline" aria-label="Annonce">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7516029395999799" data-ad-slot="1234567890" data-ad-format="auto" data-full-width-responsive="true"></ins>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Sådan virker det</h2>
+      <div class="stack">
+        <p>Beregneren laver to parallelle regnestykker for samme bil over samme periode:</p>
+        <ol>
+          <li><strong>Leasing-siden:</strong> etableringsgebyr + 12 × leasingydelse × år + eventuel restværdi-garanti + vedligeholdelse (kun hvis ikke inkluderet i aftalen).</li>
+          <li><strong>Køb-siden:</strong> udbetaling + samlede renter i ejerperioden + årlig vedligeholdelse + det reelle værditab (nyværdi − anslået salgsværdi efter perioden).</li>
+        </ol>
+        <p>Renteomkostningen beregnes med en standard annuitetslån-formel: <code>ydelse = P · r / (1 − (1+r)^−n)</code>, hvor P er hovedstol, r månedlig rente og n antal måneder. Vi løber amortisering måned for måned for at finde både samlede renter og restgæld på dit salgstidspunkt.</p>
+        <p>Salgsværdien efter perioden estimeres geometrisk: <code>nyværdi × (1 − værditabPct)^år</code>. Det er en forenkling — år 1 falder typisk hurtigere — men giver et godt overslag på 3–5 års sigt. For mere præcis kurve, brug vores <a href="/beregner/bil-vaerdtab.html">bil-værditab-beregner</a>.</p>
+        <p><strong>Breakeven-logikken:</strong> vi gentager hele regnestykket for hver måned fra 1 til 120 og finder det første tidspunkt hvor køb bliver billigere end leasing. Hvis leasing aldrig overgås i scenariet, vises det også.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <h2>Vigtige situationer du skal være opmærksom på</h2>
+      <ul class="stack">
+        <li><strong>Kilometerloft overskredet:</strong> typisk 0,50–1,50 kr/ekstra km — ikke med i grundberegning, bør lægges på restværdi-garanti.</li>
+        <li><strong>Førstegangsydelse vs. etablering:</strong> nogle aftaler kalder det "storudbetaling" — sørg for at den indgår i etablering-feltet, ellers undervurderes leasing.</li>
+        <li><strong>Leasing inkluderer service:</strong> hvis JA, må vedligeholdAarligt sættes til 0 i leasing-siden, men beholdes på køb-siden.</li>
+        <li><strong>Negativ egenkapital ved køb:</strong> hvis restgæld &gt; salgsværdi efter X år, lægges differencen oveni totalKoeb.</li>
+        <li><strong>Elbil:</strong> lavere værditab end forbrænder de første 3 år, men hurtigere fald år 4–5; juster værditab manuelt eller brug bil-værditab-kalkulatoren.</li>
+        <li><strong>Skattefri kørselsgodtgørelse</strong> er IKKE relevant for privat leasing/køb — kun for erhverv.</li>
+        <li><strong>Brexit/importbil:</strong> hvis bilen er importeret, kan restværdi være lavere end danske referencer.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section faq" id="faq">
+    <div class="container">
+      <h2>Ofte stillede spørgsmål</h2>
+      <details>
+        <summary>Er privatleasing altid dyrere end at købe?</summary>
+        <p>Nej. På korte horisonter (1–3 år) og for biler med højt værditab (premium, store SUV'er) er leasing ofte billigst, fordi du ikke bærer værditabsrisikoen. På 4–7 år og for biler med lavt værditab (Toyota, Skoda) vinder køb næsten altid.</p>
+      </details>
+      <details>
+        <summary>Hvad er en god tommelfingerregel for værditab?</summary>
+        <p>År 1: 15–25 %. År 2–5: 10–15 % pr. år af restværdien. Premium-mærker og diesel taber typisk mere; japanske biler og populære elbiler (Tesla, Kia) holder bedre i 2026.</p>
+      </details>
+      <details>
+        <summary>Hvor meget rente betaler jeg på billån i 2026?</summary>
+        <p>Typisk 5–8 % p.a. nominelt hos danske banker for billån med pant i bilen. ÅOP ligger ofte 1–2 procentpoint højere pga. gebyrer.</p>
+      </details>
+      <details>
+        <summary>Skal etableringsgebyret med i sammenligningen?</summary>
+        <p>Ja, absolut. En leasingaftale med "lav månedlig ydelse" men 25.000 kr i førstegangsydelse er ofte dyrere end en aftale med højere ydelse og lav etablering — beregneren fanger det.</p>
+      </details>
+      <details>
+        <summary>Hvad sker der hvis jeg afleverer leasingbilen med skader?</summary>
+        <p>Du betaler for afhjælpning ud over normalt slid. Sæt et realistisk beløb i "restværdi-garanti"-feltet (typisk 0–15.000 kr) afhængig af aftalens "normalt slid"-definition.</p>
+      </details>
+      <details>
+        <summary>Kan jeg trække leasing fra i skat som privatperson?</summary>
+        <p>Nej. Privatleasing giver ingen skattefordel. Kun erhvervsleasing (firmabil) udløser skattemæssig håndtering.</p>
+      </details>
+      <details>
+        <summary>Hvad med forsikring — er den med?</summary>
+        <p>Forsikring er sjældent inkluderet i privatleasing og er den samme uanset om du leaser eller ejer. Den er derfor udeladt af sammenligningen, men budgettér 6.000–14.000 kr/år ekstra.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="source-card">
+        <h3>Officielle kilder</h3>
+        <ul>
+          <li><a href="https://fdm.dk/alt-om-biler/koeb-og-salg/leasing" rel="nofollow noopener" target="_blank">FDM — Privatleasing: tjekliste og faldgruber <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
+          <li><a href="https://taenk.dk/test-og-forbrugerliv/bil/privatleasing" rel="nofollow noopener" target="_blank">Forbrugerrådet Tænk — Privatleasing <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
+          <li><a href="https://www.forbrug.dk/forbrugerforhold/privatleasing/" rel="nofollow noopener" target="_blank">Konkurrence- og Forbrugerstyrelsen — Privatleasingaftaler <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
+          <li><a href="https://www.bilpriser.dk" rel="nofollow noopener" target="_blank">Bilpriser.dk — markedsvurdering <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
+          <li><a href="https://www.mybanker.dk/laan/billaan/" rel="nofollow noopener" target="_blank">Mybanker — billån rentestatistik <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
+        </ul>
+        <p class="muted">Senest tjekket 2026-06-10.</p>
+      </div>
+      <p class="cross-link" style="margin-top:1.25rem;">Skal du regne nettoløn ud for at se hvor meget bil du har råd til? Brug <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" role="contentinfo" aria-label="Sidefod">
+  <div class="container">
+    <div class="site-footer__cols">
+      <div class="site-footer__col">
+        <h2>Studerende</h2>
+        <ul>
+          <li><a href="/beregner/su.html">SU-beregner</a></li>
+          <li><a href="/beregner/su-fribelob.html">SU fribeloeb</a></li>
+          <li><a href="/beregner/su-laan-tilbagebetaling.html">SU-laan tilbagebetaling</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h2>Ledig &amp; familie</h2>
+        <ul>
+          <li><a href="/beregner/dagpenge.html">Dagpenge</a></li>
+          <li><a href="/beregner/dimittend.html">Dimittend</a></li>
+          <li><a href="/beregner/sygedagpenge.html">Sygedagpenge</a></li>
+          <li><a href="/beregner/barselsdagpenge.html">Barselsdagpenge</a></li>
+          <li><a href="/beregner/bornepenge.html">Boernepenge</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h2>Bolig &amp; flytning</h2>
+        <ul>
+          <li><a href="/beregner/huslejebudget.html">Huslejebudget</a></li>
+          <li><a href="/beregner/kvm-beregner.html">Kvadratmeter</a></li>
+          <li><a href="/beregner/boligstoette.html">Boligstoette</a></li>
+          <li><a href="/beregner/depositum.html">Depositum</a></li>
+          <li><a href="/beregner/flyttebudget.html">Flyttebudget</a></li>
+          <li><a href="/beregner/el-vand-varme-budget.html">El, vand og varme</a></li>
+          <li><a href="/beregner/ejendomsvaerdiskat.html">Ejendomsvaerdiskat</a></li>
+          <li><a href="/beregner/andelsbolig.html">Andelsbolig</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h2>Bil &amp; transport</h2>
+        <ul>
+          <li><a href="/beregner/leasing-vs-koeb.html">Leasing vs. koeb</a></li>
+          <li><a href="/beregner/bil-totalomkostning.html">Bil totalomkostning</a></li>
+          <li><a href="/beregner/bil-vaerdtab.html">Bil-vaerditab</a></li>
+          <li><a href="/beregner/groen-ejerafgift.html">Groen ejerafgift</a></li>
+          <li><a href="/beregner/braendstof.html">Braendstof</a></li>
+          <li><a href="/beregner/elbil-opladning.html">Elbil opladning</a></li>
+          <li><a href="/beregner/pendlerbudget.html">Pendlerbudget</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h2>Selvstaendig</h2>
+        <ul>
+          <li><a href="/beregner/moms-beregner.html">Momsberegner</a></li>
+          <li><a href="/beregner/timepris-freelancer.html">Timepris</a></li>
+          <li><a href="/beregner/faktura-generator.html">Faktura-generator</a></li>
+          <li><a href="/beregner/b-skat-beregner.html">B-skat</a></li>
+          <li><a href="/beregner/overskud-efter-skat.html">Overskud efter skat</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h2>Hverdagsudgifter</h2>
+        <ul>
+          <li><a href="/beregner/elpris-apparatforbrug.html">Elpris time for time</a></li>
+          <li><a href="/beregner/pension.html">Pension</a></li>
+          <li><a href="/beregner/aktieskat.html">Aktieskat</a></li>
+          <li><a href="/beregner/efterloen.html">Efterloen</a></li>
+          <li><a href="/beregner/feriepenge.html">Feriepenge</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h2>Vaerktoejer</h2>
+        <ul>
+          <li><a href="/sporg-ai.html">Spoerg AI</a></li>
+          <li><a href="/#alle-beregnere">Alle beregnere</a></li>
+          <li><a href="https://lonberegning.dk/" rel="noopener">Loenberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h2>Om Hverdagstal</h2>
+        <ul>
+          <li><a href="/om.html">Om os</a></li>
+          <li><a href="/kilder.html">Officielle kilder</a></li>
+          <li><a href="/kontakt.html">Kontakt</a></li>
+          <li><a href="/privatlivspolitik.html">Privatlivspolitik</a></li>
+          <li><a href="/vilkar.html">Vilkaar</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="site-footer__cross">Skal du regne nettoloen ud? Brug vores soestersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a> — specialiseret i loen og skat.</p>
+    <div class="site-footer__bottom">
+      <span>&copy; 2026 hverdagstal.dk &middot; Beregn penge, stoette og udgifter i hverdagen &middot; Satser opdateret 2026-06-10</span>
+      <span>Made in Danmark</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var f = document.getElementById('leasingForm');
+  if (!f) return;
+
+  function num(id){ var el=document.getElementById(id); var v=parseFloat((el && el.value||'').replace(',','.')); return isFinite(v)?v:0; }
+  function bool(id){ var el=document.getElementById(id); return !!(el && el.checked); }
+  function kr(v){
+    if (!isFinite(v)) return '–';
+    var sign = v<0 ? '-' : '';
+    var n = Math.round(Math.abs(v));
+    var s = n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    return sign + s + ' kr';
+  }
+
+  function computeKoeb(nyvaerdi, antalAarFloat, udbetaling, laaneRentePct, laaneLoebetidAar, vedligeholdAarligt, vaerditabPctAarligt){
+    var P = Math.max(0, nyvaerdi - udbetaling);
+    var r = (laaneRentePct/100)/12;
+    var n = Math.max(1, Math.round(laaneLoebetidAar*12));
+    var ydelse;
+    if (r === 0) {
+      ydelse = P / n;
+    } else {
+      ydelse = P * r / (1 - Math.pow(1+r, -n));
+    }
+    var restgaeld = P;
+    var renter = 0;
+    var months = Math.max(0, Math.round(antalAarFloat*12));
+    for (var m=0; m<months; m++){
+      var rb = restgaeld * r;
+      renter += rb;
+      restgaeld = restgaeld + rb - ydelse;
+      if (restgaeld < 0) restgaeld = 0;
+    }
+    var salgsvaerdi = nyvaerdi * Math.pow(1 - vaerditabPctAarligt/100, antalAarFloat);
+    var vedligehold = vedligeholdAarligt * antalAarFloat;
+    var vaerditab = nyvaerdi - salgsvaerdi;
+    // Forenklet: udbetaling + renter + vedligehold + samlet værditab.
+    // Hvis restgæld > salgsværdi: læg differencen ovenpå (negativ egenkapital).
+    var total = udbetaling + renter + vedligehold + vaerditab;
+    var nettoprovenu = salgsvaerdi - restgaeld;
+    if (nettoprovenu < 0) total += Math.abs(nettoprovenu);
+    return { total: total, salgsvaerdi: salgsvaerdi, renter: renter, restgaeld: restgaeld, nettoprovenu: nettoprovenu };
+  }
+
+  function computeLeasing(etablering, leasingrateMd, antalAarFloat, restvaerdiGaranti, leasingInkluderer, vedligeholdAarligt){
+    var ydelser = leasingrateMd * 12 * antalAarFloat;
+    var ekstraVedlig = leasingInkluderer ? 0 : vedligeholdAarligt * antalAarFloat;
+    return etablering + ydelser + restvaerdiGaranti + ekstraVedlig;
+  }
+
+  function findBreakeven(p){
+    for (var m=1; m<=120; m++){
+      var aar = m/12;
+      var L = computeLeasing(p.etablering, p.leasingrateMd, aar, p.restvaerdiGaranti, p.leasingInkluderer, p.vedligeholdAarligt);
+      var K = computeKoeb(p.nyvaerdi, aar, p.udbetaling, p.laaneRente, p.laaneLoebetid, p.vedligeholdAarligt, p.vaerditabPctAarligt).total;
+      if (K < L) return m;
+    }
+    return null;
+  }
+
+  function update(){
+    var p = {
+      nyvaerdi: num('nyvaerdi'),
+      antalAar: Math.max(0.1, num('antalAar')),
+      leasingrateMd: num('leasingrateMd'),
+      etablering: num('etablering'),
+      restvaerdiGaranti: num('restvaerdiGaranti'),
+      leasingInkluderer: bool('leasingInkluderer'),
+      udbetaling: num('udbetaling'),
+      laaneRente: num('laaneRente'),
+      laaneLoebetid: Math.max(1, num('laaneLoebetid')),
+      vedligeholdAarligt: num('vedligeholdAarligt'),
+      vaerditabPctAarligt: num('vaerditabPctAarligt')
+    };
+
+    var totalLeasing = computeLeasing(p.etablering, p.leasingrateMd, p.antalAar, p.restvaerdiGaranti, p.leasingInkluderer, p.vedligeholdAarligt);
+    var koeb = computeKoeb(p.nyvaerdi, p.antalAar, p.udbetaling, p.laaneRente, p.laaneLoebetid, p.vedligeholdAarligt, p.vaerditabPctAarligt);
+    var totalKoeb = koeb.total;
+    var forskel = totalLeasing - totalKoeb;
+    var maanedKoeb = totalKoeb / (p.antalAar * 12);
+    var maanedLeasing = totalLeasing / (p.antalAar * 12);
+    var breakeven = findBreakeven(p);
+
+    document.getElementById('r-totalLeasing').textContent = kr(totalLeasing);
+    document.getElementById('r-totalKoeb').textContent = kr(totalKoeb);
+    document.getElementById('r-salgsvaerdi').textContent = kr(koeb.salgsvaerdi);
+    document.getElementById('r-renter').textContent = kr(koeb.renter);
+    document.getElementById('r-restgaeld').textContent = kr(koeb.restgaeld);
+    document.getElementById('r-netto').textContent = kr(koeb.nettoprovenu);
+    document.getElementById('r-maanedKoeb').textContent = kr(maanedKoeb) + '/md';
+    document.getElementById('r-maanedLeasing').textContent = kr(maanedLeasing) + '/md';
+
+    if (breakeven === null) {
+      document.getElementById('r-breakeven').textContent = 'Leasing er altid billigst i scenariet';
+    } else {
+      var aar = Math.floor(breakeven/12);
+      var rest = breakeven % 12;
+      var label = breakeven + ' mdr';
+      if (aar > 0) label += ' (' + aar + ' år' + (rest>0 ? ' ' + rest + ' md' : '') + ')';
+      document.getElementById('r-breakeven').textContent = label;
+    }
+
+    document.getElementById('r-forskel').textContent = kr(Math.abs(forskel));
+    var lab = document.getElementById('r-konklusion-label');
+    var kon = document.getElementById('r-konklusion');
+    if (forskel > 0) {
+      lab.textContent = 'Leasing er dyrere med';
+      kon.textContent = 'Med dine tal er KØB billigst over ' + p.antalAar + ' år. Husk at forsikring (' + kr(8000) + '/år typisk) er ens for begge.';
+    } else if (forskel < 0) {
+      lab.textContent = 'Leasing er billigere med';
+      kon.textContent = 'Med dine tal er LEASING billigst over ' + p.antalAar + ' år. Du undgår også restværdi-risiko og uventede reparationer.';
+    } else {
+      lab.textContent = 'Forskel';
+      kon.textContent = 'De to scenarier koster det samme. Vælg ud fra fleksibilitet vs. ejerskab.';
+    }
+  }
+
+  f.addEventListener('input', update);
+  f.addEventListener('change', update);
+  update();
+})();
+</script>
+<script src="/js/main.js" defer></script>
+</body>
+</html>
