@@ -72,7 +72,6 @@
       </span>
       <span class="brand__name">Hverdags<span>tal</span></span>
     </a>
-    <span class="header-badge" aria-label="Sidst opdateret 10. juni 2026">Opdateret 2026-06-10</span>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Aabn menu">
       <svg class="icon-open" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
         <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -305,12 +304,61 @@
       .filter(function (w) { return w && w.length > 1 && !STOP.has(w); });
   }
 
+  // Slug -> friendly Danish name (fallback when catalog post mangler title-felt)
+  var SLUG_NAMES = {
+    "su": "SU-beregner 2026",
+    "su-fribelob": "SU fribeloeb 2026",
+    "su-laan-tilbagebetaling": "SU-laan tilbagebetaling 2026",
+    "dagpenge": "Dagpengeberegner 2026",
+    "dimittend": "Dimittenddagpenge 2026",
+    "sygedagpenge": "Sygedagpengeberegner 2026",
+    "barselsdagpenge": "Barselsdagpenge 2026",
+    "bornepenge": "Boernepenge 2026",
+    "boligstoette": "Boligstoette 2026",
+    "huslejebudget": "Huslejebudget",
+    "ejendomsvaerdiskat": "Ejendomsvaerdiskat 2026",
+    "andelsbolig": "Andelsbolig 2026",
+    "kvm-beregner": "Kvadratmeter-beregner 2026",
+    "depositum": "Depositum 2026",
+    "flyttebudget": "Flyttebudget 2026",
+    "el-vand-varme-budget": "El, vand og varme 2026",
+    "elpris-apparatforbrug": "Elpris time for time",
+    "elbil-opladning": "Elbil opladning",
+    "braendstof": "Braendstof-beregner",
+    "bil-totalomkostning": "Bil totalomkostning (TCO)",
+    "leasing-vs-koeb": "Privatleasing vs. koeb",
+    "bil-vaerdtab": "Bil-vaerditab 2026",
+    "groen-ejerafgift": "Groen ejerafgift 2026",
+    "pendlerbudget": "Pendlerbudget 2026",
+    "pension": "Pensionsberegner",
+    "aktieskat": "Aktieskat 2026",
+    "efterloen": "Efterloen 2026",
+    "feriepenge": "Feriepenge efter skat 2026",
+    "moms-beregner": "Momsberegner 2026",
+    "timepris-freelancer": "Timepris-beregner 2026",
+    "faktura-generator": "Faktura-generator 2026",
+    "b-skat-beregner": "B-skat-beregner 2026",
+    "overskud-efter-skat": "Overskud efter skat 2026"
+  };
+
+  function calcTitle(c) {
+    return c.shortTitle || c.title || c.danishName || SLUG_NAMES[c.slug] || c.slug || "Beregner";
+  }
+  function calcBlurb(c) {
+    return c.blurb || c.shortPurpose || c.decisionAngle || "";
+  }
+
   function scoreCalc(calc, tokens) {
     var bag = [];
     if (Array.isArray(calc.longtailKeywords)) bag = bag.concat(calc.longtailKeywords);
     if (calc.title) bag.push(calc.title);
     if (calc.shortTitle) bag.push(calc.shortTitle);
+    if (calc.danishName) bag.push(calc.danishName);
     if (calc.blurb) bag.push(calc.blurb);
+    if (calc.shortPurpose) bag.push(calc.shortPurpose);
+    if (calc.targetUser) bag.push(calc.targetUser);
+    if (calc.decisionAngle) bag.push(calc.decisionAngle);
+    if (calc.situationHub) bag.push(calc.situationHub);
     if (calc.category) bag.push(calc.category);
     if (Array.isArray(calc.tags)) bag = bag.concat(calc.tags);
     var hay = " " + bag.join(" ").toLowerCase() + " ";
@@ -350,9 +398,9 @@
       a.className = "hub-card";
       a.href = c.url || ("/beregner/" + c.slug + ".html");
       var h3 = document.createElement("h3");
-      h3.textContent = c.shortTitle || c.title || c.slug;
+      h3.textContent = calcTitle(c);
       var p = document.createElement("p");
-      p.textContent = c.blurb || "";
+      p.textContent = calcBlurb(c);
       var cta = document.createElement("span");
       cta.className = "hub-card__cta";
       cta.textContent = "Beregn nu →";

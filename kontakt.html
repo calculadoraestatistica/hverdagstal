@@ -154,7 +154,6 @@
       </span>
       <span class="brand__name">Hverdags<span>tal</span></span>
     </a>
-    <span class="header-badge" aria-label="Sidst opdateret 10. juni 2026">Opdateret 2026-06-10</span>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Aabn menu">
       <svg class="icon-open" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
         <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -238,7 +237,7 @@
     <div class="container">
       <h2>Kontaktformular</h2>
       <p>Udfyld felterne, så åbner formularen din mail-klient med en færdig besked til <a href="mailto:kontakt@hverdagstal.dk">kontakt@hverdagstal.dk</a>. Vi gemmer ingen oplysninger på serveren.</p>
-      <form class="calculator-form" action="mailto:kontakt@hverdagstal.dk" method="post" enctype="text/plain">
+      <form id="kontaktForm" class="calculator-form" novalidate>
         <div class="field">
           <label for="navn">Dit navn</label>
           <input id="navn" name="Navn" type="text" autocomplete="name" required>
@@ -271,6 +270,32 @@
         </div>
       </form>
       <p class="muted">Virker formularen ikke i din browser? Send i stedet en mail direkte til <a href="mailto:kontakt@hverdagstal.dk">kontakt@hverdagstal.dk</a>.</p>
+      <script>
+      (function(){
+        var form = document.getElementById('kontaktForm');
+        if (!form) return;
+        form.addEventListener('submit', function(e){
+          e.preventDefault();
+          var navn = (document.getElementById('navn').value || '').trim();
+          var email = (document.getElementById('email').value || '').trim();
+          var emne = (document.getElementById('emne').value || '').trim();
+          var besked = (document.getElementById('besked').value || '').trim();
+          if (!navn || !email || !emne || !besked) {
+            alert('Udfyld venligst alle felter foer du sender.');
+            return;
+          }
+          var subject = '[Hverdagstal] ' + emne;
+          var body = 'Navn: ' + navn + '\n'
+                   + 'E-mail: ' + email + '\n'
+                   + 'Emne: ' + emne + '\n\n'
+                   + 'Besked:\n' + besked;
+          var href = 'mailto:kontakt@hverdagstal.dk'
+                   + '?subject=' + encodeURIComponent(subject)
+                   + '&body=' + encodeURIComponent(body);
+          window.location.href = href;
+        });
+      })();
+      </script>
     </div>
   </section>
 
