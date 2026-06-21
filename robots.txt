@@ -1,3 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /research/
+Disallow: /data/raw/
+Disallow: /logs/
 Sitemap: https://hverdagstal.dk/sitemap.xml
