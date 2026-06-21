@@ -164,12 +164,12 @@
             <div class="field">
               <label for="fradrag">Ligningsmæssige fradrag (kr/år)</label>
               <input id="fradrag" name="fradrag" type="number" inputmode="numeric" min="0" step="500" value="10000">
-              <span class="field__hint">Beskæftigelsesfradrag, befordring, fagforening, A-kasse, etc. Personfradrag (51.600 kr i 2026) er allerede indregnet automatisk.</span>
+              <span class="field__hint">Beskæftigelsesfradrag, befordring, fagforening, A-kasse, etc. Personfradrag (54.100 kr i 2026) er allerede indregnet automatisk.</span>
             </div>
             <div class="field">
               <label for="pensionsindbetaling">Pensionsindbetaling (kr/år)</label>
               <input id="pensionsindbetaling" name="pensionsindbetaling" type="number" inputmode="numeric" min="0" step="1000" value="40000">
-              <span class="field__hint">Indbetalinger til ratepension (maks. 65.500 kr/år i 2026) og livrente (ubegrænset) er fradragsberettigede og sænker din skat.</span>
+              <span class="field__hint">Indbetalinger til ratepension (maks. 68.700 kr/år i 2026) og livrente (ubegrænset) er fradragsberettigede og sænker din skat.</span>
             </div>
             <div class="field field--full">
               <label for="kommuneSkatPct">Kommune- + kirkeskat (%)</label>
@@ -216,7 +216,7 @@
       <h2>Sådan virker beregningen</h2>
       <div class="stack">
         <p><strong>1. AM-bidrag (8 %)</strong> trækkes først af overskuddet: <code>amBidrag = forventetOverskud × 0,08</code>. For 450.000 kr giver det 36.000 kr. AM-bidraget er fradragsberettiget i den personlige indkomst.</p>
-        <p><strong>2. Skattepligtig indkomst</strong> findes ved at trække AM-bidrag, ligningsmæssige fradrag, pensionsindbetaling og personfradrag (51.600 kr) fra og lægge anden A-indkomst til: <code>skattepligtig = (overskud − AM) + andenAIndkomst − fradrag − pension − personfradrag</code>.</p>
+        <p><strong>2. Skattepligtig indkomst</strong> findes ved at trække AM-bidrag, ligningsmæssige fradrag, pensionsindbetaling og personfradrag (54.100 kr) fra og lægge anden A-indkomst til: <code>skattepligtig = (overskud − AM) + andenAIndkomst − fradrag − pension − personfradrag</code>.</p>
         <p><strong>3. Bundskat (12,01 %)</strong> beregnes af hele den personlige indkomst over personfradraget.</p>
         <p><strong>4. Mellemskat (7,5 %)</strong> rammer beløbet over mellemskattegrænsen på 641.200 kr (2026): <code>mellemskat = maks(0; personlig indkomst − 641.200) × 0,075</code>.</p>
         <p><strong>5. Topskat (7,5 %)</strong> rammer beløbet over topskattegrænsen på 777.900 kr (2026): <code>topskat = maks(0; personlig indkomst − 777.900) × 0,075</code>.</p>
@@ -406,7 +406,7 @@
   var form = document.getElementById('bskat-form');
   if (!form) return;
 
-  var PERSONFRADRAG = 51600;
+  var PERSONFRADRAG = 54100;
   var MELLEMSKAT_GRAENSE = 641200;
   var TOPSKAT_GRAENSE = 777900;
   var TOPTOPSKAT_GRAENSE = 2592700;
