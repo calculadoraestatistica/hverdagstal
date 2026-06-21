@@ -159,7 +159,7 @@
             <div class="field">
               <label for="andenAIndkomst">Anden A-indkomst (løn, dagpenge) (kr/år)</label>
               <input id="andenAIndkomst" name="andenAIndkomst" type="number" inputmode="numeric" min="0" step="1000" value="0">
-              <span class="field__hint">Hvis du har et ansættelsesforhold ved siden af, påvirker det din samlede progression — topskat begynder ved 640.100 kr (2026).</span>
+              <span class="field__hint">Hvis du har et ansættelsesforhold ved siden af, påvirker det din samlede progression — topskat begynder ved 777.900 kr (2026), mellemskat ved 641.200 kr.</span>
             </div>
             <div class="field">
               <label for="fradrag">Ligningsmæssige fradrag (kr/år)</label>
@@ -185,7 +185,9 @@
             <dt>AM-bidrag (8 %)</dt><dd id="r-am">—</dd>
             <dt>Skattepligtig indkomst</dt><dd id="r-skattepligtig">—</dd>
             <dt>Bundskat (12,01 %)</dt><dd id="r-bundskat">—</dd>
-            <dt>Topskat (15 %)</dt><dd id="r-topskat">—</dd>
+            <dt>Mellemskat (7,5 % over 641.200 kr)</dt><dd id="r-mellemskat">—</dd>
+            <dt>Topskat (7,5 % over 777.900 kr)</dt><dd id="r-topskat">—</dd>
+            <dt>Toptopskat (5 % over 2.592.700 kr)</dt><dd id="r-toptopskat">—</dd>
             <dt>Kommune- + kirkeskat</dt><dd id="r-kommune">—</dd>
           </dl>
           <p class="calculator-result__total"><span>Samlet årlig B-skat</span><strong id="r-total">—</strong></p>
@@ -216,9 +218,11 @@
         <p><strong>1. AM-bidrag (8 %)</strong> trækkes først af overskuddet: <code>amBidrag = forventetOverskud × 0,08</code>. For 450.000 kr giver det 36.000 kr. AM-bidraget er fradragsberettiget i den personlige indkomst.</p>
         <p><strong>2. Skattepligtig indkomst</strong> findes ved at trække AM-bidrag, ligningsmæssige fradrag, pensionsindbetaling og personfradrag (51.600 kr) fra og lægge anden A-indkomst til: <code>skattepligtig = (overskud − AM) + andenAIndkomst − fradrag − pension − personfradrag</code>.</p>
         <p><strong>3. Bundskat (12,01 %)</strong> beregnes af hele den personlige indkomst over personfradraget.</p>
-        <p><strong>4. Topskat (15 %)</strong> rammer kun beløbet over topskattegrænsen på 640.100 kr (2026): <code>topskat = maks(0; personlig indkomst − 640.100) × 0,15</code>.</p>
-        <p><strong>5. Kommune- + kirkeskat</strong> (typisk 25–28 %) trækkes af den skattepligtige indkomst. Det er den største post for de fleste.</p>
-        <p><strong>6. Samlet B-skat</strong> = AM-bidrag + bundskat + topskat + kommuneskat, divideret med 10 rater. Februar og december er fri.</p>
+        <p><strong>4. Mellemskat (7,5 %)</strong> rammer beløbet over mellemskattegrænsen på 641.200 kr (2026): <code>mellemskat = maks(0; personlig indkomst − 641.200) × 0,075</code>.</p>
+        <p><strong>5. Topskat (7,5 %)</strong> rammer beløbet over topskattegrænsen på 777.900 kr (2026): <code>topskat = maks(0; personlig indkomst − 777.900) × 0,075</code>.</p>
+        <p><strong>6. Toptopskat (5 %)</strong> rammer beløbet over 2.592.700 kr (2026): <code>toptopskat = maks(0; personlig indkomst − 2.592.700) × 0,05</code>.</p>
+        <p><strong>7. Kommune- + kirkeskat</strong> (typisk 25–28 %) trækkes af den skattepligtige indkomst. Det er den største post for de fleste.</p>
+        <p><strong>8. Samlet B-skat</strong> = AM-bidrag + bundskat + mellemskat + topskat + toptopskat + kommuneskat, divideret med 10 rater. Februar og december er fri.</p>
       </div>
     </div>
   </section>
@@ -244,7 +248,7 @@
         <li>Bliver overskuddet <strong>MINDRE</strong> end forventet, kan du nedjustere forskudsopgørelsen og få overskydende rater tilbagebetalt eller frigivet.</li>
         <li>B-skat under <strong>5.150 kr</strong> i alt (2026-grænse) opkræves IKKE i rater, men i den endelige årsopgørelse.</li>
         <li>Hvis du har både A- og B-indkomst, modregnes den allerede indeholdte A-skat i B-skatten, så du ikke betaler dobbelt.</li>
-        <li>Topskattegrænsen er på <strong>personlig indkomst</strong> (inkl. AM-bidrag-fradrag) og IKKE skattepligtig indkomst — ofte misforstået.</li>
+        <li>Topskattegrænsen (777.900 kr i 2026) er på <strong>personlig indkomst</strong> (inkl. AM-bidrag-fradrag) og IKKE skattepligtig indkomst — ofte misforstået.</li>
         <li>Selvstændige der vælger <strong>virksomhedsskatteordningen (VSO)</strong> betaler 22 % af opsparet overskud i selskabet i stedet for fuld personlig beskatning — kun hævet overskud bliver B-skattepligtigt.</li>
         <li><strong>Frivillig indbetaling af restskat</strong> inden 1. juli 2027 (for indkomstår 2026) undgår restskattetillæg — efter 1. juli påløber 3,8–7,3 % rente.</li>
       </ul>
@@ -403,10 +407,14 @@
   if (!form) return;
 
   var PERSONFRADRAG = 51600;
-  var TOPSKAT_GRAENSE = 640100;
+  var MELLEMSKAT_GRAENSE = 641200;
+  var TOPSKAT_GRAENSE = 777900;
+  var TOPTOPSKAT_GRAENSE = 2592700;
   var AM_PCT = 0.08;
   var BUNDSKAT_PCT = 0.1201;
-  var TOPSKAT_PCT = 0.15;
+  var MELLEMSKAT_PCT = 0.075;
+  var TOPSKAT_PCT = 0.075;
+  var TOPTOPSKAT_PCT = 0.05;
   var SKATTELOFT = 0.5207;
   var MIN_RATEPLIGT = 5150;
 
@@ -429,17 +437,21 @@
     var bundskatGrundlag = Math.max(0, personligIndkomst - PERSONFRADRAG);
     var bundskat = bundskatGrundlag * BUNDSKAT_PCT;
 
+    var mellemskat = Math.max(0, personligIndkomst - MELLEMSKAT_GRAENSE) * MELLEMSKAT_PCT;
     var topskat = Math.max(0, personligIndkomst - TOPSKAT_GRAENSE) * TOPSKAT_PCT;
+    var toptopskat = Math.max(0, personligIndkomst - TOPTOPSKAT_GRAENSE) * TOPTOPSKAT_PCT;
 
     var kommune = skattepligtig * kommunePct;
 
-    var samlet = amBidrag + bundskat + topskat + kommune;
+    var samlet = amBidrag + bundskat + mellemskat + topskat + toptopskat + kommune;
     var rate = samlet / 10;
 
     document.getElementById('r-am').textContent = fmtKr(amBidrag);
     document.getElementById('r-skattepligtig').textContent = fmtKr(skattepligtig);
     document.getElementById('r-bundskat').textContent = fmtKr(bundskat);
+    document.getElementById('r-mellemskat').textContent = fmtKr(mellemskat);
     document.getElementById('r-topskat').textContent = fmtKr(topskat);
+    document.getElementById('r-toptopskat').textContent = fmtKr(toptopskat);
     document.getElementById('r-kommune').textContent = fmtKr(kommune);
     document.getElementById('r-total').textContent = fmtKr(samlet);
 

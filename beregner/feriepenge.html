@@ -302,7 +302,7 @@
                 <option value="false" selected>Nej</option>
                 <option value="true">Ja</option>
               </select>
-              <small class="field__hint">Topskat rammer ved indkomst over 777.900 kr/år i 2026. Topskat = 15 % ekstra. Ny mellemskat (7,5 %) for indkomst 611.800-777.900 kr.</small>
+              <small class="field__hint">Mellemskat (7,5 %) ved indkomst over 641.200 kr/år, topskat (7,5 %) over 777.900 kr/år, toptopskat (5 %) over 2.592.700 kr/år i 2026 — alle progressive lag oven på bund- og kommuneskat.</small>
             </div>
           </form>
         </div>
@@ -338,11 +338,11 @@
       <ol class="stack">
         <li><strong>Beregn brutto feriepenge.</strong> 12,5 % af din ferieberettigede aarsloen for feriegodtgoerelse, eller 1 % som ferietillaeg hvis du har ferie med løn. Særlig feriegodtgoerelse (1,15-1,95 %) laegges på for offentligt ansatte.</li>
         <li><strong>Traek 8 % AM-bidrag.</strong> Arbejdsmarkedsbidrag traekkes først af bruttobeloebet.</li>
-        <li><strong>Beregn marginalskat.</strong> Bundskat 12,06 % + kommuneskat + kirkeskat. Er du i topskat, laegges 15 % ekstra på — dog hoejst skatteloftet på 52,07 %.</li>
+        <li><strong>Beregn marginalskat.</strong> Bundskat 12,01 % + kommuneskat + kirkeskat. Ligger din indkomst over mellemskattegraensen (641.200 kr i 2026) tillaegges 7,5 % mellemskat, over topskattegraensen (777.900 kr) yderligere 7,5 % topskat, og over 2.592.700 kr ogsaa 5 % toptopskat — dog hoejst skatteloftet på 52,07 %.</li>
         <li><strong>Traek A-skat.</strong> Marginalskatten ganges på beloebet efter AM-bidrag.</li>
         <li><strong>Resultat: netto udbetalt.</strong> Det du faar på kontoen — typisk 50-62 % af brutto, afhaengigt af kommune og topskat.</li>
       </ol>
-      <p class="muted">Beregneren bruger 2026-satser: AM-bidrag 8 %, bundskat 12,06 %, topskat 15 % over 777.900 kr (efter AM), skatteloft 52,07 %.</p>
+      <p class="muted">Beregneren bruger 2026-satser: AM-bidrag 8 %, bundskat 12,01 %, mellemskat 7,5 % over 641.200 kr, topskat 7,5 % over 777.900 kr (efter AM), toptopskat 5 % over 2.592.700 kr, skatteloft 52,07 %.</p>
     </div>
   </section>
 
@@ -381,7 +381,7 @@
       </details>
       <details>
         <summary>Skal jeg vente med at faa feriepenge udbetalt?</summary>
-        <p>Hvis du er på grænsen til topskat (777.900 kr i 2026) kan det være økonomisk klogt at udskyde feriepenge til et år med lavere indkomst — fx ved jobskifte, orlov eller pension. Du sparer 15 % topskat af det beløb der ellers ville have ramt topskattegraensen.</p>
+        <p>Hvis du er på grænsen til topskat (777.900 kr i 2026) kan det være økonomisk klogt at udskyde feriepenge til et år med lavere indkomst — fx ved jobskifte, orlov eller pension. Du sparer 7,5 % topskat af det beløb der ellers ville have ramt topskattegraensen (plus eventuelt 7,5 % mellemskat hvis du ogsaa er over 641.200 kr-graensen).</p>
       </details>
       <details>
         <summary>Hvad er forskellen på feriegodtgoerelse og ferietillaeg?</summary>
@@ -573,9 +573,14 @@
     var amBidrag = totalBrutto * 0.08;
     var afterAM = totalBrutto - amBidrag;
 
-    var bundskat = 0.1206;
+    var bundskat = 0.1201;
     var baseRate = bundskat + kommune + kirke;
-    var marginalRate = topskat ? Math.min(0.5207, baseRate + 0.15) : baseRate;
+    // Indkomst som benyttes til at vurdere progressionslag (aarsloen efter AM-bidrag)
+    var progressionsIndkomst = Math.max(0, annualSalary - annualSalary * 0.08);
+    var mellemskatTillaeg = (topskat || progressionsIndkomst > 641200) ? 0.075 : 0;
+    var topskatTillaeg = (topskat || progressionsIndkomst > 777900) ? 0.075 : 0;
+    var toptopskatTillaeg = progressionsIndkomst > 2592700 ? 0.05 : 0;
+    var marginalRate = Math.min(0.5207, baseRate + mellemskatTillaeg + topskatTillaeg + toptopskatTillaeg);
 
     var indkomstSkat = afterAM * marginalRate;
     var netto = afterAM - indkomstSkat;
@@ -594,8 +599,9 @@
 
     var tipEl = document.getElementById('r-tip');
     if(topskat && totalBrutto > 0){
+      // 2026: topskat 7,5 % + mellemskat 7,5 % = 15 % progressivt tillaeg over 777.900 kr
       var lavereAarBesparelse = totalBrutto * 0.15;
-      tipEl.textContent = 'Tip: Ved at udskyde udbetalingen til et aar uden topskat kunne du potentielt spare op til ' + fmt(lavereAarBesparelse) + ' i skat.';
+      tipEl.textContent = 'Tip: Ved at udskyde udbetalingen til et aar uden top- og mellemskat kunne du potentielt spare op til ' + fmt(lavereAarBesparelse) + ' i skat.';
     } else if(annualSalary > 700000 && annualSalary < 777900){
       tipEl.textContent = 'Tip: Du ligger taet paa topskattegraensen (777.900 kr). En stor feriepengeudbetaling kan skubbe dig over — overvej timing.';
     } else {

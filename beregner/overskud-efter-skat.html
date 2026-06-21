@@ -196,7 +196,7 @@
         <p><strong>2. Samlede driftsomkostninger.</strong> driftsomkostninger + husleje + kørselsfradrag + løn til ansatte. Bemærk: din EGEN løn er IKKE en omkostning i enkeltmandsvirksomhed — det er en hævning af overskud.</p>
         <p><strong>3. Overskud før skat.</strong> Omsætning − samlede driftsomkostninger. Eksempel: 900.000 − (120.000 + 60.000 + 30.320 + 0) = 689.680 kr.</p>
         <p><strong>4. AM-bidrag.</strong> 8% af overskud før skat. Eks: 689.680 &times; 0,08 = 55.174 kr. AM-bidraget er fradragsberettiget i personlig indkomst.</p>
-        <p><strong>5. Personlig indkomstskat.</strong> På overskud minus AM-bidrag og pension: bundskat 12,01% + topskat 15% over 640.100 kr + kommune ca. 25,5%. Samlet marginalskat 37–52% (loft 52,07%).</p>
+        <p><strong>5. Personlig indkomstskat.</strong> På overskud minus AM-bidrag og pension: bundskat 12,01% + mellemskat 7,5% over 641.200 kr + topskat 7,5% over 777.900 kr + toptopskat 5% over 2.592.700 kr + kommune ca. 25,5%. Samlet marginalskat 37–52% (loft 52,07%).</p>
         <p><strong>6. VSO-skat.</strong> Hvis VSO valgt: opsparet overskud (overskud minus hævet beløb) beskattes med 22% acontoskat. Hævet beløb beskattes personligt som løn. Fordelagtigt hvis du tjener mere end du bruger og kan udskyde topskat.</p>
         <p><strong>7. Netto-overskud.</strong> overskud før skat − AM-bidrag − indkomstskat. Det du reelt har til rådighed.</p>
         <p><strong>8. Foreslået månedlig hævning.</strong> netto-overskud / 12, minus en buffer på 10–15% til skat-justering og uforudsete udgifter.</p>
@@ -240,7 +240,7 @@
       </details>
       <details>
         <summary>Hvornår er virksomhedsskatteordningen (VSO) en fordel?</summary>
-        <p>VSO er fordelagtig hvis du: (1) tjener mere end du forbruger, (2) ligger tæt på eller over topskattegrænsen (640.100 kr i 2026), eller (3) ønsker at udjævne indkomsten over flere år. Opsparet overskud beskattes med 22% i stedet for personlig marginalskat. Du betaler "restskatten" når du hæver — så det er en skatte-udskydning, ikke en fritagelse. Kræver ordentlig bogføring.</p>
+        <p>VSO er fordelagtig hvis du: (1) tjener mere end du forbruger, (2) ligger tæt på eller over topskattegrænsen (777.900 kr i 2026) eller mellemskattegrænsen (641.200 kr), eller (3) ønsker at udjævne indkomsten over flere år. Opsparet overskud beskattes med 22% i stedet for personlig marginalskat. Du betaler "restskatten" når du hæver — så det er en skatte-udskydning, ikke en fritagelse. Kræver ordentlig bogføring.</p>
       </details>
       <details>
         <summary>Hvor meget kørselsfradrag kan jeg få som selvstændig i 2026?</summary>
@@ -256,7 +256,7 @@
       </details>
       <details>
         <summary>Hvad er en passende løn til mig selv i mit ApS?</summary>
-        <p>Som tommelfingerregel: udbetal løn op til topskattegrænsen (640.100 kr i 2026) — det giver lavest samlet skat. Resterende overskud kan opspares i selskabet til 22% og udbetales som udbytte (27%/42%) i magre år. En løn på 35.000–45.000 kr/md netto er optimalt for de fleste enmandsejere af et ApS.</p>
+        <p>Som tommelfingerregel: udbetal løn op til topskattegrænsen (777.900 kr i 2026) — eller helt ned til mellemskattegrænsen (641.200 kr) hvis du vil undgaa også de 7,5 % mellemskat. Resterende overskud kan opspares i selskabet til 22% og udbetales som udbytte (27%/42%) i magre år. En løn på 35.000–45.000 kr/md netto er optimalt for de fleste enmandsejere af et ApS.</p>
       </details>
       <details>
         <summary>Kan jeg trække udgifter til kontor i hjemmet fra?</summary>
@@ -383,8 +383,12 @@
   var RATES = {
     am: 0.08,
     bund: 0.1201,
-    top: 0.15,
-    topGraense: 640100,
+    melle: 0.075,
+    melleGraense: 641200,
+    top: 0.075,
+    topGraense: 777900,
+    toptop: 0.05,
+    toptopGraense: 2592700,
     selskab: 0.22,
     vso: 0.22,
     udbytteLav: 0.27,
@@ -421,15 +425,17 @@
     return RATES.kmGraense * RATES.kmFoerste + (km - RATES.kmGraense) * RATES.kmOver;
   }
 
-  // Personlig indkomstskat: bund + top + kommune, minus personfradrag, loft 52,07%
+  // Personlig indkomstskat 2026: bund + mellem + top + toptop + kommune, minus personfradrag, loft 52,07%
   function personligSkat(grundlag, pension, kommunePct){
     var skatGrundlag = Math.max(0, grundlag - pension);
     var bund = Math.max(0, skatGrundlag) * RATES.bund;
+    var melle = Math.max(0, skatGrundlag - RATES.melleGraense) * RATES.melle;
     var top  = Math.max(0, skatGrundlag - RATES.topGraense) * RATES.top;
+    var toptop = Math.max(0, skatGrundlag - RATES.toptopGraense) * RATES.toptop;
     var kommune = Math.max(0, skatGrundlag) * (kommunePct/100);
     // personfradrag: trækkes som skattevaerdi (kommune+bund) af 51.600
     var pfradragVaerdi = RATES.personfradrag * (RATES.bund + kommunePct/100);
-    var samletSkat = bund + top + kommune - pfradragVaerdi;
+    var samletSkat = bund + melle + top + toptop + kommune - pfradragVaerdi;
     // loft
     var loft = skatGrundlag * RATES.skatteloft;
     if (samletSkat > loft) samletSkat = loft;
