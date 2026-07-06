@@ -292,6 +292,14 @@ pre code {
   padding-block: var(--section-py);
   position: relative;
 }
+/* Readable measure for longform text placed directly in a section
+   (grids, cards and calculator layouts are untouched) */
+.section > .container > p,
+.section > .container > .stack,
+.section > .container > ul.stack,
+.section > .container > ol.stack {
+  max-width: 75ch;
+}
 .section--alt {
   background: var(--c-paper-alt);
   border-block: 1px solid var(--c-border);
@@ -880,6 +888,25 @@ pre code {
   font-family: var(--font-mono);
   font-variant-numeric: tabular-nums lining-nums slashed-zero;
   font-weight: 600;
+}
+/* Cleaner numeric fields: hide the tiny native spin buttons */
+.field input[type="number"]::-webkit-outer-spin-button,
+.field input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.field input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+/* Custom chevron on selects (data URI, self-contained) */
+.field select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2356697a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 38px;
 }
 .field textarea {
   min-height: 120px;
@@ -1863,6 +1890,12 @@ td.num, th.num {
 @media (max-width: 639px) {
   h1 { letter-spacing: -.02em; }
   .calculator-result__breakdown { column-gap: var(--s-3); }
+  /* Rate tables scroll sideways instead of crushing columns */
+  .section table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
   .source-card h3 { padding-right: 0; }
   .source-card::before {
     position: static;
@@ -1957,3 +1990,25 @@ td.num, th.num {
   .hub-card { border: 2px solid CanvasText; }
   .opdateret-badge { border: 2px solid CanvasText; }
 }
+
+/* === Completion pass 2026-07-05: form focus, table scroll containment, hero polish === */
+/* Form ergonomics: active field's label tints, fields never blow out grid tracks. */
+.field { min-width: 0; }
+.field:focus-within > label { color: var(--c-primary-darker); }
+
+/* Mobile rate tables: contain the sideways scroll and show a slim scrollbar. */
+@media (max-width: 639px) {
+  .section table {
+    overscroll-behavior-x: contain;
+    max-width: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: var(--c-border-strong) var(--c-paper-alt);
+  }
+  .section table::-webkit-scrollbar { height: 8px; }
+  .section table::-webkit-scrollbar-thumb { background: var(--c-border-strong); border-radius: 4px; }
+  .section table::-webkit-scrollbar-track { background: var(--c-paper-alt); }
+}
+
+/* Hero polish: balanced headline ragging, no orphan words in the lead. */
+.hero__title { text-wrap: balance; }
+.hero__lead { text-wrap: pretty; }
