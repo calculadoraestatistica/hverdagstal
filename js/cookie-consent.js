@@ -6,12 +6,33 @@
   'use strict';
   const KEY = 'htal-consent';
 
+  /* Google Consent Mode v2: default everything to denied BEFORE any consent decision. */
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('consent', 'default', {
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    analytics_storage: 'denied'
+  });
+
+  function grantAll() {
+    gtag('consent', 'update', {
+      ad_storage: 'granted',
+      ad_user_data: 'granted',
+      ad_personalization: 'granted'
+    });
+  }
+
   function read() {
     try { return localStorage.getItem(KEY); } catch (_) { return null; }
   }
   function write(v) {
     try { localStorage.setItem(KEY, v); } catch (_) {}
   }
+
+  /* Re-apply a previously granted choice on every page load. */
+  if (read() === 'granted') grantAll();
 
   function buildBanner() {
     const wrap = document.createElement('div');
@@ -42,6 +63,7 @@
       if (!t) return;
       const action = t.getAttribute('data-cookie');
       write(action === 'grant' ? 'granted' : 'denied');
+      if (action === 'grant') grantAll();
       banner.classList.add('is-hidden');
       setTimeout(() => banner.remove(), 250);
       document.dispatchEvent(new CustomEvent('htal:consent', { detail: { value: action } }));
