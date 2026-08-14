@@ -128,7 +128,7 @@ img, svg, video { max-width: 100%; height: auto; display: block; }
 button, input, select, textarea { font: inherit; color: inherit; }
 button { cursor: pointer; background: none; border: 0; padding: 0; }
 hr { border: 0; border-top: 2px solid var(--c-ink); margin: var(--s-6) 0; }
-::selection { background: var(--c-accent); color: var(--c-white); }
+::selection { background: var(--c-primary-darker); color: var(--c-white); }
 
 /* Universal focus ring — via outline so high-contrast mode works */
 :focus { outline: none; }
@@ -773,6 +773,10 @@ pre code {
   font-size: .88rem;
   min-height: 36px;
   border-radius: 0;
+}
+/* Touch devices: keep small buttons at a 44px minimum target */
+@media (pointer: coarse) {
+  .btn--sm { min-height: 44px; }
 }
 
 .btn--icon {
@@ -2098,3 +2102,18 @@ td.num, th.num {
 /* Hero polish: balanced headline ragging, no orphan words in the lead. */
 .hero__title { text-wrap: balance; }
 .hero__lead { text-wrap: pretty; }
+
+/* === Polish pass 2026-08-13: simplified nav, beregner hub, full situations bento === */
+/* Forside #situationer now lists all 7 situations — place cards 5-7 in the bento. */
+@media (min-width: 860px) {
+  #situationer .hub-card:nth-child(5) { grid-column: 1; grid-row: 3; }
+  #situationer .hub-card:nth-child(6) { grid-column: 2; grid-row: 3; }
+  #situationer .hub-card:nth-child(7) { grid-column: 1 / -1; grid-row: 4; }
+}
+
+/* Filter chips (beregnere.html): ghost buttons carry a pressed state. */
+.btn--ghost[aria-pressed="true"] {
+  background: var(--c-ink);
+  color: var(--c-paper);
+  border-color: var(--c-ink);
+}
