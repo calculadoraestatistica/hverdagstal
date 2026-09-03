@@ -17,13 +17,16 @@
 
   function renderElpris(box, data) {
     var areas = data.areas || {};
-    var today = new Date().toISOString().slice(0, 10);
+    // Dags dato i dansk tid (ISO-strengen ville give UTC-datoen og skifte dag kl. 02 dansk sommertid)
+    var today = new Date().toLocaleDateString("sv-SE", { timeZone: "Europe/Copenhagen" });
     var html = "";
+    var shownDay = today;
     ["DK1", "DK2"].forEach(function (area) {
       var dage = areas[area] || {};
       var keys = Object.keys(dage).sort();
       if (!keys.length) return;
       var dag = dage[today] ? today : keys[keys.length - 1];
+      shownDay = dag;
       var v = dage[dag];
       var navn = area === "DK1" ? "Vestdanmark (DK1)" : "Østdanmark (DK2)";
       html += '<div class="live-figures">' +
@@ -38,9 +41,13 @@
     });
     if (!html) return;
     var el = box.querySelector("[data-live-target]");
-    el.innerHTML = html + '<p class="live-meta">Spotpris for ' + datoDK(today) +
+    el.innerHTML = html + '<p class="live-meta">Spotpris for ' + datoDK(shownDay) +
       ", ekskl. nettarif, elafgift og moms. Kilde: <a href=\"" + data.source_url + "\" rel=\"noopener\" target=\"_blank\">Energi Data Service</a>. Opdateret " +
       new Date(data.updated).toLocaleString("da-DK", { day: "numeric", month: "long", hour: "2-digit", minute: "2-digit" }) + ".</p>";
+    if (shownDay !== today) {
+      var h3 = box.querySelector("h3");
+      if (h3) h3.textContent = "Elprisen " + datoDK(shownDay) + " (spotpris)";
+    }
     box.hidden = false;
   }
 

@@ -41,10 +41,25 @@ def _save(name: str, payload: dict) -> None:
 
 
 # ─── Elpris ────────────────────────────────────────────────────────────────
+def _dansk_dato() -> date:
+    """Dags dato i dansk tid — IKKE runnerens UTC-dato.
+
+    GitHub-runneren koerer i UTC; ved 02:01Z den 3/9 var date.today() allerede
+    3/9, saa foerste CI-koersel hentede kun 'i morgen' set fra Danmark og
+    tabte dagens priser. Data (TimeDK) og laesere er danske, saa datoen
+    skal ogsaa vaere det.
+    """
+    try:
+        from zoneinfo import ZoneInfo
+        return datetime.now(ZoneInfo("Europe/Copenhagen")).date()
+    except Exception:  # noqa: BLE001 — fx Windows uden tzdata
+        return (datetime.now(timezone.utc) + timedelta(hours=2)).date()
+
+
 def fetch_elpris() -> None:
-    today = date.today()
+    today = _dansk_dato()
     q = urllib.parse.urlencode({
-        "start": today.isoformat(),
+        "start": (today - timedelta(days=1)).isoformat(),  # gaarsdagen med som sikkerhedsmargin
         "end": (today + timedelta(days=2)).isoformat(),
         "filter": json.dumps({"PriceArea": ["DK1", "DK2"]}),
         "sort": "TimeDK asc",
