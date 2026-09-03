@@ -1,0 +1,45 @@
+name: Opdater live-data (elpris + forbrugerpriser)
+
+# Primaer trigger: cron-job.org kalder workflow_dispatch dagligt kl. 14:20 CET/CEST
+# (day-ahead-priserne offentliggoeres ca. kl. 13). GitHub-cron er kun fallback.
+on:
+  schedule:
+    - cron: '35 12 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Hent elpris + CPI
+        run: python scripts/fetch_live_data.py
+      - name: Commit + push hvis aendret
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/elpris.json data/cpi.json
+          if git diff --staged --quiet; then
+            echo "Ingen aendringer."
+          else
+            git commit -m "data: opdaterer elpris/CPI ($(TZ='Europe/Copenhagen' date +%Y-%m-%d_%H:%M))"
+            n=0
+            until git push; do
+              n=$((n+1))
+              if [ "$n" -ge 3 ]; then echo "push fejlede efter 3 forsoeg"; exit 1; fi
+              echo "push fejlede (forsoeg $n/3) — rebase og retry om 20s"
+              sleep 20
+              git pull --rebase origin main || true
+            done
+          fi
