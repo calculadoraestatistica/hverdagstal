@@ -188,7 +188,7 @@
     <div class="container">
       <div class="stack" style="background:#fff8e1;border-left:4px solid #f6c343;padding:1rem 1.25rem;border-radius:8px;">
         <h2 style="margin:0;">Beslutningsvinkel</h2>
-        <p style="margin:0;">Hvad koster bilen mig <strong>reelt pr. måned</strong> i hvert scenarie, og hvornår tipper regnestykket — så jeg vælger ud fra tal frem for mavefornemmelse. Beregneren tager højde for værditab, renter, etableringsgebyr, restværdi-risiko og vedligeholdelse.</p>
+        <p style="margin:0;">Hvad koster bilen mig <strong>reelt pr. måned</strong> i hvert scenarie, og hvornår tipper regnestykket: så jeg vælger ud fra tal frem for mavefornemmelse. Beregneren tager højde for værditab, renter, etableringsgebyr, restværdi-risiko og vedligeholdelse.</p>
       </div>
 
       <h2 style="margin-top:2rem;">Sådan virker det</h2>
@@ -199,7 +199,7 @@
           <li><strong>Køb-siden:</strong> udbetaling + samlede renter i ejerperioden + årlig vedligeholdelse + det reelle værditab (nyværdi − anslået salgsværdi efter perioden).</li>
         </ol>
         <p>Renteomkostningen beregnes med en standard annuitetslån-formel: <code>ydelse = P · r / (1 − (1+r)^−n)</code>, hvor P er hovedstol, r månedlig rente og n antal måneder. Vi løber amortisering måned for måned for at finde både samlede renter og restgæld på dit salgstidspunkt.</p>
-        <p>Salgsværdien efter perioden estimeres geometrisk: <code>nyværdi × (1 − værditabPct)^år</code>. Det er en forenkling — år 1 falder typisk hurtigere — men giver et godt overslag på 3–5 års sigt. For mere præcis kurve, brug vores <a href="/beregner/bil-vaerdtab.html">bil-værditab-beregner</a>.</p>
+        <p>Salgsværdien efter perioden estimeres geometrisk: <code>nyværdi × (1 − værditabPct)^år</code>. Det er en forenkling, år 1 falder typisk hurtigere, men giver et godt overslag på 3–5 års sigt. For mere præcis kurve, brug vores <a href="/beregner/bil-vaerdtab.html">bil-værditab-beregner</a>.</p>
         <p><strong>Breakeven-logikken:</strong> vi gentager hele regnestykket for hver måned fra 1 til 120 og finder det første tidspunkt hvor køb bliver billigere end leasing. Hvis leasing aldrig overgås i scenariet, vises det også.</p>
       </div>
     </div>
@@ -209,12 +209,12 @@
     <div class="container">
       <h2>Vigtige situationer du skal være opmærksom på</h2>
       <ul class="stack">
-        <li><strong>Kilometerloft overskredet:</strong> typisk 0,50–1,50 kr/ekstra km — ikke med i grundberegning, bør lægges på restværdi-garanti.</li>
-        <li><strong>Førstegangsydelse vs. etablering:</strong> nogle aftaler kalder det "storudbetaling" — sørg for at den indgår i etablering-feltet, ellers undervurderes leasing.</li>
+        <li><strong>Kilometerloft overskredet:</strong> typisk 0,50–1,50 kr/ekstra km, ikke med i grundberegning, bør lægges på restværdi-garanti.</li>
+        <li><strong>Førstegangsydelse vs. etablering:</strong> nogle aftaler kalder det "storudbetaling": sørg for at den indgår i etablering-feltet, ellers undervurderes leasing.</li>
         <li><strong>Leasing inkluderer service:</strong> hvis JA, må vedligeholdAarligt sættes til 0 i leasing-siden, men beholdes på køb-siden.</li>
         <li><strong>Negativ egenkapital ved køb:</strong> hvis restgæld &gt; salgsværdi efter X år, lægges differencen oveni totalKoeb.</li>
         <li><strong>Elbil:</strong> lavere værditab end forbrænder de første 3 år, men hurtigere fald år 4–5; juster værditab manuelt eller brug bil-værditab-kalkulatoren.</li>
-        <li><strong>Skattefri kørselsgodtgørelse</strong> er IKKE relevant for privat leasing/køb — kun for erhverv.</li>
+        <li><strong>Skattefri kørselsgodtgørelse</strong> er IKKE relevant for privat leasing/køb, kun for erhverv.</li>
         <li><strong>Brexit/importbil:</strong> hvis bilen er importeret, kan restværdi være lavere end danske referencer.</li>
       </ul>
     </div>
@@ -237,7 +237,7 @@
       </details>
       <details>
         <summary>Skal etableringsgebyret med i sammenligningen?</summary>
-        <p>Ja, absolut. En leasingaftale med "lav månedlig ydelse" men 25.000 kr i førstegangsydelse er ofte dyrere end en aftale med højere ydelse og lav etablering — beregneren fanger det.</p>
+        <p>Ja, absolut. En leasingaftale med "lav månedlig ydelse" men 25.000 kr i førstegangsydelse er ofte dyrere end en aftale med højere ydelse og lav etablering: beregneren fanger det.</p>
       </details>
       <details>
         <summary>Hvad sker der hvis jeg afleverer leasingbilen med skader?</summary>
@@ -259,11 +259,11 @@
       <div class="source-card">
         <h3>Officielle kilder</h3>
         <ul>
-          <li><a href="https://fdm.dk/" rel="nofollow noopener" target="_blank">FDM — Privatleasing: tjekliste og faldgruber <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
-          <li><a href="https://taenk.dk/test-og-forbrugerliv/bil/privatleasing" rel="nofollow noopener" target="_blank">Forbrugerrådet Tænk — Privatleasing <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
-          <li><a href="https://www.forbrug.dk/" rel="nofollow noopener" target="_blank">Konkurrence- og Forbrugerstyrelsen — Privatleasingaftaler <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
-          <li><a href="https://www.bilpriser.dk" rel="nofollow noopener" target="_blank">Bilpriser.dk — markedsvurdering <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
-          <li><a href="https://www.mybanker.dk/" rel="nofollow noopener" target="_blank">Mybanker — billån rentestatistik <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
+          <li><a href="https://fdm.dk/" rel="nofollow noopener" target="_blank">FDM. Privatleasing: tjekliste og faldgruber <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
+          <li><a href="https://taenk.dk/test-og-forbrugerliv/bil/privatleasing" rel="nofollow noopener" target="_blank">Forbrugerrådet Tænk. Privatleasing <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
+          <li><a href="https://www.forbrug.dk/" rel="nofollow noopener" target="_blank">Konkurrence- og Forbrugerstyrelsen. Privatleasingaftaler <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
+          <li><a href="https://www.bilpriser.dk" rel="nofollow noopener" target="_blank">Bilpriser.dk: markedsvurdering <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
+          <li><a href="https://www.mybanker.dk/" rel="nofollow noopener" target="_blank">Mybanker: billån rentestatistik <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
         </ul>
         <p class="muted">Senest tjekket 2026-06-10.</p>
       </div>
@@ -374,7 +374,7 @@
         </ul>
       </div>
     </div>
-    <p class="site-footer__cross">Skal du regne nettoloen ud? Brug vores soestersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a> — specialiseret i løn og skat.</p>
+    <p class="site-footer__cross">Skal du regne nettoloen ud? Brug vores soestersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a>: specialiseret i løn og skat.</p>
     <div class="site-footer__bottom">
       <span>&copy; 2026 hverdagstal.dk &middot; Beregn penge, støtte og udgifter i hverdagen &middot; Satser opdateret 2026-06-10</span>
       <span>Made in Danmark</span>

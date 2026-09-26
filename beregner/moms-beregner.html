@@ -25,6 +25,7 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="stylesheet" href="/css/style.css">
 <script src="/js/cookie-consent.js" defer></script>
+  <script src="/js/media-loop.js" defer></script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7516029395999799" crossorigin="anonymous"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Hverdagstal","url":"https://hverdagstal.dk/","inLanguage":"da-DK","potentialAction":{"@type":"SearchAction","target":"https://hverdagstal.dk/?q={search_term_string}","query-input":"required name=search_term_string"},"publisher":{"@type":"Organization","name":"Hverdagstal","url":"https://hverdagstal.dk/","logo":{"@type":"ImageObject","url":"https://hverdagstal.dk/favicon-512.png","width":512,"height":512}}}</script>
 <script type="application/ld+json">
@@ -239,7 +240,7 @@
 
       <div class="decision-callout">
         <h3>Skal du tilføje, fratrække eller netto-beregne moms?</h3>
-        <p>Det afhænger af, hvor i fakturaprocessen du står: skal du <em>lægge moms oveni</em> dit tilbud, <em>trække momsen ud</em> af en kvittering, eller <em>isolere selve momsbeløbet</em> til regnskabet? Og hvornår skal momsen indberettes — månedligt, kvartalsvis eller halvårligt? Kalkulatoren viser også, om du overhovedet er momspligtig (omsætning over 50.000 kr/år).</p>
+        <p>Det afhænger af, hvor i fakturaprocessen du står: skal du <em>lægge moms oveni</em> dit tilbud, <em>trække momsen ud</em> af en kvittering, eller <em>isolere selve momsbeløbet</em> til regnskabet? Og hvornår skal momsen indberettes: månedligt, kvartalsvis eller halvårligt? Kalkulatoren viser også, om du overhovedet er momspligtig (omsætning over 50.000 kr/år).</p>
       </div>
     </div>
   </section>
@@ -253,11 +254,11 @@
       <h2>Vigtige situationer</h2>
       <ul class="stack">
         <li>Hobby-virksomhed under 50.000 kr årlig omsætning skal <strong>IKKE</strong> momsregistreres og må ikke opkræve moms.</li>
-        <li>Hvis du i løbet af året kommer over 50.000 kr, skal du momsregistrere <strong>INDEN</strong> du når grænsen — bagudvirkende momsefterbetaling kan komme på tale.</li>
-        <li>Eksport til virksomheder i andre EU-lande (B2B) er 0% moms (omvendt betalingspligt) — men kræver modtagers VAT-nummer og indberetning i EU-salgsangivelse.</li>
+        <li>Hvis du i løbet af året kommer over 50.000 kr, skal du momsregistrere <strong>INDEN</strong> du når grænsen: bagudvirkende momsefterbetaling kan komme på tale.</li>
+        <li>Eksport til virksomheder i andre EU-lande (B2B) er 0% moms (omvendt betalingspligt), men kræver modtagers VAT-nummer og indberetning i EU-salgsangivelse.</li>
         <li>Salg til privatpersoner i EU er underlagt OSS-reglerne (One Stop Shop) hvis du sælger for over 10.000 EUR/år på tværs af EU.</li>
         <li>Bilkørsel: kørsels-godtgørelse for personbiler er fortsat ikke fradragsberettiget moms (gulplade-undtagelse for varevogne).</li>
-        <li>Bøger og aviser er nulsats (0%) — IKKE momsfri (forskel: nulsats giver fradragsret for købsmoms).</li>
+        <li>Bøger og aviser er nulsats (0%). IKKE momsfri (forskel: nulsats giver fradragsret for købsmoms).</li>
         <li>Hotel og camping får reduceret sats på 7% fra 1. januar 2026, men restaurantydelser forbliver på 25%.</li>
         <li>Bygnings- og håndværksydelser har særlige regler ved omvendt betalingspligt mellem virksomheder.</li>
       </ul>
@@ -277,7 +278,7 @@
       </details>
       <details>
         <summary>Hvad er forskellen på månedlig, kvartalsvis og halvårlig momsangivelse?</summary>
-        <p>Halvårlig: omsætning under 5 mio. kr — frist 1. september og 1. marts. Kvartalsvis: 5-55 mio. kr — frist 1. i 3. måned efter kvartalet. Månedlig: over 55 mio. kr — frist 25. i næste måned. Nye virksomheder starter normalt på kvartalsvis i de første 18 måneder.</p>
+        <p>Halvårlig: omsætning under 5 mio. kr: frist 1. september og 1. marts. Kvartalsvis: 5-55 mio. kr: frist 1. i 3. måned efter kvartalet. Månedlig: over 55 mio. kr: frist 25. i næste måned. Nye virksomheder starter normalt på kvartalsvis i de første 18 måneder.</p>
       </details>
       <details>
         <summary>Skal jeg betale moms af salg til udlandet?</summary>
@@ -293,7 +294,7 @@
       </details>
       <details>
         <summary>Er bøger og aviser virkelig 0% moms?</summary>
-        <p>Ja, trykte bøger, aviser og e-bøger er nulsats (0%) i Danmark. Det er IKKE det samme som momsfritaget — nulsats betyder du opkræver 0% på salget men fortsat har fradragsret for moms på indkøb. Momsfritaget (f.eks. læge, undervisning) giver derimod INGEN fradragsret.</p>
+        <p>Ja, trykte bøger, aviser og e-bøger er nulsats (0%) i Danmark. Det er IKKE det samme som momsfritaget: nulsats betyder du opkræver 0% på salget men fortsat har fradragsret for moms på indkøb. Momsfritaget (f.eks. læge, undervisning) giver derimod INGEN fradragsret.</p>
       </details>
     </div>
   </section>
@@ -303,12 +304,12 @@
       <div class="source-card">
         <h3>Officielle kilder</h3>
         <ul>
-          <li><a href="https://skat.dk/erhverv/moms" rel="nofollow noopener" target="_blank">Skattestyrelsen — Moms <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
-          <li><a href="https://skat.dk/" rel="nofollow noopener" target="_blank">Skattestyrelsen — Momsregistrering (50.000 kr grænse) <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
-          <li><a href="https://skat.dk/" rel="nofollow noopener" target="_blank">Skattestyrelsen — Frister og angivelse <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
-          <li><a href="https://virk.dk/" rel="nofollow noopener" target="_blank">Virk — Start virksomhed og momsregistrering <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
-          <li><a href="https://www.retsinformation.dk/eli/lta/2024/209" rel="nofollow noopener" target="_blank">Retsinformation — Momsloven (LBK nr. 209) <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
-          <li><a href="https://skm.dk/aktuelt" rel="nofollow noopener" target="_blank">Skatteministeriet — Aftale om turistovernatning 7% (2026) <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
+          <li><a href="https://skat.dk/erhverv/moms" rel="nofollow noopener" target="_blank">Skattestyrelsen. Moms <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
+          <li><a href="https://skat.dk/" rel="nofollow noopener" target="_blank">Skattestyrelsen. Momsregistrering (50.000 kr grænse) <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
+          <li><a href="https://skat.dk/" rel="nofollow noopener" target="_blank">Skattestyrelsen. Frister og angivelse <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
+          <li><a href="https://virk.dk/" rel="nofollow noopener" target="_blank">Virk. Start virksomhed og momsregistrering <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
+          <li><a href="https://www.retsinformation.dk/eli/lta/2024/209" rel="nofollow noopener" target="_blank">Retsinformation. Momsloven (LBK nr.209) <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
+          <li><a href="https://skm.dk/aktuelt" rel="nofollow noopener" target="_blank">Skatteministeriet. Aftale om turistovernatning 7% (2026) <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
         </ul>
         <p class="muted"><small>Senest tjekket 2026-06-10</small></p>
       </div>
@@ -319,6 +320,13 @@
       <p class="editorial-note"><strong>Satser:</strong> 2026 &middot; <strong>Senest gennemgået:</strong> 2. september 2026 &middot; <a href="/kilder.html">Kilder</a> &middot; <a href="/metode.html">Metode</a> &middot; <a href="/redaktionel-politik.html">Redaktionel politik</a> &middot; Fandt du en fejl? <a href="/kontakt.html">Skriv til os</a>.</p>
     </div>
   </section>
+      <figure class="media-figure">
+        <video data-loop width="960" height="540" muted loop playsinline
+               preload="none" poster="/img/poster-moms-25-procent-dk.jpg">
+          <source src="/video/moms-25-procent-dk.mp4" type="video/mp4">
+        </video>
+        <figcaption>Momsen lægges oven på prisen uden moms, ikke oven på den endelige pris. Derfor er 25 % moms kun 20 % af det, du betaler — og derfor kommer du ikke tilbage til prisen uden moms ved at trække 25 % fra.</figcaption>
+      </figure>
 </main>
 
 <footer class="site-footer" role="contentinfo" aria-label="Sidefod">
@@ -418,7 +426,7 @@
         </ul>
       </div>
     </div>
-    <p class="site-footer__cross">Skal du regne nettoloen ud? Brug vores soestersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a> — specialiseret i løn og skat.</p>
+    <p class="site-footer__cross">Skal du regne nettoloen ud? Brug vores soestersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a>: specialiseret i løn og skat.</p>
     <div class="site-footer__bottom">
       <span>&copy; 2026 hverdagstal.dk &middot; Beregn penge, støtte og udgifter i hverdagen &middot; Satser opdateret 2026-06-10</span>
       <span>Made in Danmark</span>

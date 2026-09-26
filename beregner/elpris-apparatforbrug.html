@@ -148,7 +148,7 @@
       </nav>
       <p class="hero__eyebrow">Hverdagsudgifter · Energi</p>
       <h1 class="hero__title">Elpris og apparatforbrug-beregner 2026</h1>
-      <p class="hero__lead">Tjek den typiske døgnkurve (Nord Pool historik) i DK1 og DK2, laeg afgifter og nettarif oven i, og se praecist hvad det koster at koere vaskemaskinen, varmepumpen eller elbil-opladeren — lige nu eller i den billigste time af doegnet.</p>
+      <p class="hero__lead">Tjek den typiske døgnkurve (Nord Pool historik) i DK1 og DK2, laeg afgifter og nettarif oven i, og se praecist hvad det koster at koere vaskemaskinen, varmepumpen eller elbil-opladeren: lige nu eller i den billigste time af doegnet.</p>
       <p><span class="opdateret-badge">Opdateret 2026-06-10</span> <span class="badge badge--gold">2026-satser</span></p>
       <div class="cluster">
         <a class="btn btn--primary btn--lg" href="#beregner">Beregn dit elforbrug</a>
@@ -192,7 +192,7 @@
           <div class="field">
             <label for="watt">Effekt</label>
             <input id="watt" name="watt" type="number" min="1" step="1" value="2200" inputmode="numeric">
-            <p class="field__hint">Praeudfyldes når du vaelger apparat — skriv W (watt). Kan overskrives.</p>
+            <p class="field__hint">Praeudfyldes når du vaelger apparat: skriv W (watt). Kan overskrives.</p>
           </div>
 
           <div class="field">
@@ -279,18 +279,18 @@
           <p class="muted"><small>Baseret på 2026-gennemsnit fra Nord Pool, Energinet og Skat.dk. Live timepriser hentes hos dit elselskab.</small></p>
         </aside>
       </div>
-      <p>Beregneren bruger gennemsnitlige spotpriser for 2026 (DK1: 38 oere/kWh, DK2: 52 oere/kWh) og laegger elafgift, system- og transmissionstarif samt din netselskabs tidsdifferentierede tarif oven i — alt inkl. 25 % moms.</p>
+      <p>Beregneren bruger gennemsnitlige spotpriser for 2026 (DK1: 38 oere/kWh, DK2: 52 oere/kWh) og laegger elafgift, system- og transmissionstarif samt din netselskabs tidsdifferentierede tarif oven i: alt inkl. 25 % moms.</p>
     </div>
   </section>
 
   <section class="section section--alt" id="doegnkurve">
     <div class="container">
       <h2>Spotpris time for time</h2>
-      <p>Typisk doegnkurve for 2026 — DK1 og DK2, gennemsnitlig vinterdag. Soejlerne viser samlet pris pr kWh inkl. afgifter, tariffer og moms. Den grønne soejle er den billigste time, den roede er dyreste.</p>
+      <p>Typisk doegnkurve for 2026. DK1 og DK2, gennemsnitlig vinterdag. Soejlerne viser samlet pris pr kWh inkl. afgifter, tariffer og moms. Den grønne soejle er den billigste time, den roede er dyreste.</p>
       <div id="doegnkurve-chart" aria-label="Doegnkurve over elprisen pr time" role="img" style="display:grid;grid-template-columns:repeat(24,1fr);gap:2px;align-items:end;height:180px;margin:1.5rem 0;padding:0.5rem;background:#f0fdfa;border-radius:8px;">
         <!-- soejler injiceres af JS -->
       </div>
-      <p class="muted"><small>Kilde: Nord Pool day-ahead historik + Energinet tariffer 2026. Reelle priser varierer dagligt — tjek dit elselskabs app for live timepriser.</small></p>
+      <p class="muted"><small>Kilde: Nord Pool day-ahead historik + Energinet tariffer 2026. Reelle priser varierer dagligt: tjek dit elselskabs app for live timepriser.</small></p>
     </div>
   </section>
 
@@ -299,10 +299,10 @@
       <h2>Saadan virker det</h2>
       <p>Den samlede pris du betaler pr. kWh er en kaede af fem dele:</p>
       <ol>
-        <li><strong>Spotprisen</strong> fra Nord Pool i DKK pr kWh — det er den rene markedspris og varierer time for time. Gennemsnit 2026: ca. 38 oere/kWh i DK1 og 52 oere/kWh i DK2.</li>
-        <li><strong>Netselskabets tarif</strong> — N1, Radius, Cerius, Trefor og Konstant opkraever forskelligt afhaengigt af tid. Lavlast (nat) ca. 14 oere/kWh, hoejlast (dag) ca. 42 oere/kWh, spidslast (vinter kl 17-21) over 110 oere/kWh.</li>
+        <li><strong>Spotprisen</strong> fra Nord Pool i DKK pr kWh. Det er den rene markedspris og varierer time for time. Gennemsnit 2026: ca. 38 oere/kWh i DK1 og 52 oere/kWh i DK2.</li>
+        <li><strong>Netselskabets tarif</strong>. N1, Radius, Cerius, Trefor og Konstant opkraever forskelligt afhaengigt af tid. Lavlast (nat) ca. 14 oere/kWh, hoejlast (dag) ca. 42 oere/kWh, spidslast (vinter kl 17-21) over 110 oere/kWh.</li>
         <li><strong>Systemtarif</strong> 5,1 oere/kWh og <strong>transmissionstarif</strong> 6,9 oere/kWh fra Energinet.</li>
-        <li><strong>Elafgift</strong> 76,1 oere/kWh — eller bare 9,5 oere/kWh hvis du er registreret som elvarme-kunde og forbrugt over 4.000 kWh/år.</li>
+        <li><strong>Elafgift</strong> 76,1 oere/kWh, eller bare 9,5 oere/kWh hvis du er registreret som elvarme-kunde og forbrugt over 4.000 kWh/år.</li>
         <li><strong>Moms 25 %</strong> oven i hele summen.</li>
       </ol>
       <p>Formlen er: <code>total_pris_kWh = (spot + nettarif + system + transmission + elafgift) × 1,25</code>. Apparatets energiforbrug regnes som <code>watt × timer ÷ 1000</code>, og prisen for koerelsen er <code>kWh × total_pris_kWh</code>.</p>
@@ -312,7 +312,7 @@
   <section class="section section--alt">
     <div class="container">
       <h2>DK1 vs DK2</h2>
-      <p>Danmark er delt i to prisomraader af Storebaelt-forbindelsen. <strong>DK1</strong> dækker Jylland og Fyn og har masser af vindkraft og forbindelser til Norge og Tyskland, så prisen er ofte lav. <strong>DK2</strong> dækker Sjaelland, Lolland-Falster og Bornholm og er typisk 30-50 % dyrere — flaskehalsen over Storebaelt lukker af for de billige jyske vindtimer.</p>
+      <p>Danmark er delt i to prisomraader af Storebaelt-forbindelsen. <strong>DK1</strong> dækker Jylland og Fyn og har masser af vindkraft og forbindelser til Norge og Tyskland, så prisen er ofte lav. <strong>DK2</strong> dækker Sjaelland, Lolland-Falster og Bornholm og er typisk 30-50 % dyrere: flaskehalsen over Storebaelt lukker af for de billige jyske vindtimer.</p>
       <p>Eksempel for en typisk vinterdag 2026: DK1 toppes i ca. 55 oere/kWh som spot, mens DK2 rammer 78 oere/kWh i samme time. Med afgifter og tariffer oven i bliver forskellen flere kroner pr. opvask.</p>
     </div>
   </section>
@@ -330,7 +330,7 @@
         <li>Radius nettarif lav / hoej / spids: <strong>13,8 / 41,5 / 124,4 oere/kWh</strong></li>
         <li>Moms: <strong>25 %</strong></li>
       </ul>
-      <p>Spidstariffen gaelder kun vinter (oktober-marts) kl. 17-21. I sommerhalvaaret er hoejlast og spidslast typisk slaaet sammen til en lavere sats. Det betyder, at en time elradiator i januar kl. 18 i Hovedstaden kan koste over 3 kr pr kWh — mens samme time kl. 03 om natten kun koster ca. 1,40 kr.</p>
+      <p>Spidstariffen gaelder kun vinter (oktober-marts) kl. 17-21. I sommerhalvaaret er hoejlast og spidslast typisk slaaet sammen til en lavere sats. Det betyder, at en time elradiator i januar kl. 18 i Hovedstaden kan koste over 3 kr pr kWh, mens samme time kl. 03 om natten kun koster ca. 1,40 kr.</p>
     </div>
   </section>
 
@@ -338,7 +338,7 @@
     <div class="container">
       <h2>Elvarme-rabatten</h2>
       <p>Hvis din bolig opvarmes med varmepumpe, elradiator eller anden elbaseret opvarmning, kan du registreres hos forsyningen som <strong>elvarme-kunde</strong>. Det giver en kaempe rabat: elafgiften falder fra 76,1 oere til 9,5 oere/kWh på alt forbrug over 4.000 kWh om aaret.</p>
-      <p>For en familie med varmepumpe og 8.000 kWh aarsforbrug betyder det en besparelse på ca. (8000 - 4000) × (0,761 - 0,095) × 1,25 = <strong>ca. 3.330 kr/år</strong>. Det kraever blot at boligen er registreret med el som primaer varmekilde — kontakt dit netselskab eller BBR.</p>
+      <p>For en familie med varmepumpe og 8.000 kWh aarsforbrug betyder det en besparelse på ca. (8000 - 4000) × (0,761 - 0,095) × 1,25 = <strong>ca. 3.330 kr/år</strong>. Det kraever blot at boligen er registreret med el som primaer varmekilde: kontakt dit netselskab eller BBR.</p>
     </div>
   </section>
 
@@ -348,7 +348,7 @@
       <ul>
         <li><strong>Fastpris-aftale:</strong> Spotprisen er irrelevant for dig, og besparelsen ved at flytte forbrug til billigste time er 0. Beregneren bruger din indtastede fastpris i stedet.</li>
         <li><strong>Tidsdifferentieret nettarif:</strong> Spidslast vinter kl 17-21 kan tillaegge over 1 kr/kWh ekstra i nettarif alene. Undgaa madlavning og opvask i de timer.</li>
-        <li><strong>Varmepumpe-COP:</strong> En varmepumpe leverer 2,5-4 kWh varme pr. kWh strom — den nominelle effekt skal modificeres med COP-faktoren afhaengig af udetemperatur for et praecist regnestykke.</li>
+        <li><strong>Varmepumpe-COP:</strong> En varmepumpe leverer 2,5-4 kWh varme pr. kWh strom. Den nominelle effekt skal modificeres med COP-faktoren afhaengig af udetemperatur for et praecist regnestykke.</li>
         <li><strong>Negativ spotpris:</strong> I vindfulde timer kan spotprisen være under nul, men din totalpris er stadig positiv pga. afgifter og tariffer.</li>
         <li><strong>Fleksibel afregning:</strong> Kraever timeaflaest maaler. Giver typisk 5-15 oere/kWh rabat, men kun når du faktisk flytter forbrug.</li>
       </ul>
@@ -370,7 +370,7 @@
     <div class="container">
       <div class="live-box" data-live="elpris">
         <h3>Dagens elpris (spotpris)</h3>
-        <p>Den rå elpris — det, elhandlerne køber strømmen til på day-ahead-markedet — svinger time for time og kan være tre gange højere sidst på eftermiddagen end midt om natten. Tallene herunder er dagens gennemsnit og yderpunkter for de to danske prisområder, hentet dagligt fra Energinets åbne data. Læg selv nettarif, elafgift og moms til for at få din pris pr. kWh; med en variabel aftale er det typisk 1,5–2,5 kr. oveni.</p>
+        <p>Den rå elpris (det, elhandlerne køber strømmen til på day-ahead-markedet) svinger time for time og kan være tre gange højere sidst på eftermiddagen end midt om natten. Tallene herunder er dagens gennemsnit og yderpunkter for de to danske prisområder, hentet dagligt fra Energinets åbne data. Læg selv nettarif, elafgift og moms til for at få din pris pr. kWh; med en variabel aftale er det typisk 1,5–2,5 kr. oveni.</p>
         <div data-live-target><p class="live-meta">Henter dagens priser …</p></div>
       </div>
     </div>
@@ -395,7 +395,7 @@
       </details>
       <details>
         <summary>Hvor meget er elafgiften i 2026?</summary>
-        <p>Den almindelige elafgift er 76,1 oere pr kWh i 2026. Hvis du er registreret som elvarme-kunde, falder afgiften til 9,5 oere pr kWh på forbrug over 4000 kWh om aaret — det er en kaempe besparelse for boliger med varmepumpe eller elradiatorer.</p>
+        <p>Den almindelige elafgift er 76,1 oere pr kWh i 2026. Hvis du er registreret som elvarme-kunde, falder afgiften til 9,5 oere pr kWh på forbrug over 4000 kWh om aaret. Det er en kaempe besparelse for boliger med varmepumpe eller elradiatorer.</p>
       </details>
       <details>
         <summary>Er elprisloftet stadig gaeldende i 2026?</summary>
@@ -407,11 +407,11 @@
       </details>
       <details>
         <summary>Hvad koster det at lade en vaskemaskine koere i en time?</summary>
-        <p>En vaskemaskine på 2200W bruger ca 2,2 kWh på en 60-graders vask. Til en samlet pris på ca 2,30 kr/kWh (DK1 dagstime 2026) bliver det ca 5 kr — men kun 3,50 kr hvis du venter til natten.</p>
+        <p>En vaskemaskine på 2200W bruger ca 2,2 kWh på en 60-graders vask. Til en samlet pris på ca 2,30 kr/kWh (DK1 dagstime 2026) bliver det ca 5 kr, men kun 3,50 kr hvis du venter til natten.</p>
       </details>
       <details>
         <summary>Hvad er en tidsdifferentieret nettarif?</summary>
-        <p>Dit netselskab opkraever forskellig tarif i lavlast (nat), hoejlast (dag) og spidslast (kl 17-21 om vinteren). Spidstariffen kan være over 1 kr pr kWh ekstra — derfor er det vigtigt at undgaa forbrug i de timer.</p>
+        <p>Dit netselskab opkraever forskellig tarif i lavlast (nat), hoejlast (dag) og spidslast (kl 17-21 om vinteren). Spidstariffen kan være over 1 kr pr kWh ekstra: derfor er det vigtigt at undgaa forbrug i de timer.</p>
       </details>
     </div>
   </section>
@@ -428,12 +428,12 @@
         <h3>Officielle kilder</h3>
         <p class="muted"><small>Senest tjekket 2026-06-10</small></p>
         <ul>
-          <li><a href="https://energinet.dk/el/elmarkedet/tariffer/" rel="nofollow noopener" target="_blank">Energinet — tariffer og afgifter <span class="ext-icon" aria-hidden="true">↗</span></a></li>
-          <li><a href="https://data.nordpoolgroup.com/auction/day-ahead/prices?deliveryDate=latest&currency=DKK&aggregation=Hourly&deliveryAreas=DK1,DK2" rel="nofollow noopener" target="_blank">Nord Pool — spotpriser DK1/DK2 <span class="ext-icon" aria-hidden="true">↗</span></a></li>
-          <li><a href="https://skat.dk/" rel="nofollow noopener" target="_blank">Skat.dk — elafgift sats <span class="ext-icon" aria-hidden="true">↗</span></a></li>
-          <li><a href="https://ens.dk/" rel="nofollow noopener" target="_blank">Energistyrelsen — elprisstatistik <span class="ext-icon" aria-hidden="true">↗</span></a></li>
-          <li><a href="https://n1.dk/priser-og-vilkaar/aktuelle-tariffer-og-netabonnement" rel="nofollow noopener" target="_blank">N1 — nettarif tidsdifferentiering <span class="ext-icon" aria-hidden="true">↗</span></a></li>
-          <li><a href="https://radiuselnet.dk/" rel="nofollow noopener" target="_blank">Radius Elnet — tariffer <span class="ext-icon" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://energinet.dk/el/elmarkedet/tariffer/" rel="nofollow noopener" target="_blank">Energinet: tariffer og afgifter <span class="ext-icon" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://data.nordpoolgroup.com/auction/day-ahead/prices?deliveryDate=latest&currency=DKK&aggregation=Hourly&deliveryAreas=DK1,DK2" rel="nofollow noopener" target="_blank">Nord Pool: spotpriser DK1/DK2 <span class="ext-icon" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://skat.dk/" rel="nofollow noopener" target="_blank">Skat.dk: elafgift sats <span class="ext-icon" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://ens.dk/" rel="nofollow noopener" target="_blank">Energistyrelsen: elprisstatistik <span class="ext-icon" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://n1.dk/priser-og-vilkaar/aktuelle-tariffer-og-netabonnement" rel="nofollow noopener" target="_blank">N1: nettarif tidsdifferentiering <span class="ext-icon" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://radiuselnet.dk/" rel="nofollow noopener" target="_blank">Radius Elnet: tariffer <span class="ext-icon" aria-hidden="true">↗</span></a></li>
         </ul>
       </div>
     </div>
@@ -542,7 +542,7 @@
         </ul>
       </div>
     </div>
-    <p class="site-footer__cross">Skal du regne nettoloen ud? Brug vores soestersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a> — specialiseret i løn og skat.</p>
+    <p class="site-footer__cross">Skal du regne nettoloen ud? Brug vores soestersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a>: specialiseret i løn og skat.</p>
     <div class="site-footer__bottom">
       <span>&copy; 2026 hverdagstal.dk &middot; Beregn penge, støtte og udgifter i hverdagen &middot; Satser opdateret 2026-06-10</span>
       <span>Made in Danmark</span>
