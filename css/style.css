@@ -2206,6 +2206,6 @@ input,select,textarea{transition:border-color 140ms var(--ease-out),box-shadow 1
    estava no rodapé da caixa, em .78rem e opacity .58. */
 .aff__d{margin:.7rem 0 .85rem;font-size:.95rem;font-weight:500;opacity:1;border-bottom:1px solid rgba(0,0,0,.12);padding-bottom:.6rem;}
 @media (max-width:640px){.aff{padding:.85rem .95rem;}}
-/* afiliado:css:fim */
 /* Mesma medida de leitura que o site usa para texto longo. */
 .section > .container > .aff{max-width:75ch;}
+/* afiliado:css:fim */
