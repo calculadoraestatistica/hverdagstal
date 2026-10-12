@@ -1,11 +1,11 @@
 {
- "updated": "2026-10-11T17:45:32Z",
+ "updated": "2026-10-12T12:20:15Z",
  "table": "PRIS01",
- "period": "2026M08",
- "period_label": "august 2026",
- "index": 102.58,
- "yoy_pct": 2.0,
- "mom_pct": -0.3,
+ "period": "2026M09",
+ "period_label": "september 2026",
+ "index": 102.6,
+ "yoy_pct": 2.2,
+ "mom_pct": 0.0,
  "source": "Danmarks Statistik, PRIS01 (forbrugerprisindeks, 2025=100)",
  "source_url": "https://www.statistikbanken.dk/PRIS01"
 }
