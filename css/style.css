@@ -1447,7 +1447,8 @@ pre code {
   overflow: hidden;
   position: relative;
 }
-.ad-slot::before {
+.ad-slot:empty { display: none; }
+.ad-slot:not(:empty)::before {
   content: "Annonce";
   position: absolute;
   top: 6px; left: 10px;
