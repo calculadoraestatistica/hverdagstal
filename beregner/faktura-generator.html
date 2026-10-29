@@ -145,7 +145,7 @@
             <div class="field field--full">
               <label for="afsenderNavn">Dit firmanavn</label>
               <input id="afsenderNavn" name="afsenderNavn" type="text" value="Mit Firma ApS" autocomplete="organization">
-              <small class="field__hint">Det navn der staar på CVR-registreringen (eller dit personlige navn ved enkeltmandsvirksomhed).</small>
+              <small class="field__hint">Det navn der står på CVR-registreringen (eller dit personlige navn ved enkeltmandsvirksomhed).</small>
             </div>
 
             <div class="field">
@@ -169,7 +169,7 @@
             <div class="field field--full">
               <label for="afsenderKonto">Bankkonto (regnr + kontonr) eller IBAN</label>
               <input id="afsenderKonto" name="afsenderKonto" type="text" value="1234 5678901234">
-              <small class="field__hint">Hvor pengene skal overfoeres. Brug IBAN ved udenlandske kunder. Tilfoej evt. BIC/SWIFT.</small>
+              <small class="field__hint">Hvor pengene skal overføres. Brug IBAN ved udenlandske kunder. Tilføj evt. BIC/SWIFT.</small>
             </div>
 
             <div class="field field--full">
@@ -181,7 +181,7 @@
             <div class="field">
               <label for="modtagerCVR">Modtagers CVR (valgfri)</label>
               <input id="modtagerCVR" name="modtagerCVR" type="text" value="87654321" inputmode="numeric">
-              <small class="field__hint">Skal angives ved B2B, helst ogsaa EAN-nr ved salg til det offentlige.</small>
+              <small class="field__hint">Skal angives ved B2B, helst også EAN-nr ved salg til det offentlige.</small>
             </div>
 
             <div class="field">
@@ -193,7 +193,7 @@
             <div class="field">
               <label for="fakturaNr">Fakturanummer</label>
               <input id="fakturaNr" name="fakturaNr" type="text" value="2026-001">
-              <small class="field__hint">Skal være fortloebende uden huller. Mange bruger format AAAA-NNN eller blot et 1-baseret tal.</small>
+              <small class="field__hint">Skal være fortløbende uden huller. Mange bruger format ÅÅÅÅ-NNN eller blot et 1-baseret tal.</small>
             </div>
 
             <div class="field">
@@ -205,7 +205,7 @@
             <div class="field">
               <label for="leveringsDato">Leveringsdato</label>
               <input id="leveringsDato" name="leveringsDato" type="date" value="2026-06-10">
-              <small class="field__hint">Når ydelsen blev leveret. Kan være periode (fx 1.-31. maj) ved loebende ydelser.</small>
+              <small class="field__hint">Når ydelsen blev leveret. Kan være periode (fx 1.-31. maj) ved løbende ydelser.</small>
             </div>
 
             <div class="field">
@@ -223,7 +223,7 @@
 
             <div class="field field--full">
               <label for="kommentar">Kommentar / reference</label>
-              <textarea id="kommentar" name="kommentar" rows="3">Tak for samarbejdet. Ved sporgsmaal kontakt undertegnede.</textarea>
+              <textarea id="kommentar" name="kommentar" rows="3">Tak for samarbejdet. Ved spørgsmål kontakt undertegnede.</textarea>
               <small class="field__hint">PO-nummer, projektreference, kontaktperson hos kunden, eller bare en venlig hilsen.</small>
             </div>
 
@@ -248,14 +248,14 @@
           <p class="muted"><small>Print-klar faktura vises nedenfor når du har genereret den. Ingen data forlader din browser.</small></p>
         </aside>
       </div>
-      <p>Generatoren opfylder bogfoeringslovens og momslovens krav til en almindelig dansk faktura. Standardvaerdier er forhaandsudfyldt som eksempel: overskriv med dine egne tal.</p>
+      <p>Generatoren opfylder bogføringslovens og momslovens krav til en almindelig dansk faktura. Standardværdier er forhåndsudfyldt som eksempel: overskriv med dine egne tal.</p>
     </div>
   </section>
 
   <section class="section section--alt">
     <div class="container">
       <h2>Din faktura (print-klar)</h2>
-      <p class="muted">Tryk <strong>Print / gem som PDF</strong> ovenfor: vaelg "Gem som PDF" i browserens print-dialog for at faa en fil du kan sende til kunden.</p>
+      <p class="muted">Tryk <strong>Print / gem som PDF</strong> ovenfor: vælg "Gem som PDF" i browserens print-dialog for at få en fil du kan sende til kunden.</p>
       <div id="fakturaPreview" class="source-card" aria-live="polite">
         <p class="muted">Klik <em>Generer faktura</em> for at se din faktura her.</p>
       </div>
@@ -266,31 +266,31 @@
     <div class="container">
       <div class="source-card" style="border-left:4px solid #f0b400;background:#fffbea;">
         <h2>Hvorfor bruge denne generator?</h2>
-        <p>Du behøver ikke et dyrt fakturasystem til en enkelt faktura. Med korrekte felter (CVR, faktura-nr, fakturadato, leveringsdato, momsspecifikation) opfylder denne generator bogfoeringslovens krav til en almindelig dansk faktura.</p>
+        <p>Du behøver ikke et dyrt fakturasystem til en enkelt faktura. Med korrekte felter (CVR, faktura-nr, fakturadato, leveringsdato, momsspecifikation) opfylder denne generator bogføringslovens krav til en almindelig dansk faktura.</p>
       </div>
     </div>
   </section>
 
   <section class="section section--alt">
     <div class="container">
-      <h2 id="krav">Saadan virker det</h2>
+      <h2 id="krav">Sådan virker det</h2>
       <div class="stack">
-        <p><strong>1) Udfyld felterne.</strong> Alle standardvaerdier er bare et eksempel: overskriv med dine egne oplysninger.</p>
-        <p><strong>2) Tilfoej dine linjeposter.</strong> Hver post er en linje i fakturaen: beskrivelse, antal (timer eller stk), enhedspris (uden moms) og momssats (0,25 for 25%, 0,07 for 7%, 0 for momsfri/EU-eksport).</p>
+        <p><strong>1) Udfyld felterne.</strong> Alle standardværdier er bare et eksempel: overskriv med dine egne oplysninger.</p>
+        <p><strong>2) Tilføj dine linjeposter.</strong> Hver post er en linje i fakturaen: beskrivelse, antal (timer eller stk), enhedspris (uden moms) og momssats (0,25 for 25%, 0,07 for 7%, 0 for momsfri/EU-eksport).</p>
         <p><strong>3) Klik "Generer faktura".</strong> Beregneren laver subtotal, moms pr. sats og total, og udstiller fakturaen som en print-klar HTML-side.</p>
         <p><strong>4) Print til PDF.</strong> Browserens print-dialog (Ctrl+P / Cmd+P) har en "Gem som PDF"-mulighed. Send PDF'en pr. e-mail til kunden eller arkivér den.</p>
-        <p><strong>5) Arkivér.</strong> Bogfoeringsloven kraever at du opbevarer fakturaer i 5 år fra udgangen af regnskabsaaret. Gem PDF'en et sikkert sted (sky eller backup).</p>
+        <p><strong>5) Arkivér.</strong> Bogføringsloven kræver at du opbevarer fakturaer i 5 år fra udgangen af regnskabsåret. Gem PDF'en et sikkert sted (sky eller backup).</p>
 
         <h3>Lovpligtige felter på en dansk faktura (2026)</h3>
         <ul>
           <li>Udstedelsesdato (fakturadato)</li>
-          <li>Fortloebende fakturanummer</li>
-          <li>Saelgers navn, adresse og CVR-nr</li>
-          <li>Koebers navn og adresse (CVR-nr ved B2B)</li>
-          <li>Maengde og art af leverede ydelser/varer</li>
+          <li>Fortløbende fakturanummer</li>
+          <li>Sælgers navn, adresse og CVR-nr</li>
+          <li>Købers navn og adresse (CVR-nr ved B2B)</li>
+          <li>Mængde og art af leverede ydelser/varer</li>
           <li>Leveringsdato (hvis forskellig fra fakturadato)</li>
           <li>Momsgrundlag pr. sats</li>
-          <li>Momssats og momsbeloeb</li>
+          <li>Momssats og momsbeløb</li>
           <li>Total til betaling</li>
         </ul>
 
@@ -298,14 +298,14 @@
         <ul>
           <li><strong>25 %</strong>: standardsats på de fleste ydelser og varer.</li>
           <li><strong>7 %</strong>: reduceret sats på hotel- og campingovernatninger fra 2026.</li>
-          <li><strong>0 %</strong>: boeger, aviser, EU-B2B-eksport (med "Reverse charge"-tekst).</li>
+          <li><strong>0 %</strong>: bøger, aviser, EU-B2B-eksport (med "Reverse charge"-tekst).</li>
         </ul>
 
         <h3>Beløb hvis kunden ikke betaler</h3>
         <ul>
           <li>Rykkergebyr: maks. <strong>100 kr</strong> pr. rykker (op til 3 rykkere).</li>
-          <li>Forsinkelsesrente 2026: ca. <strong>12,35 % p.a.</strong> (Nationalbankens udlaansrente + 8 procentpoint).</li>
-          <li>Kompensationsbeloeb ved B2B: <strong>310 kr</strong>.</li>
+          <li>Forsinkelsesrente 2026: ca. <strong>12,35 % p.a.</strong> (Nationalbankens udlånsrente + 8 procentpoint).</li>
+          <li>Kompensationsbeløb ved B2B: <strong>310 kr</strong>.</li>
         </ul>
       </div>
     </div>
@@ -321,27 +321,27 @@
         </div>
         <div class="source-card">
           <h3>EU-B2B-salg (Reverse charge)</h3>
-          <p>Ved EU-B2B-salg skal fakturaen indeholde teksten <strong>"Reverse charge"</strong> eller <strong>"Omvendt betalingspligt"</strong> samt koebers VAT-nummer, og momsen er 0 %.</p>
+          <p>Ved EU-B2B-salg skal fakturaen indeholde teksten <strong>"Reverse charge"</strong> eller <strong>"Omvendt betalingspligt"</strong> samt købers VAT-nummer, og momsen er 0 %.</p>
         </div>
         <div class="source-card">
           <h3>Kontantsalg under 1.000 kr</h3>
-          <p>Ved kontantsalg under 1.000 kr kraeves ikke fuld faktura: en forenklet kvittering er nok (men ikke ved B2B).</p>
+          <p>Ved kontantsalg under 1.000 kr kræves ikke fuld faktura: en forenklet kvittering er nok (men ikke ved B2B).</p>
         </div>
         <div class="source-card">
           <h3>Ikke-momsregistreret (under 50.000 kr/år)</h3>
-          <p>Hvis du er ikke-momsregistreret MAA fakturaen IKKE indeholde momsbeloeb eller teksten "inkl. moms", kun beloebet uden moms.</p>
+          <p>Hvis du er ikke-momsregistreret MÅ fakturaen IKKE indeholde momsbeløb eller teksten "inkl. moms", kun beløbet uden moms.</p>
         </div>
         <div class="source-card">
           <h3>Kreditnota</h3>
-          <p>Kreditnotaer skal have eget fortloebende nummer og referere til den oprindelige faktura-nr.</p>
+          <p>Kreditnotaer skal have eget fortløbende nummer og referere til den oprindelige faktura-nr.</p>
         </div>
         <div class="source-card">
           <h3>Opbevaring</h3>
-          <p>Fakturaer skal opbevares i <strong>5 år</strong> fra udgangen af regnskabsaaret (bogfoeringslovens § 12).</p>
+          <p>Fakturaer skal opbevares i <strong>5 år</strong> fra udgangen af regnskabsåret (bogføringslovens § 12).</p>
         </div>
         <div class="source-card">
           <h3>Forsinket betaling</h3>
-          <p>Ved betaling efter forfald har du ret til forsinkelsesrente (Nationalbankens udlaansrente + 8 procentpoint, ca. <strong>12,35 % p.a.</strong> i 2026) og <strong>310 kr</strong> i kompensation ved B2B-handler.</p>
+          <p>Ved betaling efter forfald har du ret til forsinkelsesrente (Nationalbankens udlånsrente + 8 procentpoint, ca. <strong>12,35 % p.a.</strong> i 2026) og <strong>310 kr</strong> i kompensation ved B2B-handler.</p>
         </div>
         <div class="source-card">
           <h3>Privatpersoner over 6.000 kr</h3>
@@ -372,31 +372,31 @@
       <h2>Ofte stillede spørgsmål</h2>
       <details>
         <summary>Hvilke oplysninger SKAL en dansk faktura indeholde i 2026?</summary>
-        <p>Bogfoeringsloven og momsloven kraever: fakturadato, fortloebende fakturanummer, saelgers navn/adresse/CVR, koebers navn/adresse (og CVR ved B2B), beskrivelse af ydelse, leveringsdato, momsgrundlag pr. sats, momssats og momsbeloeb, samt totalbeloeb. Mangler et af felterne kan kunden afvise momsfradrag.</p>
+        <p>Bogføringsloven og momsloven kræver: fakturadato, fortløbende fakturanummer, sælgers navn/adresse/CVR, købers navn/adresse (og CVR ved B2B), beskrivelse af ydelse, leveringsdato, momsgrundlag pr. sats, momssats og momsbeløb, samt totalbeløb. Mangler et af felterne kan kunden afvise momsfradrag.</p>
       </details>
       <details>
         <summary>Kan jeg lave en faktura uden et fakturaprogram?</summary>
-        <p>Ja: en faktura kan være et Word-dokument, et PDF-dokument eller en formateret HTML-side, så laenge alle lovpligtige felter er med og nummerering er fortloebende uden huller. For under 5-10 fakturaer om aaret er det fuldt forsvarligt; ved hoejere volumen anbefales et bogfoeringsprogram der ogsaa haandterer kreditnotaer og elektronisk arkivering.</p>
+        <p>Ja: en faktura kan være et Word-dokument, et PDF-dokument eller en formateret HTML-side, så længe alle lovpligtige felter er med og nummerering er fortløbende uden huller. For under 5-10 fakturaer om året er det fuldt forsvarligt; ved højere volumen anbefales et bogføringsprogram der også håndterer kreditnotaer og elektronisk arkivering.</p>
       </details>
       <details>
         <summary>Hvad er en kort betalingsfrist — 8, 14 eller 30 dage?</summary>
-        <p>Privatmarkedet bruger typisk 8-14 dage netto. B2B 14-30 dage. Det offentlige har lovpligtigt 30 dage. Kortere end 8 dage anses som usaedvanligt og kan udfordres. Du må gerne kraeve forudbetaling, men det skal aftales på forhaand.</p>
+        <p>Privatmarkedet bruger typisk 8-14 dage netto. B2B 14-30 dage. Det offentlige har lovpligtigt 30 dage. Kortere end 8 dage anses som usædvanligt og kan udfordres. Du må gerne kræve forudbetaling, men det skal aftales på forhånd.</p>
       </details>
       <details>
-        <summary>Skal jeg laegge moms på min faktura?</summary>
-        <p>Ja, hvis du er momsregistreret (omsaetning over 50.000 kr/år): 25% på de fleste ydelser, 0% på boeger og EU-B2B-eksport, 7% på hotel/camping fra 2026. Hvis du IKKE er momsregistreret, må fakturaen IKKE indeholde momsbeloeb, kun det rene beløb uden moms eller momstekst.</p>
+        <summary>Skal jeg lægge moms på min faktura?</summary>
+        <p>Ja, hvis du er momsregistreret (omsætning over 50.000 kr/år): 25% på de fleste ydelser, 0% på bøger og EU-B2B-eksport, 7% på hotel/camping fra 2026. Hvis du IKKE er momsregistreret, må fakturaen IKKE indeholde momsbeløb, kun det rene beløb uden moms eller momstekst.</p>
       </details>
       <details>
-        <summary>Hvor laenge skal jeg gemme mine fakturaer?</summary>
-        <p>5 år fra udgangen af det regnskabsaar fakturaen vedroerer. Det gaelder baade fakturaer du har sendt og koebsbilag du har modtaget. Fra 2024 skal opbevaringen ske digitalt for de fleste virksomheder (digital bogfoeringslov).</p>
+        <summary>Hvor længe skal jeg gemme mine fakturaer?</summary>
+        <p>5 år fra udgangen af det regnskabsår fakturaen vedrører. Det gælder både fakturaer du har sendt og købsbilag du har modtaget. Fra 2024 skal opbevaringen ske digitalt for de fleste virksomheder (digital bogføringslov).</p>
       </details>
       <details>
         <summary>Kan jeg sende fakturaen som almindelig PDF til en offentlig kunde?</summary>
-        <p>Nej. Det offentlige (stat, regioner, kommuner, mange selvejende institutioner) modtager kun fakturaer i OIOUBL/PEPPOL-formatet via NemHandel. Du skal enten bruge et bogfoeringsprogram med NemHandel-integration eller den gratis "Erhvervssystem"-loesning fra Erhvervsstyrelsen.</p>
+        <p>Nej. Det offentlige (stat, regioner, kommuner, mange selvejende institutioner) modtager kun fakturaer i OIOUBL/PEPPOL-formatet via NemHandel. Du skal enten bruge et bogføringsprogram med NemHandel-integration eller den gratis "Erhvervssystem"-løsning fra Erhvervsstyrelsen.</p>
       </details>
       <details>
         <summary>Hvad gør jeg hvis kunden ikke betaler til tiden?</summary>
-        <p>1) Send første rykker (gerne efter 8 dage). Du må kraeve 100 kr i rykkergebyr (op til 3 rykkere). 2) Forsinkelsesrente kan tillaegges fra forfaldsdatoen (ca. 12,35% p.a. i 2026). 3) Ved B2B har du desuden ret til 310 kr i kompensationsbeloeb. 4) Hvis betaling fortsat udebliver, kan du sende sagen til inkasso eller fogedretten.</p>
+        <p>1) Send første rykker (gerne efter 8 dage). Du må kræve 100 kr i rykkergebyr (op til 3 rykkere). 2) Forsinkelsesrente kan tillægges fra forfaldsdatoen (ca. 12,35% p.a. i 2026). 3) Ved B2B har du desuden ret til 310 kr i kompensationsbeløb. 4) Hvis betaling fortsat udebliver, kan du sende sagen til inkasso eller fogedretten.</p>
       </details>
     </div>
   </section>
@@ -406,7 +406,7 @@
       <div class="source-card">
         <h2>Officielle kilder</h2>
         <ul>
-          <li><a href="https://www.retsinformation.dk/eli/lta/2022/700" rel="nofollow noopener" target="_blank">Bogfoeringsloven: krav til fakturaer <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
+          <li><a href="https://www.retsinformation.dk/eli/lta/2022/700" rel="nofollow noopener" target="_blank">Bogføringsloven: krav til fakturaer <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
           <li><a href="https://skat.dk/" rel="nofollow noopener" target="_blank">Skattestyrelsen. Krav til en faktura <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
           <li><a href="https://erhvervsstyrelsen.dk/" rel="nofollow noopener" target="_blank">Erhvervsstyrelsen. Digital faktura (OIOUBL) <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
           <li><a href="https://www.retsinformation.dk/eli/lta/2014/459" rel="nofollow noopener" target="_blank">Renteloven: forsinkelsesrente <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
@@ -414,7 +414,7 @@
         </ul>
         <p class="muted"><small>Senest tjekket 2026-06-10.</small></p>
       </div>
-      <p class="muted" style="margin-top:1rem;"><small>Bruger du andre selvstændig-vaerktoejer? Se ogsaa <a href="/beregner/moms-beregner.html">momsberegneren</a>, <a href="/beregner/timepris-freelancer.html">timeprisberegneren</a> og <a href="/beregner/b-skat-beregner.html">B-skat-beregneren</a>.</small></p>
+      <p class="muted" style="margin-top:1rem;"><small>Bruger du andre selvstændig-værktøjer? Se også <a href="/beregner/moms-beregner.html">momsberegneren</a>, <a href="/beregner/timepris-freelancer.html">timeprisberegneren</a> og <a href="/beregner/b-skat-beregner.html">B-skat-beregneren</a>.</small></p>
     </div>
   </section>
   <section class="section section--editorial" aria-label="Redaktionel note">
@@ -431,8 +431,8 @@
         <h2>Studerende</h2>
         <ul>
           <li><a href="/beregner/su.html">SU-beregner</a></li>
-          <li><a href="/beregner/su-fribelob.html">SU fribeloeb</a></li>
-          <li><a href="/beregner/su-laan-tilbagebetaling.html">SU-laan tilbagebetaling</a></li>
+          <li><a href="/beregner/su-fribelob.html">SU fribeløb</a></li>
+          <li><a href="/beregner/su-laan-tilbagebetaling.html">SU-lån tilbagebetaling</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
@@ -450,7 +450,7 @@
         <ul>
           <li><a href="/beregner/huslejebudget.html">Huslejebudget</a></li>
           <li><a href="/beregner/kvm-beregner.html">Kvadratmeter</a></li>
-          <li><a href="/beregner/boligstoette.html">Boligstoette</a></li>
+          <li><a href="/beregner/boligstoette.html">Boligstøtte</a></li>
           <li><a href="/beregner/depositum.html">Depositum</a></li>
           <li><a href="/beregner/flyttebudget.html">Flyttebudget</a></li>
           <li><a href="/beregner/el-vand-varme-budget.html">El, vand og varme</a></li>
@@ -486,16 +486,16 @@
           <li><a href="/beregner/elpris-apparatforbrug.html">Elpris time for time</a></li>
           <li><a href="/beregner/pension.html">Pension</a></li>
           <li><a href="/beregner/aktieskat.html">Aktieskat</a></li>
-          <li><a href="/beregner/efterloen.html">Efterloen</a></li>
+          <li><a href="/beregner/efterloen.html">Efterløn</a></li>
           <li><a href="/beregner/feriepenge.html">Feriepenge</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
-        <h2>Vaerktoejer</h2>
+        <h2>Værktøjer</h2>
         <ul>
           <li><a href="/sporg-ai.html">Spørg AI</a></li>
           <li><a href="/beregnere.html">Alle beregnere</a></li>
-          <li><a href="https://lonberegning.dk/" rel="noopener">Loenberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
+          <li><a href="https://lonberegning.dk/" rel="noopener">Lønberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
         </ul>
       </div>
       <div class="site-footer__col">
@@ -517,11 +517,11 @@
           <li><a href="/kilder.html">Officielle kilder</a></li>
           <li><a href="/kontakt.html">Kontakt</a></li>
           <li><a href="/privatlivspolitik.html">Privatlivspolitik</a></li>
-          <li><a href="/vilkar.html">Vilkaar</a></li>
+          <li><a href="/vilkar.html">Vilkår</a></li>
         </ul>
       </div>
     </div>
-    <p class="site-footer__cross">Skal du regne nettoloen ud? Brug vores soestersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a>: specialiseret i løn og skat.</p>
+    <p class="site-footer__cross">Skal du regne nettoløn ud? Brug vores søstersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a>: specialiseret i løn og skat.</p>
     <div class="site-footer__bottom">
       <span>&copy; 2026 hverdagstal.dk &middot; Beregn penge, støtte og udgifter i hverdagen &middot; Satser opdateret 2026-06-10</span>
       <span>Made in Danmark</span>

@@ -190,7 +190,7 @@
       </nav>
       <p class="hero__eyebrow">Beregner</p>
       <h1 class="hero__title">Sygedagpengeberegner 2026</h1>
-      <p class="hero__lead">Beregn hvor meget du kan faa i sygedagpenge ved sygemelding - inklusive maks-sats (5.085 kr/uge), forskellen på arbejdsgiver og kommune samt 22-ugers reglen. Satser hentet fra Beskaeftigelsesministeriet og borger.dk.</p>
+      <p class="hero__lead">Beregn hvor meget du kan få i sygedagpenge ved sygemelding - inklusive maks-sats (5.085 kr/uge), forskellen på arbejdsgiver og kommune samt 22-ugers reglen. Satser hentet fra Beskæftigelsesministeriet og borger.dk.</p>
       <span class="opdateret-badge">Opdateret 2026-06-10</span>
       <div class="cluster" style="margin-top:1rem;">
         <a class="btn btn--primary btn--lg" href="#beregner">Beregn dine sygedagpenge</a>
@@ -202,43 +202,43 @@
   <section class="section" id="beregner">
     <div class="container">
       <h2>Beregn dine sygedagpenge 2026</h2>
-      <p>Indtast din hidtidige løn, din ansaettelsesform og din ugentlige arbejdstid.</p>
+      <p>Indtast din hidtidige løn, din ansættelsesform og din ugentlige arbejdstid.</p>
 
       <div class="site-grid">
         <form class="calculator-form" id="syg-form" novalidate>
           <div class="field">
             <label for="hidtidigIndkomst">Hidtidig løn pr. måned (brutto)</label>
             <input id="hidtidigIndkomst" name="hidtidigIndkomst" type="number" inputmode="numeric" min="0" step="100" value="35000">
-            <p class="field__hint">Loenmodtagere: gennemsnit af de seneste 3 måneder. Selvstændige: gennemsnit af overskud de seneste 2 år.</p>
+            <p class="field__hint">Lønmodtagere: gennemsnit af de seneste 3 måneder. Selvstændige: gennemsnit af overskud de seneste 2 år.</p>
           </div>
 
           <div class="field">
             <label for="timerPrUge">Ugentlig arbejdstid før sygemelding</label>
             <input id="timerPrUge" name="timerPrUge" type="number" inputmode="numeric" min="1" max="60" step="1" value="37">
-            <p class="field__hint">Standard fuldtid er 37 timer. Maks-satsen forudsaetter 37 timer/uge.</p>
+            <p class="field__hint">Standard fuldtid er 37 timer. Maks-satsen forudsætter 37 timer/uge.</p>
           </div>
 
           <div class="field">
-            <label for="ansaettelsesform">Ansaettelsesform</label>
+            <label for="ansaettelsesform">Ansættelsesform</label>
             <select id="ansaettelsesform" name="ansaettelsesform">
               <option value="Loenmodtager" selected>Lønmodtager</option>
               <option value="Selvstaendig">Selvstændig</option>
               <option value="Ledig">Ledig (på dagpenge)</option>
               <option value="Nyuddannet">Nyuddannet uden job</option>
             </select>
-            <p class="field__hint">Bestemmer hvem der betaler (arbejdsgiver, kommune, a-kasse) og fra hvornaar.</p>
+            <p class="field__hint">Bestemmer hvem der betaler (arbejdsgiver, kommune, a-kasse) og fra hvornår.</p>
           </div>
 
           <div class="field">
-            <label for="ansatHosArbejdsgiver">Antal uger ansat hos nuvaerende arbejdsgiver</label>
+            <label for="ansatHosArbejdsgiver">Antal uger ansat hos nuværende arbejdsgiver</label>
             <input id="ansatHosArbejdsgiver" name="ansatHosArbejdsgiver" type="number" inputmode="numeric" min="0" step="1" value="26">
-            <p class="field__hint">Mindst 8 ugers sammenhaengende ansaettelse + 74 timers arbejde kraeves, før arbejdsgiver betaler de første 30 dage.</p>
+            <p class="field__hint">Mindst 8 ugers sammenhængende ansættelse + 74 timers arbejde kræves, før arbejdsgiver betaler de første 30 dage.</p>
           </div>
 
           <div class="field">
-            <label for="sygefravarUger">Forventet sygdomslaengde</label>
+            <label for="sygefravarUger">Forventet sygdomslængde</label>
             <input id="sygefravarUger" name="sygefravarUger" type="number" inputmode="numeric" min="0" step="1" value="12">
-            <p class="field__hint">Sygedagpenge ophoerer normalt efter 22 uger inden for 9 måneder, men kan forlaenges på 7 grunde.</p>
+            <p class="field__hint">Sygedagpenge ophører normalt efter 22 uger inden for 9 måneder, men kan forlænges på 7 grunde.</p>
           </div>
 
           <div class="field">
@@ -257,12 +257,12 @@
             <div><dt>Sygedagpenge pr. time</dt><dd id="r-time">-</dd></div>
             <div><dt>Sygedagpenge pr. uge</dt><dd id="r-uge">-</dd></div>
             <div><dt>Sygedagpenge pr. måned (brutto)</dt><dd id="r-maaned">-</dd></div>
-            <div><dt>Skoennet netto pr. måned</dt><dd id="r-netto">-</dd></div>
+            <div><dt>Skønnet netto pr. måned</dt><dd id="r-netto">-</dd></div>
             <div><dt>Hvem betaler?</dt><dd id="r-betaler">-</dd></div>
             <div><dt>Maksimal varighed</dt><dd id="r-varighed">-</dd></div>
           </dl>
           <p class="calculator-result__total"><span>Estimeret samlet udbetaling i sygeperioden</span><strong id="r-total">-</strong></p>
-          <p class="muted" style="margin-top:.5rem;font-size:.9rem;">Estimater baseret på Beskaeftigelsesministeriets satser for 2026. Netto er en grov skoennet værdi (AM-bidrag 8% og traekprocent ca. 37%) - den faktiske skat afhaenger af dit personfradrag og din traekprocent.</p>
+          <p class="muted" style="margin-top:.5rem;font-size:.9rem;">Estimater baseret på Beskæftigelsesministeriets satser for 2026. Netto er en grov skønnet værdi (AM-bidrag 8% og trækprocent ca. 37%) - den faktiske skat afhænger af dit personfradrag og din trækprocent.</p>
         </aside>
       </div>
       <p>Beregneren viser dig satsen pr. time, pr. uge og pr. måned - og hvem der betaler (arbejdsgiver, kommune eller a-kasse).</p>
@@ -271,15 +271,15 @@
 
   <section class="section section--alt">
     <div class="container">
-      <h2>Saadan virker det</h2>
-      <p>Sygedagpenge er en offentlig ydelse, som du kan faa, hvis du ikke kan arbejde på grund af sygdom. Satsen beregnes ud fra din hidtidige timeloen, men den er aldrig hoejere end maks-loftet på <strong>137,43 kr/time</strong> eller <strong>5.085 kr/uge</strong>. Ved fuldtid (37 timer) svarer det til omkring <strong>22.034 kr/md brutto</strong> i 2026.</p>
+      <h2>Sådan virker det</h2>
+      <p>Sygedagpenge er en offentlig ydelse, som du kan få, hvis du ikke kan arbejde på grund af sygdom. Satsen beregnes ud fra din hidtidige timeløn, men den er aldrig højere end maks-loftet på <strong>137,43 kr/time</strong> eller <strong>5.085 kr/uge</strong>. Ved fuldtid (37 timer) svarer det til omkring <strong>22.034 kr/md brutto</strong> i 2026.</p>
       <p>Beregningen sker i tre trin:</p>
       <ol class="stack">
-        <li><strong>Timeloen</strong> = din hidtidige maanedsloen delt med (timer pr. uge × 4,333). Det giver dig en gennemsnitlig timeloen ud fra dit normale maanedsbidrag.</li>
-        <li><strong>Sygedagpenge pr. time</strong> = den mindste værdi af din egen timeloen og maks-satsen på 137,43 kr. Hvis du tjente mindre end maks-loftet, faar du kun din faktiske timeloen.</li>
-        <li><strong>Sygedagpenge pr. uge</strong> = timesatsen ganget med din ugentlige arbejdstid - dog hoejst 5.085 kr/uge.</li>
+        <li><strong>Timeløn</strong> = din hidtidige månedsløn delt med (timer pr. uge × 4,333). Det giver dig en gennemsnitlig timeløn ud fra dit normale månedsbidrag.</li>
+        <li><strong>Sygedagpenge pr. time</strong> = den mindste værdi af din egen timeløn og maks-satsen på 137,43 kr. Hvis du tjente mindre end maks-loftet, får du kun din faktiske timeløn.</li>
+        <li><strong>Sygedagpenge pr. uge</strong> = timesatsen ganget med din ugentlige arbejdstid - dog højst 5.085 kr/uge.</li>
       </ol>
-      <p>Bagefter omregnes ugesatsen til en maaneds- og netto-sats. AM-bidrag (8 %) traekkes først, og derefter A-skat med din traekprocent (ca. 37 % i gennemsnit) - personfradraget reducerer den faktiske skat.</p>
+      <p>Bagefter omregnes ugesatsen til en måneds- og netto-sats. AM-bidrag (8 %) trækkes først, og derefter A-skat med din trækprocent (ca. 37 % i gennemsnit) - personfradraget reducerer den faktiske skat.</p>
 
       <h3>Satser for sygedagpenge 2026</h3>
       <table class="stack" style="width:100%;border-collapse:collapse;">
@@ -303,35 +303,35 @@
   <section class="section">
     <div class="container">
       <h2>Hvem betaler - arbejdsgiver eller kommune?</h2>
-      <p>Det afhaenger af din ansaettelsesform og din anciennitet:</p>
+      <p>Det afhænger af din ansættelsesform og din anciennitet:</p>
       <ul class="stack">
-        <li><strong>Lønmodtager med mindst 8 ugers ansaettelse + 74 timers arbejde:</strong> Arbejdsgiver betaler de første 30 kalenderdage. Derefter overtager kommunen.</li>
+        <li><strong>Lønmodtager med mindst 8 ugers ansættelse + 74 timers arbejde:</strong> Arbejdsgiver betaler de første 30 kalenderdage. Derefter overtager kommunen.</li>
         <li><strong>Lønmodtager uden anciennitet:</strong> Kommunen betaler fra dag 1 - arbejdsgiver er IKKE forpligtet.</li>
         <li><strong>Selvstændig uden forsikring:</strong> Karens i 14 dage. Kommunen betaler fra dag 15.</li>
         <li><strong>Selvstændig med frivillig sygedagpengeforsikring (Udbetaling Danmark):</strong> Udbetaling fra dag 3.</li>
         <li><strong>Ledig på dagpenge:</strong> A-kassen betaler de første 14 dage med samme sats som dagpenge. Derefter overtager kommunen sygedagpenge.</li>
-        <li><strong>Nyuddannet uden job:</strong> Kommunen er normalt udbetalende myndighed, hvis du er medlem af a-kassen eller opfylder beskaeftigelseskravet.</li>
+        <li><strong>Nyuddannet uden job:</strong> Kommunen er normalt udbetalende myndighed, hvis du er medlem af a-kassen eller opfylder beskæftigelseskravet.</li>
       </ul>
 
-      <h2>22-ugers reglen og forlaengelse</h2>
-      <p>Som hovedregel kan du faa sygedagpenge i <strong>22 uger inden for 9 måneder</strong>. Når de 22 uger er brugt, skal kommunen revurdere sagen. Udbetaling kan kun forlaenges på 7 specifikke grunde:</p>
+      <h2>22-ugers reglen og forlængelse</h2>
+      <p>Som hovedregel kan du få sygedagpenge i <strong>22 uger inden for 9 måneder</strong>. Når de 22 uger er brugt, skal kommunen revurdere sagen. Udbetaling kan kun forlænges på 7 specifikke grunde:</p>
       <ol>
         <li>Forventet raskmelding inden for 14 uger.</li>
-        <li>Igangvaerende eller planlagt afklarende behandling.</li>
-        <li>Behov for jobafklaringsforloeb hos kommunen.</li>
-        <li>Igangvaerende laegelig eller arbejdsmaessig afklaring.</li>
+        <li>Igangværende eller planlagt afklarende behandling.</li>
+        <li>Behov for jobafklaringsforløb hos kommunen.</li>
+        <li>Igangværende lægelig eller arbejdsmæssig afklaring.</li>
         <li>Alvorlig (livstruende) sygdom.</li>
         <li>Verserende sag om arbejdsskade.</li>
-        <li>Verserende sag om foertidspension.</li>
+        <li>Verserende sag om førtidspension.</li>
       </ol>
-      <p>Hvis ingen af grundene gaelder, overgaar du normalt til <strong>jobafklaringsforloeb med ressourceforloebsydelse</strong>, som er på kontanthjaelpsniveau.</p>
+      <p>Hvis ingen af grundene gælder, overgår du normalt til <strong>jobafklaringsforløb med ressourceforløbsydelse</strong>, som er på kontanthjælpsniveau.</p>
 
       <h2>Selvstændige og karens</h2>
-      <p>Som selvstændig er du daekket af sygedagpenge fra <strong>kommunen efter 2 ugers karens</strong>. Karensperioden kan reduceres til 2 dage, hvis du har tegnet <strong>frivillig sygedagpengeforsikring</strong> via Udbetaling Danmark - typisk en god investering, hvis du ikke har en buffer til at klare 14 sygedage uden indkomst.</p>
-      <p>Sygedagpengene beregnes ud fra dit gennemsnitlige overskud de seneste 2 år (eller 1 år, hvis du har vaeret selvstændig i mindre tid). Loftet på 5.085 kr/uge gaelder ogsaa for selvstændige.</p>
+      <p>Som selvstændig er du dækket af sygedagpenge fra <strong>kommunen efter 2 ugers karens</strong>. Karensperioden kan reduceres til 2 dage, hvis du har tegnet <strong>frivillig sygedagpengeforsikring</strong> via Udbetaling Danmark - typisk en god investering, hvis du ikke har en buffer til at klare 14 sygedage uden indkomst.</p>
+      <p>Sygedagpengene beregnes ud fra dit gennemsnitlige overskud de seneste 2 år (eller 1 år, hvis du har været selvstændig i mindre tid). Loftet på 5.085 kr/uge gælder også for selvstændige.</p>
 
       <h2>Delvis raskmelding</h2>
-      <p>Du kan være <strong>delvist sygemeldt</strong> og arbejde nogle af dine normale timer. Sygedagpengene udbetales forholdsmaessigt - eksempel: kan du kun arbejde 17 ud af dine normale 37 timer, faar du sygedagpenge for de manglende 20 timer. Husk at <strong>indberette al arbejdstid</strong> til kommunen - manglende rapportering kan koste dig udbetalingen.</p>
+      <p>Du kan være <strong>delvist sygemeldt</strong> og arbejde nogle af dine normale timer. Sygedagpengene udbetales forholdsmæssigt - eksempel: kan du kun arbejde 17 ud af dine normale 37 timer, får du sygedagpenge for de manglende 20 timer. Husk at <strong>indberette al arbejdstid</strong> til kommunen - manglende rapportering kan koste dig udbetalingen.</p>
     </div>
   </section>
 
@@ -340,8 +340,8 @@
       <h2>Vigtige situationer</h2>
       <ul class="stack">
         <li><strong>Uden 8 uger + 74 timer:</strong> Arbejdsgiver betaler IKKE de første 30 dage - kommunen overtager fra dag 1.</li>
-        <li><strong>Selvstændig uden forsikring:</strong> De første 14 sygedage er ubetalte. Det kan være en stoerre risiko end mange tror.</li>
-        <li><strong>Ledig der bliver syg:</strong> A-kassen dækker 14 dage med dagpengesats. Derefter overgaar du til kommunens sygedagpenge.</li>
+        <li><strong>Selvstændig uden forsikring:</strong> De første 14 sygedage er ubetalte. Det kan være en større risiko end mange tror.</li>
+        <li><strong>Ledig der bliver syg:</strong> A-kassen dækker 14 dage med dagpengesats. Derefter overgår du til kommunens sygedagpenge.</li>
         <li><strong>Du tjente mindre end maks-loftet:</strong> Sygedagpengene kan aldrig overstige din hidtidige løn.</li>
         <li><strong>Du genoptager arbejde gradvist:</strong> Husk obligatorisk rapportering til kommunen om alle arbejdede timer.</li>
       </ul>
@@ -351,9 +351,9 @@
   <section class="section">
     <div class="container">
       <aside class="calculator-result" style="background:#fef3c7;border-color:#f59e0b;">
-        <h2 style="color:#92400e;">Beslutningshjoernet: syg eller ledig?</h2>
-        <p>Maks-satsen for sygedagpenge og dagpenge er stort set den samme - ca. <strong>22.000 kr/md brutto</strong>. Sygedagpenge har ingen karensdage hos arbejdsgiver, men kun 22 ugers grundperiode, mens dagpenge typisk varer laengere. Vigtigste regel: hvis du er <strong>reelt syg</strong> og ikke kan arbejde, skal du sygemeldes - det er ulovligt at være på dagpenge mens man er syg. Hvis du er selvstændig, kan en privat sygeforsikring være en god investering, da karensperioden ellers er 14 dage.</p>
-        <p style="margin-top:.75rem;">Vil du sammenligne med din normale løn? <a class="cross-link" href="https://lonberegning.dk/" rel="noopener">Beregn forskellen til din almindelige løn på Loenberegning.dk <span class="ext-icon" aria-hidden="true">↗</span></a></p>
+        <h2 style="color:#92400e;">Beslutningshjørnet: syg eller ledig?</h2>
+        <p>Maks-satsen for sygedagpenge og dagpenge er stort set den samme - ca. <strong>22.000 kr/md brutto</strong>. Sygedagpenge har ingen karensdage hos arbejdsgiver, men kun 22 ugers grundperiode, mens dagpenge typisk varer længere. Vigtigste regel: hvis du er <strong>reelt syg</strong> og ikke kan arbejde, skal du sygemeldes - det er ulovligt at være på dagpenge mens man er syg. Hvis du er selvstændig, kan en privat sygeforsikring være en god investering, da karensperioden ellers er 14 dage.</p>
+        <p style="margin-top:.75rem;">Vil du sammenligne med din normale løn? <a class="cross-link" href="https://lonberegning.dk/" rel="noopener">Beregn forskellen til din almindelige løn på Lønberegning.dk <span class="ext-icon" aria-hidden="true">↗</span></a></p>
       </aside>
     </div>
   </section>
@@ -364,47 +364,47 @@
     <div class="container">
       <h2>Ofte stillede spørgsmål</h2>
       <details>
-        <summary>Hvor meget kan jeg maksimalt faa i sygedagpenge i 2026?</summary>
-        <p>Maksimum er 5.085 kr. pr. uge eller 137,43 kr. pr. time, hvilket svarer til ca. 22.034 kr./md brutto ved fuldtid (37 timer/uge). Du kan dog aldrig faa mere end din hidtidige løn.</p>
+        <summary>Hvor meget kan jeg maksimalt få i sygedagpenge i 2026?</summary>
+        <p>Maksimum er 5.085 kr. pr. uge eller 137,43 kr. pr. time, hvilket svarer til ca. 22.034 kr./md brutto ved fuldtid (37 timer/uge). Du kan dog aldrig få mere end din hidtidige løn.</p>
       </details>
       <details>
         <summary>Skal jeg melde mig syg eller ledig?</summary>
-        <p>Sygedagpenge giver typisk samme maks-sats som dagpenge (ca. 22.000 kr./md), men kan vare laengere uden karens-fradrag. Hvis du er reelt syg, skal du sygemeldes. Sygedagpenge betales af kommunen (efter arbejdsgiverperioden), mens dagpenge betales af a-kassen.</p>
+        <p>Sygedagpenge giver typisk samme maks-sats som dagpenge (ca. 22.000 kr./md), men kan vare længere uden karens-fradrag. Hvis du er reelt syg, skal du sygemeldes. Sygedagpenge betales af kommunen (efter arbejdsgiverperioden), mens dagpenge betales af a-kassen.</p>
       </details>
       <details>
         <summary>Hvem betaler mine sygedagpenge - arbejdsgiver eller kommune?</summary>
-        <p>Hvis du har vaeret ansat i mindst 8 uger og arbejdet mindst 74 timer, betaler arbejdsgiver de første 30 kalenderdage. Derefter overtager kommunen. Selvstændige faar først sygedagpenge fra kommunen efter 2 uger (eller dag 3 med privat forsikring).</p>
+        <p>Hvis du har været ansat i mindst 8 uger og arbejdet mindst 74 timer, betaler arbejdsgiver de første 30 kalenderdage. Derefter overtager kommunen. Selvstændige får først sygedagpenge fra kommunen efter 2 uger (eller dag 3 med privat forsikring).</p>
       </details>
       <details>
-        <summary>Hvor laenge kan jeg faa sygedagpenge?</summary>
-        <p>Som hovedregel 22 uger inden for 9 måneder. Herefter skal kommunen revurdere sagen, og udbetaling kan forlaenges på 7 specifikke grunde (fx alvorlig sygdom, jobafklaringsforloeb, livstruende sygdom).</p>
+        <summary>Hvor længe kan jeg få sygedagpenge?</summary>
+        <p>Som hovedregel 22 uger inden for 9 måneder. Herefter skal kommunen revurdere sagen, og udbetaling kan forlænges på 7 specifikke grunde (fx alvorlig sygdom, jobafklaringsforløb, livstruende sygdom).</p>
       </details>
       <details>
         <summary>Kan jeg arbejde lidt under sygemelding?</summary>
-        <p>Ja, delvis raskmelding er muligt og endda anbefalet. Du modtager forholdsmaessige sygedagpenge baseret på, hvor mange timer du IKKE kan arbejde. Du SKAL underrette kommunen om alt arbejde.</p>
+        <p>Ja, delvis raskmelding er muligt og endda anbefalet. Du modtager forholdsmæssige sygedagpenge baseret på, hvor mange timer du IKKE kan arbejde. Du SKAL underrette kommunen om alt arbejde.</p>
       </details>
       <details>
         <summary>Hvad gør jeg som selvstændig?</summary>
-        <p>Du har ret til sygedagpenge fra kommunen efter 2 ugers sygdom. Tegner du frivillig sygedagpengeforsikring via Udbetaling Danmark, kan du faa sygedagpenge fra dag 3 - typisk en god investering for selvstændige uden buffer.</p>
+        <p>Du har ret til sygedagpenge fra kommunen efter 2 ugers sygdom. Tegner du frivillig sygedagpengeforsikring via Udbetaling Danmark, kan du få sygedagpenge fra dag 3 - typisk en god investering for selvstændige uden buffer.</p>
       </details>
       <details>
         <summary>Hvad er G-dage?</summary>
-        <p>G-dage (godtgoerelse) er en dagpengegodtgoerelse, som arbejdsgiver betaler ved kortere ledighed/sygdom. Satsen er 1.017 kr./dag i 2026, og arbejdsgiver kan hoejst betale 16 G-dage pr. lønmodtager pr. år.</p>
+        <p>G-dage (godtgørelse) er en dagpengegodtgørelse, som arbejdsgiver betaler ved kortere ledighed/sygdom. Satsen er 1.017 kr./dag i 2026, og arbejdsgiver kan højst betale 16 G-dage pr. lønmodtager pr. år.</p>
       </details>
       <details>
         <summary>Kan jeg miste min sygedagpenge?</summary>
-        <p>Ja, hvis kommunen vurderer du kan arbejde, hvis du udebliver fra opfoelgningssamtaler, eller hvis 22-ugers-fristen udloeber uden grundlag for forlaengelse. I så fald kan du overgaa til jobafklaringsforloeb med ressourceforloebsydelse.</p>
+        <p>Ja, hvis kommunen vurderer du kan arbejde, hvis du udebliver fra opfølgningssamtaler, eller hvis 22-ugers-fristen udløber uden grundlag for forlængelse. I så fald kan du overgå til jobafklaringsforløb med ressourceforløbsydelse.</p>
       </details>
     </div>
   </section>
 
   <section class="section section--alt">
     <div class="container">
-      <h2>Beslaegtede beregnere</h2>
+      <h2>Beslægtede beregnere</h2>
       <div class="hub-grid">
         <a class="hub-card" href="/beregner/dagpenge.html">
           <h3>Dagpengeberegner</h3>
-          <p>Hvor meget faar du i dagpenge fra a-kassen?</p>
+          <p>Hvor meget får du i dagpenge fra a-kassen?</p>
           <span class="hub-card__cta">Beregn nu →</span>
         </a>
         <a class="hub-card" href="/beregner/dimittend.html">
@@ -427,8 +427,8 @@
         <h2>Officielle kilder</h2>
         <p class="muted">Senest tjekket 2026-06-10.</p>
         <ul>
-          <li><a href="https://bm.dk//satser/satser-for-2026/sygedagpenge" rel="nofollow noopener" target="_blank">Beskaeftigelsesministeriet - Sygedagpenge 2026 <span class="ext-icon" aria-hidden="true">↗</span></a></li>
-          <li><a href="https://www.borger.dk/arbejde-dagpenge-ferie/Dagpenge-kontanthjaelp-og-sygedagpenge/sygedagpenge/Sygedagpenge-hvis-du-er-loenmodtager" rel="nofollow noopener" target="_blank">borger.dk - Sygedagpenge for loenmodtagere <span class="ext-icon" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://bm.dk//satser/satser-for-2026/sygedagpenge" rel="nofollow noopener" target="_blank">Beskæftigelsesministeriet - Sygedagpenge 2026 <span class="ext-icon" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://www.borger.dk/arbejde-dagpenge-ferie/Dagpenge-kontanthjaelp-og-sygedagpenge/sygedagpenge/Sygedagpenge-hvis-du-er-loenmodtager" rel="nofollow noopener" target="_blank">borger.dk - Sygedagpenge for lønmodtagere <span class="ext-icon" aria-hidden="true">↗</span></a></li>
           <li><a href="https://star.dk//ydelser/sygdom-og-barsel/sygedagpenge/" rel="nofollow noopener" target="_blank">STAR - Ydelse ved sygdom <span class="ext-icon" aria-hidden="true">↗</span></a></li>
           <li><a href="https://www.retsinformation.dk/" rel="nofollow noopener" target="_blank">Retsinformation - Lov om sygedagpenge <span class="ext-icon" aria-hidden="true">↗</span></a></li>
           <li><a href="https://www.borger.dk/arbejde-dagpenge-ferie/Dagpenge-kontanthjaelp-og-sygedagpenge/sygedagpenge/sygedagpenge-hvis-du-er-ledig" rel="nofollow noopener" target="_blank">borger.dk - Sygedagpenge hvis du er ledig <span class="ext-icon" aria-hidden="true">↗</span></a></li>
@@ -451,8 +451,8 @@
         <h2>Studerende</h2>
         <ul>
           <li><a href="/beregner/su.html">SU-beregner</a></li>
-          <li><a href="/beregner/su-fribelob.html">SU fribeloeb</a></li>
-          <li><a href="/beregner/su-laan-tilbagebetaling.html">SU-laan tilbagebetaling</a></li>
+          <li><a href="/beregner/su-fribelob.html">SU fribeløb</a></li>
+          <li><a href="/beregner/su-laan-tilbagebetaling.html">SU-lån tilbagebetaling</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
@@ -470,7 +470,7 @@
         <ul>
           <li><a href="/beregner/huslejebudget.html">Huslejebudget</a></li>
           <li><a href="/beregner/kvm-beregner.html">Kvadratmeter</a></li>
-          <li><a href="/beregner/boligstoette.html">Boligstoette</a></li>
+          <li><a href="/beregner/boligstoette.html">Boligstøtte</a></li>
           <li><a href="/beregner/depositum.html">Depositum</a></li>
           <li><a href="/beregner/flyttebudget.html">Flyttebudget</a></li>
           <li><a href="/beregner/el-vand-varme-budget.html">El, vand og varme</a></li>
@@ -506,16 +506,16 @@
           <li><a href="/beregner/elpris-apparatforbrug.html">Elpris time for time</a></li>
           <li><a href="/beregner/pension.html">Pension</a></li>
           <li><a href="/beregner/aktieskat.html">Aktieskat</a></li>
-          <li><a href="/beregner/efterloen.html">Efterloen</a></li>
+          <li><a href="/beregner/efterloen.html">Efterløn</a></li>
           <li><a href="/beregner/feriepenge.html">Feriepenge</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
-        <h2>Vaerktoejer</h2>
+        <h2>Værktøjer</h2>
         <ul>
           <li><a href="/sporg-ai.html">Spørg AI</a></li>
           <li><a href="/beregnere.html">Alle beregnere</a></li>
-          <li><a href="https://lonberegning.dk/" rel="noopener">Loenberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
+          <li><a href="https://lonberegning.dk/" rel="noopener">Lønberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
         </ul>
       </div>
       <div class="site-footer__col">
@@ -537,11 +537,11 @@
           <li><a href="/kilder.html">Officielle kilder</a></li>
           <li><a href="/kontakt.html">Kontakt</a></li>
           <li><a href="/privatlivspolitik.html">Privatlivspolitik</a></li>
-          <li><a href="/vilkar.html">Vilkaar</a></li>
+          <li><a href="/vilkar.html">Vilkår</a></li>
         </ul>
       </div>
     </div>
-    <p class="site-footer__cross">Skal du regne nettoloen ud? Brug vores soestersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a>: specialiseret i løn og skat.</p>
+    <p class="site-footer__cross">Skal du regne nettoløn ud? Brug vores søstersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a>: specialiseret i løn og skat.</p>
     <div class="site-footer__bottom">
       <span>&copy; 2026 hverdagstal.dk &middot; Beregn penge, støtte og udgifter i hverdagen &middot; Satser opdateret 2026-06-10</span>
       <span>Made in Danmark</span>

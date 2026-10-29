@@ -148,11 +148,11 @@
       </nav>
       <p class="hero__eyebrow">Hverdagsudgifter · Energi</p>
       <h1 class="hero__title">Elpris og apparatforbrug-beregner 2026</h1>
-      <p class="hero__lead">Tjek den typiske døgnkurve (Nord Pool historik) i DK1 og DK2, laeg afgifter og nettarif oven i, og se praecist hvad det koster at koere vaskemaskinen, varmepumpen eller elbil-opladeren: lige nu eller i den billigste time af doegnet.</p>
+      <p class="hero__lead">Tjek den typiske døgnkurve (Nord Pool historik) i DK1 og DK2, læg afgifter og nettarif oven i, og se præcist hvad det koster at køre vaskemaskinen, varmepumpen eller elbil-opladeren: lige nu eller i den billigste time af døgnet.</p>
       <p><span class="opdateret-badge">Opdateret 2026-06-10</span> <span class="badge badge--gold">2026-satser</span></p>
       <div class="cluster">
         <a class="btn btn--primary btn--lg" href="#beregner">Beregn dit elforbrug</a>
-        <a class="btn btn--ghost" href="#doegnkurve">Se doegnkurven</a>
+        <a class="btn btn--ghost" href="#doegnkurve">Se døgnkurven</a>
       </div>
     </div>
   </section>
@@ -160,30 +160,30 @@
   <section class="section" id="beregner">
     <div class="container">
       <h2>Beregn dit elforbrug 2026</h2>
-      <p>Vaelg dit prisomraade, apparatet og hvornaar det skal koere.</p>
+      <p>Vælg dit prisområde, apparatet og hvornår det skal køre.</p>
       <div class="site-grid">
         <form class="calculator-form" id="elpris-form" aria-describedby="resultat">
           <div class="field">
-            <label for="region">Prisomraade</label>
+            <label for="region">Prisområde</label>
             <select id="region" name="region">
-              <option value="DK1">DK1 (Vest for Storebaelt)</option>
-              <option value="DK2">DK2 (Oest for Storebaelt)</option>
+              <option value="DK1">DK1 (Vest for Storebælt)</option>
+              <option value="DK2">DK2 (Øst for Storebælt)</option>
             </select>
-            <p class="field__hint">DK1 dækker Jylland og Fyn, DK2 dækker Sjaelland, Lolland-Falster og Bornholm.</p>
+            <p class="field__hint">DK1 dækker Jylland og Fyn, DK2 dækker Sjælland, Lolland-Falster og Bornholm.</p>
           </div>
 
           <div class="field">
-            <label for="apparat">Vaelg apparat</label>
+            <label for="apparat">Vælg apparat</label>
             <select id="apparat" name="apparat">
               <option value="vaskemaskine">Vaskemaskine (60 grader)</option>
-              <option value="toerretumbler">Toerretumbler</option>
+              <option value="toerretumbler">Tørretumbler</option>
               <option value="opvaskemaskine">Opvaskemaskine</option>
               <option value="varmepumpe">Varmepumpe (luft/vand)</option>
               <option value="elbil11">Elbil-oplader 11 kW</option>
               <option value="elbil22">Elbil-oplader 22 kW</option>
               <option value="tv">TV (LED 55 tommer)</option>
-              <option value="pc">Stationaer computer + skaerm</option>
-              <option value="koel">Koel-frys (kombi)</option>
+              <option value="pc">Stationær computer + skærm</option>
+              <option value="koel">Køl-frys (kombi)</option>
               <option value="elradiator">Elradiator 1000W</option>
               <option value="andet">Andet (egen indtastning)</option>
             </select>
@@ -192,26 +192,26 @@
           <div class="field">
             <label for="watt">Effekt</label>
             <input id="watt" name="watt" type="number" min="1" step="1" value="2200" inputmode="numeric">
-            <p class="field__hint">Praeudfyldes når du vaelger apparat: skriv W (watt). Kan overskrives.</p>
+            <p class="field__hint">Præudfyldes når du vælger apparat: skriv W (watt). Kan overskrives.</p>
           </div>
 
           <div class="field">
             <label for="timer">Antal timer</label>
             <input id="timer" name="timer" type="number" min="0.1" step="0.1" value="2" inputmode="decimal">
-            <p class="field__hint">Hvor laenge apparatet skal koere (kan være decimal, fx 1,5).</p>
+            <p class="field__hint">Hvor længe apparatet skal køre (kan være decimal, fx 1,5).</p>
           </div>
 
           <div class="field">
             <label for="starttid">Starttidspunkt</label>
             <select id="starttid" name="starttid">
               <option value="nu">Lige nu</option>
-              <option value="billigste">Vaelg billigste sammenhaengende vindue</option>
-              <option value="manuelt">Indtast klokkeslaet manuelt</option>
+              <option value="billigste">Vælg billigste sammenhængende vindue</option>
+              <option value="manuelt">Indtast klokkeslæt manuelt</option>
             </select>
           </div>
 
           <div class="field">
-            <label for="klokkeslaet">Manuelt klokkeslaet</label>
+            <label for="klokkeslaet">Manuelt klokkeslæt</label>
             <select id="klokkeslaet" name="klokkeslaet">
               <option value="0">00</option><option value="1">01</option><option value="2">02</option>
               <option value="3">03</option><option value="4">04</option><option value="5">05</option>
@@ -222,7 +222,7 @@
               <option value="18">18</option><option value="19">19</option><option value="20">20</option>
               <option value="21">21</option><option value="22">22</option><option value="23">23</option>
             </select>
-            <p class="field__hint">Bruges kun hvis du vaelger "Indtast klokkeslaet manuelt" ovenfor.</p>
+            <p class="field__hint">Bruges kun hvis du vælger "Indtast klokkeslæt manuelt" ovenfor.</p>
           </div>
 
           <div class="field">
@@ -245,7 +245,7 @@
             <select id="nettarif_zone" name="nettarif_zone">
               <option value="N1">N1 (Jylland)</option>
               <option value="Radius">Radius (Hovedstaden)</option>
-              <option value="Cerius">Cerius (Sjaelland/Lolland)</option>
+              <option value="Cerius">Cerius (Sjælland/Lolland)</option>
               <option value="Trefor">Trefor El-net (Trekanten)</option>
               <option value="Konstant">Konstant</option>
               <option value="Andet">Andet</option>
@@ -257,7 +257,7 @@
               <input id="elvarme" name="elvarme" type="checkbox">
               Registreret som elvarme-kunde
             </label>
-            <p class="field__hint">Hvis ja faar du nedsat elafgift (9,5 oere/kWh i stedet for 76,1 oere) på forbrug over 4.000 kWh/år.</p>
+            <p class="field__hint">Hvis ja får du nedsat elafgift (9,5 øre/kWh i stedet for 76,1 øre) på forbrug over 4.000 kWh/år.</p>
           </div>
         </form>
 
@@ -275,18 +275,18 @@
             <div><dt>Dyreste time i dag</dt><dd id="r-dyreste">kl 18 · 3,10 kr/kWh</dd></div>
             <div><dt>Besparelse ved at flytte til billigste time</dt><dd id="r-besparelse">1,54 kr</dd></div>
           </dl>
-          <p class="calculator-result__total"><span>Pris for denne koerelse</span><strong id="r-total">7,70 kr</strong></p>
+          <p class="calculator-result__total"><span>Pris for denne kørelse</span><strong id="r-total">7,70 kr</strong></p>
           <p class="muted"><small>Baseret på 2026-gennemsnit fra Nord Pool, Energinet og Skat.dk. Live timepriser hentes hos dit elselskab.</small></p>
         </aside>
       </div>
-      <p>Beregneren bruger gennemsnitlige spotpriser for 2026 (DK1: 38 oere/kWh, DK2: 52 oere/kWh) og laegger elafgift, system- og transmissionstarif samt din netselskabs tidsdifferentierede tarif oven i: alt inkl. 25 % moms.</p>
+      <p>Beregneren bruger gennemsnitlige spotpriser for 2026 (DK1: 38 øre/kWh, DK2: 52 øre/kWh) og lægger elafgift, system- og transmissionstarif samt din netselskabs tidsdifferentierede tarif oven i: alt inkl. 25 % moms.</p>
     </div>
   </section>
 
   <section class="section section--alt" id="doegnkurve">
     <div class="container">
       <h2>Spotpris time for time</h2>
-      <p>Typisk doegnkurve for 2026. DK1 og DK2, gennemsnitlig vinterdag. Soejlerne viser samlet pris pr kWh inkl. afgifter, tariffer og moms. Den grønne soejle er den billigste time, den roede er dyreste.</p>
+      <p>Typisk døgnkurve for 2026. DK1 og DK2, gennemsnitlig vinterdag. Søjlerne viser samlet pris pr kWh inkl. afgifter, tariffer og moms. Den grønne søjle er den billigste time, den røde er dyreste.</p>
       <div id="doegnkurve-chart" aria-label="Doegnkurve over elprisen pr time" role="img" style="display:grid;grid-template-columns:repeat(24,1fr);gap:2px;align-items:end;height:180px;margin:1.5rem 0;padding:0.5rem;background:#f0fdfa;border-radius:8px;">
         <!-- soejler injiceres af JS -->
       </div>
@@ -296,24 +296,24 @@
 
   <section class="section">
     <div class="container">
-      <h2>Saadan virker det</h2>
-      <p>Den samlede pris du betaler pr. kWh er en kaede af fem dele:</p>
+      <h2>Sådan virker det</h2>
+      <p>Den samlede pris du betaler pr. kWh er en kæde af fem dele:</p>
       <ol>
-        <li><strong>Spotprisen</strong> fra Nord Pool i DKK pr kWh. Det er den rene markedspris og varierer time for time. Gennemsnit 2026: ca. 38 oere/kWh i DK1 og 52 oere/kWh i DK2.</li>
-        <li><strong>Netselskabets tarif</strong>. N1, Radius, Cerius, Trefor og Konstant opkraever forskelligt afhaengigt af tid. Lavlast (nat) ca. 14 oere/kWh, hoejlast (dag) ca. 42 oere/kWh, spidslast (vinter kl 17-21) over 110 oere/kWh.</li>
-        <li><strong>Systemtarif</strong> 5,1 oere/kWh og <strong>transmissionstarif</strong> 6,9 oere/kWh fra Energinet.</li>
-        <li><strong>Elafgift</strong> 76,1 oere/kWh, eller bare 9,5 oere/kWh hvis du er registreret som elvarme-kunde og forbrugt over 4.000 kWh/år.</li>
+        <li><strong>Spotprisen</strong> fra Nord Pool i DKK pr kWh. Det er den rene markedspris og varierer time for time. Gennemsnit 2026: ca. 38 øre/kWh i DK1 og 52 øre/kWh i DK2.</li>
+        <li><strong>Netselskabets tarif</strong>. N1, Radius, Cerius, Trefor og Konstant opkræver forskelligt afhængigt af tid. Lavlast (nat) ca. 14 øre/kWh, højlast (dag) ca. 42 øre/kWh, spidslast (vinter kl 17-21) over 110 øre/kWh.</li>
+        <li><strong>Systemtarif</strong> 5,1 øre/kWh og <strong>transmissionstarif</strong> 6,9 øre/kWh fra Energinet.</li>
+        <li><strong>Elafgift</strong> 76,1 øre/kWh, eller bare 9,5 øre/kWh hvis du er registreret som elvarme-kunde og forbrugt over 4.000 kWh/år.</li>
         <li><strong>Moms 25 %</strong> oven i hele summen.</li>
       </ol>
-      <p>Formlen er: <code>total_pris_kWh = (spot + nettarif + system + transmission + elafgift) × 1,25</code>. Apparatets energiforbrug regnes som <code>watt × timer ÷ 1000</code>, og prisen for koerelsen er <code>kWh × total_pris_kWh</code>.</p>
+      <p>Formlen er: <code>total_pris_kWh = (spot + nettarif + system + transmission + elafgift) × 1,25</code>. Apparatets energiforbrug regnes som <code>watt × timer ÷ 1000</code>, og prisen for kørelsen er <code>kWh × total_pris_kWh</code>.</p>
     </div>
   </section>
 
   <section class="section section--alt">
     <div class="container">
       <h2>DK1 vs DK2</h2>
-      <p>Danmark er delt i to prisomraader af Storebaelt-forbindelsen. <strong>DK1</strong> dækker Jylland og Fyn og har masser af vindkraft og forbindelser til Norge og Tyskland, så prisen er ofte lav. <strong>DK2</strong> dækker Sjaelland, Lolland-Falster og Bornholm og er typisk 30-50 % dyrere: flaskehalsen over Storebaelt lukker af for de billige jyske vindtimer.</p>
-      <p>Eksempel for en typisk vinterdag 2026: DK1 toppes i ca. 55 oere/kWh som spot, mens DK2 rammer 78 oere/kWh i samme time. Med afgifter og tariffer oven i bliver forskellen flere kroner pr. opvask.</p>
+      <p>Danmark er delt i to prisområder af Storebælt-forbindelsen. <strong>DK1</strong> dækker Jylland og Fyn og har masser af vindkraft og forbindelser til Norge og Tyskland, så prisen er ofte lav. <strong>DK2</strong> dækker Sjælland, Lolland-Falster og Bornholm og er typisk 30-50 % dyrere: flaskehalsen over Storebælt lukker af for de billige jyske vindtimer.</p>
+      <p>Eksempel for en typisk vinterdag 2026: DK1 toppes i ca. 55 øre/kWh som spot, mens DK2 rammer 78 øre/kWh i samme time. Med afgifter og tariffer oven i bliver forskellen flere kroner pr. opvask.</p>
     </div>
   </section>
 
@@ -322,23 +322,23 @@
       <h2>Elafgift og nettariffer</h2>
       <p>For 2026 ser de officielle satser således ud:</p>
       <ul>
-        <li>Almindelig elafgift: <strong>76,1 oere/kWh</strong></li>
-        <li>Elvarme-afgift (over 4.000 kWh/år): <strong>9,5 oere/kWh</strong></li>
-        <li>Systemtarif (Energinet): <strong>5,1 oere/kWh</strong></li>
-        <li>Transmissionsnettarif (Energinet): <strong>6,9 oere/kWh</strong></li>
-        <li>N1 nettarif lav / hoej / spids: <strong>14,2 / 42,5 / 110,6 oere/kWh</strong></li>
-        <li>Radius nettarif lav / hoej / spids: <strong>13,8 / 41,5 / 124,4 oere/kWh</strong></li>
+        <li>Almindelig elafgift: <strong>76,1 øre/kWh</strong></li>
+        <li>Elvarme-afgift (over 4.000 kWh/år): <strong>9,5 øre/kWh</strong></li>
+        <li>Systemtarif (Energinet): <strong>5,1 øre/kWh</strong></li>
+        <li>Transmissionsnettarif (Energinet): <strong>6,9 øre/kWh</strong></li>
+        <li>N1 nettarif lav / høj / spids: <strong>14,2 / 42,5 / 110,6 øre/kWh</strong></li>
+        <li>Radius nettarif lav / høj / spids: <strong>13,8 / 41,5 / 124,4 øre/kWh</strong></li>
         <li>Moms: <strong>25 %</strong></li>
       </ul>
-      <p>Spidstariffen gaelder kun vinter (oktober-marts) kl. 17-21. I sommerhalvaaret er hoejlast og spidslast typisk slaaet sammen til en lavere sats. Det betyder, at en time elradiator i januar kl. 18 i Hovedstaden kan koste over 3 kr pr kWh, mens samme time kl. 03 om natten kun koster ca. 1,40 kr.</p>
+      <p>Spidstariffen gælder kun vinter (oktober-marts) kl. 17-21. I sommerhalvåret er højlast og spidslast typisk slået sammen til en lavere sats. Det betyder, at en time elradiator i januar kl. 18 i Hovedstaden kan koste over 3 kr pr kWh, mens samme time kl. 03 om natten kun koster ca. 1,40 kr.</p>
     </div>
   </section>
 
   <section class="section section--alt">
     <div class="container">
       <h2>Elvarme-rabatten</h2>
-      <p>Hvis din bolig opvarmes med varmepumpe, elradiator eller anden elbaseret opvarmning, kan du registreres hos forsyningen som <strong>elvarme-kunde</strong>. Det giver en kaempe rabat: elafgiften falder fra 76,1 oere til 9,5 oere/kWh på alt forbrug over 4.000 kWh om aaret.</p>
-      <p>For en familie med varmepumpe og 8.000 kWh aarsforbrug betyder det en besparelse på ca. (8000 - 4000) × (0,761 - 0,095) × 1,25 = <strong>ca. 3.330 kr/år</strong>. Det kraever blot at boligen er registreret med el som primaer varmekilde: kontakt dit netselskab eller BBR.</p>
+      <p>Hvis din bolig opvarmes med varmepumpe, elradiator eller anden elbaseret opvarmning, kan du registreres hos forsyningen som <strong>elvarme-kunde</strong>. Det giver en kæmpe rabat: elafgiften falder fra 76,1 øre til 9,5 øre/kWh på alt forbrug over 4.000 kWh om året.</p>
+      <p>For en familie med varmepumpe og 8.000 kWh årsforbrug betyder det en besparelse på ca. (8000 - 4000) × (0,761 - 0,095) × 1,25 = <strong>ca. 3.330 kr/år</strong>. Det kræver blot at boligen er registreret med el som primær varmekilde: kontakt dit netselskab eller BBR.</p>
     </div>
   </section>
 
@@ -347,10 +347,10 @@
       <h2>Vigtige situationer</h2>
       <ul>
         <li><strong>Fastpris-aftale:</strong> Spotprisen er irrelevant for dig, og besparelsen ved at flytte forbrug til billigste time er 0. Beregneren bruger din indtastede fastpris i stedet.</li>
-        <li><strong>Tidsdifferentieret nettarif:</strong> Spidslast vinter kl 17-21 kan tillaegge over 1 kr/kWh ekstra i nettarif alene. Undgaa madlavning og opvask i de timer.</li>
-        <li><strong>Varmepumpe-COP:</strong> En varmepumpe leverer 2,5-4 kWh varme pr. kWh strom. Den nominelle effekt skal modificeres med COP-faktoren afhaengig af udetemperatur for et praecist regnestykke.</li>
+        <li><strong>Tidsdifferentieret nettarif:</strong> Spidslast vinter kl 17-21 kan tillægge over 1 kr/kWh ekstra i nettarif alene. Undgå madlavning og opvask i de timer.</li>
+        <li><strong>Varmepumpe-COP:</strong> En varmepumpe leverer 2,5-4 kWh varme pr. kWh strom. Den nominelle effekt skal modificeres med COP-faktoren afhængig af udetemperatur for et præcist regnestykke.</li>
         <li><strong>Negativ spotpris:</strong> I vindfulde timer kan spotprisen være under nul, men din totalpris er stadig positiv pga. afgifter og tariffer.</li>
-        <li><strong>Fleksibel afregning:</strong> Kraever timeaflaest maaler. Giver typisk 5-15 oere/kWh rabat, men kun når du faktisk flytter forbrug.</li>
+        <li><strong>Fleksibel afregning:</strong> Kræver timeaflæst måler. Giver typisk 5-15 øre/kWh rabat, men kun når du faktisk flytter forbrug.</li>
       </ul>
     </div>
   </section>
@@ -359,7 +359,7 @@
     <div class="container">
       <aside class="calculator-result" style="border-left:4px solid #f59e0b;background:#fffbeb;">
         <h2 style="color:#92400e;">Skal jeg vente med vasken til kl. 03?</h2>
-        <p><strong>Beslutningsvinklen:</strong> Hvornaar skal du vaske toej, opvaske eller oplade elbilen for at spare mest? Og hvad koster det reelt at have varmepumpen koerende en kold time?</p>
+        <p><strong>Beslutningsvinklen:</strong> Hvornår skal du vaske tøj, opvaske eller oplade elbilen for at spare mest? Og hvad koster det reelt at have varmepumpen kørende en kold time?</p>
         <p>Hvis du har timepris og et apparat der bruger mere end 1 kWh, kan du typisk spare <strong>30-50 %</strong> ved at flytte forbruget fra dyreste til billigste time. For elbilen kan det betyde 15-25 kr sparet pr. fuld opladning. For varmepumpen kan smart styring give 2.000-4.000 kr/år.</p>
         <p><a class="btn btn--primary" href="#beregner">Saml dine tal og beregn</a></p>
       </aside>
@@ -396,39 +396,39 @@
     <div class="container">
       <h2>Ofte stillede spørgsmål</h2>
       <details>
-        <summary>Hvornaar er stroemmen billigst i Danmark?</summary>
-        <p>Typisk mellem kl 02-05 om natten og kl 13-15 om eftermiddagen når solceller producerer mest. Dyreste timer er kl 17-21 hvor alle laver mad og taender lys samtidigt. Tjek altid Nord Pool day-ahead priser dagen før for praecise tider.</p>
+        <summary>Hvornår er strømmen billigst i Danmark?</summary>
+        <p>Typisk mellem kl 02-05 om natten og kl 13-15 om eftermiddagen når solceller producerer mest. Dyreste timer er kl 17-21 hvor alle laver mad og tænder lys samtidigt. Tjek altid Nord Pool day-ahead priser dagen før for præcise tider.</p>
       </details>
       <details>
         <summary>Hvad er forskellen på DK1 og DK2?</summary>
-        <p>DK1 er Jylland og Fyn, DK2 er Sjaelland, Lolland-Falster og Bornholm. Storebaelt-forbindelsen kan blive flaskehals så DK2 ofte er 30-50% dyrere end DK1, isaer om vinteren når vinden ikke blaeser.</p>
+        <p>DK1 er Jylland og Fyn, DK2 er Sjælland, Lolland-Falster og Bornholm. Storebælt-forbindelsen kan blive flaskehals så DK2 ofte er 30-50% dyrere end DK1, især om vinteren når vinden ikke blæser.</p>
       </details>
       <details>
         <summary>Hvor meget er elafgiften i 2026?</summary>
-        <p>Den almindelige elafgift er 76,1 oere pr kWh i 2026. Hvis du er registreret som elvarme-kunde, falder afgiften til 9,5 oere pr kWh på forbrug over 4000 kWh om aaret. Det er en kaempe besparelse for boliger med varmepumpe eller elradiatorer.</p>
+        <p>Den almindelige elafgift er 76,1 øre pr kWh i 2026. Hvis du er registreret som elvarme-kunde, falder afgiften til 9,5 øre pr kWh på forbrug over 4000 kWh om året. Det er en kæmpe besparelse for boliger med varmepumpe eller elradiatorer.</p>
       </details>
       <details>
-        <summary>Er elprisloftet stadig gaeldende i 2026?</summary>
-        <p>Nej. Elprisloftet ophoerte 30. juni 2024 og er ikke genindfoert. I 2026 betaler du den reelle markedspris plus afgifter og tariffer.</p>
+        <summary>Er elprisloftet stadig gældende i 2026?</summary>
+        <p>Nej. Elprisloftet ophørte 30. juni 2024 og er ikke genindført. I 2026 betaler du den reelle markedspris plus afgifter og tariffer.</p>
       </details>
       <details>
         <summary>Kan jeg spare penge ved at skifte til timepris?</summary>
-        <p>Ja, hvis du kan flytte vaskemaskine, opvasker, elbil-opladning og varmepumpe til de billigste timer. Familier der aktivt styrer forbrug sparer typisk 1500-3500 kr om aaret. Hvis du ikke kan flytte forbruget, kan fastpris være mere stabil.</p>
+        <p>Ja, hvis du kan flytte vaskemaskine, opvasker, elbil-opladning og varmepumpe til de billigste timer. Familier der aktivt styrer forbrug sparer typisk 1500-3500 kr om året. Hvis du ikke kan flytte forbruget, kan fastpris være mere stabil.</p>
       </details>
       <details>
-        <summary>Hvad koster det at lade en vaskemaskine koere i en time?</summary>
+        <summary>Hvad koster det at lade en vaskemaskine køre i en time?</summary>
         <p>En vaskemaskine på 2200W bruger ca 2,2 kWh på en 60-graders vask. Til en samlet pris på ca 2,30 kr/kWh (DK1 dagstime 2026) bliver det ca 5 kr, men kun 3,50 kr hvis du venter til natten.</p>
       </details>
       <details>
         <summary>Hvad er en tidsdifferentieret nettarif?</summary>
-        <p>Dit netselskab opkraever forskellig tarif i lavlast (nat), hoejlast (dag) og spidslast (kl 17-21 om vinteren). Spidstariffen kan være over 1 kr pr kWh ekstra: derfor er det vigtigt at undgaa forbrug i de timer.</p>
+        <p>Dit netselskab opkræver forskellig tarif i lavlast (nat), højlast (dag) og spidslast (kl 17-21 om vinteren). Spidstariffen kan være over 1 kr pr kWh ekstra: derfor er det vigtigt at undgå forbrug i de timer.</p>
       </details>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <p>Skal du ogsaa kigge på bil-oekonomien? Vi har en dedikeret <a href="/beregner/elbil-opladning.html">elbil-opladning beregner</a>, en <a href="/beregner/braendstof.html">brændstof-beregner</a> og <a href="/beregner/bil-totalomkostning.html">bil totalomkostning</a>. Skal du regne din nettoloen ud for at se hvad der bliver tilbage til regningerne, brug vores soestersite <a class="cross-link" href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">↗</span></a>.</p>
+      <p>Skal du også kigge på bil-økonomien? Vi har en dedikeret <a href="/beregner/elbil-opladning.html">elbil-opladning beregner</a>, en <a href="/beregner/braendstof.html">brændstof-beregner</a> og <a href="/beregner/bil-totalomkostning.html">bil totalomkostning</a>. Skal du regne din nettoløn ud for at se hvad der bliver tilbage til regningerne, brug vores søstersite <a class="cross-link" href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">↗</span></a>.</p>
     </div>
   </section>
 
@@ -465,8 +465,8 @@
         <h2>Studerende</h2>
         <ul>
           <li><a href="/beregner/su.html">SU-beregner</a></li>
-          <li><a href="/beregner/su-fribelob.html">SU fribeloeb</a></li>
-          <li><a href="/beregner/su-laan-tilbagebetaling.html">SU-laan tilbagebetaling</a></li>
+          <li><a href="/beregner/su-fribelob.html">SU fribeløb</a></li>
+          <li><a href="/beregner/su-laan-tilbagebetaling.html">SU-lån tilbagebetaling</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
@@ -484,7 +484,7 @@
         <ul>
           <li><a href="/beregner/huslejebudget.html">Huslejebudget</a></li>
           <li><a href="/beregner/kvm-beregner.html">Kvadratmeter</a></li>
-          <li><a href="/beregner/boligstoette.html">Boligstoette</a></li>
+          <li><a href="/beregner/boligstoette.html">Boligstøtte</a></li>
           <li><a href="/beregner/depositum.html">Depositum</a></li>
           <li><a href="/beregner/flyttebudget.html">Flyttebudget</a></li>
           <li><a href="/beregner/el-vand-varme-budget.html">El, vand og varme</a></li>
@@ -520,16 +520,16 @@
           <li><a href="/beregner/elpris-apparatforbrug.html">Elpris time for time</a></li>
           <li><a href="/beregner/pension.html">Pension</a></li>
           <li><a href="/beregner/aktieskat.html">Aktieskat</a></li>
-          <li><a href="/beregner/efterloen.html">Efterloen</a></li>
+          <li><a href="/beregner/efterloen.html">Efterløn</a></li>
           <li><a href="/beregner/feriepenge.html">Feriepenge</a></li>
         </ul>
       </div>
       <div class="site-footer__col">
-        <h2>Vaerktoejer</h2>
+        <h2>Værktøjer</h2>
         <ul>
           <li><a href="/sporg-ai.html">Spørg AI</a></li>
           <li><a href="/beregnere.html">Alle beregnere</a></li>
-          <li><a href="https://lonberegning.dk/" rel="noopener">Loenberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
+          <li><a href="https://lonberegning.dk/" rel="noopener">Lønberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a></li>
         </ul>
       </div>
       <div class="site-footer__col">
@@ -551,11 +551,11 @@
           <li><a href="/kilder.html">Officielle kilder</a></li>
           <li><a href="/kontakt.html">Kontakt</a></li>
           <li><a href="/privatlivspolitik.html">Privatlivspolitik</a></li>
-          <li><a href="/vilkar.html">Vilkaar</a></li>
+          <li><a href="/vilkar.html">Vilkår</a></li>
         </ul>
       </div>
     </div>
-    <p class="site-footer__cross">Skal du regne nettoloen ud? Brug vores soestersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a>: specialiseret i løn og skat.</p>
+    <p class="site-footer__cross">Skal du regne nettoløn ud? Brug vores søstersite <a href="https://lonberegning.dk/" rel="noopener">lonberegning.dk <span class="ext-icon" aria-hidden="true">&#8599;</span></a>: specialiseret i løn og skat.</p>
     <div class="site-footer__bottom">
       <span>&copy; 2026 hverdagstal.dk &middot; Beregn penge, støtte og udgifter i hverdagen &middot; Satser opdateret 2026-06-10</span>
       <span>Made in Danmark</span>
