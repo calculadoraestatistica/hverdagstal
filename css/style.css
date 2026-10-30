@@ -1434,33 +1434,6 @@ pre code {
   text-decoration-style: solid;
 }
 
-/* ============================================================
-   Ad slots — neutral hairline frame
-   ============================================================ */
-.ad-slot {
-  display: block;
-  margin: var(--s-6) auto;
-  min-height: 100px;
-  background: transparent;
-  border: 1px solid var(--c-border-strong);
-  border-radius: 0;
-  overflow: hidden;
-  position: relative;
-}
-.ad-slot:empty { display: none; }
-.ad-slot:not(:empty)::before {
-  content: "Annonce";
-  position: absolute;
-  top: 6px; left: 10px;
-  font-family: var(--font-body);
-  font-size: .64rem;
-  font-weight: 600;
-  color: var(--c-muted);
-  letter-spacing: .12em;
-  text-transform: uppercase;
-}
-.ad-slot--inline { max-width: 728px; }
-.ad-slot--rail { max-width: 300px; min-height: 250px; }
 
 /* ============================================================
    Badges
@@ -2007,18 +1980,7 @@ td.num, th.num {
   body::before { display: none; }
   .site-header,
   .site-footer,
-  .ad-slot,
-  .nav-toggle,
-  .cookie-banner,
-  .skip-link,
-  .nav-cta,
-  .result-sticky-bar,
-  .breadcrumbs,
-  .hero::before,
-  .hero::after {
-    display: none;
-  }
-  a { color: #000; text-decoration: underline; }
+    a { color: #000; text-decoration: underline; }
   .hero {
     background: none;
     padding: var(--s-3) 0;
