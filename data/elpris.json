@@ -1,17 +1,11 @@
 {
- "updated": "2026-10-30T18:09:49Z",
+ "updated": "2026-10-31T12:20:17Z",
  "unit": "oere/kWh",
  "note": "Day-ahead spotpris ekskl. tariffer, elafgift og moms.",
  "source": "Energi Data Service (Energinet), dataset DayAheadPrices",
  "source_url": "https://www.energidataservice.dk/tso-electricity/DayAheadPrices",
  "areas": {
   "DK1": {
-   "2026-10-29": {
-    "avg": 222.4,
-    "min": 156.8,
-    "max": 432.2,
-    "points": 96
-   },
    "2026-10-30": {
     "avg": 200.5,
     "min": 158.2,
@@ -23,15 +17,15 @@
     "min": 161.5,
     "max": 227.7,
     "points": 96
+   },
+   "2026-11-01": {
+    "avg": 190.9,
+    "min": 169.2,
+    "max": 230.5,
+    "points": 96
    }
   },
   "DK2": {
-   "2026-10-29": {
-    "avg": 228.7,
-    "min": 161.0,
-    "max": 428.3,
-    "points": 96
-   },
    "2026-10-30": {
     "avg": 200.7,
     "min": 160.4,
@@ -42,6 +36,12 @@
     "avg": 187.7,
     "min": 162.1,
     "max": 227.8,
+    "points": 96
+   },
+   "2026-11-01": {
+    "avg": 191.0,
+    "min": 166.2,
+    "max": 231.2,
     "points": 96
    }
   }
